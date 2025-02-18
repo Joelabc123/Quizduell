@@ -25,4 +25,5 @@
         <!ELEMENT Lösungen (Loesung+)>
         <!ELEMENT Loesung (#PCDATA)>
         <!ATTLIST Loesung
-                FID IDREF #REQUIRED>
+                FID IDREF #REQUIRED
+                >

@@ -3272,7 +3272,7 @@
             <FrageName>Wie heißt der berühmte Mannheimer Jazzclub, der seit Jahrzehnten ein Hotspot für Jazzmusik ist?
             </FrageName>
             <AntwortA>Blue Note Club</AntwortA>
-            <AntwortB>Ella & Louis</AntwortB>
+            <AntwortB>Ella and Louis</AntwortB>
             <AntwortC>Harlem Jazz Lounge</AntwortC>
             <AntwortD>Jazzkeller Quadrate</AntwortD>
         </Frage>
@@ -4219,7 +4219,7 @@
         <Loesung FID="f429">Paradeplatz</Loesung>
         <Loesung FID="f430">Ludwigshafen am Rhein</Loesung>
         <Loesung FID="f431">Stuttgart</Loesung>
-        <Loesung FID="f432">Ella & Louis</Loesung>
+        <Loesung FID="f432">Ella and Louis</Loesung>
         <Loesung FID="f433">John Deere</Loesung>
         <Loesung FID="f434">Mannemer Dreck</Loesung>
         <Loesung FID="f435">Mannheim wurde stark zerstört</Loesung>
