@@ -11,6 +11,27 @@
         <Kategorie KatID="k3">
             <Name>Im Labor</Name>
         </Kategorie>
+        <Kategorie KatID="k4">
+            <Name>Musik und Hits</Name>
+        </Kategorie>
+        <Kategorie KatID="k5">
+            <Name>Musik und Hits</Name>
+        </Kategorie>
+        <Kategorie KatID="k6">
+            <Name>Computerspiele</Name>
+        </Kategorie>
+        <Kategorie KatID="k7">
+            <Name>Informatik</Name>
+        </Kategorie>
+        <Kategorie KatID="k8">
+            <Name>Rund um die Welt</Name>
+        </Kategorie>
+        <Kategorie KatID="k9">
+            <Name>Mannheim</Name>
+        </Kategorie>
+        <Kategorie KatID="k10">
+            <Name>Sport</Name>
+        </Kategorie>
     </Kategorien>
 
     <Fragen>
@@ -1153,6 +1174,2617 @@
             <AntwortC>Mikroskop</AntwortC>
             <AntwortD>Laborzange</AntwortD>
         </Frage>
+        <Frage FID="f151" KID="k4">
+            <FrageName>Welche Band ist für den Song „Bohemian Rhapsody“ bekannt?</FrageName>
+            <AntwortA>The Beatles</AntwortA>
+            <AntwortB>Queen</AntwortB>
+            <AntwortC>ABBA</AntwortC>
+            <AntwortD>Pink Floyd</AntwortD>
+        </Frage>
+        <Frage FID="f152" KID="k4">
+            <FrageName>Wer sang den Hit „Thriller“?</FrageName>
+            <AntwortA>Prince</AntwortA>
+            <AntwortB>Elton John</AntwortB>
+            <AntwortC>Michael Jackson</AntwortC>
+            <AntwortD>Stevie Wonder</AntwortD>
+        </Frage>
+        <Frage FID="f153" KID="k4">
+            <FrageName>Welche Band veröffentlichte den Song „Wonderwall“?</FrageName>
+            <AntwortA>Oasis</AntwortA>
+            <AntwortB>Blur</AntwortB>
+            <AntwortC>Coldplay</AntwortC>
+            <AntwortD>Radiohead</AntwortD>
+        </Frage>
+        <Frage FID="f154" KID="k4">
+            <FrageName>Von wem stammt der Hit „Like a Prayer“ (1989)?</FrageName>
+            <AntwortA>Madonna</AntwortA>
+            <AntwortB>Kylie Minogue</AntwortB>
+            <AntwortC>Paula Abdul</AntwortC>
+            <AntwortD>Janet Jackson</AntwortD>
+        </Frage>
+        <Frage FID="f155" KID="k4">
+            <FrageName>Wie heißt der Sänger von “Shape of You” (2017)?</FrageName>
+            <AntwortA>Sam Smith</AntwortA>
+            <AntwortB>Ed Sheeran</AntwortB>
+            <AntwortC>Harry Styles</AntwortC>
+            <AntwortD>Justin Timberlake</AntwortD>
+        </Frage>
+        <Frage FID="f156" KID="k4">
+            <FrageName>Wer komponierte die Oper „Die Zauberflöte“?</FrageName>
+            <AntwortA>Ludwig van Beethoven</AntwortA>
+            <AntwortB>Giuseppe Verdi</AntwortB>
+            <AntwortC>Wolfgang Amadeus Mozart</AntwortC>
+            <AntwortD>Richard Wagner</AntwortD>
+        </Frage>
+        <Frage FID="f157" KID="k4">
+            <FrageName>Welche schwedische Popgruppe ist bekannt für Hits wie „Mamma Mia“ und „Dancing Queen“?
+            </FrageName>
+            <AntwortA>ABBA</AntwortA>
+            <AntwortB>Roxette</AntwortB>
+            <AntwortC>A-ha</AntwortC>
+            <AntwortD>Ace of Base</AntwortD>
+        </Frage>
+        <Frage FID="f158" KID="k4">
+            <FrageName>Was ist der Titel des legendären Albums von Pink Floyd, das ein Prisma auf dem Cover zeigt?
+            </FrageName>
+            <AntwortA>„The Wall“</AntwortA>
+            <AntwortB>„Wish You Were Here“</AntwortB>
+            <AntwortC>„The Dark Side of the Moon“</AntwortC>
+            <AntwortD>„Animals“</AntwortD>
+        </Frage>
+        <Frage FID="f159" KID="k4">
+            <FrageName>Wie heißt das berühmte Musikfestival, das 1969 in den USA stattfand?</FrageName>
+            <AntwortA>Woodstock</AntwortA>
+            <AntwortB>Coachella</AntwortB>
+            <AntwortC>Lollapalooza</AntwortC>
+            <AntwortD>Burning Man</AntwortD>
+        </Frage>
+        <Frage FID="f160" KID="k4">
+            <FrageName>Wer spielte das Gitarrensolo in „Hotel California“ (Eagles)?</FrageName>
+            <AntwortA>Kirk Hammett</AntwortA>
+            <AntwortB>Don Felder und Joe Walsh</AntwortB>
+            <AntwortC>Eric Clapton</AntwortC>
+            <AntwortD>Mark Knopfler</AntwortD>
+        </Frage>
+        <Frage FID="f161" KID="k4">
+            <FrageName>Welcher Künstler steht hinter dem Album „21“, das 2011 große Erfolge feierte?</FrageName>
+            <AntwortA>Taylor Swift</AntwortA>
+            <AntwortB>Adele</AntwortB>
+            <AntwortC>Beyoncé</AntwortC>
+            <AntwortD>Rihanna</AntwortD>
+        </Frage>
+        <Frage FID="f162" KID="k4">
+            <FrageName>Welche Band brachte den Song „Smells Like Teen Spirit“ heraus?</FrageName>
+            <AntwortA>Green Day</AntwortA>
+            <AntwortB>Pearl Jam</AntwortB>
+            <AntwortC>Nirvana</AntwortC>
+            <AntwortD>Soundgarden</AntwortD>
+        </Frage>
+        <Frage FID="f163" KID="k4">
+            <FrageName>Wie heißt die Sängerin des Hits „Bad Romance“?</FrageName>
+            <AntwortA>Lady Gaga</AntwortA>
+            <AntwortB>Miley Cyrus</AntwortB>
+            <AntwortC>Britney Spears</AntwortC>
+            <AntwortD>Rihanna</AntwortD>
+        </Frage>
+        <Frage FID="f164" KID="k4">
+            <FrageName>Wer interpretierte den Song „My Heart Will Go On“ aus dem Film Titanic?</FrageName>
+            <AntwortA>Barbra Streisand</AntwortA>
+            <AntwortB>Mariah Carey</AntwortB>
+            <AntwortC>Céline Dion</AntwortC>
+            <AntwortD>Whitney Houston</AntwortD>
+        </Frage>
+        <Frage FID="f165" KID="k4">
+            <FrageName>In welchem Land fand 1985 das Live-Aid-Konzert statt, das von Bob Geldof mitorganisiert wurde?
+            </FrageName>
+            <AntwortA>Kanada</AntwortA>
+            <AntwortB>USA und Großbritannien (simultan)</AntwortB>
+            <AntwortC>Australien</AntwortC>
+            <AntwortD>Südafrika</AntwortD>
+        </Frage>
+        <Frage FID="f166" KID="k4">
+            <FrageName>Welcher Komponist schuf das berühmte „Hallelujah“ aus dem Oratorium „Messiah“?</FrageName>
+            <AntwortA>Johann Sebastian Bach</AntwortA>
+            <AntwortB>Joseph Haydn</AntwortB>
+            <AntwortC>Georg Friedrich Händel</AntwortC>
+            <AntwortD>Antonio Vivaldi</AntwortD>
+        </Frage>
+        <Frage FID="f167" KID="k4">
+            <FrageName>Welcher deutsche Musiker landete mit „Rock Me Amadeus“ einen Welterfolg?</FrageName>
+            <AntwortA>Herbert Grönemeyer</AntwortA>
+            <AntwortB>Falco (Österreicher, aber deutschsprachig)</AntwortB>
+            <AntwortC>Nena</AntwortC>
+            <AntwortD>Peter Maffay</AntwortD>
+        </Frage>
+        <Frage FID="f168" KID="k4">
+            <FrageName>Wie heißt das legendäre Debütalbum der Band The Beatles von 1963?</FrageName>
+            <AntwortA>„Rubber Soul“</AntwortA>
+            <AntwortB>„Please Please Me“</AntwortB>
+            <AntwortC>„Help!“</AntwortC>
+            <AntwortD>„Revolver“</AntwortD>
+        </Frage>
+        <Frage FID="f169" KID="k4">
+            <FrageName>Welche Band ist durch den Song „Highway to Hell“ (1979) bekannt?</FrageName>
+            <AntwortA>AC/DC</AntwortA>
+            <AntwortB>Deep Purple</AntwortB>
+            <AntwortC>Judas Priest</AntwortC>
+            <AntwortD>Motörhead</AntwortD>
+        </Frage>
+        <Frage FID="f170" KID="k4">
+            <FrageName>Welcher Künstler brachte den Song „Shape of My Heart“ (1993) heraus?</FrageName>
+            <AntwortA>Phil Collins</AntwortA>
+            <AntwortB>Sting</AntwortB>
+            <AntwortC>Rod Stewart</AntwortC>
+            <AntwortD>Eric Clapton</AntwortD>
+        </Frage>
+        <Frage FID="f171" KID="k4">
+            <FrageName>Welche Sängerin wurde mit dem Song „...Baby One More Time“ weltberühmt?</FrageName>
+            <AntwortA>Christina Aguilera</AntwortA>
+            <AntwortB>Avril Lavigne</AntwortB>
+            <AntwortC>Britney Spears</AntwortC>
+            <AntwortD>Jessica Simpson</AntwortD>
+        </Frage>
+        <Frage FID="f172" KID="k4">
+            <FrageName>Wie nennt sich das berühmte Sommer-Festival auf der Donauinsel in Wien?</FrageName>
+            <AntwortA>Donau Sounds</AntwortA>
+            <AntwortB>Wiener Festwochen</AntwortB>
+            <AntwortC>Donauinselfest</AntwortC>
+            <AntwortD>Rock am Ring</AntwortD>
+        </Frage>
+        <Frage FID="f173" KID="k4">
+            <FrageName>Welche Sängerin veröffentlichte 1983 den Hit „Girls Just Want to Have Fun“?</FrageName>
+            <AntwortA>Madonna</AntwortA>
+            <AntwortB>Bonnie Tyler</AntwortB>
+            <AntwortC>Cyndi Lauper</AntwortC>
+            <AntwortD>Belinda Carlisle</AntwortD>
+        </Frage>
+        <Frage FID="f174" KID="k4">
+            <FrageName>Wer war Mitglied der Gruppe Wham! und hatte später einen Solo-Hit mit „Careless Whisper“?
+            </FrageName>
+            <AntwortA>Robbie Williams</AntwortA>
+            <AntwortB>George Michael</AntwortB>
+            <AntwortC>Sting</AntwortC>
+            <AntwortD>Michael Bolton</AntwortD>
+        </Frage>
+        <Frage FID="f175" KID="k4">
+            <FrageName>Von welcher US-Sängerin stammt das Album „Born This Way“ (2011)?</FrageName>
+            <AntwortA>Britney Spears</AntwortA>
+            <AntwortB>Lady Gaga</AntwortB>
+            <AntwortC>Katy Perry</AntwortC>
+            <AntwortD>Miley Cyrus</AntwortD>
+        </Frage>
+        <Frage FID="f176" KID="k4">
+            <FrageName>Wie heißt der britische Sänger, der 1972 den Song „Rocket Man“ veröffentlichte?</FrageName>
+            <AntwortA>Rod Stewart</AntwortA>
+            <AntwortB>Elton John</AntwortB>
+            <AntwortC>David Bowie</AntwortC>
+            <AntwortD>Freddie Mercury</AntwortD>
+        </Frage>
+        <Frage FID="f177" KID="k4">
+            <FrageName>Welche Gruppe hatte einen großen Erfolg mit dem Titel „Backstreet’s Back“?</FrageName>
+            <AntwortA>*NSYNC</AntwortA>
+            <AntwortB>Spice Girls</AntwortB>
+            <AntwortC>Backstreet Boys</AntwortC>
+            <AntwortD>Westlife</AntwortD>
+        </Frage>
+        <Frage FID="f178" KID="k4">
+            <FrageName>Welches Instrument spielte John Coltrane hauptsächlich?</FrageName>
+            <AntwortA>Klavier</AntwortA>
+            <AntwortB>Trompete</AntwortB>
+            <AntwortC>Saxophon</AntwortC>
+            <AntwortD>Schlagzeug</AntwortD>
+        </Frage>
+        <Frage FID="f179" KID="k4">
+            <FrageName>Mit welchem Song gewannen Måneskin 2021 den Eurovision Song Contest?</FrageName>
+            <AntwortA>„Zitti e buoni“</AntwortA>
+            <AntwortB>„Beggin’“</AntwortB>
+            <AntwortC>„Torna a casa“</AntwortC>
+            <AntwortD>„Coraline“</AntwortD>
+        </Frage>
+        <Frage FID="f180" KID="k4">
+            <FrageName>Wie heißt das berühmte Pianostück von Ludwig van Beethoven, bekannt als „Für …“?</FrageName>
+            <AntwortA>„Für Anna“</AntwortA>
+            <AntwortB>„Für Lisa“</AntwortB>
+            <AntwortC>„Für Elise“</AntwortC>
+            <AntwortD>„Für Maria“</AntwortD>
+        </Frage>
+        <Frage FID="f181" KID="k4">
+            <FrageName>Welches Mädchen-Trio hatte Hits wie „Say My Name“ und „Survivor“?</FrageName>
+            <AntwortA>Destiny’s Child</AntwortA>
+            <AntwortB>TLC</AntwortB>
+            <AntwortC>En Vogue</AntwortC>
+            <AntwortD>The Supremes</AntwortD>
+        </Frage>
+        <Frage FID="f182" KID="k4">
+            <FrageName>Wer schrieb den Song „Imagine“ (1971), der weltweit populär wurde?</FrageName>
+            <AntwortA>Paul McCartney</AntwortA>
+            <AntwortB>George Harrison</AntwortB>
+            <AntwortC>John Lennon</AntwortC>
+            <AntwortD>Ringo Starr</AntwortD>
+        </Frage>
+        <Frage FID="f183" KID="k4">
+            <FrageName>Welcher DJ ist berühmt für Songs wie „Wake Me Up“ und „Levels“?</FrageName>
+            <AntwortA>David Guetta</AntwortA>
+            <AntwortB>Calvin Harris</AntwortB>
+            <AntwortC>Avicii</AntwortC>
+            <AntwortD>Tiësto</AntwortD>
+        </Frage>
+        <Frage FID="f184" KID="k4">
+            <FrageName>Welcher mexikanische Gitarrist wurde mit Songs wie „Oye Como Va“ und „Smooth“ bekannt?
+            </FrageName>
+            <AntwortA>Richie Valens</AntwortA>
+            <AntwortB>Carlos Santana</AntwortB>
+            <AntwortC>Marc Anthony</AntwortC>
+            <AntwortD>Enrique Iglesias</AntwortD>
+        </Frage>
+        <Frage FID="f185" KID="k4">
+            <FrageName>Welches Instrument spielt Lang Lang, der aus China stammende Klassik-Star?</FrageName>
+            <AntwortA>Geige</AntwortA>
+            <AntwortB>Klavier</AntwortB>
+            <AntwortC>Cello</AntwortC>
+            <AntwortD>Klarinette</AntwortD>
+        </Frage>
+        <Frage FID="f186" KID="k4">
+            <FrageName>Was war der erste große Hit der Beatles in Großbritannien (1962)?</FrageName>
+            <AntwortA>„Love Me Do“</AntwortA>
+            <AntwortB>„She Loves You“</AntwortB>
+            <AntwortC>„I Want to Hold Your Hand“</AntwortC>
+            <AntwortD>„Please Please Me“</AntwortD>
+        </Frage>
+        <Frage FID="f187" KID="k4">
+            <FrageName>Wie heißt die US-Sängerin, die mit dem Album „1989“ große Erfolge feierte?</FrageName>
+            <AntwortA>Selena Gomez</AntwortA>
+            <AntwortB>Taylor Swift</AntwortB>
+            <AntwortC>Demi Lovato</AntwortC>
+            <AntwortD>Ariana Grande</AntwortD>
+        </Frage>
+        <Frage FID="f188" KID="k4">
+            <FrageName>Welche Band wurde durch „Smells Like Teen Spirit“ zum Symbol des Grunge?</FrageName>
+            <AntwortA>Pearl Jam</AntwortA>
+            <AntwortB>Soundgarden</AntwortB>
+            <AntwortC>Foo Fighters</AntwortC>
+            <AntwortD>Nirvana</AntwortD>
+        </Frage>
+        <Frage FID="f189" KID="k4">
+            <FrageName>Wie heißt der Komponist der „Mondscheinsonate“?</FrageName>
+            <AntwortA>Johann Strauss</AntwortA>
+            <AntwortB>Frédéric Chopin</AntwortB>
+            <AntwortC>Franz Schubert</AntwortC>
+            <AntwortD>Ludwig van Beethoven</AntwortD>
+        </Frage>
+        <Frage FID="f190" KID="k4">
+            <FrageName>Wer rappte zusammen mit Dr. Dre den Song „California Love“ (1995)?</FrageName>
+            <AntwortA>2Pac (Tupac Shakur)</AntwortA>
+            <AntwortB>Notorious B.I.G.</AntwortB>
+            <AntwortC>Jay-Z</AntwortC>
+            <AntwortD>Snoop Dogg</AntwortD>
+        </Frage>
+        <Frage FID="f191" KID="k4">
+            <FrageName>Welche Sängerin wurde durch den Song „Genie in a Bottle“ (1999) bekannt?</FrageName>
+            <AntwortA>Christina Aguilera</AntwortA>
+            <AntwortB>Britney Spears</AntwortB>
+            <AntwortC>Jessica Simpson</AntwortC>
+            <AntwortD>Mandy Moore</AntwortD>
+        </Frage>
+        <Frage FID="f192" KID="k4">
+            <FrageName>Wer war Frontmann der Band Queen?</FrageName>
+            <AntwortA>Elvis Presley</AntwortA>
+            <AntwortB>Freddie Mercury</AntwortB>
+            <AntwortC>Ozzy Osbourne</AntwortC>
+            <AntwortD>Jon Bon Jovi</AntwortD>
+        </Frage>
+        <Frage FID="f193" KID="k4">
+            <FrageName>Wie heißt das Lied, mit dem Whitney Houston im Film „Bodyguard“ (1992) weltweiten Erfolg hatte?
+            </FrageName>
+            <AntwortA>„I Will Always Love You“</AntwortA>
+            <AntwortB>„Saving All My Love for You“</AntwortB>
+            <AntwortC>„I Wanna Dance with Somebody“</AntwortC>
+            <AntwortD>„Greatest Love of All“</AntwortD>
+        </Frage>
+        <Frage FID="f194" KID="k4">
+            <FrageName>Welcher Komponist schrieb die sinfonische Dichtung „Also sprach Zarathustra“?</FrageName>
+            <AntwortA>Gustav Mahler</AntwortA>
+            <AntwortB>Johannes Brahms</AntwortB>
+            <AntwortC>Richard Strauss</AntwortC>
+            <AntwortD>Anton Bruckner</AntwortD>
+        </Frage>
+        <Frage FID="f195" KID="k4">
+            <FrageName>Welche Girlband landete 1996 mit „Wannabe“ einen Welthit?</FrageName>
+            <AntwortA>Atomic Kitten</AntwortA>
+            <AntwortB>Spice Girls</AntwortB>
+            <AntwortC>Pussycat Dolls</AntwortC>
+            <AntwortD>All Saints</AntwortD>
+        </Frage>
+        <Frage FID="f196" KID="k4">
+            <FrageName>Wer ist der Sänger des Hits „In the Air Tonight“ (1981)?</FrageName>
+            <AntwortA>Sting</AntwortA>
+            <AntwortB>Phil Collins</AntwortB>
+            <AntwortC>Peter Gabriel</AntwortC>
+            <AntwortD>Michael Bolton</AntwortD>
+        </Frage>
+        <Frage FID="f197" KID="k4">
+            <FrageName>Wie heißt die Band, die „Nothing Else Matters“ (1991) veröffentlichte?</FrageName>
+            <AntwortA>Iron Maiden</AntwortA>
+            <AntwortB>Metallica</AntwortB>
+            <AntwortC>Megadeth</AntwortC>
+            <AntwortD>Slayer</AntwortD>
+        </Frage>
+        <Frage FID="f198" KID="k4">
+            <FrageName>Welcher Künstler performte den Song „Purple Rain“ (1984)?</FrageName>
+            <AntwortA>James Brown</AntwortA>
+            <AntwortB>Prince</AntwortB>
+            <AntwortC>Lenny Kravitz</AntwortC>
+            <AntwortD>Marvin Gaye</AntwortD>
+        </Frage>
+        <Frage FID="f199" KID="k4">
+            <FrageName>Welche australische Rockband hatte mit „You Shook Me All Night Long“ einen Hit?</FrageName>
+            <AntwortA>AC/DC</AntwortA>
+            <AntwortB>INXS</AntwortB>
+            <AntwortC>Midnight Oil</AntwortC>
+            <AntwortD>Men at Work</AntwortD>
+        </Frage>
+        <Frage FID="f200" KID="k4">
+            <FrageName>Wer wurde als erster Sieger bei der Castingshow „Deutschland sucht den Superstar“ (2003)
+                bekannt?
+            </FrageName>
+            <AntwortA>Alexander Klaws</AntwortA>
+            <AntwortB>Mark Medlock</AntwortB>
+            <AntwortC>Thomas Godoj</AntwortC>
+            <AntwortD>Luca Hänni</AntwortD>
+        </Frage>
+        <Frage FID="f201" KID="k5">
+            <FrageName>Welche Erfindung leitete maßgeblich die Industrielle Revolution ein?</FrageName>
+            <AntwortA>Die Dampfmaschine von James Watt</AntwortA>
+            <AntwortB>Der Verbrennungsmotor von Karl Benz</AntwortB>
+            <AntwortC>Die Glühlampe von Thomas Edison</AntwortC>
+            <AntwortD>Das Telefon von Alexander Graham Bell</AntwortD>
+        </Frage>
+        <Frage FID="f202" KID="k5">
+            <FrageName>Wer gilt allgemein als Erfinder des ersten funktionsfähigen Telefons?</FrageName>
+            <AntwortA>Antonio Meucci</AntwortA>
+            <AntwortB>Alexander Graham Bell</AntwortB>
+            <AntwortC>Elisha Gray</AntwortC>
+            <AntwortD>Guglielmo Marconi</AntwortD>
+        </Frage>
+        <Frage FID="f203" KID="k5">
+            <FrageName>Welches Bauelement revolutionierte die Elektronik nach dem Zweiten Weltkrieg?</FrageName>
+            <AntwortA>Die Elektronenröhre</AntwortA>
+            <AntwortB>Der Transistor</AntwortB>
+            <AntwortC>Das Relais</AntwortC>
+            <AntwortD>Der Generator</AntwortD>
+        </Frage>
+        <Frage FID="f204" KID="k5">
+            <FrageName>Welche Entdeckung gilt als Grundstein für moderne Mikrochips?</FrageName>
+            <AntwortA>Die Erfindung des integrierten Schaltkreises</AntwortA>
+            <AntwortB>Die Entwicklung der Lochkarten</AntwortB>
+            <AntwortC>Die Konstruktion des Telegraphen</AntwortC>
+            <AntwortD>Die Einführung der Radartechnik</AntwortD>
+        </Frage>
+        <Frage FID="f205" KID="k5">
+            <FrageName>Welche Erfindung von Johannes Gutenberg revolutionierte das Verbreiten von Wissen?</FrageName>
+            <AntwortA>Der Buchdruck mit beweglichen Lettern</AntwortA>
+            <AntwortB>Die Schreibmaschine</AntwortB>
+            <AntwortC>Die Druckerpresse nach Tauchdruckverfahren</AntwortC>
+            <AntwortD>Der Rotationsdruck</AntwortD>
+        </Frage>
+        <Frage FID="f206" KID="k5">
+            <FrageName>Welches Bauteil bildet das Herzstück nahezu aller modernen elektronischen Geräte?</FrageName>
+            <AntwortA>Der Kondensator</AntwortA>
+            <AntwortB>Der Mikrochip (IC)</AntwortB>
+            <AntwortC>Die Diode</AntwortC>
+            <AntwortD>Die Spule</AntwortD>
+        </Frage>
+        <Frage FID="f207" KID="k5">
+            <FrageName>Welche technische Innovation bildete die Grundlage des heutigen Internets?</FrageName>
+            <AntwortA>Das Telefonnetz der 1920er</AntwortA>
+            <AntwortB>Das ARPANET</AntwortB>
+            <AntwortC>Die Morsecode-Kommunikation</AntwortC>
+            <AntwortD>Die Entwicklung des Fernsehens</AntwortD>
+        </Frage>
+        <Frage FID="f208" KID="k5">
+            <FrageName>Welche Rakete brachte 1969 erstmals Menschen zum Mond?</FrageName>
+            <AntwortA>Saturn V</AntwortA>
+            <AntwortB>Ariane 5</AntwortB>
+            <AntwortC>Falcon Heavy</AntwortC>
+            <AntwortD>Wostok-K</AntwortD>
+        </Frage>
+        <Frage FID="f209" KID="k5">
+            <FrageName>Wer baute das erste praxistaugliche Automobil mit Verbrennungsmotor (1885/86)?</FrageName>
+            <AntwortA>Gottlieb Daimler</AntwortA>
+            <AntwortB>Carl Benz</AntwortB>
+            <AntwortC>Henry Ford</AntwortC>
+            <AntwortD>Rudolf Diesel</AntwortD>
+        </Frage>
+        <Frage FID="f210" KID="k5">
+            <FrageName>Welche Brüder gelten als die Pioniere der motorisierten Luftfahrt?</FrageName>
+            <AntwortA>Die Gebrüder Montgolfier</AntwortA>
+            <AntwortB>Die Gebrüder Wright</AntwortB>
+            <AntwortC>Die Gebrüder Lumière</AntwortC>
+            <AntwortD>Die Gebrüder Dassler</AntwortD>
+        </Frage>
+        <Frage FID="f211" KID="k5">
+            <FrageName>Wie nennt man automatisierte Maschinen, die repetetive Aufgaben erledigen können?</FrageName>
+            <AntwortA>Automobil</AntwortA>
+            <AntwortB>Roboter</AntwortB>
+            <AntwortC>Generatoren</AntwortC>
+            <AntwortD>Transformatoren</AntwortD>
+        </Frage>
+        <Frage FID="f212" KID="k5">
+            <FrageName>Welche Erfindung ermöglichte erstmals eine praktische Beleuchtung ohne Flamme?</FrageName>
+            <AntwortA>Die Gaslaterne</AntwortA>
+            <AntwortB>Die Neonröhre</AntwortB>
+            <AntwortC>Die Glühlampe von Edison</AntwortC>
+            <AntwortD>Die Petroleumlampe</AntwortD>
+        </Frage>
+        <Frage FID="f213" KID="k5">
+            <FrageName>Welches Haushaltsgerät revolutionierte das Waschen von Kleidung im 20. Jahrhundert?</FrageName>
+            <AntwortA>Der elektrische Trockner</AntwortA>
+            <AntwortB>Die Waschmaschine</AntwortB>
+            <AntwortC>Der Geschirrspüler</AntwortC>
+            <AntwortD>Der Staubsauger</AntwortD>
+        </Frage>
+        <Frage FID="f214" KID="k5">
+            <FrageName>Welche Innovation machte die langfristige Lagerung von Lebensmitteln zu Hause möglich?
+            </FrageName>
+            <AntwortA>Die Gefriertruhe</AntwortA>
+            <AntwortB>Die Konservendose</AntwortB>
+            <AntwortC>Die Vakuumverpackung</AntwortC>
+            <AntwortD>Der Kühlschrank</AntwortD>
+        </Frage>
+        <Frage FID="f215" KID="k5">
+            <FrageName>Welche Erfindung veränderte die Art und Weise, wie Menschen Informationen audiovisuell
+                konsumieren?
+            </FrageName>
+            <AntwortA>Das Radio</AntwortA>
+            <AntwortB>Der Plattenspieler</AntwortB>
+            <AntwortC>Der Fernseher</AntwortC>
+            <AntwortD>Der Projektor</AntwortD>
+        </Frage>
+        <Frage FID="f216" KID="k5">
+            <FrageName>Was ermöglichte die weltweite Übertragung von Fernseh- und Radiosignalen aus dem All?</FrageName>
+            <AntwortA>Spezielle Funkmasten</AntwortA>
+            <AntwortB>Kommunikationssatelliten</AntwortB>
+            <AntwortC>Transatlantische Unterseekabel</AntwortC>
+            <AntwortD>Die Mondlandefähre</AntwortD>
+        </Frage>
+        <Frage FID="f217" KID="k5">
+            <FrageName>Welches Gerät vereint Telefon, Kamera, Computer und Internetzugang in einem?</FrageName>
+            <AntwortA>Der Pager</AntwortA>
+            <AntwortB>Das Smartphone</AntwortB>
+            <AntwortC>Der Walkman</AntwortC>
+            <AntwortD>Das Faxgerät</AntwortD>
+        </Frage>
+        <Frage FID="f218" KID="k5">
+            <FrageName>Welche Erfindung führte maßgeblich zur Verbreitung des Personal Computers?</FrageName>
+            <AntwortA>Der Flachbildschirm</AntwortA>
+            <AntwortB>Der Mikroprozessor</AntwortB>
+            <AntwortC>Die Lochkarte</AntwortC>
+            <AntwortD>Die Computermaus</AntwortD>
+        </Frage>
+        <Frage FID="f219" KID="k5">
+            <FrageName>Welches technische System machte Wolkenkratzer erst in großer Höhe realistisch nutzbar?
+            </FrageName>
+            <AntwortA>Die Klimaanlage</AntwortA>
+            <AntwortB>Die Zentralheizung</AntwortB>
+            <AntwortC>Der elektrische Aufzug</AntwortC>
+            <AntwortD>Die Blitzschutzanlage</AntwortD>
+        </Frage>
+        <Frage FID="f220" KID="k5">
+            <FrageName>Welches Instrument ermöglicht eine Abbildung von Oberflächenstrukturen auf atomarer Ebene?
+            </FrageName>
+            <AntwortA>Das Rasterkraftmikroskop</AntwortA>
+            <AntwortB>Das Elektronenrastermikroskop</AntwortB>
+            <AntwortC>Das Rastertunnelmikroskop</AntwortC>
+            <AntwortD>Das Lichtmikroskop</AntwortD>
+        </Frage>
+        <Frage FID="f221" KID="k5">
+            <FrageName>Welches bildgebende Verfahren nutzt Röntgenstrahlen zur detaillierten Schichtaufnahme des
+                Körpers?
+            </FrageName>
+            <AntwortA>Kernspintomografie</AntwortA>
+            <AntwortB>Computertomografie</AntwortB>
+            <AntwortC>Ultraschall-Diagnostik</AntwortC>
+            <AntwortD>Szintigraphie</AntwortD>
+        </Frage>
+        <Frage FID="f222" KID="k5">
+            <FrageName>Welches implantierbare Gerät half erstmals bei Herzrhythmusstörungen durch elektrische Impulse?
+            </FrageName>
+            <AntwortA>Herzkatheter</AntwortA>
+            <AntwortB>Herzklappe</AntwortB>
+            <AntwortC>Künstliches Herz</AntwortC>
+            <AntwortD>Der Herzschrittmacher</AntwortD>
+        </Frage>
+        <Frage FID="f223" KID="k5">
+            <FrageName>Welche Erfindung ermöglichte die kontrollierte Nutzung der Kernspaltung zur Energiegewinnung?
+            </FrageName>
+            <AntwortA>Der Kernfusionsreaktor</AntwortA>
+            <AntwortB>Der Teilchenbeschleuniger</AntwortB>
+            <AntwortC>Der Kernreaktor</AntwortC>
+            <AntwortD>Die Brennstoffzelle</AntwortD>
+        </Frage>
+        <Frage FID="f224" KID="k5">
+            <FrageName>Welche medizinische Errungenschaft ermöglichte 1978 erstmals die Geburt eines Babys aus einer
+                außerhalb des Körpers befruchteten Eizelle?
+            </FrageName>
+            <AntwortA>Impfstoffentwicklung</AntwortA>
+            <AntwortB>In-vitro-Fertilisation</AntwortB>
+            <AntwortC>Gen-Therapie</AntwortC>
+            <AntwortD>Laser-Chirurgie</AntwortD>
+        </Frage>
+        <Frage FID="f225" KID="k5">
+            <FrageName>Welche Technologie nutzt gebündeltes Licht für vielfältige Anwendungen in Industrie und
+                Medizin?
+            </FrageName>
+            <AntwortA>LED</AntwortA>
+            <AntwortB>Laser</AntwortB>
+            <AntwortC>Infrarot</AntwortC>
+            <AntwortD>Röntgenstrahlung</AntwortD>
+        </Frage>
+        <Frage FID="f226" KID="k5">
+            <FrageName>Welches satellitengestützte System ermöglicht präzise globale Ortung?</FrageName>
+            <AntwortA>GPS</AntwortA>
+            <AntwortB>FAX</AntwortB>
+            <AntwortC>DSL</AntwortC>
+            <AntwortD>ISDN</AntwortD>
+        </Frage>
+        <Frage FID="f227" KID="k5">
+            <FrageName>Wie heißt das Verfahren zur gezielten Veränderung von DNA, das als Durchbruch der Gentechnik
+                gilt?
+            </FrageName>
+            <AntwortA>PCR (Polymerase-Kettenreaktion)</AntwortA>
+            <AntwortB>CRISPR/Cas</AntwortB>
+            <AntwortC>Klonen durch Kerntransfer</AntwortC>
+            <AntwortD>RNA-Interferenz</AntwortD>
+        </Frage>
+        <Frage FID="f228" KID="k5">
+            <FrageName>Wie heißt der größte Teilchenbeschleuniger der Welt, der zu grundlegenden Erkenntnissen über
+                Materie geführt hat?
+            </FrageName>
+            <AntwortA>Tevatron</AntwortA>
+            <AntwortB>Large Hadron Collider (LHC)</AntwortB>
+            <AntwortC>RHIC</AntwortC>
+            <AntwortD>ILC</AntwortD>
+        </Frage>
+        <Frage FID="f229" KID="k5">
+            <FrageName>Welche Technologie ermöglicht den schichtweisen Aufbau von Objekten aus digitalen 3D-Daten?
+            </FrageName>
+            <AntwortA>3D-Druck</AntwortA>
+            <AntwortB>CNC-Fräsen</AntwortB>
+            <AntwortC>Laserschneiden</AntwortC>
+            <AntwortD>Injektionsgießen</AntwortD>
+        </Frage>
+        <Frage FID="f230" KID="k5">
+            <FrageName>Welche Innovation macht selbstfahrende Autos mittels Sensorik und künstlicher Intelligenz
+                möglich?
+            </FrageName>
+            <AntwortA>Hybridmotor</AntwortA>
+            <AntwortB>LIDAR und neuronale Netze</AntwortB>
+            <AntwortC>ESP-Stabilitätskontrolle</AntwortC>
+            <AntwortD>ABS-Bremssystem</AntwortD>
+        </Frage>
+        <Frage FID="f231" KID="k5">
+            <FrageName>Welche Flugzeugkategorie erreichte erstmals Überschallgeschwindigkeit im Linienverkehr?
+            </FrageName>
+            <AntwortA>Jagdflugzeuge</AntwortA>
+            <AntwortB>Concorde</AntwortB>
+            <AntwortC>Boeing 747</AntwortC>
+            <AntwortD>Zeppeline</AntwortD>
+        </Frage>
+        <Frage FID="f232" KID="k5">
+            <FrageName>Welches futuristische Transportkonzept soll Personen in Röhren mit hoher Geschwindigkeit
+                befördern?
+            </FrageName>
+            <AntwortA>Hyperloop</AntwortA>
+            <AntwortB>MagnetbahnTransrapid</AntwortB>
+            <AntwortC>Flugtaxi</AntwortC>
+            <AntwortD>Drohnen-Shuttle</AntwortD>
+        </Frage>
+        <Frage FID="f233" KID="k5">
+            <FrageName>Welche Technologie ermöglicht die direkte Umwandlung von Sonnenlicht in elektrischen Strom?
+            </FrageName>
+            <AntwortA>Kraft-Wärme-Kopplung</AntwortA>
+            <AntwortB>Windenergieanlage</AntwortB>
+            <AntwortC>Photovoltaik</AntwortC>
+            <AntwortD>Geothermie</AntwortD>
+        </Frage>
+        <Frage FID="f234" KID="k5">
+            <FrageName>Welche Entwicklung hat Fertigungsprozesse revolutioniert und wird oft „Industrie 4.0“
+                zugeschrieben?
+            </FrageName>
+            <AntwortA>Mechanische Webstühle</AntwortA>
+            <AntwortB>Roboterarme in der Fertigung</AntwortB>
+            <AntwortC>Dampfkraftwerke</AntwortC>
+            <AntwortD>Fließbandproduktion</AntwortD>
+        </Frage>
+        <Frage FID="f235" KID="k5">
+            <FrageName>Welche aufstrebende Technologie nutzt die Prinzipien der Quantenphysik für schnellere
+                Rechenprozesse?
+            </FrageName>
+            <AntwortA>Neuronale Netze</AntwortA>
+            <AntwortB>Quantencomputing</AntwortB>
+            <AntwortC>Cloud Computing</AntwortC>
+            <AntwortD>Blockchain</AntwortD>
+        </Frage>
+        <Frage FID="f236" KID="k5">
+            <FrageName>Welche Kommunikationstechnik setzt gebündelte Glasfasern zur Datenübertragung ein?</FrageName>
+            <AntwortA>Koaxialkabel</AntwortA>
+            <AntwortB>Satellitenkommunikation</AntwortB>
+            <AntwortC>Powerline</AntwortC>
+            <AntwortD>Glasfasertechnik</AntwortD>
+        </Frage>
+        <Frage FID="f237" KID="k5">
+            <FrageName>Welche Funktechnologie dient zur drahtlosen Verbindung von Geräten über kurze Distanz?
+            </FrageName>
+            <AntwortA>NFC (Near Field Communication)</AntwortA>
+            <AntwortB>Bluetooth</AntwortB>
+            <AntwortC>GSM</AntwortC>
+            <AntwortD>LTE</AntwortD>
+        </Frage>
+        <Frage FID="f238" KID="k5">
+            <FrageName>Welcher Standard ermöglicht kabellose Internetverbindungen in lokalen Netzwerken?</FrageName>
+            <AntwortA>Wi-Fi (WLAN)</AntwortA>
+            <AntwortB>Ethernet</AntwortB>
+            <AntwortC>UMTS</AntwortC>
+            <AntwortD>HDMI</AntwortD>
+        </Frage>
+        <Frage FID="f239" KID="k5">
+            <FrageName>Was definiert das „WWW“ (World Wide Web) im Gegensatz zum grundlegenden „Internet“?</FrageName>
+            <AntwortA>Ein dezentrales Stromnetz</AntwortA>
+            <AntwortB>Ein System von Hypertext-Dokumenten</AntwortB>
+            <AntwortC>Eine drahtlose Satellitenverbindung</AntwortC>
+            <AntwortD>Ein geschlossenes Firmennetzwerk</AntwortD>
+        </Frage>
+        <Frage FID="f240" KID="k5">
+            <FrageName>Welche bahnbrechende Raketenwiederverwendung wurde von SpaceX entwickelt?</FrageName>
+            <AntwortA>Selbstzerstörungs-Mechanismus</AntwortA>
+            <AntwortB>Vertikales Landeverfahren (Falcon 9)</AntwortB>
+            <AntwortC>Ablenkbarer Flugkörper</AntwortC>
+            <AntwortD>Mehrstufige Feststoffrakete</AntwortD>
+        </Frage>
+        <Frage FID="f241" KID="k5">
+            <FrageName>Welche internationale Forschungsstation umkreist seit 1998 die Erde und ermöglicht Experimente in
+                Schwerelosigkeit?
+            </FrageName>
+            <AntwortA>Hubble-Weltraumteleskop</AntwortA>
+            <AntwortB>International Space Station (ISS)</AntwortB>
+            <AntwortC>Skylab</AntwortC>
+            <AntwortD>Mir</AntwortD>
+        </Frage>
+        <Frage FID="f242" KID="k5">
+            <FrageName>Welche Raumsonde war 1957 der erste künstliche Erdsatellit?</FrageName>
+            <AntwortA>Sputnik 1</AntwortA>
+            <AntwortB>Vostok 1</AntwortB>
+            <AntwortC>Apollo 11</AntwortC>
+            <AntwortD>Voyager 1</AntwortD>
+        </Frage>
+        <Frage FID="f243" KID="k5">
+            <FrageName>Welches von Nikola Tesla erfundene Gerät erzeugt hochfrequente Wechselspannungen?</FrageName>
+            <AntwortA>Der Transformator</AntwortA>
+            <AntwortB>Die Tesla-Spule</AntwortB>
+            <AntwortC>Der Motor-Generator</AntwortC>
+            <AntwortD>Die Telefunken-Anlage</AntwortD>
+        </Frage>
+        <Frage FID="f244" KID="k5">
+            <FrageName>Welche Hochgeschwindigkeitszugart nutzt Magnetschwebetechnik zur Reibungsminimierung?</FrageName>
+            <AntwortA>ICE (Intercity-Express)</AntwortA>
+            <AntwortB>TGV (Train à Grande Vitesse)</AntwortB>
+            <AntwortC>Maglev</AntwortC>
+            <AntwortD>Shinkansen</AntwortD>
+        </Frage>
+        <Frage FID="f245" KID="k5">
+            <FrageName>Welche Raumsonde erforschte den Saturn und setzte eine Landesonde auf dem Mond Titan ab?
+            </FrageName>
+            <AntwortA>Pioneer 10</AntwortA>
+            <AntwortB>Cassini-Huygens</AntwortB>
+            <AntwortC>Voyager 2</AntwortC>
+            <AntwortD>Galileo</AntwortD>
+        </Frage>
+        <Frage FID="f246" KID="k5">
+            <FrageName>Welches elektronische Bauteil wurde vor dem Transistor in Computern zur Verstärkung genutzt?
+            </FrageName>
+            <AntwortA>Der Kondensator</AntwortA>
+            <AntwortB>Die Elektronenröhre</AntwortB>
+            <AntwortC>Der Widerstand</AntwortC>
+            <AntwortD>Der Transformator</AntwortD>
+        </Frage>
+        <Frage FID="f247" KID="k5">
+            <FrageName>Welches Sicherheitsgerät zeichnet Flugdaten und Stimmen im Cockpit auf?</FrageName>
+            <AntwortA>Der Flugschreiber (Black Box)</AntwortA>
+            <AntwortB>Der Transponder</AntwortB>
+            <AntwortC>Der Autopilot</AntwortC>
+            <AntwortD>Die Radarbox</AntwortD>
+        </Frage>
+        <Frage FID="f248" KID="k5">
+            <FrageName>Welche „Gesetzmäßigkeit“ beschreibt die regelmäßige Verdopplung von Transistoren auf Chips?
+            </FrageName>
+            <AntwortA>Plancksches Gesetz</AntwortA>
+            <AntwortB>Ohmsches Gesetz</AntwortB>
+            <AntwortC>Moores Gesetz</AntwortC>
+            <AntwortD>Murphys Gesetz</AntwortD>
+        </Frage>
+        <Frage FID="f249" KID="k5">
+            <FrageName>Wie hieß einer der ersten vollelektronischen Universalrechner (1946)?</FrageName>
+            <AntwortA>ENIAC</AntwortA>
+            <AntwortB>Zuse Z3</AntwortB>
+            <AntwortC>IBM 650</AntwortC>
+            <AntwortD>Colossus</AntwortD>
+        </Frage>
+        <Frage FID="f250" KID="k5">
+            <FrageName>Welches Netzwerkprojekt der US-Regierung gilt als Vorläufer des heutigen Internets?</FrageName>
+            <AntwortA>Archie</AntwortA>
+            <AntwortB>Arpanet</AntwortB>
+            <AntwortC>Bitnet</AntwortC>
+            <AntwortD>Fidonet</AntwortD>
+        </Frage>
+        <Frage FID="f251" KID="k6">
+            <FrageName>Welches Spiel gilt als eines der ersten kommerziell erfolgreichen Videospiele?</FrageName>
+            <AntwortA>Space Invaders</AntwortA>
+            <AntwortB>Pong</AntwortB>
+            <AntwortC>Pac-Man</AntwortC>
+            <AntwortD>Tetris</AntwortD>
+        </Frage>
+        <Frage FID="f252" KID="k6">
+            <FrageName>Welches Unternehmen entwickelte „Super Mario Bros.“?</FrageName>
+            <AntwortA>Konami</AntwortA>
+            <AntwortB>Capcom</AntwortB>
+            <AntwortC>Nintendo</AntwortC>
+            <AntwortD>Sega</AntwortD>
+        </Frage>
+        <Frage FID="f253" KID="k6">
+            <FrageName>Welche der folgenden Spielereihen stammt NICHT von Blizzard Entertainment?</FrageName>
+            <AntwortA>Warcraft</AntwortA>
+            <AntwortB>Diablo</AntwortB>
+            <AntwortC>Overwatch</AntwortC>
+            <AntwortD>League of Legends</AntwortD>
+        </Frage>
+        <Frage FID="f254" KID="k6">
+            <FrageName>Welches Spiel wird oft als einer der ersten First-Person-Shooter überhaupt bezeichnet?
+            </FrageName>
+            <AntwortA>Wolfenstein 3D</AntwortA>
+            <AntwortB>Doom</AntwortB>
+            <AntwortC>Maze War</AntwortC>
+            <AntwortD>Quake</AntwortD>
+        </Frage>
+        <Frage FID="f255" KID="k6">
+            <FrageName>In welchem Jahr erschien der erste „The Legend of Zelda“-Titel in Japan?</FrageName>
+            <AntwortA>1982</AntwortA>
+            <AntwortB>1983</AntwortB>
+            <AntwortC>1986</AntwortC>
+            <AntwortD>1989</AntwortD>
+        </Frage>
+        <Frage FID="f256" KID="k6">
+            <FrageName>Welche Spielekonsole gilt als die meistverkaufte aller Zeiten (Stand 2023)?</FrageName>
+            <AntwortA>Nintendo DS</AntwortA>
+            <AntwortB>PlayStation 2</AntwortB>
+            <AntwortC>Game Boy</AntwortC>
+            <AntwortD>PlayStation 4</AntwortD>
+        </Frage>
+        <Frage FID="f257" KID="k6">
+            <FrageName>Welches Spiel revolutionierte das Genre der Battle-Royale-Spiele?</FrageName>
+            <AntwortA>Fortnite</AntwortA>
+            <AntwortB>H1Z1</AntwortB>
+            <AntwortC>PlayerUnknown’s Battlegrounds</AntwortC>
+            <AntwortD>Apex Legends</AntwortD>
+        </Frage>
+        <Frage FID="f258" KID="k6">
+            <FrageName>Welches Unternehmen entwickelte das Spiel „Minecraft“?</FrageName>
+            <AntwortA>Bethesda</AntwortA>
+            <AntwortB>Mojang</AntwortB>
+            <AntwortC>Ubisoft</AntwortC>
+            <AntwortD>Electronic Arts</AntwortD>
+        </Frage>
+        <Frage FID="f259" KID="k6">
+            <FrageName>Welches dieser Spiele stammt NICHT von Rockstar Games?</FrageName>
+            <AntwortA>Grand Theft Auto</AntwortA>
+            <AntwortB>Red Dead Redemption</AntwortB>
+            <AntwortC>LA Noire</AntwortC>
+            <AntwortD>Just Cause</AntwortD>
+        </Frage>
+        <Frage FID="f260" KID="k6">
+            <FrageName>In welchem Land wurde das Spiel „Tetris“ ursprünglich entwickelt?</FrageName>
+            <AntwortA>USA</AntwortA>
+            <AntwortB>Deutschland</AntwortB>
+            <AntwortC>Russland</AntwortC>
+            <AntwortD>Japan</AntwortD>
+        </Frage>
+        <Frage FID="f261" KID="k6">
+            <FrageName>Welche Spielereihe stammt ursprünglich von id Software?</FrageName>
+            <AntwortA>Half-Life</AntwortA>
+            <AntwortB>Quake</AntwortB>
+            <AntwortC>Halo</AntwortC>
+            <AntwortD>Bioshock</AntwortD>
+        </Frage>
+        <Frage FID="f262" KID="k6">
+            <FrageName>Welcher Entwickler steht hinter der „Assassin’s Creed“-Reihe?</FrageName>
+            <AntwortA>Square Enix</AntwortA>
+            <AntwortB>Electronic Arts</AntwortB>
+            <AntwortC>Ubisoft</AntwortC>
+            <AntwortD>Capcom</AntwortD>
+        </Frage>
+        <Frage FID="f263" KID="k6">
+            <FrageName>Wie heißt der legendäre Schöpfer der „Metal Gear“-Serie?</FrageName>
+            <AntwortA>Shigeru Miyamoto</AntwortA>
+            <AntwortB>Hideo Kojima</AntwortB>
+            <AntwortC>Yu Suzuki</AntwortC>
+            <AntwortD>Hideki Kamiya</AntwortD>
+        </Frage>
+        <Frage FID="f264" KID="k6">
+            <FrageName>Welche Serie gilt als Mitbegründer des Genres „Survival Horror“?</FrageName>
+            <AntwortA>Fatal Frame</AntwortA>
+            <AntwortB>Silent Hill</AntwortB>
+            <AntwortC>Clock Tower</AntwortC>
+            <AntwortD>Resident Evil</AntwortD>
+        </Frage>
+        <Frage FID="f265" KID="k6">
+            <FrageName>Welches Spiel war der direkte Vorgänger der erfolgreichen „Dark Souls“-Reihe?</FrageName>
+            <AntwortA>Bloodborne</AntwortA>
+            <AntwortB>King’s Field</AntwortB>
+            <AntwortC>Demon’s Souls</AntwortC>
+            <AntwortD>Dark Souls II</AntwortD>
+        </Frage>
+        <Frage FID="f266" KID="k6">
+            <FrageName>Welches Spiel gilt als Pionier im Genre der Echtzeit-Strategiespiele (RTS)?</FrageName>
+            <AntwortA>Warcraft: Orcs and Humans</AntwortA>
+            <AntwortB>Dune II</AntwortB>
+            <AntwortC>Command and Conquer</AntwortC>
+            <AntwortD>Age of Empires</AntwortD>
+        </Frage>
+        <Frage FID="f267" KID="k6">
+            <FrageName>In welchem Spiel steuert man das Leben von virtuellen Menschen in ihren Häusern und im Alltag?
+            </FrageName>
+            <AntwortA>SimCity</AntwortA>
+            <AntwortB>The Sims</AntwortB>
+            <AntwortC>Minecraft</AntwortC>
+            <AntwortD>Civilization</AntwortD>
+        </Frage>
+        <Frage FID="f268" KID="k6">
+            <FrageName>Welches Spiel sorgte 1993 für Kontroversen und trug maßgeblich zur Gründung des ESRB bei?
+            </FrageName>
+            <AntwortA>Doom</AntwortA>
+            <AntwortB>Wolfenstein 3D</AntwortB>
+            <AntwortC>Mortal Kombat</AntwortC>
+            <AntwortD>Night Trap</AntwortD>
+        </Frage>
+        <Frage FID="f269" KID="k6">
+            <FrageName>Welches Spiel von CD Projekt Red ist Teil des „The Witcher“-Universums?</FrageName>
+            <AntwortA>The Witcher 2: Assassins of Kings</AntwortA>
+            <AntwortB>The Witcher 3: Wild Hunt</AntwortB>
+            <AntwortC>Baldur’s Gate 3</AntwortC>
+            <AntwortD>Gothic 3</AntwortD>
+        </Frage>
+        <Frage FID="f270" KID="k6">
+            <FrageName>Welches Unternehmen ist primär für die Entwicklung der „Kirby“-Spiele verantwortlich?</FrageName>
+            <AntwortA>Capcom</AntwortA>
+            <AntwortB>Sega</AntwortB>
+            <AntwortC>Rare</AntwortC>
+            <AntwortD>HAL Laboratory</AntwortD>
+        </Frage>
+        <Frage FID="f271" KID="k6">
+            <FrageName>Welcher Videospiel-Charakter ist ein blauer Igel, der mit hoher Geschwindigkeit rennt?
+            </FrageName>
+            <AntwortA>Crash Bandicoot</AntwortA>
+            <AntwortB>Rayman</AntwortB>
+            <AntwortC>Sonic</AntwortC>
+            <AntwortD>Mega Man</AntwortD>
+        </Frage>
+        <Frage FID="f272" KID="k6">
+            <FrageName>Welche MMO-Reihe ist besonders für das Add-on „Wrath of the Lich King“ bekannt?</FrageName>
+            <AntwortA>Guild Wars</AntwortA>
+            <AntwortB>Final Fantasy XIV</AntwortB>
+            <AntwortC>World of Warcraft</AntwortC>
+            <AntwortD>EverQuest</AntwortD>
+        </Frage>
+        <Frage FID="f273" KID="k6">
+            <FrageName>Welche Firma hat „League of Legends“ entwickelt?</FrageName>
+            <AntwortA>Valve</AntwortA>
+            <AntwortB>Riot Games</AntwortB>
+            <AntwortC>Blizzard</AntwortC>
+            <AntwortD>Epic Games</AntwortD>
+        </Frage>
+        <Frage FID="f274" KID="k6">
+            <FrageName>Welche Spielreihe stammt ursprünglich von Bethesda Game Studios?</FrageName>
+            <AntwortA>Fallout</AntwortA>
+            <AntwortB>Dragon Age</AntwortB>
+            <AntwortC>The Elder Scrolls</AntwortC>
+            <AntwortD>Fable</AntwortD>
+        </Frage>
+        <Frage FID="f275" KID="k6">
+            <FrageName>Welches Spielprinzip zeichnet die Serie „Civilization“ aus?</FrageName>
+            <AntwortA>Rundenbasierte Strategie</AntwortA>
+            <AntwortB>Action-Adventure</AntwortB>
+            <AntwortC>Survival Horror</AntwortC>
+            <AntwortD>Rennsimulation</AntwortD>
+        </Frage>
+        <Frage FID="f276" KID="k6">
+            <FrageName>Wie heißt die Firma hinter der Handheld-Konsole „Game Boy“?</FrageName>
+            <AntwortA>Sega</AntwortA>
+            <AntwortB>Atari</AntwortB>
+            <AntwortC>Sony</AntwortC>
+            <AntwortD>Nintendo</AntwortD>
+        </Frage>
+        <Frage FID="f277" KID="k6">
+            <FrageName>Welche Spieleserie hat den Charakter „Pikachu“ als Maskottchen?</FrageName>
+            <AntwortA>Digimon</AntwortA>
+            <AntwortB>Pokémon</AntwortB>
+            <AntwortC>Monster Hunter</AntwortC>
+            <AntwortD>Yu-Gi-Oh!</AntwortD>
+        </Frage>
+        <Frage FID="f278" KID="k6">
+            <FrageName>Welches Spiel machte den italienischen Klempner mit roter Mütze weltberühmt?</FrageName>
+            <AntwortA>Mario Kart</AntwortA>
+            <AntwortB>Super Mario Bros.</AntwortB>
+            <AntwortC>Donkey Kong</AntwortC>
+            <AntwortD>Luigi’s Mansion</AntwortD>
+        </Frage>
+        <Frage FID="f279" KID="k6">
+            <FrageName>Welche Spielereihe handelt vom Supersoldaten „Master Chief“?</FrageName>
+            <AntwortA>Killzone</AntwortA>
+            <AntwortB>Halo</AntwortB>
+            <AntwortC>Destiny</AntwortC>
+            <AntwortD>Doom</AntwortD>
+        </Frage>
+        <Frage FID="f280" KID="k6">
+            <FrageName>Welches Spiel zählt zu den erfolgreichsten Farming-Simulationen?</FrageName>
+            <AntwortA>FIFA</AntwortA>
+            <AntwortB>Gran Turismo</AntwortB>
+            <AntwortC>Harvest Moon</AntwortC>
+            <AntwortD>StarCraft</AntwortD>
+        </Frage>
+        <Frage FID="f281" KID="k6">
+            <FrageName>Welche Videospielmarke ist für „Tekken“ bekannt?</FrageName>
+            <AntwortA>Capcom</AntwortA>
+            <AntwortB>SNK</AntwortB>
+            <AntwortC>Bandai Namco</AntwortC>
+            <AntwortD>Square Enix</AntwortD>
+        </Frage>
+        <Frage FID="f282" KID="k6">
+            <FrageName>Welcher Ego-Shooter hat eine bekannte Map namens „Dust II“?</FrageName>
+            <AntwortA>Call of Duty</AntwortA>
+            <AntwortB>Battlefield</AntwortB>
+            <AntwortC>Overwatch</AntwortC>
+            <AntwortD>Counter-Strike</AntwortD>
+        </Frage>
+        <Frage FID="f283" KID="k6">
+            <FrageName>Wie heißt der Publisher, der die Reihen „FIFA“ und „Madden NFL“ herausbringt?</FrageName>
+            <AntwortA>Ubisoft</AntwortA>
+            <AntwortB>Electronic Arts</AntwortB>
+            <AntwortC>Konami</AntwortC>
+            <AntwortD>Sony</AntwortD>
+        </Frage>
+        <Frage FID="f284" KID="k6">
+            <FrageName>Welche japanische Firma brachte die Spielkonsole „PlayStation“ heraus?</FrageName>
+            <AntwortA>Nintendo</AntwortA>
+            <AntwortB>Sega</AntwortB>
+            <AntwortC>Sony</AntwortC>
+            <AntwortD>Panasonic</AntwortD>
+        </Frage>
+        <Frage FID="f285" KID="k6">
+            <FrageName>In welchem Spiel muss man Geistern ausweichen und Punkte in einem Labyrinth fressen?</FrageName>
+            <AntwortA>Donkey Kong</AntwortA>
+            <AntwortB>Pac-Man</AntwortB>
+            <AntwortC>Frogger</AntwortC>
+            <AntwortD>Galaga</AntwortD>
+        </Frage>
+        <Frage FID="f286" KID="k6">
+            <FrageName>Welche Reihe wird gemeinhin als „Soulsborne“-Genre bezeichnet?</FrageName>
+            <AntwortA>Devil May Cry and Bayonetta</AntwortA>
+            <AntwortB>Dark Souls and Bloodborne</AntwortB>
+            <AntwortC>Metal Gear and Splinter Cell</AntwortC>
+            <AntwortD>Dragon Age and Mass Effect</AntwortD>
+        </Frage>
+        <Frage FID="f287" KID="k6">
+            <FrageName>Zu welchem Genre gehören Spiele wie „StarCraft“ oder „Age of Empires“?</FrageName>
+            <AntwortA>Echtzeit-Strategie</AntwortA>
+            <AntwortB>Action-Rollenspiel</AntwortB>
+            <AntwortC>Rennsimulation</AntwortC>
+            <AntwortD>Jump ’n’ Run</AntwortD>
+        </Frage>
+        <Frage FID="f288" KID="k6">
+            <FrageName>Welches Unternehmen steht hinter dem „Epic Games Store“ und dem Spiel „Fortnite“?</FrageName>
+            <AntwortA>Valve</AntwortA>
+            <AntwortB>Blizzard</AntwortB>
+            <AntwortC>Epic Games</AntwortC>
+            <AntwortD>Activision</AntwortD>
+        </Frage>
+        <Frage FID="f289" KID="k6">
+            <FrageName>Welche Konsole von Microsoft war die direkte Konkurrenz zur PlayStation 2?</FrageName>
+            <AntwortA>Xbox 360</AntwortA>
+            <AntwortB>Xbox One</AntwortB>
+            <AntwortC>Xbox Series X</AntwortC>
+            <AntwortD>Xbox</AntwortD>
+        </Frage>
+        <Frage FID="f290" KID="k6">
+            <FrageName>Welches Spiel aus dem Jahr 2009 legte den Grundstein für das heutige MOBA-Genre?</FrageName>
+            <AntwortA>League of Legends</AntwortA>
+            <AntwortB>Dota 2</AntwortB>
+            <AntwortC>Heroes of Newerth</AntwortC>
+            <AntwortD>Smite</AntwortD>
+        </Frage>
+        <Frage FID="f291" KID="k6">
+            <FrageName>Welche Reihe wird oft als „Final Fantasy mit Disney-Figuren“ bezeichnet?</FrageName>
+            <AntwortA>Dragon Quest</AntwortA>
+            <AntwortB>Persona</AntwortB>
+            <AntwortC>Kingdom Hearts</AntwortC>
+            <AntwortD>Chrono Trigger</AntwortD>
+        </Frage>
+        <Frage FID="f292" KID="k6">
+            <FrageName>Welche Reihe bietet den Koop-Modus „Zombies“ als beliebte Erweiterung?</FrageName>
+            <AntwortA>Halo</AntwortA>
+            <AntwortB>Battlefield</AntwortB>
+            <AntwortC>Left 4 Dead</AntwortC>
+            <AntwortD>Call of Duty</AntwortD>
+        </Frage>
+        <Frage FID="f293" KID="k6">
+            <FrageName>Welche Firma entwickelte ursprünglich die „Tomb Raider“-Reihe?</FrageName>
+            <AntwortA>Ubisoft</AntwortA>
+            <AntwortB>Eidos/Core Design</AntwortB>
+            <AntwortC>Rockstar Games</AntwortC>
+            <AntwortD>Sony Interactive</AntwortD>
+        </Frage>
+        <Frage FID="f294" KID="k6">
+            <FrageName>Welches Spiel gilt als Pionier für Open-World-3D-Umgebungen auf Konsolen (erschienen 1996)?
+            </FrageName>
+            <AntwortA>Crash Bandicoot</AntwortA>
+            <AntwortB>Super Mario 64</AntwortB>
+            <AntwortC>Banjo-Kazooie</AntwortC>
+            <AntwortD>Spyro the Dragon</AntwortD>
+        </Frage>
+        <Frage FID="f295" KID="k6">
+            <FrageName>Welche Spielereihe lässt den Spieler als professionellen Dieb in einer Steampunk-Welt agieren?
+            </FrageName>
+            <AntwortA>Dishonored</AntwortA>
+            <AntwortB>Thief</AntwortB>
+            <AntwortC>Assassin’s Creed</AntwortC>
+            <AntwortD>Hitman</AntwortD>
+        </Frage>
+        <Frage FID="f296" KID="k6">
+            <FrageName>Welche Firma ist für die Konsole Wii verantwortlich?</FrageName>
+            <AntwortA>Sony</AntwortA>
+            <AntwortB>Microsoft</AntwortB>
+            <AntwortC>Sega</AntwortC>
+            <AntwortD>Nintendo</AntwortD>
+        </Frage>
+        <Frage FID="f297" KID="k6">
+            <FrageName>Welcher Entwickler brachte 2001 das MMO „Final Fantasy XI“ auf den Markt?</FrageName>
+            <AntwortA>Square Enix</AntwortA>
+            <AntwortB>Capcom</AntwortB>
+            <AntwortC>Blizzard</AntwortC>
+            <AntwortD>Sega</AntwortD>
+        </Frage>
+        <Frage FID="f298" KID="k6">
+            <FrageName>Welches dieser Spiele war eines der ersten großen Kickstarter-Crowdfunding-Projekte?</FrageName>
+            <AntwortA>Shovel Knight</AntwortA>
+            <AntwortB>Undertale</AntwortB>
+            <AntwortC>Hollow Knight</AntwortC>
+            <AntwortD>Stardew Valley</AntwortD>
+        </Frage>
+        <Frage FID="f299" KID="k6">
+            <FrageName>Welche Konsole führte erstmals einen „DualShock“-Controller ein?</FrageName>
+            <AntwortA>Nintendo 64</AntwortA>
+            <AntwortB>PlayStation</AntwortB>
+            <AntwortC>Sega Saturn</AntwortC>
+            <AntwortD>Dreamcast</AntwortD>
+        </Frage>
+        <Frage FID="f300" KID="k6">
+            <FrageName>Welches Spiel legte neben „Metroid“ den Grundstein für den Begriff „Metroidvania“?</FrageName>
+            <AntwortA>Contra</AntwortA>
+            <AntwortB>Mega Man</AntwortB>
+            <AntwortC>Castlevania: Symphony of the Night</AntwortC>
+            <AntwortD>Ghosts ’n Goblins</AntwortD>
+        </Frage>
+        <Frage FID="f301" KID="k7">
+            <FrageName>Wer gilt als geistiger Vater der „Turingmaschine“ und Pionier der modernen Informatik?
+            </FrageName>
+            <AntwortA>Konrad Zuse</AntwortA>
+            <AntwortB>Charles Babbage</AntwortB>
+            <AntwortC>Alan Turing</AntwortC>
+            <AntwortD>John von Neumann</AntwortD>
+        </Frage>
+        <Frage FID="f302" KID="k7">
+            <FrageName>Welches Datenbankmodell nutzt Tabellen mit Zeilen und Spalten?</FrageName>
+            <AntwortA>Relationales Datenbankmodell</AntwortA>
+            <AntwortB>Hierarchisches Datenbankmodell</AntwortB>
+            <AntwortC>Netzwerk-Datenbankmodell</AntwortC>
+            <AntwortD>Dokumentenorientiertes Datenbankmodell</AntwortD>
+        </Frage>
+        <Frage FID="f303" KID="k7">
+            <FrageName>Welche Big-O-Notation beschreibt die Laufzeit einer binären Suche in einer sortierten Liste?
+            </FrageName>
+            <AntwortA>O(n)</AntwortA>
+            <AntwortB>O(log n)</AntwortB>
+            <AntwortC>O(n²)</AntwortC>
+            <AntwortD>O(1)</AntwortD>
+        </Frage>
+        <Frage FID="f304" KID="k7">
+            <FrageName>Welches Prinzip beschreibt bei der objektorientierten Programmierung das „Verstecken“ von
+                Implementierungsdetails?
+            </FrageName>
+            <AntwortA>Polymorphismus</AntwortA>
+            <AntwortB>Kapselung</AntwortB>
+            <AntwortC>Vererbung</AntwortC>
+            <AntwortD>Abstraktion</AntwortD>
+        </Frage>
+        <Frage FID="f305" KID="k7">
+            <FrageName>Wie heißt das von Edsger W. Dijkstra vorgeschlagene Verfahren zur Pfadsuche in Graphen?
+            </FrageName>
+            <AntwortA>BFS (Breadth-First Search)</AntwortA>
+            <AntwortB>DFS (Depth-First Search)</AntwortB>
+            <AntwortC>Dijkstra-Algorithmus</AntwortC>
+            <AntwortD>Bellman-Ford-Algorithmus</AntwortD>
+        </Frage>
+        <Frage FID="f306" KID="k7">
+            <FrageName>Welches Format ist ein Standard zur Strukturierung von Daten mittels Tags?</FrageName>
+            <AntwortA>JSON</AntwortA>
+            <AntwortB>CSV</AntwortB>
+            <AntwortC>XML</AntwortC>
+            <AntwortD>YAML</AntwortD>
+        </Frage>
+        <Frage FID="f307" KID="k7">
+            <FrageName>Welche Datenstruktur verwendet das LIFO-Prinzip (Last In, First Out)?</FrageName>
+            <AntwortA>Queue</AntwortA>
+            <AntwortB>Stack</AntwortB>
+            <AntwortC>Linked List</AntwortC>
+            <AntwortD>Hash Map</AntwortD>
+        </Frage>
+        <Frage FID="f308" KID="k7">
+            <FrageName>Wie heißt das Konzept, bei dem ein Betriebssystem mehrere Prozesse scheinbar gleichzeitig
+                ausführt?
+            </FrageName>
+            <AntwortA>Multiprogramming</AntwortA>
+            <AntwortB>Multicasting</AntwortB>
+            <AntwortC>Multithreading</AntwortC>
+            <AntwortD>Multiplexing</AntwortD>
+        </Frage>
+        <Frage FID="f309" KID="k7">
+            <FrageName>Welche Schicht im OSI-Modell ist für die zuverlässige Ende-zu-Ende-Kommunikation zuständig?
+            </FrageName>
+            <AntwortA>Transportschicht</AntwortA>
+            <AntwortB>Sitzungsschicht</AntwortB>
+            <AntwortC>Netzwerkschicht</AntwortC>
+            <AntwortD>Darstellungsschicht</AntwortD>
+        </Frage>
+        <Frage FID="f310" KID="k7">
+            <FrageName>Welches SQL-Kommando dient der Abfrage von Daten aus einer Datenbanktabelle?</FrageName>
+            <AntwortA>INSERT</AntwortA>
+            <AntwortB>SELECT</AntwortB>
+            <AntwortC>UPDATE</AntwortC>
+            <AntwortD>DELETE</AntwortD>
+        </Frage>
+        <Frage FID="f311" KID="k7">
+            <FrageName>Welche Speicherstruktur wird üblicherweise für die Implementierung einer Breitensuche (BFS)
+                verwendet?
+            </FrageName>
+            <AntwortA>Stack</AntwortA>
+            <AntwortB>Queue</AntwortB>
+            <AntwortC>Array</AntwortC>
+            <AntwortD>Verkettete Liste</AntwortD>
+        </Frage>
+        <Frage FID="f312" KID="k7">
+            <FrageName>Wie nennt man die Einstellung, bei der eine Variable nur im jeweiligen Block sichtbar ist?
+            </FrageName>
+            <AntwortA>Statische Bindung</AntwortA>
+            <AntwortB>Globale Reichweite</AntwortB>
+            <AntwortC>Blockscope</AntwortC>
+            <AntwortD>Externe Bindung</AntwortD>
+        </Frage>
+        <Frage FID="f313" KID="k7">
+            <FrageName>Welche Komplexitätsklasse enthält Entscheidungsprobleme, die deterministisch in Polynomialzeit
+                lösbar sind?
+            </FrageName>
+            <AntwortA>NP</AntwortA>
+            <AntwortB>EXP</AntwortB>
+            <AntwortC>P</AntwortC>
+            <AntwortD>PSPACE</AntwortD>
+        </Frage>
+        <Frage FID="f314" KID="k7">
+            <FrageName>Welches Bit stellt in einer IP-Adresse (IPv4) das höchstwertige Bit dar?</FrageName>
+            <AntwortA>Das 7. Bit</AntwortA>
+            <AntwortB>Das 0. Bit</AntwortB>
+            <AntwortC>Das 31. Bit</AntwortC>
+            <AntwortD>Das 255. Bit</AntwortD>
+        </Frage>
+        <Frage FID="f315" KID="k7">
+            <FrageName>Welche Speicherart zeichnet sich durch besonders niedrige Zugriffszeiten aus?</FrageName>
+            <AntwortA>Festplatte (HDD)</AntwortA>
+            <AntwortB>Cache</AntwortB>
+            <AntwortC>SSD-Speicher</AntwortC>
+            <AntwortD>Optische Laufwerke</AntwortD>
+        </Frage>
+        <Frage FID="f316" KID="k7">
+            <FrageName>Welches Verschlüsselungsverfahren setzt auf ein Schlüsselpaar aus privatem und öffentlichem
+                Schlüssel?
+            </FrageName>
+            <AntwortA>Symmetrische Verschlüsselung</AntwortA>
+            <AntwortB>Hashing</AntwortB>
+            <AntwortC>Asymmetrische Verschlüsselung</AntwortC>
+            <AntwortD>Blockchiffre</AntwortD>
+        </Frage>
+        <Frage FID="f317" KID="k7">
+            <FrageName>Welcher Informatiker entwickelte das Betriebssystem „Linux“?</FrageName>
+            <AntwortA>Richard Stallman</AntwortA>
+            <AntwortB>Linus Torvalds</AntwortB>
+            <AntwortC>Ken Thompson</AntwortC>
+            <AntwortD>Bill Gates</AntwortD>
+        </Frage>
+        <Frage FID="f318" KID="k7">
+            <FrageName>Wie heißt das grundlegende Architekturmodell, bei dem Programme und Daten im selben Speicher
+                liegen?
+            </FrageName>
+            <AntwortA>Harvard-Architektur</AntwortA>
+            <AntwortB>Von-Neumann-Architektur</AntwortB>
+            <AntwortC>Mikrokernel-Architektur</AntwortC>
+            <AntwortD>CISC-Architektur</AntwortD>
+        </Frage>
+        <Frage FID="f319" KID="k7">
+            <FrageName>Welche Logik-Schaltung liefert nur dann „1“, wenn beide Eingänge 1 sind?</FrageName>
+            <AntwortA>AND-Gatter</AntwortA>
+            <AntwortB>OR-Gatter</AntwortB>
+            <AntwortC>XOR-Gatter</AntwortC>
+            <AntwortD>NOR-Gatter</AntwortD>
+        </Frage>
+        <Frage FID="f320" KID="k7">
+            <FrageName>Wie wird das Prinzip genannt, bei dem kleinere Teile eines Problems rekursiv gelöst und dann
+                kombiniert werden?
+            </FrageName>
+            <AntwortA>Dynamische Programmierung</AntwortA>
+            <AntwortB>Greedy-Algorithmus</AntwortB>
+            <AntwortC>Teile-und-herrsche (Divide and Conquer)</AntwortC>
+            <AntwortD>Backtracking</AntwortD>
+        </Frage>
+        <Frage FID="f321" KID="k7">
+            <FrageName>Welches der folgenden Dateisysteme ist typisch für Linux-Systeme?</FrageName>
+            <AntwortA>NTFS</AntwortA>
+            <AntwortB>HFS+</AntwortB>
+            <AntwortC>ext4</AntwortC>
+            <AntwortD>FAT32</AntwortD>
+        </Frage>
+        <Frage FID="f322" KID="k7">
+            <FrageName>Welches Vorgehensmodell beschreibt iterative Entwicklungsphasen mit festen Zeitabschnitten
+                (Sprints)?
+            </FrageName>
+            <AntwortA>Wasserfallmodell</AntwortA>
+            <AntwortB>Spiralmodell</AntwortB>
+            <AntwortC>Scrum</AntwortC>
+            <AntwortD>V-Modell</AntwortD>
+        </Frage>
+        <Frage FID="f323" KID="k7">
+            <FrageName>Welcher Mechanismus verhindert, dass mehrere Prozesse gleichzeitig auf dieselbe Ressource
+                zugreifen?
+            </FrageName>
+            <AntwortA>Kompression</AntwortA>
+            <AntwortB>Context Switch</AntwortB>
+            <AntwortC>Mutual Exclusion (Mutex)</AntwortC>
+            <AntwortD>Paging</AntwortD>
+        </Frage>
+        <Frage FID="f324" KID="k7">
+            <FrageName>Welche Programmiersprache ist vor allem bekannt durch ihre breite Verwendung im Bereich Data
+                Science?
+            </FrageName>
+            <AntwortA>C++</AntwortA>
+            <AntwortB>Java</AntwortB>
+            <AntwortC>Python</AntwortC>
+            <AntwortD>Go</AntwortD>
+        </Frage>
+        <Frage FID="f325" KID="k7">
+            <FrageName>Welche Schicht im TCP/IP-Modell entspricht in etwa der Vermittlungsschicht des OSI-Modells?
+            </FrageName>
+            <AntwortA>Internet-Schicht</AntwortA>
+            <AntwortB>Anwendungsschicht</AntwortB>
+            <AntwortC>Transport-Schicht</AntwortC>
+            <AntwortD>Netzzugriffsschicht</AntwortD>
+        </Frage>
+        <Frage FID="f326" KID="k7">
+            <FrageName>Welche Softwarekomponente übersetzt Quellcode direkt und führt ihn Zeile für Zeile aus?
+            </FrageName>
+            <AntwortA>Kompiler</AntwortA>
+            <AntwortB>Interpreter</AntwortB>
+            <AntwortC>Assembler</AntwortC>
+            <AntwortD>Linker</AntwortD>
+        </Frage>
+        <Frage FID="f327" KID="k7">
+            <FrageName>Was ist der Zweck von Git in der Softwareentwicklung?</FrageName>
+            <AntwortA>Erstellung von Benutzeroberflächen</AntwortA>
+            <AntwortB>Versionskontrolle</AntwortB>
+            <AntwortC>Bugtracking</AntwortC>
+            <AntwortD>Automatisiertes Testen</AntwortD>
+        </Frage>
+        <Frage FID="f328" KID="k7">
+            <FrageName>Wie nennt man die Struktur, in der jeder Knoten maximal zwei Kindknoten haben kann?</FrageName>
+            <AntwortA>Heap</AntwortA>
+            <AntwortB>Graph</AntwortB>
+            <AntwortC>Binärbaum</AntwortC>
+            <AntwortD>AVL-Baum</AntwortD>
+        </Frage>
+        <Frage FID="f329" KID="k7">
+            <FrageName>Welches Passwort-Hash-Verfahren ist bekannt für die Nutzung von „Salts“ und mehrfachem
+                Durchlauf?
+            </FrageName>
+            <AntwortA>MD5</AntwortA>
+            <AntwortB>SHA-1</AntwortB>
+            <AntwortC>bcrypt</AntwortC>
+            <AntwortD>CRC32</AntwortD>
+        </Frage>
+        <Frage FID="f330" KID="k7">
+            <FrageName>Wie heißt das Verfahren, das große Datenmengen in Teilmengen zerlegt, auf verschiedenen Rechnern
+                verarbeitet und dann zusammenführt?
+            </FrageName>
+            <AntwortA>MapReduce</AntwortA>
+            <AntwortB>Load Balancing</AntwortB>
+            <AntwortC>Pipeline-Processing</AntwortC>
+            <AntwortD>Sharding</AntwortD>
+        </Frage>
+        <Frage FID="f331" KID="k7">
+            <FrageName>Welche Methode gehört NICHT zur objektorientierten Analyse und Design nach UML?</FrageName>
+            <AntwortA>Anwendungsfalldiagramm (Use Case Diagram)</AntwortA>
+            <AntwortB>Klassendiagramm (Class Diagram)</AntwortB>
+            <AntwortC>Zustandsdiagramm (State Machine Diagram)</AntwortC>
+            <AntwortD>HTTP-Diagramm (Hypertext Transfer Protocol Diagram)</AntwortD>
+        </Frage>
+        <Frage FID="f332" KID="k7">
+            <FrageName>Welche Art von Test prüft einzelne, isolierte Module einer Anwendung?</FrageName>
+            <AntwortA>Integrationstest</AntwortA>
+            <AntwortB>Unittest</AntwortB>
+            <AntwortC>Systemtest</AntwortC>
+            <AntwortD>Akzeptanztest</AntwortD>
+        </Frage>
+        <Frage FID="f333" KID="k7">
+            <FrageName>Welches Konzept sorgt in einem Betriebssystem dafür, dass Prozesse nur auf ihren eigenen
+                Speicherbereich zugreifen können?
+            </FrageName>
+            <AntwortA>Zero-Knowledge</AntwortA>
+            <AntwortB>Virtual Memory (virtueller Speicher)</AntwortB>
+            <AntwortC>Multitenancy</AntwortC>
+            <AntwortD>Root-Zugriff</AntwortD>
+        </Frage>
+        <Frage FID="f334" KID="k7">
+            <FrageName>Wie bezeichnet man die Struktur zur Organisation von Dateien auf Speichermedien?</FrageName>
+            <AntwortA>Dateipuffer</AntwortA>
+            <AntwortB>Verzeichnisbaum (Directory Tree)</AntwortB>
+            <AntwortC>Redundanzstruktur</AntwortC>
+            <AntwortD>Indexierungstabelle</AntwortD>
+        </Frage>
+        <Frage FID="f335" KID="k7">
+            <FrageName>Welches Schlagwort bezieht sich auf das Lernen von Mustern und Vorhersagen aus Daten?</FrageName>
+            <AntwortA>Machine Learning</AntwortA>
+            <AntwortB>Virtualisierung</AntwortB>
+            <AntwortC>Cloud Computing</AntwortC>
+            <AntwortD>Embedded Systems</AntwortD>
+        </Frage>
+        <Frage FID="f336" KID="k7">
+            <FrageName>Welche Normalform in Datenbanken fordert, dass alle Nichtschlüsselattribute nur vom
+                Primärschlüssel abhängen?
+            </FrageName>
+            <AntwortA>1. Normalform</AntwortA>
+            <AntwortB>2. Normalform</AntwortB>
+            <AntwortC>3. Normalform</AntwortC>
+            <AntwortD>Boyce-Codd-Normalform</AntwortD>
+        </Frage>
+        <Frage FID="f337" KID="k7">
+            <FrageName>Welche Funktion hat ein Compiler?</FrageName>
+            <AntwortA>Er überwacht Netzwerkverkehr.</AntwortA>
+            <AntwortB>Er führt Programme sofort aus.</AntwortB>
+            <AntwortC>Er übersetzt Quellcode in Maschinencode.</AntwortC>
+            <AntwortD>Er verwaltet Betriebsmittelfreigaben.</AntwortD>
+        </Frage>
+        <Frage FID="f338" KID="k7">
+            <FrageName>Was bedeutet der Begriff „Open Source“ in der Softwareentwicklung?</FrageName>
+            <AntwortA>Die Software ist kostenpflichtig.</AntwortA>
+            <AntwortB>Der Quellcode ist frei zugänglich.</AntwortB>
+            <AntwortC>Die Software ist ausschließlich privat nutzbar.</AntwortC>
+            <AntwortD>Der Quellcode darf nicht verändert werden.</AntwortD>
+        </Frage>
+        <Frage FID="f339" KID="k7">
+            <FrageName>Welche Struktur eignet sich besonders zur Realisierung von Prioritätswarteschlangen?</FrageName>
+            <AntwortA>Stack</AntwortA>
+            <AntwortB>Binärer Suchbaum</AntwortB>
+            <AntwortC>Heap</AntwortC>
+            <AntwortD>Hash-Tabelle</AntwortD>
+        </Frage>
+        <Frage FID="f340" KID="k7">
+            <FrageName>Wie heißt das bekannte Framework, das ressourcenschonende virtuelle Maschinen (Container)
+                bereitstellt?
+            </FrageName>
+            <AntwortA>GitLab</AntwortA>
+            <AntwortB>Docker</AntwortB>
+            <AntwortC>Travis CI</AntwortC>
+            <AntwortD>Jenkins</AntwortD>
+        </Frage>
+        <Frage FID="f341" KID="k7">
+            <FrageName>In welcher Schicht des OSI-Modells arbeitet das HTTP-Protokoll?</FrageName>
+            <AntwortA>Netzwerkschicht</AntwortA>
+            <AntwortB>Transportschicht</AntwortB>
+            <AntwortC>Anwendungsschicht</AntwortC>
+            <AntwortD>Sicherungsschicht</AntwortD>
+        </Frage>
+        <Frage FID="f342" KID="k7">
+            <FrageName>Welches Suchverfahren benötigt KEIN sortiertes Datenfeld als Voraussetzung?</FrageName>
+            <AntwortA>Binäre Suche</AntwortA>
+            <AntwortB>Interpolation Search</AntwortB>
+            <AntwortC>Sequenzielle (lineare) Suche</AntwortC>
+            <AntwortD>Exponentielle Suche</AntwortD>
+        </Frage>
+        <Frage FID="f343" KID="k7">
+            <FrageName>Welcher Informatiker ist für die Entwicklung der Programmiersprache C maßgeblich
+                verantwortlich?
+            </FrageName>
+            <AntwortA>Dennis Ritchie</AntwortA>
+            <AntwortB>James Gosling</AntwortB>
+            <AntwortC>Bjarne Stroustrup</AntwortC>
+            <AntwortD>Guido van Rossum</AntwortD>
+        </Frage>
+        <Frage FID="f344" KID="k7">
+            <FrageName>Welche Technologie wird oft zur Realisierung von Web-APIs verwendet und basiert auf dem
+                HTTP-Protokoll?
+            </FrageName>
+            <AntwortA>SOAP</AntwortA>
+            <AntwortB>REST</AntwortB>
+            <AntwortC>SMTP</AntwortC>
+            <AntwortD>DNS</AntwortD>
+        </Frage>
+        <Frage FID="f345" KID="k7">
+            <FrageName>Welche Programmiersprache gilt als Vorläufer moderner objektorientierter Sprachen und führte u.a.
+                Klassen ein?
+            </FrageName>
+            <AntwortA>COBOL</AntwortA>
+            <AntwortB>Lisp</AntwortB>
+            <AntwortC>Smalltalk</AntwortC>
+            <AntwortD>Fortran</AntwortD>
+        </Frage>
+        <Frage FID="f346" KID="k7">
+            <FrageName>Welcher Algorithmus wird zur asymmetrischen Verschlüsselung häufig verwendet?</FrageName>
+            <AntwortA>RSA</AntwortA>
+            <AntwortB>AES</AntwortB>
+            <AntwortC>3DES</AntwortC>
+            <AntwortD>Blowfish</AntwortD>
+        </Frage>
+        <Frage FID="f347" KID="k7">
+            <FrageName>Welcher Mechanismus teilt den Arbeitsspeicher in feste oder variable Blöcke auf, um Prozesse
+                auszulagern?
+            </FrageName>
+            <AntwortA>Swapping</AntwortA>
+            <AntwortB>Virtualisierung</AntwortB>
+            <AntwortC>Defragmentierung</AntwortC>
+            <AntwortD>Mirroring</AntwortD>
+        </Frage>
+        <Frage FID="f348" KID="k7">
+            <FrageName>Was ist das Ziel von Continuous Integration (CI) in der Softwareentwicklung?</FrageName>
+            <AntwortA>Manuelles Testen jedes einzelnen Commits</AntwortA>
+            <AntwortB>Seltener Zusammenführen von Codeänderungen</AntwortB>
+            <AntwortC>Automatisiertes Zusammenführen und Testen von Code</AntwortC>
+            <AntwortD>Ausschließlich lokale Codeverwaltung</AntwortD>
+        </Frage>
+        <Frage FID="f349" KID="k7">
+            <FrageName>Wie nennt man den Prozess, bei dem Quellcode in eine weniger abstrakte Form (z.B. Bytecode)
+                übertragen wird?
+            </FrageName>
+            <AntwortA>Refactoring</AntwortA>
+            <AntwortB>Parsing</AntwortB>
+            <AntwortC>Kompilieren</AntwortC>
+            <AntwortD>Hooking</AntwortD>
+        </Frage>
+        <Frage FID="f350" KID="k7">
+            <FrageName>Welcher Datentyp fasst in vielen Programmiersprachen ganzzahlige Werte mit typischerweise 32
+                Bit?
+            </FrageName>
+            <AntwortA>byte</AntwortA>
+            <AntwortB>int</AntwortB>
+            <AntwortC>long</AntwortC>
+            <AntwortD>short</AntwortD>
+        </Frage>
+        <Frage FID="f351" KID="k8">
+            <FrageName>Welches Land hat die größte Bevölkerungszahl?</FrageName>
+            <AntwortA>China</AntwortA>
+            <AntwortB>Indien</AntwortB>
+            <AntwortC>USA</AntwortC>
+            <AntwortD>Indonesien</AntwortD>
+        </Frage>
+        <Frage FID="f352" KID="k8">
+            <FrageName>Welche Stadt ist die Hauptstadt von Australien?</FrageName>
+            <AntwortA>Canberra</AntwortA>
+            <AntwortB>Melbourne</AntwortB>
+            <AntwortC>Sydney</AntwortC>
+            <AntwortD>Perth</AntwortD>
+        </Frage>
+        <Frage FID="f353" KID="k8">
+            <FrageName>Welche Stadt liegt auf zwei Kontinenten (Europa und Asien)?</FrageName>
+            <AntwortA>Istanbul</AntwortA>
+            <AntwortB>Moskau</AntwortB>
+            <AntwortC>Kairo</AntwortC>
+            <AntwortD>Casablanca</AntwortD>
+        </Frage>
+        <Frage FID="f354" KID="k8">
+            <FrageName>Welches Land ist flächenmäßig das größte der Welt?</FrageName>
+            <AntwortA>Kanada</AntwortA>
+            <AntwortB>Russland</AntwortB>
+            <AntwortC>China</AntwortC>
+            <AntwortD>USA</AntwortD>
+        </Frage>
+        <Frage FID="f355" KID="k8">
+            <FrageName>Welches afrikanische Land hat Kairo als Hauptstadt?</FrageName>
+            <AntwortA>Ägypten</AntwortA>
+            <AntwortB>Marokko</AntwortB>
+            <AntwortC>Algerien</AntwortC>
+            <AntwortD>Sudan</AntwortD>
+        </Frage>
+        <Frage FID="f356" KID="k8">
+            <FrageName>Welcher Berg ist mit über 8.848 Metern der höchste Gipfel der Erde?</FrageName>
+            <AntwortA>K2</AntwortA>
+            <AntwortB>Kilimandscharo</AntwortB>
+            <AntwortC>Mount Everest</AntwortC>
+            <AntwortD>Mont Blanc</AntwortD>
+        </Frage>
+        <Frage FID="f357" KID="k8">
+            <FrageName>Wie heißt die Hauptstadt von Brasilien?</FrageName>
+            <AntwortA>Rio de Janeiro</AntwortA>
+            <AntwortB>São Paulo</AntwortB>
+            <AntwortC>Brasília</AntwortC>
+            <AntwortD>Salvador</AntwortD>
+        </Frage>
+        <Frage FID="f358" KID="k8">
+            <FrageName>Welches Land ist bekannt für die Māori-Kultur?</FrageName>
+            <AntwortA>Australien</AntwortA>
+            <AntwortB>Neuseeland</AntwortB>
+            <AntwortC>Papua-Neuguinea</AntwortC>
+            <AntwortD>Fidschi</AntwortD>
+        </Frage>
+        <Frage FID="f359" KID="k8">
+            <FrageName>An welchem Fluss liegt die Stadt Paris?</FrageName>
+            <AntwortA>Seine</AntwortA>
+            <AntwortB>Rhone</AntwortB>
+            <AntwortC>Loire</AntwortC>
+            <AntwortD>Rhein</AntwortD>
+        </Frage>
+        <Frage FID="f360" KID="k8">
+            <FrageName>Welches Land grenzt sowohl an den Atlantik als auch an den Pazifik?</FrageName>
+            <AntwortA>Mexiko</AntwortA>
+            <AntwortB>Kanada</AntwortB>
+            <AntwortC>Brasilien</AntwortC>
+            <AntwortD>Peru</AntwortD>
+        </Frage>
+        <Frage FID="f361" KID="k8">
+            <FrageName>Wie heißt die Hauptstadt von Kanada?</FrageName>
+            <AntwortA>Ottawa</AntwortA>
+            <AntwortB>Toronto</AntwortB>
+            <AntwortC>Montreal</AntwortC>
+            <AntwortD>Vancouver</AntwortD>
+        </Frage>
+        <Frage FID="f362" KID="k8">
+            <FrageName>Welches Land hat auf der Landkarte die Form eines Stiefels?</FrageName>
+            <AntwortA>Spanien</AntwortA>
+            <AntwortB>Italien</AntwortB>
+            <AntwortC>Griechenland</AntwortC>
+            <AntwortD>Portugal</AntwortD>
+        </Frage>
+        <Frage FID="f363" KID="k8">
+            <FrageName>Welches ist das größte Binnengewässer (Binnensee) der Erde?</FrageName>
+            <AntwortA>Tanganjikasee</AntwortA>
+            <AntwortB>Kaspisches Meer</AntwortB>
+            <AntwortC>Baikalsee</AntwortC>
+            <AntwortD>Victoriasee</AntwortD>
+        </Frage>
+        <Frage FID="f364" KID="k8">
+            <FrageName>Welche Insel ist mit über 2 Millionen Quadratkilometern die flächengrößte der Welt?</FrageName>
+            <AntwortA>Grönland</AntwortA>
+            <AntwortB>Madagaskar</AntwortB>
+            <AntwortC>Neuguinea</AntwortC>
+            <AntwortD>Borneo</AntwortD>
+        </Frage>
+        <Frage FID="f365" KID="k8">
+            <FrageName>Welches Land hat Rom als Hauptstadt?</FrageName>
+            <AntwortA>Frankreich</AntwortA>
+            <AntwortB>Spanien</AntwortB>
+            <AntwortC>Italien</AntwortC>
+            <AntwortD>Portugal</AntwortD>
+        </Frage>
+        <Frage FID="f366" KID="k8">
+            <FrageName>Welche Sprache hat weltweit die meisten Muttersprachler?</FrageName>
+            <AntwortA>Englisch</AntwortA>
+            <AntwortB>Spanisch</AntwortB>
+            <AntwortC>Chinesisch (Mandarin)</AntwortC>
+            <AntwortD>Hindi</AntwortD>
+        </Frage>
+        <Frage FID="f367" KID="k8">
+            <FrageName>In welchem Land befindet sich die Stadt Marrakesch?</FrageName>
+            <AntwortA>Marokko</AntwortA>
+            <AntwortB>Ägypten</AntwortB>
+            <AntwortC>Tunesien</AntwortC>
+            <AntwortD>Jordanien</AntwortD>
+        </Frage>
+        <Frage FID="f368" KID="k8">
+            <FrageName>Welches Land nennt man auch das „Land der aufgehenden Sonne“?</FrageName>
+            <AntwortA>China</AntwortA>
+            <AntwortB>Japan</AntwortB>
+            <AntwortC>Südkorea</AntwortC>
+            <AntwortD>Vietnam</AntwortD>
+        </Frage>
+        <Frage FID="f369" KID="k8">
+            <FrageName>Welche Meerenge trennt Afrika von Europa?</FrageName>
+            <AntwortA>Bosporus</AntwortA>
+            <AntwortB>Straße von Gibraltar</AntwortB>
+            <AntwortC>Malakkastraße</AntwortC>
+            <AntwortD>Beringstraße</AntwortD>
+        </Frage>
+        <Frage FID="f370" KID="k8">
+            <FrageName>Welches ist das bevölkerungsreichste Land Afrikas?</FrageName>
+            <AntwortA>Nigeria</AntwortA>
+            <AntwortB>Ägypten</AntwortB>
+            <AntwortC>Äthiopien</AntwortC>
+            <AntwortD>Südafrika</AntwortD>
+        </Frage>
+        <Frage FID="f371" KID="k8">
+            <FrageName>Welches Land ist kein Mitglied der Europäischen Union?</FrageName>
+            <AntwortA>Dänemark</AntwortA>
+            <AntwortB>Norwegen</AntwortB>
+            <AntwortC>Österreich</AntwortC>
+            <AntwortD>Rumänien</AntwortD>
+        </Frage>
+        <Frage FID="f372" KID="k8">
+            <FrageName>Welche Stadt ist als „Big Apple“ bekannt?</FrageName>
+            <AntwortA>Los Angeles</AntwortA>
+            <AntwortB>New York City</AntwortB>
+            <AntwortC>Chicago</AntwortC>
+            <AntwortD>Miami</AntwortD>
+        </Frage>
+        <Frage FID="f373" KID="k8">
+            <FrageName>Welcher Fluss fließt durch Wien, Bratislava, Budapest und Belgrad?</FrageName>
+            <AntwortA>Rhein</AntwortA>
+            <AntwortB>Donau</AntwortB>
+            <AntwortC>Po</AntwortC>
+            <AntwortD>Wolga</AntwortD>
+        </Frage>
+        <Frage FID="f374" KID="k8">
+            <FrageName>In welchem Land stehen die berühmten Moai-Statuen auf der Osterinsel?</FrageName>
+            <AntwortA>Chile</AntwortA>
+            <AntwortB>Peru</AntwortB>
+            <AntwortC>Ecuador</AntwortC>
+            <AntwortD>Argentinien</AntwortD>
+        </Frage>
+        <Frage FID="f375" KID="k8">
+            <FrageName>Welches Land hat die weltweit höchste Bevölkerungsdichte?</FrageName>
+            <AntwortA>Bangladesch</AntwortA>
+            <AntwortB>Monaco</AntwortB>
+            <AntwortC>Singapur</AntwortC>
+            <AntwortD>Vatikanstadt</AntwortD>
+        </Frage>
+        <Frage FID="f376" KID="k8">
+            <FrageName>Welches ist das längste Gebirge der Erde?</FrageName>
+            <AntwortA>Rocky Mountains</AntwortA>
+            <AntwortB>Anden</AntwortB>
+            <AntwortC>Uralgebirge</AntwortC>
+            <AntwortD>Atlasgebirge</AntwortD>
+        </Frage>
+        <Frage FID="f377" KID="k8">
+            <FrageName>Welche Stadt ist die Hauptstadt von Argentinien?</FrageName>
+            <AntwortA>Rosario</AntwortA>
+            <AntwortB>Córdoba</AntwortB>
+            <AntwortC>Mendoza</AntwortC>
+            <AntwortD>Buenos Aires</AntwortD>
+        </Frage>
+        <Frage FID="f378" KID="k8">
+            <FrageName>Welcher Staat besteht aus über 7.000 Inseln und liegt in Südostasien?</FrageName>
+            <AntwortA>Philippinen</AntwortA>
+            <AntwortB>Indonesien</AntwortB>
+            <AntwortC>Japan</AntwortC>
+            <AntwortD>Malaysia</AntwortD>
+        </Frage>
+        <Frage FID="f379" KID="k8">
+            <FrageName>Welche Stadt ist die Hauptstadt von Portugal?</FrageName>
+            <AntwortA>Porto</AntwortA>
+            <AntwortB>Lissabon</AntwortB>
+            <AntwortC>Coimbra</AntwortC>
+            <AntwortD>Faro</AntwortD>
+        </Frage>
+        <Frage FID="f380" KID="k8">
+            <FrageName>In welchem Land befinden sich die Victoriafälle?</FrageName>
+            <AntwortA>Südafrika</AntwortA>
+            <AntwortB>Tansania</AntwortB>
+            <AntwortC>Kenia</AntwortC>
+            <AntwortD>Zwischen Sambia und Simbabwe</AntwortD>
+        </Frage>
+        <Frage FID="f381" KID="k8">
+            <FrageName>Welches Gebirge teilt Europa und Asien in Russland?</FrageName>
+            <AntwortA>Kaukasus</AntwortA>
+            <AntwortB>Ural</AntwortB>
+            <AntwortC>Alpen</AntwortC>
+            <AntwortD>Tian Shan</AntwortD>
+        </Frage>
+        <Frage FID="f382" KID="k8">
+            <FrageName>In welchem Land liegt Machu Picchu, eine berühmte Inka-Stätte?</FrageName>
+            <AntwortA>Mexiko</AntwortA>
+            <AntwortB>Peru</AntwortB>
+            <AntwortC>Bolivien</AntwortC>
+            <AntwortD>Chile</AntwortD>
+        </Frage>
+        <Frage FID="f383" KID="k8">
+            <FrageName>Welches Land ist bekannt für die „Chinesische Mauer“?</FrageName>
+            <AntwortA>Indien</AntwortA>
+            <AntwortB>Südkorea</AntwortB>
+            <AntwortC>Japan</AntwortC>
+            <AntwortD>China</AntwortD>
+        </Frage>
+        <Frage FID="f384" KID="k8">
+            <FrageName>Welches Meer liegt zwischen Europa und Afrika?</FrageName>
+            <AntwortA>Nordsee</AntwortA>
+            <AntwortB>Mittelmeer</AntwortB>
+            <AntwortC>Schwarzes Meer</AntwortC>
+            <AntwortD>Totes Meer</AntwortD>
+        </Frage>
+        <Frage FID="f385" KID="k8">
+            <FrageName>Welche deutsche Stadt ist für den Kölner Dom bekannt?</FrageName>
+            <AntwortA>Berlin</AntwortA>
+            <AntwortB>Hamburg</AntwortB>
+            <AntwortC>Köln</AntwortC>
+            <AntwortD>München</AntwortD>
+        </Frage>
+        <Frage FID="f386" KID="k8">
+            <FrageName>Welche Stadt wurde einst Konstantinopel genannt?</FrageName>
+            <AntwortA>Teheran</AntwortA>
+            <AntwortB>Istanbul</AntwortB>
+            <AntwortC>Athen</AntwortC>
+            <AntwortD>Damaskus</AntwortD>
+        </Frage>
+        <Frage FID="f387" KID="k8">
+            <FrageName>Wie heißt die Hauptstadt von Thailand?</FrageName>
+            <AntwortA>Bangkok</AntwortA>
+            <AntwortB>Hanoi</AntwortB>
+            <AntwortC>Phnom Penh</AntwortC>
+            <AntwortD>Singapur</AntwortD>
+        </Frage>
+        <Frage FID="f388" KID="k8">
+            <FrageName>Welche Stadt ist die Hauptstadt von Russland?</FrageName>
+            <AntwortA>St. Petersburg</AntwortA>
+            <AntwortB>Moskau</AntwortB>
+            <AntwortC>Wolgograd</AntwortC>
+            <AntwortD>Sotschi</AntwortD>
+        </Frage>
+        <Frage FID="f389" KID="k8">
+            <FrageName>Welcher Fluss mündet in Ägypten ins Mittelmeer?</FrageName>
+            <AntwortA>Kongo</AntwortA>
+            <AntwortB>Nil</AntwortB>
+            <AntwortC>Niger</AntwortC>
+            <AntwortD>Sambesi</AntwortD>
+        </Frage>
+        <Frage FID="f390" KID="k8">
+            <FrageName>Welches Land hat weltweit die meisten direkten Nachbarländer?</FrageName>
+            <AntwortA>Russland</AntwortA>
+            <AntwortB>China</AntwortB>
+            <AntwortC>Deutschland</AntwortC>
+            <AntwortD>Brasilien</AntwortD>
+        </Frage>
+        <Frage FID="f391" KID="k8">
+            <FrageName>Welches Land ist für seine Tulpen und Windmühlen berühmt?</FrageName>
+            <AntwortA>Belgien</AntwortA>
+            <AntwortB>Niederlande</AntwortB>
+            <AntwortC>Dänemark</AntwortC>
+            <AntwortD>Schweden</AntwortD>
+        </Frage>
+        <Frage FID="f392" KID="k8">
+            <FrageName>Welches Land erstreckt sich über die Kontinente Südamerika und Antarktika?</FrageName>
+            <AntwortA>Argentinien</AntwortA>
+            <AntwortB>Chile</AntwortB>
+            <AntwortC>Australien</AntwortC>
+            <AntwortD>Neuseeland</AntwortD>
+        </Frage>
+        <Frage FID="f393" KID="k8">
+            <FrageName>Welcher Kontinent ist der zweitgrößte der Erde nach Asien?</FrageName>
+            <AntwortA>Afrika</AntwortA>
+            <AntwortB>Nordamerika</AntwortB>
+            <AntwortC>Europa</AntwortC>
+            <AntwortD>Südamerika</AntwortD>
+        </Frage>
+        <Frage FID="f394" KID="k8">
+            <FrageName>Welches Land hat Helsinki als Hauptstadt?</FrageName>
+            <AntwortA>Finnland</AntwortA>
+            <AntwortB>Schweden</AntwortB>
+            <AntwortC>Norwegen</AntwortC>
+            <AntwortD>Dänemark</AntwortD>
+        </Frage>
+        <Frage FID="f395" KID="k8">
+            <FrageName>In welchem Land befindet sich die Große Sphinx von Gizeh?</FrageName>
+            <AntwortA>Marokko</AntwortA>
+            <AntwortB>Ägypten</AntwortB>
+            <AntwortC>Jordanien</AntwortC>
+            <AntwortD>Libanon</AntwortD>
+        </Frage>
+        <Frage FID="f396" KID="k8">
+            <FrageName>Welche Stadt ist die Hauptstadt von Südkorea?</FrageName>
+            <AntwortA>Seoul</AntwortA>
+            <AntwortB>Pjöngjang</AntwortB>
+            <AntwortC>Tokio</AntwortC>
+            <AntwortD>Busan</AntwortD>
+        </Frage>
+        <Frage FID="f397" KID="k8">
+            <FrageName>In welchem Land steht der Schiefe Turm von Pisa?</FrageName>
+            <AntwortA>Frankreich</AntwortA>
+            <AntwortB>Italien</AntwortB>
+            <AntwortC>Spanien</AntwortC>
+            <AntwortD>Schweiz</AntwortD>
+        </Frage>
+        <Frage FID="f398" KID="k8">
+            <FrageName>Welches Gewässer trennt Großbritannien vom europäischen Festland?</FrageName>
+            <AntwortA>Ärmelkanal</AntwortA>
+            <AntwortB>Nordsee</AntwortB>
+            <AntwortC>Irische See</AntwortC>
+            <AntwortD>Biskaya</AntwortD>
+        </Frage>
+        <Frage FID="f399" KID="k8">
+            <FrageName>Welche Stadt ist die Hauptstadt von Kenia?</FrageName>
+            <AntwortA>Nairobi</AntwortA>
+            <AntwortB>Mombasa</AntwortB>
+            <AntwortC>Dar es Salaam</AntwortC>
+            <AntwortD>Kampala</AntwortD>
+        </Frage>
+        <Frage FID="f400" KID="k8">
+            <FrageName>Welche Vulkaninsel ist sowohl für Geysire als auch für Wasserfälle bekannt?</FrageName>
+            <AntwortA>Island</AntwortA>
+            <AntwortB>Neuseeland</AntwortB>
+            <AntwortC>Philippinen</AntwortC>
+            <AntwortD>Hawaii</AntwortD>
+        </Frage>
+        <Frage FID="f401" KID="k9">
+            <FrageName>In welchem deutschen Bundesland liegt die Stadt Mannheim?</FrageName>
+            <AntwortA>Rheinland-Pfalz</AntwortA>
+            <AntwortB>Baden-Württemberg</AntwortB>
+            <AntwortC>Bayern</AntwortC>
+            <AntwortD>Hessen</AntwortD>
+        </Frage>
+        <Frage FID="f402" KID="k9">
+            <FrageName>Mannheim wird auch „Quadratestadt“ genannt. Worauf bezieht sich dieser Begriff?</FrageName>
+            <AntwortA>Auf die quadratischen Fenster der historischen Häuser</AntwortA>
+            <AntwortB>Auf ein traditionelles Brettspiel aus Mannheim</AntwortB>
+            <AntwortC>Auf die schachbrettartige Anordnung der Innenstadt</AntwortC>
+            <AntwortD>Auf den Stadtwappen in Form eines Quadrats</AntwortD>
+        </Frage>
+        <Frage FID="f403" KID="k9">
+            <FrageName>Welcher Fluss mündet in Mannheim in den Rhein?</FrageName>
+            <AntwortA>Neckar</AntwortA>
+            <AntwortB>Main</AntwortB>
+            <AntwortC>Elbe</AntwortC>
+            <AntwortD>Donau</AntwortD>
+        </Frage>
+        <Frage FID="f404" KID="k9">
+            <FrageName>Welches imposante Bauwerk ist eines der größten Barockschlösser Europas und befindet sich in
+                Mannheim?
+            </FrageName>
+            <AntwortA>Das Heidelberger Schloss</AntwortA>
+            <AntwortB>Das Residenzschloss Ludwigsburg</AntwortB>
+            <AntwortC>Das Mannheimer Schloss</AntwortC>
+            <AntwortD>Schloss Schwetzingen</AntwortD>
+        </Frage>
+        <Frage FID="f405" KID="k9">
+            <FrageName>Wie nennt man das berühmte Wahrzeichen Mannheims, einen Turm in Jugendstiloptik nahe der City?
+            </FrageName>
+            <AntwortA>Stadtturm</AntwortA>
+            <AntwortB>Funkturm</AntwortB>
+            <AntwortC>Messeturm</AntwortC>
+            <AntwortD>Wasserturm</AntwortD>
+        </Frage>
+        <Frage FID="f406" KID="k9">
+            <FrageName>Welcher Pionier baute in Mannheim das erste praxistaugliche Automobil mit Verbrennungsmotor?
+            </FrageName>
+            <AntwortA>Gottlieb Daimler</AntwortA>
+            <AntwortB>Carl Benz</AntwortB>
+            <AntwortC>Rudolf Diesel</AntwortC>
+            <AntwortD>Wilhelm Maybach</AntwortD>
+        </Frage>
+        <Frage FID="f407" KID="k9">
+            <FrageName>Welches große Flusskreuz hat maßgeblichen Einfluss auf Mannheims wirtschaftliche Bedeutung als
+                Binnenhafen?
+            </FrageName>
+            <AntwortA>Rhein und Main</AntwortA>
+            <AntwortB>Rhein und Neckar</AntwortB>
+            <AntwortC>Neckar und Mosel</AntwortC>
+            <AntwortD>Donau und Isar</AntwortD>
+        </Frage>
+        <Frage FID="f408" KID="k9">
+            <FrageName>Wie heißt der bekannte Stadtpark in Mannheim, der unter anderem für sein Schmetterlingshaus und
+                sein Freizeitangebot bekannt ist?
+            </FrageName>
+            <AntwortA>Hofgarten</AntwortA>
+            <AntwortB>Luisenpark</AntwortB>
+            <AntwortC>Englischer Garten</AntwortC>
+            <AntwortD>Citypark</AntwortD>
+        </Frage>
+        <Frage FID="f409" KID="k9">
+            <FrageName>Welches große Theater in Mannheim ist eines der ältesten kommunalen Theater Europas?</FrageName>
+            <AntwortA>Residenztheater</AntwortA>
+            <AntwortB>Nationaltheater Mannheim</AntwortB>
+            <AntwortC>Staatstheater Mannheim-Neckarau</AntwortC>
+            <AntwortD>Kurpfalz-Theater</AntwortD>
+        </Frage>
+        <Frage FID="f410" KID="k9">
+            <FrageName>Welche Universität in Mannheim gilt als besonders renommiert im Bereich
+                Wirtschaftswissenschaften?
+            </FrageName>
+            <AntwortA>Universität Mannheim</AntwortA>
+            <AntwortB>Hochschule für Wirtschaft Mannheim</AntwortB>
+            <AntwortC>Popakademie Mannheim</AntwortC>
+            <AntwortD>Hochschule der Bundesagentur</AntwortD>
+        </Frage>
+        <Frage FID="f411" KID="k9">
+            <FrageName>Wie wird das Stadtwappen Mannheims farblich beschrieben?</FrageName>
+            <AntwortA>Grün-weiß</AntwortA>
+            <AntwortB>Blau-gelb-rot</AntwortB>
+            <AntwortC>Schwarz-gold</AntwortC>
+            <AntwortD>Rot-weiß-blau</AntwortD>
+        </Frage>
+        <Frage FID="f412" KID="k9">
+            <FrageName>Welcher beliebte Mannheimer Ort ist auch als „Monnemer Dreck“ bekannt?</FrageName>
+            <AntwortA>Ein Schokoladen-Souvenir</AntwortA>
+            <AntwortB>Ein lokaler Club in der Innenstadt</AntwortB>
+            <AntwortC>Die Reste der Neckarmauer</AntwortC>
+            <AntwortD>Ein dortiger Gebrauchtwarenmarkt</AntwortD>
+        </Frage>
+        <Frage FID="f413" KID="k9">
+            <FrageName>Welches bekannte Eis-Dessert wurde in Mannheim von Dario Fontanella erfunden?</FrageName>
+            <AntwortA>Spaghettieis</AntwortA>
+            <AntwortB>Bananensplit</AntwortB>
+            <AntwortC>Pizza-Eis</AntwortC>
+            <AntwortD>Eisknödel</AntwortD>
+        </Frage>
+        <Frage FID="f414" KID="k9">
+            <FrageName>Wie nennt man die Mundart, die man in Mannheim spricht, im regionalen Sprachgebrauch?</FrageName>
+            <AntwortA>Bayrisch</AntwortA>
+            <AntwortB>Badisch</AntwortB>
+            <AntwortC>Kurpfälzisch</AntwortC>
+            <AntwortD>Elsässisch</AntwortD>
+        </Frage>
+        <Frage FID="f415" KID="k9">
+            <FrageName>Welche große Sportarena in Mannheim ist Heimspielstätte der Adler Mannheim (Eishockey) und der
+                Rhein-Neckar Löwen (Handball)?
+            </FrageName>
+            <AntwortA>Olympiahalle Mannheim</AntwortA>
+            <AntwortB>Waldhof-Arena</AntwortB>
+            <AntwortC>SAP Arena</AntwortC>
+            <AntwortD>Neckarstadion</AntwortD>
+        </Frage>
+        <Frage FID="f416" KID="k9">
+            <FrageName>Mannheim ist Teil einer Metropolregion, die auch Heidelberg und Ludwigshafen umfasst. Wie heißt
+                sie?
+            </FrageName>
+            <AntwortA>Metropolregion Berlin-Brandenburg</AntwortA>
+            <AntwortB>Metropolregion Rhein-Neckar</AntwortB>
+            <AntwortC>Metropolregion Rhein-Ruhr</AntwortC>
+            <AntwortD>Metropolregion FrankfurtRheinMain</AntwortD>
+        </Frage>
+        <Frage FID="f417" KID="k9">
+            <FrageName>Wie nennt man in Mannheim die zentralen Einkaufsstraßen in der Innenstadt?</FrageName>
+            <AntwortA>Alte Meile</AntwortA>
+            <AntwortB>Planken</AntwortB>
+            <AntwortC>Quadrate-Galerie</AntwortC>
+            <AntwortD>Friedrichstraße</AntwortD>
+        </Frage>
+        <Frage FID="f418" KID="k9">
+            <FrageName>Welcher bekannte Park in Mannheim beherbergt unter anderem das
+                Luisenpark-Gondoletta-Bootsystem?
+            </FrageName>
+            <AntwortA>Schlossgarten</AntwortA>
+            <AntwortB>Herzogenriedpark</AntwortB>
+            <AntwortC>Luisenpark</AntwortC>
+            <AntwortD>Stadtpark Neckarau</AntwortD>
+        </Frage>
+        <Frage FID="f419" KID="k9">
+            <FrageName>Welche berühmte Persönlichkeit unternahm 1888 die erste weite Autofahrt von Mannheim nach
+                Pforzheim?
+            </FrageName>
+            <AntwortA>Bertha Benz</AntwortA>
+            <AntwortB>Clara Schumann</AntwortB>
+            <AntwortC>Lina Daimler</AntwortC>
+            <AntwortD>Helene Diesel</AntwortD>
+        </Frage>
+        <Frage FID="f420" KID="k9">
+            <FrageName>Welcher Fußballverein aus Mannheim hat eine lange Tradition und wird oft einfach „Waldhof“
+                genannt?
+            </FrageName>
+            <AntwortA>SV Waldhof Mannheim</AntwortA>
+            <AntwortB>VfR Mannheim</AntwortB>
+            <AntwortC>1. FC Mannheim</AntwortC>
+            <AntwortD>FC Quadrate Mannheim</AntwortD>
+        </Frage>
+        <Frage FID="f421" KID="k9">
+            <FrageName>Wie heißt der große zentrale Platz in Mannheim, an dem sich der markante Wasserturm befindet?
+            </FrageName>
+            <AntwortA>Paradeplatz</AntwortA>
+            <AntwortB>Friedrichsplatz</AntwortB>
+            <AntwortC>Schillerplatz</AntwortC>
+            <AntwortD>Theodor-Heuss-Platz</AntwortD>
+        </Frage>
+        <Frage FID="f422" KID="k9">
+            <FrageName>Unter welchem Kurfürsten erhielt Mannheim 1607 die Stadtrechte?</FrageName>
+            <AntwortA>Kurfürst Friedrich IV. von der Pfalz</AntwortA>
+            <AntwortB>Kurfürst Karl Theodor</AntwortB>
+            <AntwortC>Kurfürst Maximilian I.</AntwortC>
+            <AntwortD>Kurfürst August der Starke</AntwortD>
+        </Frage>
+        <Frage FID="f423" KID="k9">
+            <FrageName>Welche Veranstaltung ist ein bekanntes Techno-Festival, das regelmäßig in Mannheim stattfindet?
+            </FrageName>
+            <AntwortA>Nature One</AntwortA>
+            <AntwortB>Mayday</AntwortB>
+            <AntwortC>Time Warp</AntwortC>
+            <AntwortD>Syndicate</AntwortD>
+        </Frage>
+        <Frage FID="f424" KID="k9">
+            <FrageName>Welcher bekannte Komponist war Hofkapellmeister in Mannheim und prägte die „Mannheimer Schule“ in
+                der Musikgeschichte?
+            </FrageName>
+            <AntwortA>Wolfgang Amadeus Mozart</AntwortA>
+            <AntwortB>Johann Sebastian Bach</AntwortB>
+            <AntwortC>Johann Stamitz</AntwortC>
+            <AntwortD>Joseph Haydn</AntwortD>
+        </Frage>
+        <Frage FID="f425" KID="k9">
+            <FrageName>Welches Museum in Mannheim gehört zu den bedeutenden Ausstellungshäusern der Region und umfasst
+                mehrere Häuser wie das Zeughaus?
+            </FrageName>
+            <AntwortA>Kurpfälzisches Museum</AntwortA>
+            <AntwortB>Landesmuseum für Technik und Arbeit</AntwortB>
+            <AntwortC>Reiss-Engelhorn-Museen</AntwortC>
+            <AntwortD>ZKM (Zentrum für Kunst und Medien)</AntwortD>
+        </Frage>
+        <Frage FID="f426" KID="k9">
+            <FrageName>Wie viele Quadrate umfasst das historische Mannheimer Stadtzentrum ungefähr?</FrageName>
+            <AntwortA>Rund 20</AntwortA>
+            <AntwortB>Rund 50</AntwortB>
+            <AntwortC>Rund 100</AntwortC>
+            <AntwortD>Rund 200</AntwortD>
+        </Frage>
+        <Frage FID="f427" KID="k9">
+            <FrageName>In welchem Stadtteil von Mannheim befindet sich die Universität überwiegend?</FrageName>
+            <AntwortA>Neuostheim</AntwortA>
+            <AntwortB>Neckarau</AntwortB>
+            <AntwortC>Quadrate (Innenstadt)</AntwortC>
+            <AntwortD>Sandhofen</AntwortD>
+        </Frage>
+        <Frage FID="f428" KID="k9">
+            <FrageName>Welche Form hat das Grundrissmuster der Mannheimer Innenstadt?</FrageName>
+            <AntwortA>Ein Kreis mit konzentrischen Straßen</AntwortA>
+            <AntwortB>Ein schachbrettartiges Quadrat-System</AntwortB>
+            <AntwortC>Ein dreieckiges Festungsmodell</AntwortC>
+            <AntwortD>Eine spiralförmige Anordnung</AntwortD>
+        </Frage>
+        <Frage FID="f429" KID="k9">
+            <FrageName>Wie heißt der große zentrale Umsteigepunkt für den Nahverkehr in der Mannheimer Innenstadt?
+            </FrageName>
+            <AntwortA>Berliner Platz</AntwortA>
+            <AntwortB>Paradeplatz</AntwortB>
+            <AntwortC>Luisenring</AntwortC>
+            <AntwortD>Marktplatz</AntwortD>
+        </Frage>
+        <Frage FID="f430" KID="k9">
+            <FrageName>Welche Nachbarstadt liegt unmittelbar westlich von Mannheim, auf der anderen Seite des Rheins?
+            </FrageName>
+            <AntwortA>Ludwigshafen am Rhein</AntwortA>
+            <AntwortB>Worms</AntwortB>
+            <AntwortC>Speyer</AntwortC>
+            <AntwortD>Heidelberg</AntwortD>
+        </Frage>
+        <Frage FID="f431" KID="k9">
+            <FrageName>Mannheim ist die drittgrößte Stadt in Baden-Württemberg. Welche Stadt ist die größte im
+                Bundesland?
+            </FrageName>
+            <AntwortA>Karlsruhe</AntwortA>
+            <AntwortB>Freiburg im Breisgau</AntwortB>
+            <AntwortC>Heilbronn</AntwortC>
+            <AntwortD>Stuttgart</AntwortD>
+        </Frage>
+        <Frage FID="f432" KID="k9">
+            <FrageName>Wie heißt der berühmte Mannheimer Jazzclub, der seit Jahrzehnten ein Hotspot für Jazzmusik ist?
+            </FrageName>
+            <AntwortA>Blue Note Club</AntwortA>
+            <AntwortB>Ella & Louis</AntwortB>
+            <AntwortC>Harlem Jazz Lounge</AntwortC>
+            <AntwortD>Jazzkeller Quadrate</AntwortD>
+        </Frage>
+        <Frage FID="f433" KID="k9">
+            <FrageName>Welcher weltweit tätige Landmaschinenhersteller betreibt ein großes Werk in Mannheim?</FrageName>
+            <AntwortA>Fendt</AntwortA>
+            <AntwortB>John Deere</AntwortB>
+            <AntwortC>Case IH</AntwortC>
+            <AntwortD>Claas</AntwortD>
+        </Frage>
+        <Frage FID="f434" KID="k9">
+            <FrageName>Welche kulinarische Spezialität mit Mürbeteig, Nüssen oder Mandeln trägt einen Namen, der an
+                Mannheim erinnert?
+            </FrageName>
+            <AntwortA>Mannheimer Gugelhupf</AntwortA>
+            <AntwortB>Mannemer Dreck</AntwortB>
+            <AntwortC>Kurpfalz-Kipferl</AntwortC>
+            <AntwortD>Monnemer Linzer Torte</AntwortD>
+        </Frage>
+        <Frage FID="f435" KID="k9">
+            <FrageName>Welche der folgenden Aussagen beschreibt den historischen Zustand Mannheims im Zweiten
+                Weltkrieg?
+            </FrageName>
+            <AntwortA>Mannheim blieb vollständig unbeschadet</AntwortA>
+            <AntwortB>Mannheim wurde stark zerstört</AntwortB>
+            <AntwortC>Mannheim wurde evakuiert und zur Festung erklärt</AntwortC>
+            <AntwortD>Es gab keinerlei Luftangriffe auf Mannheim</AntwortD>
+        </Frage>
+        <Frage FID="f436" KID="k9">
+            <FrageName>Die Straßen in Mannheims Innenstadt sind nicht klassisch benannt, sondern wie bezeichnet?
+            </FrageName>
+            <AntwortA>Mit Vogelnamen</AntwortA>
+            <AntwortB>Mit Buchstaben und Zahlen (Quadrat-System)</AntwortB>
+            <AntwortC>Nach berühmten Dichtern</AntwortC>
+            <AntwortD>Sie haben gar keine Namen, nur Farben</AntwortD>
+        </Frage>
+        <Frage FID="f437" KID="k9">
+            <FrageName>Wie nennt man den Mannheimer Dialekt umgangssprachlich?</FrageName>
+            <AntwortA>Monnemerisch</AntwortA>
+            <AntwortB>Ma-Hessisch</AntwortB>
+            <AntwortC>Mannheimisch</AntwortC>
+            <AntwortD>Kurpfälzer Schwäbisch</AntwortD>
+        </Frage>
+        <Frage FID="f438" KID="k9">
+            <FrageName>Welcher dieser Stadtteile gehört zu Mannheim?</FrageName>
+            <AntwortA>Sandhofen</AntwortA>
+            <AntwortB>Neckargemünd</AntwortB>
+            <AntwortC>Schwetzingen</AntwortC>
+            <AntwortD>Weinheim</AntwortD>
+        </Frage>
+        <Frage FID="f439" KID="k9">
+            <FrageName>In welchem Mannheimer Stadtteil befindet sich der City Airport Mannheim?</FrageName>
+            <AntwortA>Innenstadt/Jungbusch</AntwortA>
+            <AntwortB>Neuostheim/Neuhermsheim</AntwortB>
+            <AntwortC>Neckarau</AntwortC>
+            <AntwortD>Feudenheim</AntwortD>
+        </Frage>
+        <Frage FID="f440" KID="k9">
+            <FrageName>Welches Bauwerk in Mannheim ist für seine barocke Kirche mit zwei Türmen und opulenter
+                Innenausstattung bekannt?
+            </FrageName>
+            <AntwortA>Jesuitenkirche Mannheim</AntwortA>
+            <AntwortB>Lutherkirche Mannheim</AntwortB>
+            <AntwortC>St. Peter und Paul</AntwortC>
+            <AntwortD>Marienkirche Mannheim</AntwortD>
+        </Frage>
+        <Frage FID="f441" KID="k9">
+            <FrageName>Wie heißt der zentrale Bahnhof Mannheims, der ein wichtiger Verkehrsknotenpunkt in
+                Südwestdeutschland ist?
+            </FrageName>
+            <AntwortA>Mannheim Hauptbahnhof</AntwortA>
+            <AntwortB>Mannheim Südstation</AntwortB>
+            <AntwortC>Mannheim Citybahnhof</AntwortC>
+            <AntwortD>Mannheim Quadrate-Bahnhof</AntwortD>
+        </Frage>
+        <Frage FID="f442" KID="k9">
+            <FrageName>Wer ist Erfinder der sogenannten „Laufmaschine“ (Vorgänger des Fahrrads), welche er 1817 erstmals
+                in Mannheim präsentierte?
+            </FrageName>
+            <AntwortA>Karl Drais</AntwortA>
+            <AntwortB>Carl Benz</AntwortB>
+            <AntwortC>Gottlieb Daimler</AntwortC>
+            <AntwortD>Ferdinand Porsche</AntwortD>
+        </Frage>
+        <Frage FID="f443" KID="k9">
+            <FrageName>Welcher Bundesstraße folgt man hauptsächlich, wenn man von Mannheim Richtung Heidelberg fährt?
+            </FrageName>
+            <AntwortA>B37</AntwortA>
+            <AntwortB>B44</AntwortB>
+            <AntwortC>B291</AntwortC>
+            <AntwortD>B38</AntwortD>
+        </Frage>
+        <Frage FID="f444" KID="k9">
+            <FrageName>Welcher Tierpark liegt im Luisenpark und ist für sein Schmetterlingshaus und Flamingos bekannt?
+            </FrageName>
+            <AntwortA>Der Tiergarten Mannheim</AntwortA>
+            <AntwortB>Der Luisenpark Zoo</AntwortB>
+            <AntwortC>Der Herzogenriedpark-Zoo</AntwortC>
+            <AntwortD>Der Vogelpark Rheinau</AntwortD>
+        </Frage>
+        <Frage FID="f445" KID="k9">
+            <FrageName>Wie wird Mannheims zentraler Weihnachtsmarkt in der Nähe des Wasserturms gemeinhin genannt?
+            </FrageName>
+            <AntwortA>Weihnachtsmarkt am Schloss</AntwortA>
+            <AntwortB>Christkindlmarkt Luisenpark</AntwortB>
+            <AntwortC>Weihnachtsmarkt am Wasserturm</AntwortC>
+            <AntwortD>Quadrate-Weihnacht</AntwortD>
+        </Frage>
+        <Frage FID="f446" KID="k9">
+            <FrageName>Welches Festival für elektronische Musik und Techno findet in Mannheims Maimarkthalle statt?
+            </FrageName>
+            <AntwortA>Love Parade</AntwortA>
+            <AntwortB>Mayday Mannheim</AntwortB>
+            <AntwortC>Time Warp</AntwortC>
+            <AntwortD>Nature One Mannheim</AntwortD>
+        </Frage>
+        <Frage FID="f447" KID="k9">
+            <FrageName>Welche Einrichtung in Mannheim bildet Studierende im Bereich Popmusik und Musikbusiness aus?
+            </FrageName>
+            <AntwortA>Popakademie Baden-Württemberg</AntwortA>
+            <AntwortB>Musikhochschule Mannheim</AntwortB>
+            <AntwortC>Kurpfalz-Akademie</AntwortC>
+            <AntwortD>Staatliche Akademie der Künste</AntwortD>
+        </Frage>
+        <Frage FID="f448" KID="k9">
+            <FrageName>Wie heißt Mannheims Dialektname („Spitzname“) in der regionalen Aussprache?</FrageName>
+            <AntwortA>Manhamm</AntwortA>
+            <AntwortB>Monnem</AntwortB>
+            <AntwortC>Monna</AntwortC>
+            <AntwortD>Nammheim</AntwortD>
+        </Frage>
+        <Frage FID="f449" KID="k9">
+            <FrageName>Welcher große Gartenschaupark befindet sich im Mannheimer Norden und wird ebenfalls für
+                Veranstaltungen genutzt?
+            </FrageName>
+            <AntwortA>Herzogenriedpark</AntwortA>
+            <AntwortB>Rosengarten Mannheim</AntwortB>
+            <AntwortC>Stadtpark Neckarau</AntwortC>
+            <AntwortD>Schlosspark Käfertal</AntwortD>
+        </Frage>
+        <Frage FID="f450" KID="k9">
+            <FrageName>Welches Motto wird in Mannheim häufig mit „Quadratestadt“ kombiniert und lautet offiziell „Leben.
+                ___ Quadrat.“?
+            </FrageName>
+            <AntwortA>Im</AntwortA>
+            <AntwortB>Ins</AntwortB>
+            <AntwortC>Durch</AntwortC>
+            <AntwortD>Am</AntwortD>
+        </Frage>
+        <Frage FID="f451" KID="k10">
+            <FrageName>Welche der folgenden Disziplinen ist KEINE Leichtathletik-Disziplin?</FrageName>
+            <AntwortA>Marathon</AntwortA>
+            <AntwortB>Speerwurf</AntwortB>
+            <AntwortC>100-Meter-Lauf</AntwortC>
+            <AntwortD>Eishockey</AntwortD>
+        </Frage>
+        <Frage FID="f452" KID="k10">
+            <FrageName>Wer ist der Rekordtorschütze der Fußball-Weltmeisterschaften (Stand 2023)?</FrageName>
+            <AntwortA>Miroslav Klose</AntwortA>
+            <AntwortB>Ronaldo (Brasilien)</AntwortB>
+            <AntwortC>Gerd Müller</AntwortC>
+            <AntwortD>Pelé</AntwortD>
+        </Frage>
+        <Frage FID="f453" KID="k10">
+            <FrageName>Welche Sportart wird typischerweise auf Eis mit einem Schläger und einem Puck gespielt?
+            </FrageName>
+            <AntwortA>Curling</AntwortA>
+            <AntwortB>Eishockey</AntwortB>
+            <AntwortC>Eiskunstlauf</AntwortC>
+            <AntwortD>Eisschnelllauf</AntwortD>
+        </Frage>
+        <Frage FID="f454" KID="k10">
+            <FrageName>Wie viele Spieler pro Team stehen beim Basketball in der Regel zeitgleich auf dem Feld?
+            </FrageName>
+            <AntwortA>4</AntwortA>
+            <AntwortB>5</AntwortB>
+            <AntwortC>6</AntwortC>
+            <AntwortD>7</AntwortD>
+        </Frage>
+        <Frage FID="f455" KID="k10">
+            <FrageName>In welcher US-Stadt wurde LeBron James geboren?</FrageName>
+            <AntwortA>Cleveland, Ohio</AntwortA>
+            <AntwortB>Akron, Ohio</AntwortB>
+            <AntwortC>Chicago, Illinois</AntwortC>
+            <AntwortD>Los Angeles, California</AntwortD>
+        </Frage>
+        <Frage FID="f456" KID="k10">
+            <FrageName>Welchen Spitznamen trägt LeBron James oft in der NBA?</FrageName>
+            <AntwortA>King James</AntwortA>
+            <AntwortB>The Diesel</AntwortB>
+            <AntwortC>The Flash</AntwortC>
+            <AntwortD>Air James</AntwortD>
+        </Frage>
+        <Frage FID="f457" KID="k10">
+            <FrageName>Mit welcher Trikotnummer war LeBron James während der meisten Zeit seiner Karriere bekannt?
+            </FrageName>
+            <AntwortA>6</AntwortA>
+            <AntwortB>9</AntwortB>
+            <AntwortC>23</AntwortC>
+            <AntwortD>33</AntwortD>
+        </Frage>
+        <Frage FID="f458" KID="k10">
+            <FrageName>Welche Tennisspielerin galt lange als Rekord-Grand-Slam-Siegerin (Einzel) in der Open Era?
+            </FrageName>
+            <AntwortA>Serena Williams</AntwortA>
+            <AntwortB>Steffi Graf</AntwortB>
+            <AntwortC>Margaret Court</AntwortC>
+            <AntwortD>Martina Navratilova</AntwortD>
+        </Frage>
+        <Frage FID="f459" KID="k10">
+            <FrageName>Wie viele Spieler befinden sich in einer Volleyball-Mannschaft gleichzeitig auf dem Feld?
+            </FrageName>
+            <AntwortA>4</AntwortA>
+            <AntwortB>5</AntwortB>
+            <AntwortC>6</AntwortC>
+            <AntwortD>7</AntwortD>
+        </Frage>
+        <Frage FID="f460" KID="k10">
+            <FrageName>Welches Land gewann die FIFA-Weltmeisterschaft 2014 in Brasilien?</FrageName>
+            <AntwortA>Brasilien</AntwortA>
+            <AntwortB>Deutschland</AntwortB>
+            <AntwortC>Argentinien</AntwortC>
+            <AntwortD>Spanien</AntwortD>
+        </Frage>
+        <Frage FID="f461" KID="k10">
+            <FrageName>Welches große Radrennen endet traditionell auf den Champs-Élysées in Paris?</FrageName>
+            <AntwortA>Giro d’Italia</AntwortA>
+            <AntwortB>Vuelta a España</AntwortB>
+            <AntwortC>Tour de France</AntwortC>
+            <AntwortD>Paris–Roubaix</AntwortD>
+        </Frage>
+        <Frage FID="f462" KID="k10">
+            <FrageName>Welches Team siegte in der NFL (American Football) am häufigsten beim Super Bowl (Stand 2023)?
+            </FrageName>
+            <AntwortA>New England Patriots</AntwortA>
+            <AntwortB>Pittsburgh Steelers</AntwortB>
+            <AntwortC>Dallas Cowboys</AntwortC>
+            <AntwortD>Green Bay Packers</AntwortD>
+        </Frage>
+        <Frage FID="f463" KID="k10">
+            <FrageName>Wie lang ist die Distanz eines Marathons?</FrageName>
+            <AntwortA>21,0975 km</AntwortA>
+            <AntwortB>36,195 km</AntwortB>
+            <AntwortC>42,195 km</AntwortC>
+            <AntwortD>50 km</AntwortD>
+        </Frage>
+        <Frage FID="f464" KID="k10">
+            <FrageName>In welcher Sportart wird der Davis Cup ausgetragen?</FrageName>
+            <AntwortA>Fußball</AntwortA>
+            <AntwortB>Handball</AntwortB>
+            <AntwortC>Tennis</AntwortC>
+            <AntwortD>Golf</AntwortD>
+        </Frage>
+        <Frage FID="f465" KID="k10">
+            <FrageName>Welcher Sportler hat die meisten Goldmedaillen bei Olympischen Spielen gewonnen?</FrageName>
+            <AntwortA>Michael Phelps</AntwortA>
+            <AntwortB>Usain Bolt</AntwortB>
+            <AntwortC>Carl Lewis</AntwortC>
+            <AntwortD>Mark Spitz</AntwortD>
+        </Frage>
+        <Frage FID="f466" KID="k10">
+            <FrageName>Wie heißt die weltweit höchste Motorsportklasse für Formelwagen?</FrageName>
+            <AntwortA>Formel 1</AntwortA>
+            <AntwortB>IndyCar</AntwortB>
+            <AntwortC>Formel E</AntwortC>
+            <AntwortD>GP2</AntwortD>
+        </Frage>
+        <Frage FID="f467" KID="k10">
+            <FrageName>Welcher Golfer gilt als einer der erfolgreichsten aller Zeiten mit 18 Major-Siegen?</FrageName>
+            <AntwortA>Tiger Woods</AntwortA>
+            <AntwortB>Jack Nicklaus</AntwortB>
+            <AntwortC>Arnold Palmer</AntwortC>
+            <AntwortD>Gary Player</AntwortD>
+        </Frage>
+        <Frage FID="f468" KID="k10">
+            <FrageName>Welche Sportart wird mit dem Schläger auf Rasen, Sand oder Hartplatz gespielt?</FrageName>
+            <AntwortA>Tischtennis</AntwortA>
+            <AntwortB>Baseball</AntwortB>
+            <AntwortC>Tennis</AntwortC>
+            <AntwortD>Cricket</AntwortD>
+        </Frage>
+        <Frage FID="f469" KID="k10">
+            <FrageName>Welches Land hat die meisten EM-Titel im Männer-Fußball (Stand 2023)?</FrageName>
+            <AntwortA>Spanien</AntwortA>
+            <AntwortB>Deutschland</AntwortB>
+            <AntwortC>Frankreich</AntwortC>
+            <AntwortD>Italien</AntwortD>
+        </Frage>
+        <Frage FID="f470" KID="k10">
+            <FrageName>Welche Kampfsportart ist für Würfe, Hebel und Würgegriffe bekannt?</FrageName>
+            <AntwortA>Karate</AntwortA>
+            <AntwortB>Judo</AntwortB>
+            <AntwortC>Taekwondo</AntwortC>
+            <AntwortD>Kickboxen</AntwortD>
+        </Frage>
+        <Frage FID="f471" KID="k10">
+            <FrageName>Wie viele Spieler stehen in einer Feldhockey-Mannschaft auf dem Platz?</FrageName>
+            <AntwortA>7</AntwortA>
+            <AntwortB>9</AntwortB>
+            <AntwortC>10</AntwortC>
+            <AntwortD>11</AntwortD>
+        </Frage>
+        <Frage FID="f472" KID="k10">
+            <FrageName>Welcher Basketballspieler ist für den legendären „Skyhook“ bekannt?</FrageName>
+            <AntwortA>Michael Jordan</AntwortA>
+            <AntwortB>Kareem Abdul-Jabbar</AntwortB>
+            <AntwortC>Shaquille O’Neal</AntwortC>
+            <AntwortD>Magic Johnson</AntwortD>
+        </Frage>
+        <Frage FID="f473" KID="k10">
+            <FrageName>Welche Nation richtete die Olympischen Winterspiele 2022 aus?</FrageName>
+            <AntwortA>Südkorea</AntwortA>
+            <AntwortB>China</AntwortB>
+            <AntwortC>Japan</AntwortC>
+            <AntwortD>Russland</AntwortD>
+        </Frage>
+        <Frage FID="f474" KID="k10">
+            <FrageName>Wie heißt die höchste Spielklasse im deutschen Herren-Fußball?</FrageName>
+            <AntwortA>1. Bundesliga</AntwortA>
+            <AntwortB>2. Bundesliga</AntwortB>
+            <AntwortC>DFB-Pokal</AntwortC>
+            <AntwortD>Regionalliga</AntwortD>
+        </Frage>
+        <Frage FID="f475" KID="k10">
+            <FrageName>Welcher Tennisspieler wird oft „King of Clay“ genannt?</FrageName>
+            <AntwortA>Roger Federer</AntwortA>
+            <AntwortB>Novak Djokovic</AntwortB>
+            <AntwortC>Rafael Nadal</AntwortC>
+            <AntwortD>Andy Murray</AntwortD>
+        </Frage>
+        <Frage FID="f476" KID="k10">
+            <FrageName>In welcher Sportart ist Simone Biles eine Ausnahmeathletin?</FrageName>
+            <AntwortA>Leichtathletik</AntwortA>
+            <AntwortB>Turnen</AntwortB>
+            <AntwortC>Schwimmen</AntwortC>
+            <AntwortD>Eiskunstlauf</AntwortD>
+        </Frage>
+        <Frage FID="f477" KID="k10">
+            <FrageName>Welche US-amerikanische Universität ist für das NCAA-College-Football-Team „Crimson Tide“
+                bekannt?
+            </FrageName>
+            <AntwortA>University of Alabama</AntwortA>
+            <AntwortB>Ohio State University</AntwortB>
+            <AntwortC>Clemson University</AntwortC>
+            <AntwortD>University of Michigan</AntwortD>
+        </Frage>
+        <Frage FID="f478" KID="k10">
+            <FrageName>In welchem Sport erzielt man Punkte durch erfolgreiche Körbe in einem 3,05 Meter hohen Korb?
+            </FrageName>
+            <AntwortA>Handball</AntwortA>
+            <AntwortB>Netball</AntwortB>
+            <AntwortC>Basketball</AntwortC>
+            <AntwortD>Volleyball</AntwortD>
+        </Frage>
+        <Frage FID="f479" KID="k10">
+            <FrageName>Wie viele Grand-Slam-Turniere gibt es im Tennis pro Jahr?</FrageName>
+            <AntwortA>2</AntwortA>
+            <AntwortB>3</AntwortB>
+            <AntwortC>4</AntwortC>
+            <AntwortD>5</AntwortD>
+        </Frage>
+        <Frage FID="f480" KID="k10">
+            <FrageName>Welcher Fußballer erhielt den Spitznamen „Der Kaiser“?</FrageName>
+            <AntwortA>Franz Beckenbauer</AntwortA>
+            <AntwortB>Lothar Matthäus</AntwortB>
+            <AntwortC>Gerd Müller</AntwortC>
+            <AntwortD>Philipp Lahm</AntwortD>
+        </Frage>
+        <Frage FID="f481" KID="k10">
+            <FrageName>Welcher Sportbegriff bezeichnet den „Einstand“ (Unentschieden) beim Tennis?</FrageName>
+            <AntwortA>Out</AntwortA>
+            <AntwortB>Ace</AntwortB>
+            <AntwortC>Deuce</AntwortC>
+            <AntwortD>Advantage</AntwortD>
+        </Frage>
+        <Frage FID="f482" KID="k10">
+            <FrageName>Welche Eishockeyliga ist die höchste Profiliga in Nordamerika?</FrageName>
+            <AntwortA>NHL</AntwortA>
+            <AntwortB>KHL</AntwortB>
+            <AntwortC>DEL</AntwortC>
+            <AntwortD>SHL</AntwortD>
+        </Frage>
+        <Frage FID="f483" KID="k10">
+            <FrageName>Welche Schwimmtechnik wird im Wettkampf gemeinhin als schnellste angesehen?</FrageName>
+            <AntwortA>Brustschwimmen</AntwortA>
+            <AntwortB>Kraulschwimmen (Freistil)</AntwortB>
+            <AntwortC>Rückenschwimmen</AntwortC>
+            <AntwortD>Schmetterling</AntwortD>
+        </Frage>
+        <Frage FID="f484" KID="k10">
+            <FrageName>Wie nennt man beim Bowling den Wurf, bei dem alle 10 Pins direkt fallen?</FrageName>
+            <AntwortA>Spare</AntwortA>
+            <AntwortB>Split</AntwortB>
+            <AntwortC>Strike</AntwortC>
+            <AntwortD>Gutter</AntwortD>
+        </Frage>
+        <Frage FID="f485" KID="k10">
+            <FrageName>Welcher dreifache Olympiasieger aus Jamaika dominierte den Sprint über 100m und 200m?</FrageName>
+            <AntwortA>Asafa Powell</AntwortA>
+            <AntwortB>Usain Bolt</AntwortB>
+            <AntwortC>Yohan Blake</AntwortC>
+            <AntwortD>Tyson Gay</AntwortD>
+        </Frage>
+        <Frage FID="f486" KID="k10">
+            <FrageName>Welcher Fußballclub hat die meisten Champions-League-Titel (Stand 2023)?</FrageName>
+            <AntwortA>FC Barcelona</AntwortA>
+            <AntwortB>Real Madrid</AntwortB>
+            <AntwortC>FC Bayern München</AntwortC>
+            <AntwortD>AC Mailand</AntwortD>
+        </Frage>
+        <Frage FID="f487" KID="k10">
+            <FrageName>In welchem Land wird das traditionsreiche Formel-1-Rennen in Monte Carlo ausgetragen?</FrageName>
+            <AntwortA>Frankreich</AntwortA>
+            <AntwortB>Italien</AntwortB>
+            <AntwortC>Monaco</AntwortC>
+            <AntwortD>Spanien</AntwortD>
+        </Frage>
+        <Frage FID="f488" KID="k10">
+            <FrageName>Welche Kampfsportart umfasst Schläge, Tritte und den Einsatz von Ellbogen und Knien?</FrageName>
+            <AntwortA>Muay Thai</AntwortA>
+            <AntwortB>Judo</AntwortB>
+            <AntwortC>Boxen</AntwortC>
+            <AntwortD>Karate</AntwortD>
+        </Frage>
+        <Frage FID="f489" KID="k10">
+            <FrageName>Wie viele Punkte gibt ein reguläres „Try“ beim Rugby Union?</FrageName>
+            <AntwortA>1</AntwortA>
+            <AntwortB>3</AntwortB>
+            <AntwortC>5</AntwortC>
+            <AntwortD>7</AntwortD>
+        </Frage>
+        <Frage FID="f490" KID="k10">
+            <FrageName>Welche Leichtathletik-Veranstaltung umfasst Laufen, Springen und Werfen in zehn Disziplinen?
+            </FrageName>
+            <AntwortA>Fünfkampf</AntwortA>
+            <AntwortB>Achtkampf</AntwortB>
+            <AntwortC>Zehnkampf</AntwortC>
+            <AntwortD>Dreikampf</AntwortD>
+        </Frage>
+        <Frage FID="f491" KID="k10">
+            <FrageName>In welcher US-Profiliga spielen die Los Angeles Lakers?</FrageName>
+            <AntwortA>MLB</AntwortA>
+            <AntwortB>NFL</AntwortB>
+            <AntwortC>NBA</AntwortC>
+            <AntwortD>NHL</AntwortD>
+        </Frage>
+        <Frage FID="f492" KID="k10">
+            <FrageName>Wie viele Gewinnsätze sind im Herren-Einzel bei Grand-Slam-Turnieren im Tennis üblich?
+            </FrageName>
+            <AntwortA>2</AntwortA>
+            <AntwortB>3</AntwortB>
+            <AntwortC>4</AntwortC>
+            <AntwortD>5</AntwortD>
+        </Frage>
+        <Frage FID="f493" KID="k10">
+            <FrageName>Welches Sportgerät verwendet man im Stabhochsprung?</FrageName>
+            <AntwortA>Speer</AntwortA>
+            <AntwortB>Stab</AntwortB>
+            <AntwortC>Hantel</AntwortC>
+            <AntwortD>Diskus</AntwortD>
+        </Frage>
+        <Frage FID="f494" KID="k10">
+            <FrageName>Wie viele Minuten dauert ein Handballspiel im Erwachsenenbereich (ohne Verlängerung)?</FrageName>
+            <AntwortA>30</AntwortA>
+            <AntwortB>40</AntwortB>
+            <AntwortC>50</AntwortC>
+            <AntwortD>60</AntwortD>
+        </Frage>
+        <Frage FID="f495" KID="k10">
+            <FrageName>Welche Fußballnation wird auch „Seleção“ genannt?</FrageName>
+            <AntwortA>Argentinien</AntwortA>
+            <AntwortB>Brasilien</AntwortB>
+            <AntwortC>Spanien</AntwortC>
+            <AntwortD>Portugal</AntwortD>
+        </Frage>
+        <Frage FID="f496" KID="k10">
+            <FrageName>Wie nennt man einen Home Run im Baseball, bei dem alle drei Bases besetzt sind und vier Punkte
+                erzielt werden?
+            </FrageName>
+            <AntwortA>Solo Home Run</AntwortA>
+            <AntwortB>Double</AntwortB>
+            <AntwortC>Grand Slam</AntwortC>
+            <AntwortD>Triple</AntwortD>
+        </Frage>
+        <Frage FID="f497" KID="k10">
+            <FrageName>Welcher Leichtathlet übersprang als erster Mensch 8,90m im Weitsprung?</FrageName>
+            <AntwortA>Carl Lewis</AntwortA>
+            <AntwortB>Mike Powell</AntwortB>
+            <AntwortC>Bob Beamon</AntwortC>
+            <AntwortD>Jesse Owens</AntwortD>
+        </Frage>
+        <Frage FID="f498" KID="k10">
+            <FrageName>Welche Sportart betreibt man, wenn man den K2 oder den Mount Everest besteigt?</FrageName>
+            <AntwortA>Mountainbiking</AntwortA>
+            <AntwortB>Bergsteigen</AntwortB>
+            <AntwortC>Wintersport</AntwortC>
+            <AntwortD>Crosslauf</AntwortD>
+        </Frage>
+        <Frage FID="f499" KID="k10">
+            <FrageName>Wie viele Punkte werden pro Ballwechsel im Badminton vergeben?</FrageName>
+            <AntwortA>Nur der aufschlagende Spieler kann punkten</AntwortA>
+            <AntwortB>Jeder Ballwechsel bringt einen Punkt</AntwortB>
+            <AntwortC>Nur beim dritten Schlag</AntwortC>
+            <AntwortD>Nur bei Netzfehler</AntwortD>
+        </Frage>
+        <Frage FID="f500" KID="k10">
+            <FrageName>Wie heißt der Preis, den der beste Spieler der NBA-Finals erhält?</FrageName>
+            <AntwortA>Finals Best Player Award</AntwortA>
+            <AntwortB>Larry O’Brien Trophy</AntwortB>
+            <AntwortC>Bill Russell NBA Finals MVP Award</AntwortC>
+            <AntwortD>Michael Jordan MVP Trophy</AntwortD>
+        </Frage>
     </Fragen>
 
     <Lösungen>
@@ -1306,5 +3938,355 @@
         <Loesung FID="f148">Gesundheitsgefahr (z. B. Reizung, Sensibilisierung)</Loesung>
         <Loesung FID="f149">Ein Gerät zum Ansaugen von Flüssigkeiten in eine Pipette</Loesung>
         <Loesung FID="f150">Mikroskop</Loesung>
+        <Loesung FID="f151">Queen</Loesung>
+        <Loesung FID="f152">Michael Jackson</Loesung>
+        <Loesung FID="f153">Oasis</Loesung>
+        <Loesung FID="f154">Madonna</Loesung>
+        <Loesung FID="f155">Ed Sheeran</Loesung>
+        <Loesung FID="f156">Wolfgang Amadeus Mozart</Loesung>
+        <Loesung FID="f157">ABBA</Loesung>
+        <Loesung FID="f158">„The Dark Side of the Moon“</Loesung>
+        <Loesung FID="f159">Woodstock</Loesung>
+        <Loesung FID="f160">Don Felder und Joe Walsh</Loesung>
+        <Loesung FID="f161">Adele</Loesung>
+        <Loesung FID="f162">Nirvana</Loesung>
+        <Loesung FID="f163">Lady Gaga</Loesung>
+        <Loesung FID="f164">Céline Dion</Loesung>
+        <Loesung FID="f165">USA und Großbritannien (simultan)</Loesung>
+        <Loesung FID="f166">Georg Friedrich Händel</Loesung>
+        <Loesung FID="f167">Falco (Österreicher, aber deutschsprachig)</Loesung>
+        <Loesung FID="f168">„Please Please Me“</Loesung>
+        <Loesung FID="f169">AC/DC</Loesung>
+        <Loesung FID="f170">Sting</Loesung>
+        <Loesung FID="f171">Britney Spears</Loesung>
+        <Loesung FID="f172">Donauinselfest</Loesung>
+        <Loesung FID="f173">Cyndi Lauper</Loesung>
+        <Loesung FID="f174">George Michael</Loesung>
+        <Loesung FID="f175">Lady Gaga</Loesung>
+        <Loesung FID="f176">Elton John</Loesung>
+        <Loesung FID="f177">Backstreet Boys</Loesung>
+        <Loesung FID="f178">Saxophon</Loesung>
+        <Loesung FID="f179">„Zitti e buoni“</Loesung>
+        <Loesung FID="f180">„Für Elise“</Loesung>
+        <Loesung FID="f181">Destiny’s Child</Loesung>
+        <Loesung FID="f182">John Lennon</Loesung>
+        <Loesung FID="f183">Avicii</Loesung>
+        <Loesung FID="f184">Carlos Santana</Loesung>
+        <Loesung FID="f185">Klavier</Loesung>
+        <Loesung FID="f186">„Love Me Do“</Loesung>
+        <Loesung FID="f187">Taylor Swift</Loesung>
+        <Loesung FID="f188">Nirvana</Loesung>
+        <Loesung FID="f189">Ludwig van Beethoven</Loesung>
+        <Loesung FID="f190">2Pac (Tupac Shakur)</Loesung>
+        <Loesung FID="f191">Christina Aguilera</Loesung>
+        <Loesung FID="f192">Freddie Mercury</Loesung>
+        <Loesung FID="f193">„I Will Always Love You“</Loesung>
+        <Loesung FID="f194">Richard Strauss</Loesung>
+        <Loesung FID="f195">Spice Girls</Loesung>
+        <Loesung FID="f196">Phil Collins</Loesung>
+        <Loesung FID="f197">Metallica</Loesung>
+        <Loesung FID="f198">Prince</Loesung>
+        <Loesung FID="f199">AC/DC</Loesung>
+        <Loesung FID="f200">Alexander Klaws</Loesung>
+        <Loesung FID="f201">Die Dampfmaschine von James Watt</Loesung>
+        <Loesung FID="f202">Alexander Graham Bell</Loesung>
+        <Loesung FID="f203">Der Transistor</Loesung>
+        <Loesung FID="f204">Die Erfindung des integrierten Schaltkreises</Loesung>
+        <Loesung FID="f205">Der Buchdruck mit beweglichen Lettern</Loesung>
+        <Loesung FID="f206">Der Mikrochip (IC)</Loesung>
+        <Loesung FID="f207">Das ARPANET</Loesung>
+        <Loesung FID="f208">Saturn V</Loesung>
+        <Loesung FID="f209">Carl Benz</Loesung>
+        <Loesung FID="f210">Die Gebrüder Wright</Loesung>
+        <Loesung FID="f211">Roboter</Loesung>
+        <Loesung FID="f212">Die Glühlampe von Edison</Loesung>
+        <Loesung FID="f213">Die Waschmaschine</Loesung>
+        <Loesung FID="f214">Der Kühlschrank</Loesung>
+        <Loesung FID="f215">Der Fernseher</Loesung>
+        <Loesung FID="f216">Kommunikationssatelliten</Loesung>
+        <Loesung FID="f217">Das Smartphone</Loesung>
+        <Loesung FID="f218">Der Mikroprozessor</Loesung>
+        <Loesung FID="f219">Der elektrische Aufzug</Loesung>
+        <Loesung FID="f220">Das Rastertunnelmikroskop</Loesung>
+        <Loesung FID="f221">Computertomografie</Loesung>
+        <Loesung FID="f222">Der Herzschrittmacher</Loesung>
+        <Loesung FID="f223">Der Kernreaktor</Loesung>
+        <Loesung FID="f224">In-vitro-Fertilisation</Loesung>
+        <Loesung FID="f225">Laser</Loesung>
+        <Loesung FID="f226">GPS</Loesung>
+        <Loesung FID="f227">CRISPR/Cas</Loesung>
+        <Loesung FID="f228">Large Hadron Collider (LHC)</Loesung>
+        <Loesung FID="f229">3D-Druck</Loesung>
+        <Loesung FID="f230">LIDAR und neuronale Netze</Loesung>
+        <Loesung FID="f231">Concorde</Loesung>
+        <Loesung FID="f232">Hyperloop</Loesung>
+        <Loesung FID="f233">Photovoltaik</Loesung>
+        <Loesung FID="f234">Roboterarme in der Fertigung</Loesung>
+        <Loesung FID="f235">Quantencomputing</Loesung>
+        <Loesung FID="f236">Glasfasertechnik</Loesung>
+        <Loesung FID="f237">Bluetooth</Loesung>
+        <Loesung FID="f238">Wi-Fi (WLAN)</Loesung>
+        <Loesung FID="f239">Ein System von Hypertext-Dokumenten</Loesung>
+        <Loesung FID="f240">Vertikales Landeverfahren (Falcon 9)</Loesung>
+        <Loesung FID="f241">International Space Station (ISS)</Loesung>
+        <Loesung FID="f242">Sputnik 1</Loesung>
+        <Loesung FID="f243">Die Tesla-Spule</Loesung>
+        <Loesung FID="f244">Maglev</Loesung>
+        <Loesung FID="f245">Cassini-Huygens</Loesung>
+        <Loesung FID="f246">Die Elektronenröhre</Loesung>
+        <Loesung FID="f247">Der Flugschreiber (Black Box)</Loesung>
+        <Loesung FID="f248">Moores Gesetz</Loesung>
+        <Loesung FID="f249">ENIAC</Loesung>
+        <Loesung FID="f250">Arpanet</Loesung>
+        <Loesung FID="f251">Pong</Loesung>
+        <Loesung FID="f252">Nintendo</Loesung>
+        <Loesung FID="f253">League of Legends</Loesung>
+        <Loesung FID="f254">Maze War</Loesung>
+        <Loesung FID="f255">1986</Loesung>
+        <Loesung FID="f256">PlayStation 2</Loesung>
+        <Loesung FID="f257">PlayerUnknown’s Battlegrounds</Loesung>
+        <Loesung FID="f258">Mojang</Loesung>
+        <Loesung FID="f259">Just Cause</Loesung>
+        <Loesung FID="f260">Russland</Loesung>
+        <Loesung FID="f261">Quake</Loesung>
+        <Loesung FID="f262">Ubisoft</Loesung>
+        <Loesung FID="f263">Hideo Kojima</Loesung>
+        <Loesung FID="f264">Resident Evil</Loesung>
+        <Loesung FID="f265">Demon’s Souls</Loesung>
+        <Loesung FID="f266">Dune II</Loesung>
+        <Loesung FID="f267">The Sims</Loesung>
+        <Loesung FID="f268">Mortal Kombat</Loesung>
+        <Loesung FID="f269">The Witcher 3: Wild Hunt</Loesung>
+        <Loesung FID="f270">HAL Laboratory</Loesung>
+        <Loesung FID="f271">Sonic</Loesung>
+        <Loesung FID="f272">World of Warcraft</Loesung>
+        <Loesung FID="f273">Riot Games</Loesung>
+        <Loesung FID="f274">The Elder Scrolls</Loesung>
+        <Loesung FID="f275">Rundenbasierte Strategie</Loesung>
+        <Loesung FID="f276">Nintendo</Loesung>
+        <Loesung FID="f277">Pokémon</Loesung>
+        <Loesung FID="f278">Super Mario Bros.</Loesung>
+        <Loesung FID="f279">Halo</Loesung>
+        <Loesung FID="f280">Harvest Moon</Loesung>
+        <Loesung FID="f281">Bandai Namco</Loesung>
+        <Loesung FID="f282">Counter-Strike</Loesung>
+        <Loesung FID="f283">Electronic Arts</Loesung>
+        <Loesung FID="f284">Sony</Loesung>
+        <Loesung FID="f285">Pac-Man</Loesung>
+        <Loesung FID="f286">Dark Souls und Bloodborne</Loesung>
+        <Loesung FID="f287">Echtzeit-Strategie</Loesung>
+        <Loesung FID="f288">Epic Games</Loesung>
+        <Loesung FID="f289">Xbox</Loesung>
+        <Loesung FID="f290">League of Legends</Loesung>
+        <Loesung FID="f291">Kingdom Hearts</Loesung>
+        <Loesung FID="f292">Call of Duty</Loesung>
+        <Loesung FID="f293">Eidos/Core Design</Loesung>
+        <Loesung FID="f294">Super Mario 64</Loesung>
+        <Loesung FID="f295">Thief</Loesung>
+        <Loesung FID="f296">Nintendo</Loesung>
+        <Loesung FID="f297">Square Enix</Loesung>
+        <Loesung FID="f298">Shovel Knight</Loesung>
+        <Loesung FID="f299">PlayStation</Loesung>
+        <Loesung FID="f300">Castlevania: Symphony of the Night</Loesung>
+        <Loesung FID="f301">Alan Turing</Loesung>
+        <Loesung FID="f302">Relationales Datenbankmodell</Loesung>
+        <Loesung FID="f303">O(log n)</Loesung>
+        <Loesung FID="f304">Kapselung</Loesung>
+        <Loesung FID="f305">Dijkstra-Algorithmus</Loesung>
+        <Loesung FID="f306">XML</Loesung>
+        <Loesung FID="f307">Stack</Loesung>
+        <Loesung FID="f308">Multiprogramming</Loesung>
+        <Loesung FID="f309">Transportschicht</Loesung>
+        <Loesung FID="f310">SELECT</Loesung>
+        <Loesung FID="f311">Queue</Loesung>
+        <Loesung FID="f312">Blockscope</Loesung>
+        <Loesung FID="f313">P</Loesung>
+        <Loesung FID="f314">Das 31. Bit</Loesung>
+        <Loesung FID="f315">Cache</Loesung>
+        <Loesung FID="f316">Asymmetrische Verschlüsselung</Loesung>
+        <Loesung FID="f317">Linus Torvalds</Loesung>
+        <Loesung FID="f318">Von-Neumann-Architektur</Loesung>
+        <Loesung FID="f319">AND-Gatter</Loesung>
+        <Loesung FID="f320">Teile-und-herrsche (Divide and Conquer)</Loesung>
+        <Loesung FID="f321">ext4</Loesung>
+        <Loesung FID="f322">Scrum</Loesung>
+        <Loesung FID="f323">Mutual Exclusion (Mutex)</Loesung>
+        <Loesung FID="f324">Python</Loesung>
+        <Loesung FID="f325">Internet-Schicht</Loesung>
+        <Loesung FID="f326">Interpreter</Loesung>
+        <Loesung FID="f327">Versionskontrolle</Loesung>
+        <Loesung FID="f328">Binärbaum</Loesung>
+        <Loesung FID="f329">bcrypt</Loesung>
+        <Loesung FID="f330">MapReduce</Loesung>
+        <Loesung FID="f331">HTTP-Diagramm (Hypertext Transfer Protocol Diagram)</Loesung>
+        <Loesung FID="f332">Unittest</Loesung>
+        <Loesung FID="f333">Virtual Memory (virtueller Speicher)</Loesung>
+        <Loesung FID="f334">Verzeichnisbaum (Directory Tree)</Loesung>
+        <Loesung FID="f335">Machine Learning</Loesung>
+        <Loesung FID="f336">3. Normalform</Loesung>
+        <Loesung FID="f337">Er übersetzt Quellcode in Maschinencode.</Loesung>
+        <Loesung FID="f338">Der Quellcode ist frei zugänglich.</Loesung>
+        <Loesung FID="f339">Heap</Loesung>
+        <Loesung FID="f340">Docker</Loesung>
+        <Loesung FID="f341">Anwendungsschicht</Loesung>
+        <Loesung FID="f342">Sequenzielle (lineare) Suche</Loesung>
+        <Loesung FID="f343">Dennis Ritchie</Loesung>
+        <Loesung FID="f344">REST</Loesung>
+        <Loesung FID="f345">Smalltalk</Loesung>
+        <Loesung FID="f346">RSA</Loesung>
+        <Loesung FID="f347">Swapping</Loesung>
+        <Loesung FID="f348">Automatisiertes Zusammenführen und Testen von Code</Loesung>
+        <Loesung FID="f349">Kompilieren</Loesung>
+        <Loesung FID="f350">int</Loesung>
+        <Loesung FID="f351">China</Loesung>
+        <Loesung FID="f352">Canberra</Loesung>
+        <Loesung FID="f353">Istanbul</Loesung>
+        <Loesung FID="f354">Russland</Loesung>
+        <Loesung FID="f355">Ägypten</Loesung>
+        <Loesung FID="f356">Mount Everest</Loesung>
+        <Loesung FID="f357">Brasília</Loesung>
+        <Loesung FID="f358">Neuseeland</Loesung>
+        <Loesung FID="f359">Seine</Loesung>
+        <Loesung FID="f360">Mexiko</Loesung>
+        <Loesung FID="f361">Ottawa</Loesung>
+        <Loesung FID="f362">Italien</Loesung>
+        <Loesung FID="f363">Kaspisches Meer</Loesung>
+        <Loesung FID="f364">Grönland</Loesung>
+        <Loesung FID="f365">Italien</Loesung>
+        <Loesung FID="f366">Chinesisch (Mandarin)</Loesung>
+        <Loesung FID="f367">Marokko</Loesung>
+        <Loesung FID="f368">Japan</Loesung>
+        <Loesung FID="f369">Straße von Gibraltar</Loesung>
+        <Loesung FID="f370">Nigeria</Loesung>
+        <Loesung FID="f371">Norwegen</Loesung>
+        <Loesung FID="f372">New York City</Loesung>
+        <Loesung FID="f373">Donau</Loesung>
+        <Loesung FID="f374">Chile</Loesung>
+        <Loesung FID="f375">Monaco</Loesung>
+        <Loesung FID="f376">Anden</Loesung>
+        <Loesung FID="f377">Buenos Aires</Loesung>
+        <Loesung FID="f378">Philippinen</Loesung>
+        <Loesung FID="f379">Lissabon</Loesung>
+        <Loesung FID="f380">Zwischen Sambia und Simbabwe</Loesung>
+        <Loesung FID="f381">Ural</Loesung>
+        <Loesung FID="f382">Peru</Loesung>
+        <Loesung FID="f383">China</Loesung>
+        <Loesung FID="f384">Mittelmeer</Loesung>
+        <Loesung FID="f385">Köln</Loesung>
+        <Loesung FID="f386">Istanbul</Loesung>
+        <Loesung FID="f387">Bangkok</Loesung>
+        <Loesung FID="f388">Moskau</Loesung>
+        <Loesung FID="f389">Nil</Loesung>
+        <Loesung FID="f390">China</Loesung>
+        <Loesung FID="f391">Niederlande</Loesung>
+        <Loesung FID="f392">Chile</Loesung>
+        <Loesung FID="f393">Afrika</Loesung>
+        <Loesung FID="f394">Finnland</Loesung>
+        <Loesung FID="f395">Ägypten</Loesung>
+        <Loesung FID="f396">Seoul</Loesung>
+        <Loesung FID="f397">Italien</Loesung>
+        <Loesung FID="f398">Ärmelkanal</Loesung>
+        <Loesung FID="f399">Nairobi</Loesung>
+        <Loesung FID="f400">Island</Loesung>
+        <Loesung FID="f401">Baden-Württemberg</Loesung>
+        <Loesung FID="f402">Auf die schachbrettartige Anordnung der Innenstadt</Loesung>
+        <Loesung FID="f403">Neckar</Loesung>
+        <Loesung FID="f404">Das Mannheimer Schloss</Loesung>
+        <Loesung FID="f405">Wasserturm</Loesung>
+        <Loesung FID="f406">Carl Benz</Loesung>
+        <Loesung FID="f407">Rhein und Neckar</Loesung>
+        <Loesung FID="f408">Luisenpark</Loesung>
+        <Loesung FID="f409">Nationaltheater Mannheim</Loesung>
+        <Loesung FID="f410">Universität Mannheim</Loesung>
+        <Loesung FID="f411">Blau-gelb-rot</Loesung>
+        <Loesung FID="f412">Ein Schokoladen-Souvenir</Loesung>
+        <Loesung FID="f413">Spaghettieis</Loesung>
+        <Loesung FID="f414">Kurpfälzisch</Loesung>
+        <Loesung FID="f415">SAP Arena</Loesung>
+        <Loesung FID="f416">Metropolregion Rhein-Neckar</Loesung>
+        <Loesung FID="f417">Planken</Loesung>
+        <Loesung FID="f418">Luisenpark</Loesung>
+        <Loesung FID="f419">Bertha Benz</Loesung>
+        <Loesung FID="f420">SV Waldhof Mannheim</Loesung>
+        <Loesung FID="f421">Friedrichsplatz</Loesung>
+        <Loesung FID="f422">Kurfürst Friedrich IV. von der Pfalz</Loesung>
+        <Loesung FID="f423">Time Warp</Loesung>
+        <Loesung FID="f424">Johann Stamitz</Loesung>
+        <Loesung FID="f425">Reiss-Engelhorn-Museen</Loesung>
+        <Loesung FID="f426">Rund 100</Loesung>
+        <Loesung FID="f427">Quadrate (Innenstadt)</Loesung>
+        <Loesung FID="f428">Ein schachbrettartiges Quadrat-System</Loesung>
+        <Loesung FID="f429">Paradeplatz</Loesung>
+        <Loesung FID="f430">Ludwigshafen am Rhein</Loesung>
+        <Loesung FID="f431">Stuttgart</Loesung>
+        <Loesung FID="f432">Ella & Louis</Loesung>
+        <Loesung FID="f433">John Deere</Loesung>
+        <Loesung FID="f434">Mannemer Dreck</Loesung>
+        <Loesung FID="f435">Mannheim wurde stark zerstört</Loesung>
+        <Loesung FID="f436">Mit Buchstaben und Zahlen (Quadrat-System)</Loesung>
+        <Loesung FID="f437">Monnemerisch</Loesung>
+        <Loesung FID="f438">Sandhofen</Loesung>
+        <Loesung FID="f439">Neuostheim/Neuhermsheim</Loesung>
+        <Loesung FID="f440">Jesuitenkirche Mannheim</Loesung>
+        <Loesung FID="f441">Mannheim Hauptbahnhof</Loesung>
+        <Loesung FID="f442">Karl Drais</Loesung>
+        <Loesung FID="f443">B37</Loesung>
+        <Loesung FID="f444">Der Luisenpark Zoo</Loesung>
+        <Loesung FID="f445">Weihnachtsmarkt am Wasserturm</Loesung>
+        <Loesung FID="f446">Time Warp</Loesung>
+        <Loesung FID="f447">Popakademie Baden-Württemberg</Loesung>
+        <Loesung FID="f448">Monnem</Loesung>
+        <Loesung FID="f449">Herzogenriedpark</Loesung>
+        <Loesung FID="f450">Im</Loesung>
+        <Loesung FID="f451">Eishockey</Loesung>
+        <Loesung FID="f452">Miroslav Klose</Loesung>
+        <Loesung FID="f453">Eishockey</Loesung>
+        <Loesung FID="f454">5</Loesung>
+        <Loesung FID="f455">Akron, Ohio</Loesung>
+        <Loesung FID="f456">King James</Loesung>
+        <Loesung FID="f457">23</Loesung>
+        <Loesung FID="f458">Serena Williams</Loesung>
+        <Loesung FID="f459">6</Loesung>
+        <Loesung FID="f460">Deutschland</Loesung>
+        <Loesung FID="f461">Tour de France</Loesung>
+        <Loesung FID="f462">Pittsburgh Steelers</Loesung>
+        <Loesung FID="f463">42,195 km</Loesung>
+        <Loesung FID="f464">Tennis</Loesung>
+        <Loesung FID="f465">Michael Phelps</Loesung>
+        <Loesung FID="f466">Formel 1</Loesung>
+        <Loesung FID="f467">Jack Nicklaus</Loesung>
+        <Loesung FID="f468">Tennis</Loesung>
+        <Loesung FID="f469">Deutschland</Loesung>
+        <Loesung FID="f470">Judo</Loesung>
+        <Loesung FID="f471">11</Loesung>
+        <Loesung FID="f472">Kareem Abdul-Jabbar</Loesung>
+        <Loesung FID="f473">China</Loesung>
+        <Loesung FID="f474">1. Bundesliga</Loesung>
+        <Loesung FID="f475">Rafael Nadal</Loesung>
+        <Loesung FID="f476">Turnen</Loesung>
+        <Loesung FID="f477">University of Alabama</Loesung>
+        <Loesung FID="f478">Netball</Loesung>
+        <Loesung FID="f479">4</Loesung>
+        <Loesung FID="f480">Franz Beckenbauer</Loesung>
+        <Loesung FID="f481">Deuce</Loesung>
+        <Loesung FID="f482">NHL</Loesung>
+        <Loesung FID="f483">Kraulschwimmen (Freistil)</Loesung>
+        <Loesung FID="f484">Strike</Loesung>
+        <Loesung FID="f485">Usain Bolt</Loesung>
+        <Loesung FID="f486">Real Madrid</Loesung>
+        <Loesung FID="f487">Monaco</Loesung>
+        <Loesung FID="f488">Muay Thai</Loesung>
+        <Loesung FID="f489">5</Loesung>
+        <Loesung FID="f490">Zehnkampf</Loesung>
+        <Loesung FID="f491">NBA</Loesung>
+        <Loesung FID="f492">3</Loesung>
+        <Loesung FID="f493">Stab</Loesung>
+        <Loesung FID="f494">60</Loesung>
+        <Loesung FID="f495">Brasilien</Loesung>
+        <Loesung FID="f496">Grand Slam</Loesung>
+        <Loesung FID="f497">Bob Beamon</Loesung>
+        <Loesung FID="f498">Bergsteigen</Loesung>
+        <Loesung FID="f499">Jeder Ballwechsel bringt einen Punkt</Loesung>
+        <Loesung FID="f500">Bill Russell NBA Finals MVP Award</Loesung>
     </Lösungen>
 </database>
