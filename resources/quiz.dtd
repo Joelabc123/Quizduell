@@ -1,0 +1,28 @@
+<!ELEMENT database (Kategorien, Fragen, Lösungen)>
+
+        <!-- ============= KATEGORIEN ============= -->
+        <!ELEMENT Kategorien (Kategorie+)>
+        <!ELEMENT Kategorie (Name)>
+        <!ATTLIST Kategorie
+                KatID ID #REQUIRED
+                >
+        <!ELEMENT Name (#PCDATA)>
+
+        <!-- ============= FRAGEN ============= -->
+        <!ELEMENT Fragen (Frage+)>
+        <!ELEMENT Frage (FrageName, AntwortA, AntwortB, AntwortC, AntwortD)>
+        <!ATTLIST Frage
+                FID  ID    #REQUIRED
+                KID  IDREF #REQUIRED
+                >
+        <!ELEMENT FrageName (#PCDATA)>
+        <!ELEMENT AntwortA  (#PCDATA)>
+        <!ELEMENT AntwortB  (#PCDATA)>
+        <!ELEMENT AntwortC  (#PCDATA)>
+        <!ELEMENT AntwortD  (#PCDATA)>
+
+        <!-- ============= LÖSUNGEN ============= -->
+        <!ELEMENT Lösungen (Loesung+)>
+        <!ELEMENT Loesung (#PCDATA)>
+        <!ATTLIST Loesung
+                FID IDREF #REQUIRED>

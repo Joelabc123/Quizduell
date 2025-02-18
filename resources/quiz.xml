@@ -1,0 +1,1310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE database SYSTEM "quiz.dtd">
+<database>
+    <Kategorien>
+        <Kategorie KatID="k1">
+            <Name>Macht und Geld</Name>
+        </Kategorie>
+        <Kategorie KatID="k2">
+            <Name>Glaube und Religion</Name>
+        </Kategorie>
+        <Kategorie KatID="k3">
+            <Name>Im Labor</Name>
+        </Kategorie>
+    </Kategorien>
+
+    <Fragen>
+        <Frage FID="f1" KID="k1">
+            <FrageName>Wer war der erste Bundeskanzler Deutschlands?</FrageName>
+            <AntwortA>Konrad Adenauer</AntwortA>
+            <AntwortB>Ludwig Erhard</AntwortB>
+            <AntwortC>Willy Brandt</AntwortC>
+            <AntwortD>Helmut Schmidt</AntwortD>
+        </Frage>
+        <Frage FID="f2" KID="k1">
+            <FrageName>Welcher berühmte Investor ist bekannt für das Zitat „Der dümmste Grund, eine Aktie zu kaufen,
+                ist, weil sie steigt“?
+            </FrageName>
+            <AntwortA>Warren Buffett</AntwortA>
+            <AntwortB>Peter Lynch</AntwortB>
+            <AntwortC>André Kostolany</AntwortC>
+            <AntwortD>George Soros</AntwortD>
+        </Frage>
+        <Frage FID="f3" KID="k1">
+            <FrageName>Welcher Philosoph prägte das Zitat „Wissen ist Macht“?</FrageName>
+            <AntwortA>Niccolò Machiavelli</AntwortA>
+            <AntwortB>Francis Bacon</AntwortB>
+            <AntwortC>Thomas Hobbes</AntwortC>
+            <AntwortD>René Descartes</AntwortD>
+        </Frage>
+        <Frage FID="f4" KID="k1">
+            <FrageName>Welche Institution ist für die Ausgabe von Euro-Banknoten zuständig?</FrageName>
+            <AntwortA>Die Europäische Zentralbank</AntwortA>
+            <AntwortB>Die Deutsche Bundesbank</AntwortB>
+            <AntwortC>Der Internationale Währungsfonds</AntwortC>
+            <AntwortD>Die Weltbank</AntwortD>
+        </Frage>
+        <Frage FID="f5" KID="k1">
+            <FrageName>Wann wurde die Deutsche Bundesbank gegründet?</FrageName>
+            <AntwortA>1957</AntwortA>
+            <AntwortB>1949</AntwortB>
+            <AntwortC>1963</AntwortC>
+            <AntwortD>1972</AntwortD>
+        </Frage>
+        <Frage FID="f6" KID="k1">
+            <FrageName>Welche Funktion hat der Internationale Währungsfonds (IWF)?</FrageName>
+            <AntwortA>Kreditvergabe an Länder mit Zahlungsbilanzproblemen</AntwortA>
+            <AntwortB>Festlegung von Zolltarifen innerhalb der EU</AntwortB>
+            <AntwortC>Einstufung von Unternehmen in Aktienindizes</AntwortC>
+            <AntwortD>Überwachung der OPEC-Ölpreise</AntwortD>
+        </Frage>
+        <Frage FID="f7" KID="k1">
+            <FrageName>Wer war der Begründer des Wirtschaftsliberalismus, bekannt für sein Werk „Der Wohlstand der
+                Nationen“?
+            </FrageName>
+            <AntwortA>Adam Smith</AntwortA>
+            <AntwortB>Karl Marx</AntwortB>
+            <AntwortC>David Ricardo</AntwortC>
+            <AntwortD>John Maynard Keynes</AntwortD>
+        </Frage>
+        <Frage FID="f8" KID="k1">
+            <FrageName>Welche Stadt gilt als wichtigstes Finanzzentrum Japans?</FrageName>
+            <AntwortA>Tokio</AntwortA>
+            <AntwortB>Kyoto</AntwortB>
+            <AntwortC>Osaka</AntwortC>
+            <AntwortD>Hiroshima</AntwortD>
+        </Frage>
+        <Frage FID="f9" KID="k1">
+            <FrageName>Die „Invisible Hand“ ist ein Konzept in der Wirtschaftstheorie von …</FrageName>
+            <AntwortA>Adam Smith</AntwortA>
+            <AntwortB>Friedrich Hayek</AntwortB>
+            <AntwortC>John Locke</AntwortC>
+            <AntwortD>Milton Friedman</AntwortD>
+        </Frage>
+        <Frage FID="f10" KID="k1">
+            <FrageName>Welches Land ist das Gründungsmitglied des Europarates mit der größten Wirtschaftskraft in
+                Europa?
+            </FrageName>
+            <AntwortA>Deutschland</AntwortA>
+            <AntwortB>Frankreich</AntwortB>
+            <AntwortC>Spanien</AntwortC>
+            <AntwortD>Italien</AntwortD>
+        </Frage>
+        <Frage FID="f11" KID="k1">
+            <FrageName>Wer wurde oft als „Eiserne Lady“ bezeichnet und war britische Premierministerin?</FrageName>
+            <AntwortA>Margaret Thatcher</AntwortA>
+            <AntwortB>Theresa May</AntwortB>
+            <AntwortC>Angela Merkel</AntwortC>
+            <AntwortD>Indira Gandhi</AntwortD>
+        </Frage>
+        <Frage FID="f12" KID="k1">
+            <FrageName>Was war der Hauptzweck des Marshallplans nach dem Zweiten Weltkrieg?</FrageName>
+            <AntwortA>Wiederaufbau Europas</AntwortA>
+            <AntwortB>Begrenzung des sowjetischen Einflusses in Asien</AntwortB>
+            <AntwortC>Schaffung eines gemeinsamen Militärbündnisses</AntwortC>
+            <AntwortD>Gründung der Vereinten Nationen</AntwortD>
+        </Frage>
+        <Frage FID="f13" KID="k1">
+            <FrageName>Wie wird das oberste Entscheidungsgremium der Europäischen Zentralbank genannt?</FrageName>
+            <AntwortA>EZB-Rat</AntwortA>
+            <AntwortB>EU-Ministerrat</AntwortB>
+            <AntwortC>EZB-Präsidium</AntwortC>
+            <AntwortD>Zentraler Ausschuss</AntwortD>
+        </Frage>
+        <Frage FID="f14" KID="k1">
+            <FrageName>In welchem Jahr wurde der Euro als Buchgeld eingeführt?</FrageName>
+            <AntwortA>1999</AntwortA>
+            <AntwortB>1995</AntwortB>
+            <AntwortC>2002</AntwortC>
+            <AntwortD>2005</AntwortD>
+        </Frage>
+        <Frage FID="f15" KID="k1">
+            <FrageName>Welcher Theoretiker schrieb „Il Principe“ (Der Fürst) und gilt als ein wichtiger Denker in Sachen
+                Machtpolitik?
+            </FrageName>
+            <AntwortA>Niccolò Machiavelli</AntwortA>
+            <AntwortB>Thomas Hobbes</AntwortB>
+            <AntwortC>Jean-Jacques Rousseau</AntwortC>
+            <AntwortD>John Locke</AntwortD>
+        </Frage>
+        <Frage FID="f16" KID="k1">
+            <FrageName>Der Begriff „Realpolitik“ wird oft mit welchem deutschen Staatsmann des 19. Jahrhunderts in
+                Verbindung gebracht?
+            </FrageName>
+            <AntwortA>Otto von Bismarck</AntwortA>
+            <AntwortB>Wilhelm II.</AntwortB>
+            <AntwortC>Friedrich der Große</AntwortC>
+            <AntwortD>Paul von Hindenburg</AntwortD>
+        </Frage>
+        <Frage FID="f17" KID="k1">
+            <FrageName>Wer gilt als einer der reichsten Menschen der Geschichte und war König von Mali im 14.
+                Jahrhundert?
+            </FrageName>
+            <AntwortA>Mansa Musa</AntwortA>
+            <AntwortB>Dschingis Khan</AntwortB>
+            <AntwortC>Karl der Große</AntwortC>
+            <AntwortD>Iwan der Schreckliche</AntwortD>
+        </Frage>
+        <Frage FID="f18" KID="k1">
+            <FrageName>Welches Organ ist in Deutschland für die Geldpolitik zuständig?</FrageName>
+            <AntwortA>Die Deutsche Bundesbank im Eurosystem</AntwortA>
+            <AntwortB>Der Deutsche Bundestag</AntwortB>
+            <AntwortC>Das Bundesfinanzministerium</AntwortC>
+            <AntwortD>Die Börsenaufsicht BaFin</AntwortD>
+        </Frage>
+        <Frage FID="f19" KID="k1">
+            <FrageName>Wer war der Gründer der Bank of England?</FrageName>
+            <AntwortA>Sir John Houblon</AntwortA>
+            <AntwortB>Alexander Hamilton</AntwortB>
+            <AntwortC>John Maynard Keynes</AntwortC>
+            <AntwortD>Robert Peel</AntwortD>
+        </Frage>
+        <Frage FID="f20" KID="k1">
+            <FrageName>Welches Unternehmen gilt als das erste offiziell registrierte, das Aktien ausgab (im 17.
+                Jahrhundert)?
+            </FrageName>
+            <AntwortA>Die Niederländische Ostindien-Kompanie (VOC)</AntwortA>
+            <AntwortB>Die British East India Company</AntwortB>
+            <AntwortC>Die Hudson’s Bay Company</AntwortC>
+            <AntwortD>Die Banque de France</AntwortD>
+        </Frage>
+        <Frage FID="f21" KID="k1">
+            <FrageName>Wer war der Präsident der Europäischen Zentralbank von 2003 bis 2011?</FrageName>
+            <AntwortA>Jean-Claude Trichet</AntwortA>
+            <AntwortB>Mario Draghi</AntwortB>
+            <AntwortC>Christine Lagarde</AntwortC>
+            <AntwortD>Wim Duisenberg</AntwortD>
+        </Frage>
+        <Frage FID="f22" KID="k1">
+            <FrageName>Welche historische Epoche wird auch als das Zeitalter der absolutistischen Monarchien
+                bezeichnet?
+            </FrageName>
+            <AntwortA>Das Ancien Régime</AntwortA>
+            <AntwortB>Die Weimarer Republik</AntwortB>
+            <AntwortC>Das Dritte Reich</AntwortC>
+            <AntwortD>Die Renaissance</AntwortD>
+        </Frage>
+        <Frage FID="f23" KID="k1">
+            <FrageName>Welche Organisation wurde nach dem Zweiten Weltkrieg gegründet, um den Weltfrieden zu sichern und
+                internationale Zusammenarbeit zu fördern?
+            </FrageName>
+            <AntwortA>Die Vereinten Nationen (UNO)</AntwortA>
+            <AntwortB>Der Völkerbund</AntwortB>
+            <AntwortC>Die NATO</AntwortC>
+            <AntwortD>Die Weltbank</AntwortD>
+        </Frage>
+        <Frage FID="f24" KID="k1">
+            <FrageName>Wer schrieb das Werk „Kapitalismus, Sozialismus und Demokratie“ und prägte den Begriff
+                „Schöpferische Zerstörung“?
+            </FrageName>
+            <AntwortA>Joseph Schumpeter</AntwortA>
+            <AntwortB>Max Weber</AntwortB>
+            <AntwortC>Milton Friedman</AntwortC>
+            <AntwortD>Friedrich Engels</AntwortD>
+        </Frage>
+        <Frage FID="f25" KID="k1">
+            <FrageName>Welches Land hat die größte Goldreserve der Welt (Stand 2021)?</FrageName>
+            <AntwortA>Die USA</AntwortA>
+            <AntwortB>China</AntwortB>
+            <AntwortC>Deutschland</AntwortC>
+            <AntwortD>Russland</AntwortD>
+        </Frage>
+        <Frage FID="f26" KID="k1">
+            <FrageName>In welchem Land liegt das Finanzzentrum „Wall Street“?</FrageName>
+            <AntwortA>USA</AntwortA>
+            <AntwortB>Kanada</AntwortB>
+            <AntwortC>Großbritannien</AntwortC>
+            <AntwortD>Australien</AntwortD>
+        </Frage>
+        <Frage FID="f27" KID="k1">
+            <FrageName>Wer verfasste das Kommunistische Manifest zusammen mit Friedrich Engels?</FrageName>
+            <AntwortA>Karl Marx</AntwortA>
+            <AntwortB>Wladimir Lenin</AntwortB>
+            <AntwortC>Josef Stalin</AntwortC>
+            <AntwortD>Rosa Luxemburg</AntwortD>
+        </Frage>
+        <Frage FID="f28" KID="k1">
+            <FrageName>Welche Währung wurde 2002 als Bargeld in mehreren europäischen Ländern eingeführt?</FrageName>
+            <AntwortA>Der Euro</AntwortA>
+            <AntwortB>Der ECU</AntwortB>
+            <AntwortC>Der Dollar</AntwortC>
+            <AntwortD>Die Krone</AntwortD>
+        </Frage>
+        <Frage FID="f29" KID="k1">
+            <FrageName>Welcher deutsche Ökonom prägte den Begriff „Soziale Marktwirtschaft“?</FrageName>
+            <AntwortA>Alfred Müller-Armack</AntwortA>
+            <AntwortB>Walter Eucken</AntwortB>
+            <AntwortC>Ludwig Erhard</AntwortC>
+            <AntwortD>Friedrich List</AntwortD>
+        </Frage>
+        <Frage FID="f30" KID="k1">
+            <FrageName>Wer war zur Zeit der Französischen Revolution König von Frankreich?</FrageName>
+            <AntwortA>Ludwig XVI.</AntwortA>
+            <AntwortB>Ludwig XIV.</AntwortB>
+            <AntwortC>Karl X.</AntwortC>
+            <AntwortD>Napoleon Bonaparte</AntwortD>
+        </Frage>
+        <Frage FID="f31" KID="k1">
+            <FrageName>Welche Zentralbank ist eine der ältesten der Welt und wurde 1668 gegründet?</FrageName>
+            <AntwortA>Sveriges Riksbank (Schweden)</AntwortA>
+            <AntwortB>Bank of England</AntwortB>
+            <AntwortC>Banque de France</AntwortC>
+            <AntwortD>Federal Reserve</AntwortD>
+        </Frage>
+        <Frage FID="f32" KID="k1">
+            <FrageName>Welche Bezeichnung trägt das US-amerikanische Notenbanksystem?</FrageName>
+            <AntwortA>Federal Reserve System</AntwortA>
+            <AntwortB>Bank of the United States</AntwortB>
+            <AntwortC>National Reserve Bank</AntwortC>
+            <AntwortD>American Monetary Fund</AntwortD>
+        </Frage>
+        <Frage FID="f33" KID="k1">
+            <FrageName>Welche mächtige Familie war im Mittelalter vor allem als Bankiers und später als Herrscher von
+                Florenz bekannt?
+            </FrageName>
+            <AntwortA>Die Medici</AntwortA>
+            <AntwortB>Die Fugger</AntwortB>
+            <AntwortC>Die Borgia</AntwortC>
+            <AntwortD>Die Habsburger</AntwortD>
+        </Frage>
+        <Frage FID="f34" KID="k1">
+            <FrageName>Wer hatte als US-Präsident das Programm „New Deal“ eingeführt?</FrageName>
+            <AntwortA>Franklin D. Roosevelt</AntwortA>
+            <AntwortB>Herbert Hoover</AntwortB>
+            <AntwortC>John F. Kennedy</AntwortC>
+            <AntwortD>Dwight D. Eisenhower</AntwortD>
+        </Frage>
+        <Frage FID="f35" KID="k1">
+            <FrageName>Welches Dokument regelt die Zusammenarbeit und Kompetenzen der Europäischen Union?</FrageName>
+            <AntwortA>Der Vertrag von Lissabon</AntwortA>
+            <AntwortB>Der Schengen-Vertrag</AntwortB>
+            <AntwortC>Die Atlantik-Charta</AntwortC>
+            <AntwortD>Die Allgemeine Erklärung der Menschenrechte</AntwortD>
+        </Frage>
+        <Frage FID="f36" KID="k1">
+            <FrageName>Was versteht man unter dem Begriff „Oligarchie“?</FrageName>
+            <AntwortA>Die Herrschaft weniger</AntwortA>
+            <AntwortB>Die Herrschaft vieler</AntwortB>
+            <AntwortC>Die Herrschaft eines Einzelnen</AntwortC>
+            <AntwortD>Die Herrschaft des Militärs</AntwortD>
+        </Frage>
+        <Frage FID="f37" KID="k1">
+            <FrageName>Welches Ereignis leitete 1929 eine schwere Weltwirtschaftskrise ein?</FrageName>
+            <AntwortA>Der Schwarze Freitag (Börsencrash)</AntwortA>
+            <AntwortB>Der Abschluss des Versailler Vertrags</AntwortB>
+            <AntwortC>Der Beginn des Zweiten Weltkriegs</AntwortC>
+            <AntwortD>Die Ölkrise</AntwortD>
+        </Frage>
+        <Frage FID="f38" KID="k1">
+            <FrageName>Wer war einflussreicher Ökonom und Autor der „Allgemeinen Theorie der Beschäftigung, des Zinses
+                und des Geldes“?
+            </FrageName>
+            <AntwortA>John Maynard Keynes</AntwortA>
+            <AntwortB>Milton Friedman</AntwortB>
+            <AntwortC>Paul Samuelson</AntwortC>
+            <AntwortD>Friedrich Hayek</AntwortD>
+        </Frage>
+        <Frage FID="f39" KID="k1">
+            <FrageName>Welches Land war die Heimat des Bankhauses Rothschild?</FrageName>
+            <AntwortA>Deutschland</AntwortA>
+            <AntwortB>Österreich</AntwortB>
+            <AntwortC>Großbritannien</AntwortC>
+            <AntwortD>Italien</AntwortD>
+        </Frage>
+        <Frage FID="f40" KID="k1">
+            <FrageName>Welche Stadt ist als globales Finanzzentrum für Aktienhandel und Banken in Großbritannien
+                bekannt?
+            </FrageName>
+            <AntwortA>London</AntwortA>
+            <AntwortB>Manchester</AntwortB>
+            <AntwortC>Birmingham</AntwortC>
+            <AntwortD>Leeds</AntwortD>
+        </Frage>
+        <Frage FID="f41" KID="k1">
+            <FrageName>Welche Regierungsform besteht aus einer vom Volk gewählten Vertretung anstatt eines Monarchen?
+            </FrageName>
+            <AntwortA>Republik</AntwortA>
+            <AntwortB>Monarchie</AntwortB>
+            <AntwortC>Diktatur</AntwortC>
+            <AntwortD>Theokratie</AntwortD>
+        </Frage>
+        <Frage FID="f42" KID="k1">
+            <FrageName>Wie nennt man den Vorgang, bei dem ein Land seine Währung abwertet, um seine Exporte zu
+                fördern?
+            </FrageName>
+            <AntwortA>Abwertungspolitik</AntwortA>
+            <AntwortB>Währungsunion</AntwortB>
+            <AntwortC>Staatsverschuldung</AntwortC>
+            <AntwortD>Inflationierung</AntwortD>
+        </Frage>
+        <Frage FID="f43" KID="k1">
+            <FrageName>Wer war der Präsident der Russischen Föderation zwischen 2000 und 2008 und erneut ab 2012?
+            </FrageName>
+            <AntwortA>Wladimir Putin</AntwortA>
+            <AntwortB>Dmitri Medwedew</AntwortB>
+            <AntwortC>Boris Jelzin</AntwortC>
+            <AntwortD>Michail Gorbatschow</AntwortD>
+        </Frage>
+        <Frage FID="f44" KID="k1">
+            <FrageName>In welchem Land hatte der „Arabische Frühling“ seinen Anfang, der unter anderem politische
+                Umbrüche auslöste?
+            </FrageName>
+            <AntwortA>Tunesien</AntwortA>
+            <AntwortB>Ägypten</AntwortB>
+            <AntwortC>Libyen</AntwortC>
+            <AntwortD>Syrien</AntwortD>
+        </Frage>
+        <Frage FID="f45" KID="k1">
+            <FrageName>Wie wird die Gesamtheit aller Regeln und Normen bezeichnet, die das wirtschaftliche und
+                gesellschaftliche Zusammenleben in einem Staat ordnen?
+            </FrageName>
+            <AntwortA>Rechtsordnung</AntwortA>
+            <AntwortB>Verfassung</AntwortB>
+            <AntwortC>Finanzordnung</AntwortC>
+            <AntwortD>Verwaltungssystem</AntwortD>
+        </Frage>
+        <Frage FID="f46" KID="k1">
+            <FrageName>Welche Organisation wurde nach dem Zweiten Weltkrieg gegründet, um die wirtschaftliche
+                Zusammenarbeit zu fördern und die Entwicklung in Mitgliedstaaten zu unterstützen?
+            </FrageName>
+            <AntwortA>Die OECD</AntwortA>
+            <AntwortB>Der Warschauer Pakt</AntwortB>
+            <AntwortC>Die OPEC</AntwortC>
+            <AntwortD>Die ASEAN</AntwortD>
+        </Frage>
+        <Frage FID="f47" KID="k1">
+            <FrageName>Wer war der Hauptautor des „Manifest der Kommunistischen Partei“ neben Karl Marx?</FrageName>
+            <AntwortA>Friedrich Engels</AntwortA>
+            <AntwortB>Wladimir Lenin</AntwortB>
+            <AntwortC>Leo Trotzki</AntwortC>
+            <AntwortD>Mao Zedong</AntwortD>
+        </Frage>
+        <Frage FID="f48" KID="k1">
+            <FrageName>Welche englische Königin herrschte 63 Jahre lang (1837–1901) und prägte eine gesamte Epoche?
+            </FrageName>
+            <AntwortA>Königin Victoria</AntwortA>
+            <AntwortB>Königin Elisabeth I.</AntwortB>
+            <AntwortC>Königin Anne</AntwortC>
+            <AntwortD>Königin Elisabeth II.</AntwortD>
+        </Frage>
+        <Frage FID="f49" KID="k1">
+            <FrageName>Welches politische Bündnis wurde 1949 als Verteidigungsbündnis gegen die Sowjetunion gegründet?
+            </FrageName>
+            <AntwortA>Die NATO</AntwortA>
+            <AntwortB>Die Europäische Gemeinschaft</AntwortB>
+            <AntwortC>Der Warschauer Pakt</AntwortC>
+            <AntwortD>Die Afrikanische Union</AntwortD>
+        </Frage>
+        <Frage FID="f50" KID="k1">
+            <FrageName>Welcher US-amerikanische Unternehmer gründete Microsoft und engagiert sich heute stark in der
+                Philanthropie?
+            </FrageName>
+            <AntwortA>Bill Gates</AntwortA>
+            <AntwortB>Steve Jobs</AntwortB>
+            <AntwortC>Mark Zuckerberg</AntwortC>
+            <AntwortD>Elon Musk</AntwortD>
+        </Frage>
+        <Frage FID="f51" KID="k2">
+            <FrageName>Wie heißt das heilige Buch des Islam?</FrageName>
+            <AntwortA>Bibel</AntwortA>
+            <AntwortB>Tora</AntwortB>
+            <AntwortC>Koran</AntwortC>
+            <AntwortD>Bhagavad Gita</AntwortD>
+        </Frage>
+        <Frage FID="f52" KID="k2">
+            <FrageName>Wer gilt als Gründer des Buddhismus?</FrageName>
+            <AntwortA>Siddhartha Gautama (Buddha)</AntwortA>
+            <AntwortB>Jesus Christus</AntwortB>
+            <AntwortC>Mahavira</AntwortC>
+            <AntwortD>Konfuzius</AntwortD>
+        </Frage>
+        <Frage FID="f53" KID="k2">
+            <FrageName>Wie nennt man das zentrale Glaubensbekenntnis im Islam?</FrageName>
+            <AntwortA>Die Shahada</AntwortA>
+            <AntwortB>Das Ave Maria</AntwortB>
+            <AntwortC>Das Vaterunser</AntwortC>
+            <AntwortD>Das Shema Israel</AntwortD>
+        </Frage>
+        <Frage FID="f54" KID="k2">
+            <FrageName>Welches Fest feiern Christen zur Erinnerung an die Auferstehung Jesu Christi?</FrageName>
+            <AntwortA>Ostern</AntwortA>
+            <AntwortB>Weihnachten</AntwortB>
+            <AntwortC>Pfingsten</AntwortC>
+            <AntwortD>Allerheiligen</AntwortD>
+        </Frage>
+        <Frage FID="f55" KID="k2">
+            <FrageName>Welche Religion hat den Sabbat als wöchentlichen Ruhetag?</FrageName>
+            <AntwortA>Der Islam</AntwortA>
+            <AntwortB>Das Judentum</AntwortB>
+            <AntwortC>Der Hinduismus</AntwortC>
+            <AntwortD>Der Buddhismus</AntwortD>
+        </Frage>
+        <Frage FID="f56" KID="k2">
+            <FrageName>In welcher Religion ist Vishnu eine der Hauptgottheiten?</FrageName>
+            <AntwortA>Buddhismus</AntwortA>
+            <AntwortB>Judentum</AntwortB>
+            <AntwortC>Hinduismus</AntwortC>
+            <AntwortD>Christentum</AntwortD>
+        </Frage>
+        <Frage FID="f57" KID="k2">
+            <FrageName>Welches ist das heilige Buch des Judentums?</FrageName>
+            <AntwortA>Bibel (Neues Testament)</AntwortA>
+            <AntwortB>Koran</AntwortB>
+            <AntwortC>Tipitaka</AntwortC>
+            <AntwortD>Tora</AntwortD>
+        </Frage>
+        <Frage FID="f58" KID="k2">
+            <FrageName>Wer gilt als der Begründer des Protestantismus?</FrageName>
+            <AntwortA>Johannes Calvin</AntwortA>
+            <AntwortB>Jan Hus</AntwortB>
+            <AntwortC>Martin Luther</AntwortC>
+            <AntwortD>Ulrich Zwingli</AntwortD>
+        </Frage>
+        <Frage FID="f59" KID="k2">
+            <FrageName>Wie nennt man das Oberhaupt der römisch-katholischen Kirche?</FrageName>
+            <AntwortA>Der Dalai Lama</AntwortA>
+            <AntwortB>Der Patriarch</AntwortB>
+            <AntwortC>Der Papst</AntwortC>
+            <AntwortD>Der Rabbiner</AntwortD>
+        </Frage>
+        <Frage FID="f60" KID="k2">
+            <FrageName>In welcher Religion spielt das Kastensystem eine wichtige Rolle?</FrageName>
+            <AntwortA>Im Islam</AntwortA>
+            <AntwortB>Im Hinduismus</AntwortB>
+            <AntwortC>Im Judentum</AntwortC>
+            <AntwortD>Im Christentum</AntwortD>
+        </Frage>
+        <Frage FID="f61" KID="k2">
+            <FrageName>Wer gilt als zentrale Figur des Christentums?</FrageName>
+            <AntwortA>Prophet Mohammed</AntwortA>
+            <AntwortB>Jesus Christus</AntwortB>
+            <AntwortC>Mose</AntwortC>
+            <AntwortD>Krishna</AntwortD>
+        </Frage>
+        <Frage FID="f62" KID="k2">
+            <FrageName>Welches Fest wird im Hinduismus gefeiert, um den Triumph des Guten über das Böse zu
+                symbolisieren?
+            </FrageName>
+            <AntwortA>Ramadan</AntwortA>
+            <AntwortB>Chanukka</AntwortB>
+            <AntwortC>Diwali</AntwortC>
+            <AntwortD>Vesakh</AntwortD>
+        </Frage>
+        <Frage FID="f63" KID="k2">
+            <FrageName>Wie nennen Juden das Neujahrsfest?</FrageName>
+            <AntwortA>Jom Kippur</AntwortA>
+            <AntwortB>Passah</AntwortB>
+            <AntwortC>Rosh Hashana</AntwortC>
+            <AntwortD>Purim</AntwortD>
+        </Frage>
+        <Frage FID="f64" KID="k2">
+            <FrageName>Welches Symbol wird allgemein mit dem Buddhismus assoziiert?</FrageName>
+            <AntwortA>Menora</AntwortA>
+            <AntwortB>Kreuz</AntwortB>
+            <AntwortC>Halbmond</AntwortC>
+            <AntwortD>Dharma-Rad</AntwortD>
+        </Frage>
+        <Frage FID="f65" KID="k2">
+            <FrageName>Welches wichtige Ereignis feiern Christen an Weihnachten?</FrageName>
+            <AntwortA>Die Taufe Jesu</AntwortA>
+            <AntwortB>Die Geburt Jesu</AntwortB>
+            <AntwortC>Die Kreuzigung Jesu</AntwortC>
+            <AntwortD>Die Himmelfahrt Jesu</AntwortD>
+        </Frage>
+        <Frage FID="f66" KID="k2">
+            <FrageName>Was ist die Kaaba?</FrageName>
+            <AntwortA>Ein Fluss in Indien</AntwortA>
+            <AntwortB>Ein Berg im Himalaya</AntwortB>
+            <AntwortC>Das zentrale Heiligtum in Mekka</AntwortC>
+            <AntwortD>Ein Kloster in Tibet</AntwortD>
+        </Frage>
+        <Frage FID="f67" KID="k2">
+            <FrageName>Welche Religion verehrt unter anderem Götter wie Zeus und Hera?</FrageName>
+            <AntwortA>Germanische Mythologie</AntwortA>
+            <AntwortB>Nordische Mythologie</AntwortB>
+            <AntwortC>Römische Mythologie</AntwortC>
+            <AntwortD>Griechische Mythologie</AntwortD>
+        </Frage>
+        <Frage FID="f68" KID="k2">
+            <FrageName>In welcher Stadt steht der Petersdom?</FrageName>
+            <AntwortA>Jerusalem</AntwortA>
+            <AntwortB>Rom</AntwortB>
+            <AntwortC>Konstantinopel (Istanbul)</AntwortC>
+            <AntwortD>Athen</AntwortD>
+        </Frage>
+        <Frage FID="f69" KID="k2">
+            <FrageName>Welches Symbol ist das wichtigste Erkennungszeichen des Christentums?</FrageName>
+            <AntwortA>Der Davidstern</AntwortA>
+            <AntwortB>Der Halbmond</AntwortB>
+            <AntwortC>Das Kreuz</AntwortC>
+            <AntwortD>Die Lotosblume</AntwortD>
+        </Frage>
+        <Frage FID="f70" KID="k2">
+            <FrageName>Was ist der Sabbat?</FrageName>
+            <AntwortA>Das islamische Freitagsgebet</AntwortA>
+            <AntwortB>Der jüdische Ruhetag</AntwortB>
+            <AntwortC>Ein hinduistisches Ritual</AntwortC>
+            <AntwortD>Ein christliches Glaubensbekenntnis</AntwortD>
+        </Frage>
+        <Frage FID="f71" KID="k2">
+            <FrageName>Wie heißt die Glaubensgemeinschaft, die Joseph Smith im 19. Jahrhundert in den USA gründete?
+            </FrageName>
+            <AntwortA>Die Quäker</AntwortA>
+            <AntwortB>Die Shaker</AntwortB>
+            <AntwortC>Die Mormonen (Kirche Jesu Christi der Heiligen der Letzten Tage)</AntwortC>
+            <AntwortD>Die Amish</AntwortD>
+        </Frage>
+        <Frage FID="f72" KID="k2">
+            <FrageName>Welches ist die älteste monotheistische Religion?</FrageName>
+            <AntwortA>Christentum</AntwortA>
+            <AntwortB>Judentum</AntwortB>
+            <AntwortC>Islam</AntwortC>
+            <AntwortD>Buddhismus</AntwortD>
+        </Frage>
+        <Frage FID="f73" KID="k2">
+            <FrageName>Welcher Feiertag gedenkt im Christentum der Ausgießung des Heiligen Geistes?</FrageName>
+            <AntwortA>Ostern</AntwortA>
+            <AntwortB>Weihnachten</AntwortB>
+            <AntwortC>Himmelfahrt</AntwortC>
+            <AntwortD>Pfingsten</AntwortD>
+        </Frage>
+        <Frage FID="f74" KID="k2">
+            <FrageName>Welche Strömung im Islam legt großen Wert auf die innere, mystische Erfahrung Gottes?</FrageName>
+            <AntwortA>Sunniten</AntwortA>
+            <AntwortB>Schiiten</AntwortB>
+            <AntwortC>Sufismus</AntwortC>
+            <AntwortD>Wahhabiten</AntwortD>
+        </Frage>
+        <Frage FID="f75" KID="k2">
+            <FrageName>Welches Fest feiern Juden zum Gedenken an den Auszug aus Ägypten?</FrageName>
+            <AntwortA>Chanukka</AntwortA>
+            <AntwortB>Jom Kippur</AntwortB>
+            <AntwortC>Passah (Pessach)</AntwortC>
+            <AntwortD>Purim</AntwortD>
+        </Frage>
+        <Frage FID="f76" KID="k2">
+            <FrageName>Welche Religion verbindet man mit dem Dalai Lama?</FrageName>
+            <AntwortA>Hinduismus</AntwortA>
+            <AntwortB>Tibetischer Buddhismus</AntwortB>
+            <AntwortC>Sikhismus</AntwortC>
+            <AntwortD>Shintoismus</AntwortD>
+        </Frage>
+        <Frage FID="f77" KID="k2">
+            <FrageName>In welcher Religion gilt die Wallfahrt nach Mekka als eine der Pflichtübungen?</FrageName>
+            <AntwortA>Islam</AntwortA>
+            <AntwortB>Christentum</AntwortB>
+            <AntwortC>Hinduismus</AntwortC>
+            <AntwortD>Judentum</AntwortD>
+        </Frage>
+        <Frage FID="f78" KID="k2">
+            <FrageName>Welches christliche Glaubensbekenntnis beginnt mit den Worten „Wir glauben an den einen Gott“?
+            </FrageName>
+            <AntwortA>Das Athanasianische Glaubensbekenntnis</AntwortA>
+            <AntwortB>Das Apostolische Glaubensbekenntnis</AntwortB>
+            <AntwortC>Das Nicäno-Konstantinopolitanische Glaubensbekenntnis</AntwortC>
+            <AntwortD>Das Chalcedonische Glaubensbekenntnis</AntwortD>
+        </Frage>
+        <Frage FID="f79" KID="k2">
+            <FrageName>Wer ist nach christlichem Verständnis der „Vater des Glaubens“ im Alten Testament?</FrageName>
+            <AntwortA>Noah</AntwortA>
+            <AntwortB>Mose</AntwortB>
+            <AntwortC>Abraham</AntwortC>
+            <AntwortD>Isaak</AntwortD>
+        </Frage>
+        <Frage FID="f80" KID="k2">
+            <FrageName>Welches Land ist traditionell Zentrum des katholischen Christentums?</FrageName>
+            <AntwortA>Spanien</AntwortA>
+            <AntwortB>Italien</AntwortB>
+            <AntwortC>Frankreich</AntwortC>
+            <AntwortD>Brasilien</AntwortD>
+        </Frage>
+        <Frage FID="f81" KID="k2">
+            <FrageName>Wie nennt man das Oberhaupt der tibetisch-buddhistischen Tradition, das auch als geistliches
+                Oberhaupt der Tibeter gilt?
+            </FrageName>
+            <AntwortA>Rinpoche</AntwortA>
+            <AntwortB>Bodhisattva</AntwortB>
+            <AntwortC>Dalai Lama</AntwortC>
+            <AntwortD>Pandit</AntwortD>
+        </Frage>
+        <Frage FID="f82" KID="k2">
+            <FrageName>Welches Fest wird im Islam zum Ende des Fastenmonats Ramadan gefeiert?</FrageName>
+            <AntwortA>Aschura</AntwortA>
+            <AntwortB>Id al-Adha (Opferfest)</AntwortB>
+            <AntwortC>Laylat al-Qadr</AntwortC>
+            <AntwortD>Id al-Fitr (Fastenbrechenfest)</AntwortD>
+        </Frage>
+        <Frage FID="f83" KID="k2">
+            <FrageName>Welche Religion hat den Ganges als heiligen Fluss?</FrageName>
+            <AntwortA>Islam</AntwortA>
+            <AntwortB>Hinduismus</AntwortB>
+            <AntwortC>Judentum</AntwortC>
+            <AntwortD>Sikhismus</AntwortD>
+        </Frage>
+        <Frage FID="f84" KID="k2">
+            <FrageName>Woran glauben Anhänger des Shintoismus besonders stark?</FrageName>
+            <AntwortA>An die Karma-Lehre</AntwortA>
+            <AntwortB>An die Offenbarungen des Neuen Testaments</AntwortB>
+            <AntwortC>An die Existenz vieler Kami (Gottheiten/Geister)</AntwortC>
+            <AntwortD>An die fünf Säulen</AntwortD>
+        </Frage>
+        <Frage FID="f85" KID="k2">
+            <FrageName>Wie heißt das jüdische Lichterfest, das an das Tempelwunder erinnert?</FrageName>
+            <AntwortA>Chanukka</AntwortA>
+            <AntwortB>Purim</AntwortB>
+            <AntwortC>Shavuot</AntwortC>
+            <AntwortD>Simchat Tora</AntwortD>
+        </Frage>
+        <Frage FID="f86" KID="k2">
+            <FrageName>Wie heißt der höchste Berg, der vielen Hindus als heilig gilt?</FrageName>
+            <AntwortA>Mount Everest</AntwortA>
+            <AntwortB>Kailash</AntwortB>
+            <AntwortC>K2</AntwortC>
+            <AntwortD>Mount Fuji</AntwortD>
+        </Frage>
+        <Frage FID="f87" KID="k2">
+            <FrageName>Wer gilt im Christentum als Verfasser der Mehrheit der Briefe im Neuen Testament?</FrageName>
+            <AntwortA>Johannes der Täufer</AntwortA>
+            <AntwortB>Paulus von Tarsus</AntwortB>
+            <AntwortC>Petrus</AntwortC>
+            <AntwortD>Lukas</AntwortD>
+        </Frage>
+        <Frage FID="f88" KID="k2">
+            <FrageName>Welcher buddhistische Begriff steht für das Ende des Leidens und das Verlöschen aller
+                Begierden?
+            </FrageName>
+            <AntwortA>Nirwana (Nibbana)</AntwortA>
+            <AntwortB>Zen</AntwortB>
+            <AntwortC>Dharma</AntwortC>
+            <AntwortD>Samadhi</AntwortD>
+        </Frage>
+        <Frage FID="f89" KID="k2">
+            <FrageName>In welcher Religion ist Guru Nanak eine wichtige Gründerfigur?</FrageName>
+            <AntwortA>Buddhismus</AntwortA>
+            <AntwortB>Jainismus</AntwortB>
+            <AntwortC>Sikhismus</AntwortC>
+            <AntwortD>Taoismus</AntwortD>
+        </Frage>
+        <Frage FID="f90" KID="k2">
+            <FrageName>Welche zentralen Schriften sind im Christentum als „Evangelien“ bekannt?</FrageName>
+            <AntwortA>Matthäus, Markus, Lukas, Johannes</AntwortA>
+            <AntwortB>Genesis, Exodus, Levitikus, Numeri</AntwortB>
+            <AntwortC>Jesaja, Jeremia, Ezechiel, Daniel</AntwortC>
+            <AntwortD>Paulusbriefe</AntwortD>
+        </Frage>
+        <Frage FID="f91" KID="k2">
+            <FrageName>Welches biblische Buch beginnt mit den Worten „Im Anfang schuf Gott Himmel und Erde“?</FrageName>
+            <AntwortA>Das Buch Exodus</AntwortA>
+            <AntwortB>Das Buch Genesis</AntwortB>
+            <AntwortC>Das Buch Levitikus</AntwortC>
+            <AntwortD>Das Buch Jesaja</AntwortD>
+        </Frage>
+        <Frage FID="f92" KID="k2">
+            <FrageName>Wie nennen Muslime das rituelle Pflichtgebet?</FrageName>
+            <AntwortA>Salat</AntwortA>
+            <AntwortB>Sawm</AntwortB>
+            <AntwortC>Zakat</AntwortC>
+            <AntwortD>Hadsch</AntwortD>
+        </Frage>
+        <Frage FID="f93" KID="k2">
+            <FrageName>Welche Religion hat den Großteil ihrer Anhänger in Lateinamerika?</FrageName>
+            <AntwortA>Christentum (insbesondere Katholizismus)</AntwortA>
+            <AntwortB>Islam</AntwortB>
+            <AntwortC>Hinduismus</AntwortC>
+            <AntwortD>Buddhismus</AntwortD>
+        </Frage>
+        <Frage FID="f94" KID="k2">
+            <FrageName>Wer wurde der Überlieferung nach von Gott beauftragt, die Israeliten aus der Sklaverei in Ägypten
+                zu führen?
+            </FrageName>
+            <AntwortA>Mose</AntwortA>
+            <AntwortB>Josua</AntwortB>
+            <AntwortC>David</AntwortC>
+            <AntwortD>Abraham</AntwortD>
+        </Frage>
+        <Frage FID="f95" KID="k2">
+            <FrageName>Wie nennt man das Fest im Buddhismus, das an die Geburt, Erleuchtung und das Vergehen Buddhas
+                erinnert?
+            </FrageName>
+            <AntwortA>Diwali</AntwortA>
+            <AntwortB>Vesakh (Vesak)</AntwortB>
+            <AntwortC>Holi</AntwortC>
+            <AntwortD>Das Lichterfest Chanukka</AntwortD>
+        </Frage>
+        <Frage FID="f96" KID="k2">
+            <FrageName>Welche religiöse Strömung im Christentum lehnt die Kindertaufe ab und praktiziert nur die
+                Erwachsenentaufe?
+            </FrageName>
+            <AntwortA>Römisch-Katholische Kirche</AntwortA>
+            <AntwortB>Methodisten</AntwortB>
+            <AntwortC>Baptisten</AntwortC>
+            <AntwortD>Orthodoxe Kirche</AntwortD>
+        </Frage>
+        <Frage FID="f97" KID="k2">
+            <FrageName>Wie nennt man im Hinduismus die Befreiung aus dem Kreislauf von Geburt und Wiedergeburt?
+            </FrageName>
+            <AntwortA>Moksha</AntwortA>
+            <AntwortB>Artha</AntwortB>
+            <AntwortC>Karma</AntwortC>
+            <AntwortD>Dharma</AntwortD>
+        </Frage>
+        <Frage FID="f98" KID="k2">
+            <FrageName>Welcher Religionsstifter predigte das „mittlere Path“ als Weg zur Erlösung?</FrageName>
+            <AntwortA>Mohammed</AntwortA>
+            <AntwortB>Jesus Christus</AntwortB>
+            <AntwortC>Buddha</AntwortC>
+            <AntwortD>Moses</AntwortD>
+        </Frage>
+        <Frage FID="f99" KID="k2">
+            <FrageName>Wie nennt man das gemeinsame Gebetshaus der Sikhs?</FrageName>
+            <AntwortA>Synagoge</AntwortA>
+            <AntwortB>Gurdwara</AntwortB>
+            <AntwortC>Moschee</AntwortC>
+            <AntwortD>Tempel</AntwortD>
+        </Frage>
+        <Frage FID="f100" KID="k2">
+            <FrageName>Wie heißt das älteste erhaltene Evangelium im Neuen Testament?</FrageName>
+            <AntwortA>Johannes</AntwortA>
+            <AntwortB>Markus</AntwortB>
+            <AntwortC>Matthäus</AntwortC>
+            <AntwortD>Lukas</AntwortD>
+        </Frage>
+        <Frage FID="f101" KID="k3">
+            <FrageName>Welche Schutzkleidung ist im Chemielabor in der Regel vorgeschrieben?</FrageName>
+            <AntwortA>Laborkittel, Schutzbrille, Handschuhe</AntwortA>
+            <AntwortB>Flip-Flops, Badehose, Sonnenbrille</AntwortB>
+            <AntwortC>Abendkleid, High Heels, Perücke</AntwortC>
+            <AntwortD>Regenmantel, Gummistiefel, Hut</AntwortD>
+        </Frage>
+        <Frage FID="f102" KID="k3">
+            <FrageName>Welches Gerät dient im Labor zur genauen Messung von Flüssigkeitsvolumina?</FrageName>
+            <AntwortA>Reagenzglas</AntwortA>
+            <AntwortB>Pipette</AntwortB>
+            <AntwortC>Uhrglas</AntwortC>
+            <AntwortD>Standzylinder</AntwortD>
+        </Frage>
+        <Frage FID="f103" KID="k3">
+            <FrageName>Wie nennt man einen feuerfesten Behälter, der im Labor meist zum Erhitzen von Stoffen verwendet
+                wird?
+            </FrageName>
+            <AntwortA>Erlenmeyerkolben</AntwortA>
+            <AntwortB>Messkolben</AntwortB>
+            <AntwortC>Tiegel</AntwortC>
+            <AntwortD>Becherglas</AntwortD>
+        </Frage>
+        <Frage FID="f104" KID="k3">
+            <FrageName>Wofür wird ein Autoklav im Labor hauptsächlich genutzt?</FrageName>
+            <AntwortA>Zum Wiegen von Substanzen</AntwortA>
+            <AntwortB>Zur Sterilisation von Geräten</AntwortB>
+            <AntwortC>Zur Destillation von Flüssigkeiten</AntwortC>
+            <AntwortD>Zum Kühlen von Proben</AntwortD>
+        </Frage>
+        <Frage FID="f105" KID="k3">
+            <FrageName>Was bedeutet die Abkürzung „pH“ in der Laborchemie?</FrageName>
+            <AntwortA>Potentia Hydrogenii (Wasserstoffionenkonzentration)</AntwortA>
+            <AntwortB>Positiver Hydratationsfaktor</AntwortB>
+            <AntwortC>Protonen-Haushalt</AntwortC>
+            <AntwortD>Partielle Hitzeresistenz</AntwortD>
+        </Frage>
+        <Frage FID="f106" KID="k3">
+            <FrageName>Womit sollte man verschüttete Chemikalien auf der Haut sofort behandeln?</FrageName>
+            <AntwortA>Starkem Alkohol</AntwortA>
+            <AntwortB>Reichlich fließendem Wasser</AntwortB>
+            <AntwortC>Heißer Luft</AntwortC>
+            <AntwortD>Verdünnter Lauge</AntwortD>
+        </Frage>
+        <Frage FID="f107" KID="k3">
+            <FrageName>Welches Gerät benutzt man häufig im Labor, um feste Stoffe zu Pulver zu verarbeiten?</FrageName>
+            <AntwortA>Mörser mit Pistill</AntwortA>
+            <AntwortB>Haushaltsmixer</AntwortB>
+            <AntwortC>Thermometer</AntwortC>
+            <AntwortD>Magnetrührer</AntwortD>
+        </Frage>
+        <Frage FID="f108" KID="k3">
+            <FrageName>Was ist ein Zentrifuge im Labor?</FrageName>
+            <AntwortA>Ein Gerät zum Trocknen von Proben</AntwortA>
+            <AntwortB>Ein Gerät zum Abtrennen von Stoffen durch Rotation</AntwortB>
+            <AntwortC>Eine spezielle Abzugshaube für Säuren</AntwortC>
+            <AntwortD>Eine Einheit zur Temperaturmessung</AntwortD>
+        </Frage>
+        <Frage FID="f109" KID="k3">
+            <FrageName>Wie nennt man ein Laborgerät, mit dem man das Gewicht einer Substanz sehr genau bestimmen kann?
+            </FrageName>
+            <AntwortA>Esslöffelwaage</AntwortA>
+            <AntwortB>Digitale Personenwaage</AntwortB>
+            <AntwortC>Analysenwaage</AntwortC>
+            <AntwortD>Barometer</AntwortD>
+        </Frage>
+        <Frage FID="f110" KID="k3">
+            <FrageName>Welches Verfahren dient der Trennung von Stoffgemischen durch Unterschiede in der
+                Siedetemperatur?
+            </FrageName>
+            <AntwortA>Filtration</AntwortA>
+            <AntwortB>Destillation</AntwortB>
+            <AntwortC>Chromatographie</AntwortC>
+            <AntwortD>Zentrifugation</AntwortD>
+        </Frage>
+        <Frage FID="f111" KID="k3">
+            <FrageName>Welche Farbe hat die Flamme eines Bunsenbrenners im optimalen Zustand?</FrageName>
+            <AntwortA>Gelb leuchtend</AntwortA>
+            <AntwortB>Orange flackernd</AntwortB>
+            <AntwortC>Bläulich</AntwortC>
+            <AntwortD>Rot glimmend</AntwortD>
+        </Frage>
+        <Frage FID="f112" KID="k3">
+            <FrageName>Welche Laborapparatur wird genutzt, um Flüssigkeiten in einem Rückflussverfahren zu erhitzen?
+            </FrageName>
+            <AntwortA>Destillierbrücke</AntwortA>
+            <AntwortB>Kühler (Liebigkühler)</AntwortB>
+            <AntwortC>Trichter</AntwortC>
+            <AntwortD>Uhrglas</AntwortD>
+        </Frage>
+        <Frage FID="f113" KID="k3">
+            <FrageName>Was versteht man unter „Laborabzug“ oder „Abzugshaube“?</FrageName>
+            <AntwortA>Eine Waage mit integrierter Absaugung</AntwortA>
+            <AntwortB>Einen separaten Raum für Kühlgeräte</AntwortB>
+            <AntwortC>Eine Schutzeinrichtung zur Absaugung von Dämpfen</AntwortC>
+            <AntwortD>Ein Aufbewahrungsschrank für Chemikalien</AntwortD>
+        </Frage>
+        <Frage FID="f114" KID="k3">
+            <FrageName>Was bezeichnet man als „Meniskus“ bei Flüssigkeiten in Messgeräten?</FrageName>
+            <AntwortA>Die Krümmung der Flüssigkeitsoberfläche</AntwortA>
+            <AntwortB>Den Boden des Messkolbens</AntwortB>
+            <AntwortC>Eine spezielle Markierung für Ablesung</AntwortC>
+            <AntwortD>Den oberen Rand des Gefäßes</AntwortD>
+        </Frage>
+        <Frage FID="f115" KID="k3">
+            <FrageName>Welches Laborgefäß wird typischerweise zum Aufbewahren und Messen von Flüssigkeiten verwendet und
+                hat meist einen langen Hals?
+            </FrageName>
+            <AntwortA>Erlenmeyerkolben</AntwortA>
+            <AntwortB>Messkolben</AntwortB>
+            <AntwortC>Becherglas</AntwortC>
+            <AntwortD>Standzylinder</AntwortD>
+        </Frage>
+        <Frage FID="f116" KID="k3">
+            <FrageName>Wie nennt man die Schutzvorrichtung, die verhindert, dass Gase oder Dämpfe aus dem Labor in
+                andere Räume gelangen?
+            </FrageName>
+            <AntwortA>Brandschutztür</AntwortA>
+            <AntwortB>Gasschieber</AntwortB>
+            <AntwortC>Luftschleuse</AntwortC>
+            <AntwortD>Lichtschranke</AntwortD>
+        </Frage>
+        <Frage FID="f117" KID="k3">
+            <FrageName>Welche Geräteart wird verwendet, um Substanzen durch Erwärmen auf konstante Temperatur zu
+                halten?
+            </FrageName>
+            <AntwortA>Ultraschallbad</AntwortA>
+            <AntwortB>Magnetrührer mit Heizplatte</AntwortB>
+            <AntwortC>Trockenschrank (Ofen)</AntwortC>
+            <AntwortD>Kühlschrank</AntwortD>
+        </Frage>
+        <Frage FID="f118" KID="k3">
+            <FrageName>Welches Verfahren wird im Labor verwendet, um Proteine oder DNA-Fragmente anhand ihrer Größe zu
+                trennen?
+            </FrageName>
+            <AntwortA>Spektroskopie</AntwortA>
+            <AntwortB>Elektrophorese</AntwortB>
+            <AntwortC>Extraktion</AntwortC>
+            <AntwortD>Filtration</AntwortD>
+        </Frage>
+        <Frage FID="f119" KID="k3">
+            <FrageName>Wozu dient ein Magnetrührstab im Labor?</FrageName>
+            <AntwortA>Zur Bestimmung des pH-Werts</AntwortA>
+            <AntwortB>Zur Messung der Temperatur</AntwortB>
+            <AntwortC>Zum automatischen Rühren von Lösungen</AntwortC>
+            <AntwortD>Zur Zerkleinerung von Feststoffen</AntwortD>
+        </Frage>
+        <Frage FID="f120" KID="k3">
+            <FrageName>Welche Stoffe werden im Labor als Indikatoren zur Bestimmung des pH-Werts verwendet?</FrageName>
+            <AntwortA>Elektrolyte</AntwortA>
+            <AntwortB>Färbemittel für Textilien</AntwortB>
+            <AntwortC>Substanzen wie Phenolphthalein oder Bromthymolblau</AntwortC>
+            <AntwortD>Konzentrische Säuren</AntwortD>
+        </Frage>
+        <Frage FID="f121" KID="k3">
+            <FrageName>Wofür steht die Abkürzung „GHS“, die auf Gefahrstoffetiketten zu finden ist?</FrageName>
+            <AntwortA>Global Harmonisiertes System zur Einstufung und Kennzeichnung von Chemikalien</AntwortA>
+            <AntwortB>Gesamthazardstufe</AntwortB>
+            <AntwortC>Geräte-Handhabungs-Schema</AntwortC>
+            <AntwortD>Gefahrstoff-Hauptsicherheitsplan</AntwortD>
+        </Frage>
+        <Frage FID="f122" KID="k3">
+            <FrageName>Wie sollten reaktive Chemikalien wie Natrium oder Kalium im Labor gelagert werden?</FrageName>
+            <AntwortA>In Wasser</AntwortA>
+            <AntwortB>Unter Öl oder luftdicht</AntwortB>
+            <AntwortC>Bei hohen Temperaturen</AntwortC>
+            <AntwortD>In offenem Gefäß bei Raumluft</AntwortD>
+        </Frage>
+        <Frage FID="f123" KID="k3">
+            <FrageName>Welche Maßnahme dient der Unfallverhütung beim Arbeiten mit Chemikalien?</FrageName>
+            <AntwortA>Verzicht auf Laborkleidung</AntwortA>
+            <AntwortB>Genaue Beachtung der Sicherheitsdatenblätter</AntwortB>
+            <AntwortC>Mischen aller Reste in einem Behälter</AntwortC>
+            <AntwortD>Offenes Essen und Trinken im Labor</AntwortD>
+        </Frage>
+        <Frage FID="f124" KID="k3">
+            <FrageName>Was verwendet man im Labor, um Feststoffe von Flüssigkeiten zu trennen, indem man die Flüssigkeit
+                durch ein Papier leitet?
+            </FrageName>
+            <AntwortA>Destillation</AntwortA>
+            <AntwortB>Filtration</AntwortB>
+            <AntwortC>Titration</AntwortC>
+            <AntwortD>Kristallisation</AntwortD>
+        </Frage>
+        <Frage FID="f125" KID="k3">
+            <FrageName>Welche Art von Flasche ist üblicherweise für die Aufbewahrung brennbarer Lösungsmittel
+                vorgesehen?
+            </FrageName>
+            <AntwortA>Plastikflasche</AntwortA>
+            <AntwortB>Lackierte Stahlflasche</AntwortB>
+            <AntwortC>Braune Glasflasche</AntwortC>
+            <AntwortD>Offenes Becherglas</AntwortD>
+        </Frage>
+        <Frage FID="f126" KID="k3">
+            <FrageName>Was ist bei der Arbeit mit ätzenden Substanzen besonders wichtig?</FrageName>
+            <AntwortA>Niemals eine Schutzbrille tragen</AntwortA>
+            <AntwortB>Nur in Abwesenheit der Aufsichtsperson arbeiten</AntwortB>
+            <AntwortC>Handschuhe und Augenschutz benutzen</AntwortC>
+            <AntwortD>Substanzen kräftig schütteln und riechen</AntwortD>
+        </Frage>
+        <Frage FID="f127" KID="k3">
+            <FrageName>Welche Laborgerätetypen nutzt man, um unterschiedliche Substanzen zu trennen, indem diese über
+                eine stationäre Phase wandern?
+            </FrageName>
+            <AntwortA>Dichte-Waagen</AntwortA>
+            <AntwortB>Chromatographiesäulen oder Chromatographiepapier</AntwortB>
+            <AntwortC>Uhrgläser</AntwortC>
+            <AntwortD>Laborstative</AntwortD>
+        </Frage>
+        <Frage FID="f128" KID="k3">
+            <FrageName>Was ist beim Umgang mit organischen Lösemitteln wie Aceton oder Ethanol im Labor zu beachten?
+            </FrageName>
+            <AntwortA>Sie sind völlig ungiftig und ungefährlich</AntwortA>
+            <AntwortB>Sie können leicht entzündlich sein</AntwortB>
+            <AntwortC>Sie sind immer fest und nicht flüchtig</AntwortC>
+            <AntwortD>Sie verdampfen nicht</AntwortD>
+        </Frage>
+        <Frage FID="f129" KID="k3">
+            <FrageName>Welche Maßnahme reduziert das Risiko von Verätzungen und Verpuffungen bei
+                Säure-Base-Reaktionen?
+            </FrageName>
+            <AntwortA>Base in Säure gießen (Grundregel: „Erst das Wasser, dann die Säure“)</AntwortA>
+            <AntwortB>Niemals Handschuhe tragen</AntwortB>
+            <AntwortC>Säure in Base gießen, ohne Schutz</AntwortC>
+            <AntwortD>Alles auf einmal mischen</AntwortD>
+        </Frage>
+        <Frage FID="f130" KID="k3">
+            <FrageName>Wie nennt man die Methode, bei der eine Lösung mit einer genauen Konzentration verwendet wird, um
+                eine andere Lösung zu neutralisieren?
+            </FrageName>
+            <AntwortA>Sublimation</AntwortA>
+            <AntwortB>Titration</AntwortB>
+            <AntwortC>Extraktion</AntwortC>
+            <AntwortD>Zentrifugation</AntwortD>
+        </Frage>
+        <Frage FID="f131" KID="k3">
+            <FrageName>Wofür wird ein Photometer im Labor benutzt?</FrageName>
+            <AntwortA>Zur Bestimmung der Lichtabsorption einer Probe</AntwortA>
+            <AntwortB>Zum Elektroschweißen</AntwortB>
+            <AntwortC>Zum Bestimmen der Schmelztemperatur</AntwortC>
+            <AntwortD>Zum Rühren von Flüssigkeiten</AntwortD>
+        </Frage>
+        <Frage FID="f132" KID="k3">
+            <FrageName>Welches Symbol kennzeichnet Reagenzien mit hoher Entflammbarkeit?</FrageName>
+            <AntwortA>Totenkopf-Symbol</AntwortA>
+            <AntwortB>Flamme-Symbol</AntwortB>
+            <AntwortC>Gasflasche-Symbol</AntwortC>
+            <AntwortD>Ausrufezeichen-Symbol</AntwortD>
+        </Frage>
+        <Frage FID="f133" KID="k3">
+            <FrageName>Wie nennt man den Temperaturbereich, in dem ein Feststoff zu schmelzen beginnt und vollständig
+                geschmolzen ist?
+            </FrageName>
+            <AntwortA>Tripelpunkt</AntwortA>
+            <AntwortB>Gefrierpunkt</AntwortB>
+            <AntwortC>Siedepunkt</AntwortC>
+            <AntwortD>Schmelzpunkt</AntwortD>
+        </Frage>
+        <Frage FID="f134" KID="k3">
+            <FrageName>Welche Regeln gelten beim Umgang mit offenen Flammen im Labor?</FrageName>
+            <AntwortA>Keine besonderen Regeln, alles ist erlaubt</AntwortA>
+            <AntwortB>Langärmelige Kleidung über die Flamme halten</AntwortB>
+            <AntwortC>Vermeidung brennbarer Materialien in der Nähe</AntwortC>
+            <AntwortD>Nicht auf die Flamme achten</AntwortD>
+        </Frage>
+        <Frage FID="f135" KID="k3">
+            <FrageName>Was misst ein pH-Meter?</FrageName>
+            <AntwortA>Die Leitfähigkeit einer Lösung</AntwortA>
+            <AntwortB>Den Salzgehalt in Gramm</AntwortB>
+            <AntwortC>Den pH-Wert (Säure- oder Basenstärke)</AntwortC>
+            <AntwortD>Die Temperatur einer Lösung</AntwortD>
+        </Frage>
+        <Frage FID="f136" KID="k3">
+            <FrageName>Was bedeutet der Begriff „Sterilisation“ im mikrobiologischen Labor?</FrageName>
+            <AntwortA>Teilweise Entfernung von Schmutz</AntwortA>
+            <AntwortB>Abtöten oder Entfernen aller lebensfähigen Mikroorganismen</AntwortB>
+            <AntwortC>Konservierung von Lebensmitteln</AntwortC>
+            <AntwortD>Reine Kühlung der Proben</AntwortD>
+        </Frage>
+        <Frage FID="f137" KID="k3">
+            <FrageName>Wie nennt man das Laborverfahren, bei dem Bakterien oder Zellen auf Nährmedien gezüchtet
+                werden?
+            </FrageName>
+            <AntwortA>Keimfilterung</AntwortA>
+            <AntwortB>Kultivierung</AntwortB>
+            <AntwortC>Lyophilisation</AntwortC>
+            <AntwortD>Sterilfiltration</AntwortD>
+        </Frage>
+        <Frage FID="f138" KID="k3">
+            <FrageName>Was ist bei der Entsorgung von Lösungsmittelresten im Labor zu beachten?</FrageName>
+            <AntwortA>Sie können bedenkenlos in den Ausguss geschüttet werden</AntwortA>
+            <AntwortB>Sie gehören in spezielle, gekennzeichnete Abfallbehälter</AntwortB>
+            <AntwortC>Man gießt sie zurück in beliebige Vorratsflaschen</AntwortC>
+            <AntwortD>Man verbrennt sie sofort in einem Abzug</AntwortD>
+        </Frage>
+        <Frage FID="f139" KID="k3">
+            <FrageName>Wie prüft man im Labor häufig, ob Gase wie Wasserstoff brennbar sind?</FrageName>
+            <AntwortA>Mit einem pH-Papier</AntwortA>
+            <AntwortB>Durch Titration</AntwortB>
+            <AntwortC>Knallgasprobe (Flammenprobe)</AntwortC>
+            <AntwortD>Durch Einfrieren</AntwortD>
+        </Frage>
+        <Frage FID="f140" KID="k3">
+            <FrageName>Welche Maßnahme dient dem Brandschutz im Labor?</FrageName>
+            <AntwortA>Löschdecke und Feuerlöscher bereitstellen</AntwortA>
+            <AntwortB>Offene Chemikalien überall verteilen</AntwortB>
+            <AntwortC>Alle Fenster immer geschlossen halten</AntwortC>
+            <AntwortD>Feuer nur unbeaufsichtigt brennen lassen</AntwortD>
+        </Frage>
+        <Frage FID="f141" KID="k3">
+            <FrageName>Wie nennt man den Prozess des Übergangs einer Substanz vom festen direkt in den gasförmigen
+                Zustand?
+            </FrageName>
+            <AntwortA>Sieden</AntwortA>
+            <AntwortB>Sublimation</AntwortB>
+            <AntwortC>Verdampfung</AntwortC>
+            <AntwortD>Kondensation</AntwortD>
+        </Frage>
+        <Frage FID="f142" KID="k3">
+            <FrageName>Was ist das Hauptziel beim Autoklavieren von Laborutensilien?</FrageName>
+            <AntwortA>Energiesparen</AntwortA>
+            <AntwortB>Eliminierung von Bakterien und Keimen</AntwortB>
+            <AntwortC>Herausfiltern von Feststoffen</AntwortC>
+            <AntwortD>Kühlen von Proben</AntwortD>
+        </Frage>
+        <Frage FID="f143" KID="k3">
+            <FrageName>Wofür steht die Abkürzung „RNA“ in biologischen Laboren?</FrageName>
+            <AntwortA>Rational Numeric Analysis</AntwortA>
+            <AntwortB>Ribonukleinsäure</AntwortB>
+            <AntwortC>Radical Neutralizing Agent</AntwortC>
+            <AntwortD>Reagent for Nitrogen Absorption</AntwortD>
+        </Frage>
+        <Frage FID="f144" KID="k3">
+            <FrageName>Wie nennt man die transparente Kunststofffolie, die zum Schutz von Labortischen genutzt wird?
+            </FrageName>
+            <AntwortA>Parafilm</AntwortA>
+            <AntwortB>Klebeband</AntwortB>
+            <AntwortC>Cellophan</AntwortC>
+            <AntwortD>Thermopapier</AntwortD>
+        </Frage>
+        <Frage FID="f145" KID="k3">
+            <FrageName>Was ist ein Mischer der Firma Heidolph oder IKA im Labor?</FrageName>
+            <AntwortA>Ein Spezialkühlschrank</AntwortA>
+            <AntwortB>Ein Magnetrührer oder Overhead-Rührgerät</AntwortB>
+            <AntwortC>Ein Gerät zur pH-Messung</AntwortC>
+            <AntwortD>Ein Zentrifugenaufsatz</AntwortD>
+        </Frage>
+        <Frage FID="f146" KID="k3">
+            <FrageName>Welche Faustregel gilt für das Mischen von Säure mit Wasser?</FrageName>
+            <AntwortA>Erst Säure in den Behälter, dann Wasser dazu</AntwortA>
+            <AntwortB>Erst Wasser, dann die Säure langsam zugeben</AntwortB>
+            <AntwortC>Beides gleichzeitig hineinschütten</AntwortC>
+            <AntwortD>Die Reihenfolge ist egal</AntwortD>
+        </Frage>
+        <Frage FID="f147" KID="k3">
+            <FrageName>Was ist ein Chromatograph?</FrageName>
+            <AntwortA>Ein Gerät zur Temperaturmessung</AntwortA>
+            <AntwortB>Ein Laborgerät zur Trennung von Stoffgemischen</AntwortB>
+            <AntwortC>Ein Mikroskoptyp</AntwortC>
+            <AntwortD>Eine Schutzausrüstung</AntwortD>
+        </Frage>
+        <Frage FID="f148" KID="k3">
+            <FrageName>Welche Bedeutung hat das Symbol mit dem Ausrufezeichen (GHS07)?</FrageName>
+            <AntwortA>Explosiv</AntwortA>
+            <AntwortB>Gesundheitsgefahr (z. B. Reizung, Sensibilisierung)</AntwortB>
+            <AntwortC>Gas unter Druck</AntwortC>
+            <AntwortD>Gewässergefährdend</AntwortD>
+        </Frage>
+        <Frage FID="f149" KID="k3">
+            <FrageName>Was ist ein Vollpipettierer (Pipettierball)?</FrageName>
+            <AntwortA>Ein Ballon zum Verschließen von Flaschen</AntwortA>
+            <AntwortB>Ein Gerät zum Ansaugen von Flüssigkeiten in eine Pipette</AntwortB>
+            <AntwortC>Eine Waage zum Messen des Volumens</AntwortC>
+            <AntwortD>Eine Destillationsapparatur</AntwortD>
+        </Frage>
+        <Frage FID="f150" KID="k3">
+            <FrageName>Welches Laborinstrument wird häufig zur visuellen Beurteilung kleiner Objekte oder Zellstrukturen
+                verwendet?
+            </FrageName>
+            <AntwortA>Spektralfotometer</AntwortA>
+            <AntwortB>Thermocycler</AntwortB>
+            <AntwortC>Mikroskop</AntwortC>
+            <AntwortD>Laborzange</AntwortD>
+        </Frage>
+    </Fragen>
+
+    <Lösungen>
+        <Loesung FID="f1">Konrad Adenauer</Loesung>
+        <Loesung FID="f2">André Kostolany</Loesung>
+        <Loesung FID="f3">Francis Bacon</Loesung>
+        <Loesung FID="f4">Die Europäische Zentralbank</Loesung>
+        <Loesung FID="f5">1957</Loesung>
+        <Loesung FID="f6">Kreditvergabe an Länder mit Zahlungsbilanzproblemen</Loesung>
+        <Loesung FID="f7">Adam Smith</Loesung>
+        <Loesung FID="f8">Tokio</Loesung>
+        <Loesung FID="f9">Adam Smith</Loesung>
+        <Loesung FID="f10">Deutschland</Loesung>
+        <Loesung FID="f11">Margaret Thatcher</Loesung>
+        <Loesung FID="f12">Wiederaufbau Europas</Loesung>
+        <Loesung FID="f13">EZB-Rat</Loesung>
+        <Loesung FID="f14">1999</Loesung>
+        <Loesung FID="f15">Niccolò Machiavelli</Loesung>
+        <Loesung FID="f16">Otto von Bismarck</Loesung>
+        <Loesung FID="f17">Mansa Musa</Loesung>
+        <Loesung FID="f18">Die Deutsche Bundesbank im Eurosystem</Loesung>
+        <Loesung FID="f19">Sir John Houblon</Loesung>
+        <Loesung FID="f20">Die Niederländische Ostindien-Kompanie (VOC)</Loesung>
+        <Loesung FID="f21">Jean-Claude Trichet</Loesung>
+        <Loesung FID="f22">Das Ancien Régime</Loesung>
+        <Loesung FID="f23">Die Vereinten Nationen (UNO)</Loesung>
+        <Loesung FID="f24">Joseph Schumpeter</Loesung>
+        <Loesung FID="f25">Die USA</Loesung>
+        <Loesung FID="f26">USA</Loesung>
+        <Loesung FID="f27">Karl Marx</Loesung>
+        <Loesung FID="f28">Der Euro</Loesung>
+        <Loesung FID="f29">Alfred Müller-Armack</Loesung>
+        <Loesung FID="f30">Ludwig XVI.</Loesung>
+        <Loesung FID="f31">Sveriges Riksbank (Schweden)</Loesung>
+        <Loesung FID="f32">Federal Reserve System</Loesung>
+        <Loesung FID="f33">Die Medici</Loesung>
+        <Loesung FID="f34">Franklin D. Roosevelt</Loesung>
+        <Loesung FID="f35">Der Vertrag von Lissabon</Loesung>
+        <Loesung FID="f36">Die Herrschaft weniger</Loesung>
+        <Loesung FID="f37">Der Schwarze Freitag (Börsencrash)</Loesung>
+        <Loesung FID="f38">John Maynard Keynes</Loesung>
+        <Loesung FID="f39">Deutschland</Loesung>
+        <Loesung FID="f40">London</Loesung>
+        <Loesung FID="f41">Republik</Loesung>
+        <Loesung FID="f42">Abwertungspolitik</Loesung>
+        <Loesung FID="f43">Wladimir Putin</Loesung>
+        <Loesung FID="f44">Tunesien</Loesung>
+        <Loesung FID="f45">Rechtsordnung</Loesung>
+        <Loesung FID="f46">Die OECD</Loesung>
+        <Loesung FID="f47">Friedrich Engels</Loesung>
+        <Loesung FID="f48">Königin Victoria</Loesung>
+        <Loesung FID="f49">Die NATO</Loesung>
+        <Loesung FID="f50">Bill Gates</Loesung>
+        <Loesung FID="f51">Koran</Loesung>
+        <Loesung FID="f52">Siddhartha Gautama (Buddha)</Loesung>
+        <Loesung FID="f53">Die Shahada</Loesung>
+        <Loesung FID="f54">Ostern</Loesung>
+        <Loesung FID="f55">Das Judentum</Loesung>
+        <Loesung FID="f56">Hinduismus</Loesung>
+        <Loesung FID="f57">Tora</Loesung>
+        <Loesung FID="f58">Martin Luther</Loesung>
+        <Loesung FID="f59">Der Papst</Loesung>
+        <Loesung FID="f60">Im Hinduismus</Loesung>
+        <Loesung FID="f61">Jesus Christus</Loesung>
+        <Loesung FID="f62">Diwali</Loesung>
+        <Loesung FID="f63">Rosh Hashana</Loesung>
+        <Loesung FID="f64">Dharma-Rad</Loesung>
+        <Loesung FID="f65">Die Geburt Jesu</Loesung>
+        <Loesung FID="f66">Das zentrale Heiligtum in Mekka</Loesung>
+        <Loesung FID="f67">Griechische Mythologie</Loesung>
+        <Loesung FID="f68">Rom</Loesung>
+        <Loesung FID="f69">Das Kreuz</Loesung>
+        <Loesung FID="f70">Der jüdische Ruhetag</Loesung>
+        <Loesung FID="f71">Die Mormonen (Kirche Jesu Christi der Heiligen der Letzten Tage)</Loesung>
+        <Loesung FID="f72">Judentum</Loesung>
+        <Loesung FID="f73">Pfingsten</Loesung>
+        <Loesung FID="f74">Sufismus</Loesung>
+        <Loesung FID="f75">Passah (Pessach)</Loesung>
+        <Loesung FID="f76">Tibetischer Buddhismus</Loesung>
+        <Loesung FID="f77">Islam</Loesung>
+        <Loesung FID="f78">Das Nicäno-Konstantinopolitanische Glaubensbekenntnis</Loesung>
+        <Loesung FID="f79">Abraham</Loesung>
+        <Loesung FID="f80">Italien</Loesung>
+        <Loesung FID="f81">Dalai Lama</Loesung>
+        <Loesung FID="f82">Id al-Fitr (Fastenbrechenfest)</Loesung>
+        <Loesung FID="f83">Hinduismus</Loesung>
+        <Loesung FID="f84">An die Existenz vieler Kami (Gottheiten/Geister)</Loesung>
+        <Loesung FID="f85">Chanukka</Loesung>
+        <Loesung FID="f86">Kailash</Loesung>
+        <Loesung FID="f87">Paulus von Tarsus</Loesung>
+        <Loesung FID="f88">Nirwana (Nibbana)</Loesung>
+        <Loesung FID="f89">Sikhismus</Loesung>
+        <Loesung FID="f90">Matthäus, Markus, Lukas, Johannes</Loesung>
+        <Loesung FID="f91">Das Buch Genesis</Loesung>
+        <Loesung FID="f92">Salat</Loesung>
+        <Loesung FID="f93">Christentum (insbesondere Katholizismus)</Loesung>
+        <Loesung FID="f94">Mose</Loesung>
+        <Loesung FID="f95">Vesakh (Vesak)</Loesung>
+        <Loesung FID="f96">Baptisten</Loesung>
+        <Loesung FID="f97">Moksha</Loesung>
+        <Loesung FID="f98">Buddha</Loesung>
+        <Loesung FID="f99">Gurdwara</Loesung>
+        <Loesung FID="f100">Markus</Loesung>
+        <Loesung FID="f101">Laborkittel, Schutzbrille, Handschuhe</Loesung>
+        <Loesung FID="f102">Pipette</Loesung>
+        <Loesung FID="f103">Tiegel</Loesung>
+        <Loesung FID="f104">Zur Sterilisation von Geräten</Loesung>
+        <Loesung FID="f105">Potentia Hydrogenii (Wasserstoffionenkonzentration)</Loesung>
+        <Loesung FID="f106">Reichlich fließendem Wasser</Loesung>
+        <Loesung FID="f107">Mörser mit Pistill</Loesung>
+        <Loesung FID="f108">Ein Gerät zum Abtrennen von Stoffen durch Rotation</Loesung>
+        <Loesung FID="f109">Analysenwaage</Loesung>
+        <Loesung FID="f110">Destillation</Loesung>
+        <Loesung FID="f111">Bläulich</Loesung>
+        <Loesung FID="f112">Kühler (Liebigkühler)</Loesung>
+        <Loesung FID="f113">Eine Schutzeinrichtung zur Absaugung von Dämpfen</Loesung>
+        <Loesung FID="f114">Die Krümmung der Flüssigkeitsoberfläche</Loesung>
+        <Loesung FID="f115">Messkolben</Loesung>
+        <Loesung FID="f116">Luftschleuse</Loesung>
+        <Loesung FID="f117">Trockenschrank (Ofen)</Loesung>
+        <Loesung FID="f118">Elektrophorese</Loesung>
+        <Loesung FID="f119">Zum automatischen Rühren von Lösungen</Loesung>
+        <Loesung FID="f120">Substanzen wie Phenolphthalein oder Bromthymolblau</Loesung>
+        <Loesung FID="f121">Global Harmonisiertes System zur Einstufung und Kennzeichnung von Chemikalien</Loesung>
+        <Loesung FID="f122">Unter Öl oder luftdicht</Loesung>
+        <Loesung FID="f123">Genaue Beachtung der Sicherheitsdatenblätter</Loesung>
+        <Loesung FID="f124">Filtration</Loesung>
+        <Loesung FID="f125">Braune Glasflasche</Loesung>
+        <Loesung FID="f126">Handschuhe und Augenschutz benutzen</Loesung>
+        <Loesung FID="f127">Chromatographiesäulen oder Chromatographiepapier</Loesung>
+        <Loesung FID="f128">Sie können leicht entzündlich sein</Loesung>
+        <Loesung FID="f129">Base in Säure gießen (Grundregel: „Erst das Wasser, dann die Säure“)</Loesung>
+        <Loesung FID="f130">Titration</Loesung>
+        <Loesung FID="f131">Zur Bestimmung der Lichtabsorption einer Probe</Loesung>
+        <Loesung FID="f132">Flamme-Symbol</Loesung>
+        <Loesung FID="f133">Schmelzpunkt</Loesung>
+        <Loesung FID="f134">Vermeidung brennbarer Materialien in der Nähe</Loesung>
+        <Loesung FID="f135">Den pH-Wert (Säure- oder Basenstärke)</Loesung>
+        <Loesung FID="f136">Abtöten oder Entfernen aller lebensfähigen Mikroorganismen</Loesung>
+        <Loesung FID="f137">Kultivierung</Loesung>
+        <Loesung FID="f138">Sie gehören in spezielle, gekennzeichnete Abfallbehälter</Loesung>
+        <Loesung FID="f139">Knallgasprobe (Flammenprobe)</Loesung>
+        <Loesung FID="f140">Löschdecke und Feuerlöscher bereitstellen</Loesung>
+        <Loesung FID="f141">Sublimation</Loesung>
+        <Loesung FID="f142">Eliminierung von Bakterien und Keimen</Loesung>
+        <Loesung FID="f143">Ribonukleinsäure</Loesung>
+        <Loesung FID="f144">Parafilm</Loesung>
+        <Loesung FID="f145">Ein Magnetrührer oder Overhead-Rührgerät</Loesung>
+        <Loesung FID="f146">Erst Wasser, dann die Säure langsam zugeben</Loesung>
+        <Loesung FID="f147">Ein Laborgerät zur Trennung von Stoffgemischen</Loesung>
+        <Loesung FID="f148">Gesundheitsgefahr (z. B. Reizung, Sensibilisierung)</Loesung>
+        <Loesung FID="f149">Ein Gerät zum Ansaugen von Flüssigkeiten in eine Pipette</Loesung>
+        <Loesung FID="f150">Mikroskop</Loesung>
+    </Lösungen>
+</database>
