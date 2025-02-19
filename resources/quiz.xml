@@ -12,10 +12,10 @@
             <Name>Im Labor</Name>
         </Kategorie>
         <Kategorie KatID="k4">
-            <Name>Musik und Hits</Name>
+            <Name>Weltall</Name>
         </Kategorie>
         <Kategorie KatID="k5">
-            <Name>Musik und Hits</Name>
+            <Name>Wunder der Technik</Name>
         </Kategorie>
         <Kategorie KatID="k6">
             <Name>Computerspiele</Name>
@@ -1175,362 +1175,381 @@
             <AntwortD>Laborzange</AntwortD>
         </Frage>
         <Frage FID="f151" KID="k4">
-            <FrageName>Welche Band ist für den Song „Bohemian Rhapsody“ bekannt?</FrageName>
-            <AntwortA>The Beatles</AntwortA>
-            <AntwortB>Queen</AntwortB>
-            <AntwortC>ABBA</AntwortC>
-            <AntwortD>Pink Floyd</AntwortD>
+            <FrageName>Welcher Planet wird oft als „Roter Planet“ bezeichnet?</FrageName>
+            <AntwortA>Jupiter</AntwortA>
+            <AntwortB>Mars</AntwortB>
+            <AntwortC>Merkur</AntwortC>
+            <AntwortD>Venus</AntwortD>
         </Frage>
         <Frage FID="f152" KID="k4">
-            <FrageName>Wer sang den Hit „Thriller“?</FrageName>
-            <AntwortA>Prince</AntwortA>
-            <AntwortB>Elton John</AntwortB>
-            <AntwortC>Michael Jackson</AntwortC>
-            <AntwortD>Stevie Wonder</AntwortD>
+            <FrageName>Wie heißt der größte Planet in unserem Sonnensystem?</FrageName>
+            <AntwortA>Saturn</AntwortA>
+            <AntwortB>Uranus</AntwortB>
+            <AntwortC>Neptun</AntwortC>
+            <AntwortD>Jupiter</AntwortD>
         </Frage>
         <Frage FID="f153" KID="k4">
-            <FrageName>Welche Band veröffentlichte den Song „Wonderwall“?</FrageName>
-            <AntwortA>Oasis</AntwortA>
-            <AntwortB>Blur</AntwortB>
-            <AntwortC>Coldplay</AntwortC>
-            <AntwortD>Radiohead</AntwortD>
+            <FrageName>Welcher Himmelskörper ist der Erde am nächsten?</FrageName>
+            <AntwortA>Mond</AntwortA>
+            <AntwortB>Venus</AntwortB>
+            <AntwortC>Merkur</AntwortC>
+            <AntwortD>Mars</AntwortD>
         </Frage>
         <Frage FID="f154" KID="k4">
-            <FrageName>Von wem stammt der Hit „Like a Prayer“ (1989)?</FrageName>
-            <AntwortA>Madonna</AntwortA>
-            <AntwortB>Kylie Minogue</AntwortB>
-            <AntwortC>Paula Abdul</AntwortC>
-            <AntwortD>Janet Jackson</AntwortD>
+            <FrageName>Welche Organisation brachte 1969 erstmals Menschen zum Mond?</FrageName>
+            <AntwortA>NASA</AntwortA>
+            <AntwortB>ESA</AntwortB>
+            <AntwortC>Roscosmos</AntwortC>
+            <AntwortD>CNSA</AntwortD>
         </Frage>
         <Frage FID="f155" KID="k4">
-            <FrageName>Wie heißt der Sänger von “Shape of You” (2017)?</FrageName>
-            <AntwortA>Sam Smith</AntwortA>
-            <AntwortB>Ed Sheeran</AntwortB>
-            <AntwortC>Harry Styles</AntwortC>
-            <AntwortD>Justin Timberlake</AntwortD>
+            <FrageName>Wie heißt unser Heimatstern?</FrageName>
+            <AntwortA>Sirius</AntwortA>
+            <AntwortB>Polaris</AntwortB>
+            <AntwortC>Sonne</AntwortC>
+            <AntwortD>Alpha Centauri</AntwortD>
         </Frage>
         <Frage FID="f156" KID="k4">
-            <FrageName>Wer komponierte die Oper „Die Zauberflöte“?</FrageName>
-            <AntwortA>Ludwig van Beethoven</AntwortA>
-            <AntwortB>Giuseppe Verdi</AntwortB>
-            <AntwortC>Wolfgang Amadeus Mozart</AntwortC>
-            <AntwortD>Richard Wagner</AntwortD>
+            <FrageName>Welcher Planet besitzt ein ausgeprägtes Ringsystem, das man bereits von der Erde aus beobachten
+                kann?
+            </FrageName>
+            <AntwortA>Jupiter</AntwortA>
+            <AntwortB>Saturn</AntwortB>
+            <AntwortC>Neptun</AntwortC>
+            <AntwortD>Uranus</AntwortD>
         </Frage>
         <Frage FID="f157" KID="k4">
-            <FrageName>Welche schwedische Popgruppe ist bekannt für Hits wie „Mamma Mia“ und „Dancing Queen“?
+            <FrageName>Welcher Planet wurde lange Zeit als neunter Planet geführt, bevor er zum Zwergplaneten erklärt
+                wurde?
             </FrageName>
-            <AntwortA>ABBA</AntwortA>
-            <AntwortB>Roxette</AntwortB>
-            <AntwortC>A-ha</AntwortC>
-            <AntwortD>Ace of Base</AntwortD>
+            <AntwortA>Pluto</AntwortA>
+            <AntwortB>Ceres</AntwortB>
+            <AntwortC>Eris</AntwortC>
+            <AntwortD>Orcus</AntwortD>
         </Frage>
         <Frage FID="f158" KID="k4">
-            <FrageName>Was ist der Titel des legendären Albums von Pink Floyd, das ein Prisma auf dem Cover zeigt?
+            <FrageName>Welche Raumstation umkreist seit 1998 die Erde und wird gemeinsam von mehreren Nationen
+                betrieben?
             </FrageName>
-            <AntwortA>„The Wall“</AntwortA>
-            <AntwortB>„Wish You Were Here“</AntwortB>
-            <AntwortC>„The Dark Side of the Moon“</AntwortC>
-            <AntwortD>„Animals“</AntwortD>
+            <AntwortA>Mir</AntwortA>
+            <AntwortB>Tiangong</AntwortB>
+            <AntwortC>International Space Station (ISS)</AntwortC>
+            <AntwortD>Skylab</AntwortD>
         </Frage>
         <Frage FID="f159" KID="k4">
-            <FrageName>Wie heißt das berühmte Musikfestival, das 1969 in den USA stattfand?</FrageName>
-            <AntwortA>Woodstock</AntwortA>
-            <AntwortB>Coachella</AntwortB>
-            <AntwortC>Lollapalooza</AntwortC>
-            <AntwortD>Burning Man</AntwortD>
+            <FrageName>Wer war der erste Mensch im Weltall (1961)?</FrageName>
+            <AntwortA>Neil Armstrong</AntwortA>
+            <AntwortB>Buzz Aldrin</AntwortB>
+            <AntwortC>Yuri Gagarin</AntwortC>
+            <AntwortD>John Glenn</AntwortD>
         </Frage>
         <Frage FID="f160" KID="k4">
-            <FrageName>Wer spielte das Gitarrensolo in „Hotel California“ (Eagles)?</FrageName>
-            <AntwortA>Kirk Hammett</AntwortA>
-            <AntwortB>Don Felder und Joe Walsh</AntwortB>
-            <AntwortC>Eric Clapton</AntwortC>
-            <AntwortD>Mark Knopfler</AntwortD>
+            <FrageName>Wie nennt man die Entfernung, die Licht in einem Jahr zurücklegt?</FrageName>
+            <AntwortA>Parallaxeneinheit</AntwortA>
+            <AntwortB>Astronomische Einheit</AntwortB>
+            <AntwortC>Lichtsekunde</AntwortC>
+            <AntwortD>Lichtjahr</AntwortD>
         </Frage>
         <Frage FID="f161" KID="k4">
-            <FrageName>Welcher Künstler steht hinter dem Album „21“, das 2011 große Erfolge feierte?</FrageName>
-            <AntwortA>Taylor Swift</AntwortA>
-            <AntwortB>Adele</AntwortB>
-            <AntwortC>Beyoncé</AntwortC>
-            <AntwortD>Rihanna</AntwortD>
+            <FrageName>Welche Kraft hält Planeten in ihrer Umlaufbahn um die Sonne?</FrageName>
+            <AntwortA>Elektromagnetische Kraft</AntwortA>
+            <AntwortB>Gravitationskraft</AntwortB>
+            <AntwortC>Zentrifugalkraft</AntwortC>
+            <AntwortD>Kernkraft</AntwortD>
         </Frage>
         <Frage FID="f162" KID="k4">
-            <FrageName>Welche Band brachte den Song „Smells Like Teen Spirit“ heraus?</FrageName>
-            <AntwortA>Green Day</AntwortA>
-            <AntwortB>Pearl Jam</AntwortB>
-            <AntwortC>Nirvana</AntwortC>
-            <AntwortD>Soundgarden</AntwortD>
+            <FrageName>Welches Weltraumteleskop lieferte seit 1990 zahlreiche Bilder aus dem All?</FrageName>
+            <AntwortA>Hubble-Weltraumteleskop</AntwortA>
+            <AntwortB>Spitzer-Teleskop</AntwortB>
+            <AntwortC>Webb-Teleskop</AntwortC>
+            <AntwortD>Kepler-Teleskop</AntwortD>
         </Frage>
         <Frage FID="f163" KID="k4">
-            <FrageName>Wie heißt die Sängerin des Hits „Bad Romance“?</FrageName>
-            <AntwortA>Lady Gaga</AntwortA>
-            <AntwortB>Miley Cyrus</AntwortB>
-            <AntwortC>Britney Spears</AntwortC>
-            <AntwortD>Rihanna</AntwortD>
+            <FrageName>Wie lautet der Fachbegriff für ein explosives Ende eines massereichen Sterns?</FrageName>
+            <AntwortA>Neutronenstern</AntwortA>
+            <AntwortB>Supernova</AntwortB>
+            <AntwortC>Weißer Zwerg</AntwortC>
+            <AntwortD>Roter Riese</AntwortD>
         </Frage>
         <Frage FID="f164" KID="k4">
-            <FrageName>Wer interpretierte den Song „My Heart Will Go On“ aus dem Film Titanic?</FrageName>
-            <AntwortA>Barbra Streisand</AntwortA>
-            <AntwortB>Mariah Carey</AntwortB>
-            <AntwortC>Céline Dion</AntwortC>
-            <AntwortD>Whitney Houston</AntwortD>
+            <FrageName>Welches Phänomen bezeichnet ein schwarzes Loch?</FrageName>
+            <AntwortA>Sternexplosion</AntwortA>
+            <AntwortB>Region mit so starker Gravitation, dass nicht einmal Licht entweichen kann</AntwortB>
+            <AntwortC>Komplett dunkler Planet</AntwortC>
+            <AntwortD>Gasnebel ohne leuchtende Sterne</AntwortD>
         </Frage>
         <Frage FID="f165" KID="k4">
-            <FrageName>In welchem Land fand 1985 das Live-Aid-Konzert statt, das von Bob Geldof mitorganisiert wurde?
-            </FrageName>
-            <AntwortA>Kanada</AntwortA>
-            <AntwortB>USA und Großbritannien (simultan)</AntwortB>
-            <AntwortC>Australien</AntwortC>
-            <AntwortD>Südafrika</AntwortD>
+            <FrageName>Welcher Planet ist der heißeste in unserem Sonnensystem, trotz seiner Position?</FrageName>
+            <AntwortA>Venus</AntwortA>
+            <AntwortB>Merkur</AntwortB>
+            <AntwortC>Mars</AntwortC>
+            <AntwortD>Saturn</AntwortD>
         </Frage>
         <Frage FID="f166" KID="k4">
-            <FrageName>Welcher Komponist schuf das berühmte „Hallelujah“ aus dem Oratorium „Messiah“?</FrageName>
-            <AntwortA>Johann Sebastian Bach</AntwortA>
-            <AntwortB>Joseph Haydn</AntwortB>
-            <AntwortC>Georg Friedrich Händel</AntwortC>
-            <AntwortD>Antonio Vivaldi</AntwortD>
+            <FrageName>Wie nennt man die dunklen, von Lava überfluteten Ebenen auf dem Mond?</FrageName>
+            <AntwortA>Rillen</AntwortA>
+            <AntwortB>Kratermeere</AntwortB>
+            <AntwortC>Mare (Mondmeere)</AntwortC>
+            <AntwortD>Faltengebirge</AntwortD>
         </Frage>
         <Frage FID="f167" KID="k4">
-            <FrageName>Welcher deutsche Musiker landete mit „Rock Me Amadeus“ einen Welterfolg?</FrageName>
-            <AntwortA>Herbert Grönemeyer</AntwortA>
-            <AntwortB>Falco (Österreicher, aber deutschsprachig)</AntwortB>
-            <AntwortC>Nena</AntwortC>
-            <AntwortD>Peter Maffay</AntwortD>
+            <FrageName>Welche Sonde verließ als erste das Sonnensystem (nach offizieller Definition) und sendet noch
+                Daten?
+            </FrageName>
+            <AntwortA>Voyager 1</AntwortA>
+            <AntwortB>Apollo 13</AntwortB>
+            <AntwortC>Pioneer 10</AntwortC>
+            <AntwortD>New Horizons</AntwortD>
         </Frage>
         <Frage FID="f168" KID="k4">
-            <FrageName>Wie heißt das legendäre Debütalbum der Band The Beatles von 1963?</FrageName>
-            <AntwortA>„Rubber Soul“</AntwortA>
-            <AntwortB>„Please Please Me“</AntwortB>
-            <AntwortC>„Help!“</AntwortC>
-            <AntwortD>„Revolver“</AntwortD>
+            <FrageName>Was bezeichnet man als „Asteroidengürtel“?</FrageName>
+            <AntwortA>Eine Kette von Kometen in Sonnenähe</AntwortA>
+            <AntwortB>Die Bahnregion zwischen Mars und Jupiter mit vielen Asteroiden</AntwortB>
+            <AntwortC>Ein ringförmiges Staubband um den Saturn</AntwortC>
+            <AntwortD>Die Region am Rande des Sonnensystems</AntwortD>
         </Frage>
         <Frage FID="f169" KID="k4">
-            <FrageName>Welche Band ist durch den Song „Highway to Hell“ (1979) bekannt?</FrageName>
-            <AntwortA>AC/DC</AntwortA>
-            <AntwortB>Deep Purple</AntwortB>
-            <AntwortC>Judas Priest</AntwortC>
-            <AntwortD>Motörhead</AntwortD>
+            <FrageName>Wie heißt der zweitgrößte Mond des Sonnensystems und größter Mond des Saturn?</FrageName>
+            <AntwortA>Europa</AntwortA>
+            <AntwortB>Ganymed</AntwortB>
+            <AntwortC>Titan</AntwortC>
+            <AntwortD>Triton</AntwortD>
         </Frage>
         <Frage FID="f170" KID="k4">
-            <FrageName>Welcher Künstler brachte den Song „Shape of My Heart“ (1993) heraus?</FrageName>
-            <AntwortA>Phil Collins</AntwortA>
-            <AntwortB>Sting</AntwortB>
-            <AntwortC>Rod Stewart</AntwortC>
-            <AntwortD>Eric Clapton</AntwortD>
+            <FrageName>Womit beschäftigt sich die Astrobiologie primär?</FrageName>
+            <AntwortA>Mit der Erforschung der Gravitation</AntwortA>
+            <AntwortB>Mit der Suche nach und Erforschung von Leben im All</AntwortB>
+            <AntwortC>Mit der Wettervorhersage auf Planeten</AntwortC>
+            <AntwortD>Mit der Herstellung von Treibstoff für Raumfahrt</AntwortD>
         </Frage>
         <Frage FID="f171" KID="k4">
-            <FrageName>Welche Sängerin wurde mit dem Song „...Baby One More Time“ weltberühmt?</FrageName>
-            <AntwortA>Christina Aguilera</AntwortA>
-            <AntwortB>Avril Lavigne</AntwortB>
-            <AntwortC>Britney Spears</AntwortC>
-            <AntwortD>Jessica Simpson</AntwortD>
+            <FrageName>Welches Element fusioniert in der Sonne hauptsächlich zu Helium, um Energie freizusetzen?
+            </FrageName>
+            <AntwortA>Kohlenstoff</AntwortA>
+            <AntwortB>Wasserstoff</AntwortB>
+            <AntwortC>Sauerstoff</AntwortC>
+            <AntwortD>Uran</AntwortD>
         </Frage>
         <Frage FID="f172" KID="k4">
-            <FrageName>Wie nennt sich das berühmte Sommer-Festival auf der Donauinsel in Wien?</FrageName>
-            <AntwortA>Donau Sounds</AntwortA>
-            <AntwortB>Wiener Festwochen</AntwortB>
-            <AntwortC>Donauinselfest</AntwortC>
-            <AntwortD>Rock am Ring</AntwortD>
+            <FrageName>Wie nennt man den Zeitraum, in dem die Erde einmal um ihre Achse rotiert?</FrageName>
+            <AntwortA>Monat</AntwortA>
+            <AntwortB>Jahr</AntwortB>
+            <AntwortC>Tag</AntwortC>
+            <AntwortD>Stunde</AntwortD>
         </Frage>
         <Frage FID="f173" KID="k4">
-            <FrageName>Welche Sängerin veröffentlichte 1983 den Hit „Girls Just Want to Have Fun“?</FrageName>
-            <AntwortA>Madonna</AntwortA>
-            <AntwortB>Bonnie Tyler</AntwortB>
-            <AntwortC>Cyndi Lauper</AntwortC>
-            <AntwortD>Belinda Carlisle</AntwortD>
+            <FrageName>Welcher US-Präsident verkündete das Ziel, einen Menschen auf den Mond zu bringen?</FrageName>
+            <AntwortA>John F. Kennedy</AntwortA>
+            <AntwortB>Richard Nixon</AntwortB>
+            <AntwortC>Dwight D. Eisenhower</AntwortC>
+            <AntwortD>Lyndon B. Johnson</AntwortD>
         </Frage>
         <Frage FID="f174" KID="k4">
-            <FrageName>Wer war Mitglied der Gruppe Wham! und hatte später einen Solo-Hit mit „Careless Whisper“?
+            <FrageName>Wie nennt man die Phase, in der sich der Mond zwischen Erde und Sonne befindet und man einen
+                dunklen Mond am Himmel sieht?
             </FrageName>
-            <AntwortA>Robbie Williams</AntwortA>
-            <AntwortB>George Michael</AntwortB>
-            <AntwortC>Sting</AntwortC>
-            <AntwortD>Michael Bolton</AntwortD>
+            <AntwortA>Vollmond</AntwortA>
+            <AntwortB>Halbmond</AntwortB>
+            <AntwortC>Neumond</AntwortC>
+            <AntwortD>Erstes Viertel</AntwortD>
         </Frage>
         <Frage FID="f175" KID="k4">
-            <FrageName>Von welcher US-Sängerin stammt das Album „Born This Way“ (2011)?</FrageName>
-            <AntwortA>Britney Spears</AntwortA>
-            <AntwortB>Lady Gaga</AntwortB>
-            <AntwortC>Katy Perry</AntwortC>
-            <AntwortD>Miley Cyrus</AntwortD>
+            <FrageName>Welcher Stern steht der Sonne am nächsten?</FrageName>
+            <AntwortA>Proxima Centauri</AntwortA>
+            <AntwortB>Betelgeuse</AntwortB>
+            <AntwortC>Sirius</AntwortC>
+            <AntwortD>Vega</AntwortD>
         </Frage>
         <Frage FID="f176" KID="k4">
-            <FrageName>Wie heißt der britische Sänger, der 1972 den Song „Rocket Man“ veröffentlichte?</FrageName>
-            <AntwortA>Rod Stewart</AntwortA>
-            <AntwortB>Elton John</AntwortB>
-            <AntwortC>David Bowie</AntwortC>
-            <AntwortD>Freddie Mercury</AntwortD>
+            <FrageName>Welche kosmische Struktur ist größer?</FrageName>
+            <AntwortA>Galaxie</AntwortA>
+            <AntwortB>Planetensystem</AntwortB>
+            <AntwortC>Stern</AntwortC>
+            <AntwortD>Planet</AntwortD>
         </Frage>
         <Frage FID="f177" KID="k4">
-            <FrageName>Welche Gruppe hatte einen großen Erfolg mit dem Titel „Backstreet’s Back“?</FrageName>
-            <AntwortA>*NSYNC</AntwortA>
-            <AntwortB>Spice Girls</AntwortB>
-            <AntwortC>Backstreet Boys</AntwortC>
-            <AntwortD>Westlife</AntwortD>
+            <FrageName>Welches Gerät wird eingesetzt, um Raketen oder Raumfähren in den Orbit zu bringen?</FrageName>
+            <AntwortA>Satellit</AntwortA>
+            <AntwortB>Trägerrakete</AntwortB>
+            <AntwortC>Shuttle-Simulator</AntwortC>
+            <AntwortD>Ionentriebwerk</AntwortD>
         </Frage>
         <Frage FID="f178" KID="k4">
-            <FrageName>Welches Instrument spielte John Coltrane hauptsächlich?</FrageName>
-            <AntwortA>Klavier</AntwortA>
-            <AntwortB>Trompete</AntwortB>
-            <AntwortC>Saxophon</AntwortC>
-            <AntwortD>Schlagzeug</AntwortD>
+            <FrageName>Was versteht man unter dem Begriff „Meteorit“?</FrageName>
+            <AntwortA>Eine helle Leuchterscheinung am Himmel</AntwortA>
+            <AntwortB>Ein anderes Wort für Komet</AntwortB>
+            <AntwortC>Ein Himmelskörper, der die Erdoberfläche erreicht</AntwortC>
+            <AntwortD>Ein Sonnenwind-Phänomen</AntwortD>
         </Frage>
         <Frage FID="f179" KID="k4">
-            <FrageName>Mit welchem Song gewannen Måneskin 2021 den Eurovision Song Contest?</FrageName>
-            <AntwortA>„Zitti e buoni“</AntwortA>
-            <AntwortB>„Beggin’“</AntwortB>
-            <AntwortC>„Torna a casa“</AntwortC>
-            <AntwortD>„Coraline“</AntwortD>
+            <FrageName>Welcher Kosmonaut war erster Mensch, der einen Außenbordeinsatz (Weltraumspaziergang)
+                durchführte?
+            </FrageName>
+            <AntwortA>Valentina Tereschkowa</AntwortA>
+            <AntwortB>Alexei Leonow</AntwortB>
+            <AntwortC>Laika</AntwortC>
+            <AntwortD>Wladimir Komarow</AntwortD>
         </Frage>
         <Frage FID="f180" KID="k4">
-            <FrageName>Wie heißt das berühmte Pianostück von Ludwig van Beethoven, bekannt als „Für …“?</FrageName>
-            <AntwortA>„Für Anna“</AntwortA>
-            <AntwortB>„Für Lisa“</AntwortB>
-            <AntwortC>„Für Elise“</AntwortC>
-            <AntwortD>„Für Maria“</AntwortD>
+            <FrageName>Wie heißt das von der ESA und der NASA gemeinsam betriebene Raumfahrtkontrollzentrum in Darmstadt
+                (Deutschland)?
+            </FrageName>
+            <AntwortA>JPL</AntwortA>
+            <AntwortB>Satish Dhawan Space Centre</AntwortB>
+            <AntwortC>ESOC</AntwortC>
+            <AntwortD>Goddard Space Flight Center</AntwortD>
         </Frage>
         <Frage FID="f181" KID="k4">
-            <FrageName>Welches Mädchen-Trio hatte Hits wie „Say My Name“ und „Survivor“?</FrageName>
-            <AntwortA>Destiny’s Child</AntwortA>
-            <AntwortB>TLC</AntwortB>
-            <AntwortC>En Vogue</AntwortC>
-            <AntwortD>The Supremes</AntwortD>
+            <FrageName>Welches Teleskop wurde entwickelt, um infrarotes Licht aus dem Universum besser zu erfassen und
+                startete Ende 2021?
+            </FrageName>
+            <AntwortA>Spitzer-Weltraumteleskop</AntwortA>
+            <AntwortB>James Webb Space Telescope</AntwortB>
+            <AntwortC>Gaia-Teleskop</AntwortC>
+            <AntwortD>Chandra-Röntgenobservatorium</AntwortD>
         </Frage>
         <Frage FID="f182" KID="k4">
-            <FrageName>Wer schrieb den Song „Imagine“ (1971), der weltweit populär wurde?</FrageName>
-            <AntwortA>Paul McCartney</AntwortA>
-            <AntwortB>George Harrison</AntwortB>
-            <AntwortC>John Lennon</AntwortC>
-            <AntwortD>Ringo Starr</AntwortD>
+            <FrageName>Was bezeichnet der Begriff „Exoplanet“?</FrageName>
+            <AntwortA>Einen Planeten außerhalb des Sonnensystems</AntwortA>
+            <AntwortB>Einen besonders hellen Planeten im Sonnensystem</AntwortB>
+            <AntwortC>Einen Zwergplaneten im Kuipergürtel</AntwortC>
+            <AntwortD>Den namenlosen zehnten Planeten</AntwortD>
         </Frage>
         <Frage FID="f183" KID="k4">
-            <FrageName>Welcher DJ ist berühmt für Songs wie „Wake Me Up“ und „Levels“?</FrageName>
-            <AntwortA>David Guetta</AntwortA>
-            <AntwortB>Calvin Harris</AntwortB>
-            <AntwortC>Avicii</AntwortC>
-            <AntwortD>Tiësto</AntwortD>
+            <FrageName>Welcher Planet besitzt die größte Anzahl bekannter Monde (Stand 2023)?</FrageName>
+            <AntwortA>Uranus</AntwortA>
+            <AntwortB>Saturn</AntwortB>
+            <AntwortC>Neptun</AntwortC>
+            <AntwortD>Jupiter</AntwortD>
         </Frage>
         <Frage FID="f184" KID="k4">
-            <FrageName>Welcher mexikanische Gitarrist wurde mit Songs wie „Oye Como Va“ und „Smooth“ bekannt?
+            <FrageName>Wie heißt das Phänomen, bei dem ein Komet eine leuchtende Gasspur hinter sich herzieht?
             </FrageName>
-            <AntwortA>Richie Valens</AntwortA>
-            <AntwortB>Carlos Santana</AntwortB>
-            <AntwortC>Marc Anthony</AntwortC>
-            <AntwortD>Enrique Iglesias</AntwortD>
+            <AntwortA>Meteorstrom</AntwortA>
+            <AntwortB>Korona</AntwortB>
+            <AntwortC>Kometenschweif</AntwortC>
+            <AntwortD>Kernschatten</AntwortD>
         </Frage>
         <Frage FID="f185" KID="k4">
-            <FrageName>Welches Instrument spielt Lang Lang, der aus China stammende Klassik-Star?</FrageName>
-            <AntwortA>Geige</AntwortA>
-            <AntwortB>Klavier</AntwortB>
-            <AntwortC>Cello</AntwortC>
-            <AntwortD>Klarinette</AntwortD>
+            <FrageName>Welche Behörde ist für die zivile Raumfahrt in Europa zuständig?</FrageName>
+            <AntwortA>NATO</AntwortA>
+            <AntwortB>ESA</AntwortB>
+            <AntwortC>JAXA</AntwortC>
+            <AntwortD>EuroComm</AntwortD>
         </Frage>
         <Frage FID="f186" KID="k4">
-            <FrageName>Was war der erste große Hit der Beatles in Großbritannien (1962)?</FrageName>
-            <AntwortA>„Love Me Do“</AntwortA>
-            <AntwortB>„She Loves You“</AntwortB>
-            <AntwortC>„I Want to Hold Your Hand“</AntwortC>
-            <AntwortD>„Please Please Me“</AntwortD>
+            <FrageName>Wie nennt man den Prozess, bei dem der Mond den Erdschatten durchquert und sich verdunkelt?
+            </FrageName>
+            <AntwortA>Sonnenfinsternis</AntwortA>
+            <AntwortB>Partielle Finsternis</AntwortB>
+            <AntwortC>Mondfinsternis</AntwortC>
+            <AntwortD>Roter Zwerg</AntwortD>
         </Frage>
         <Frage FID="f187" KID="k4">
-            <FrageName>Wie heißt die US-Sängerin, die mit dem Album „1989“ große Erfolge feierte?</FrageName>
-            <AntwortA>Selena Gomez</AntwortA>
-            <AntwortB>Taylor Swift</AntwortB>
-            <AntwortC>Demi Lovato</AntwortC>
-            <AntwortD>Ariana Grande</AntwortD>
+            <FrageName>Welche galaktische Struktur beheimatet unser Sonnensystem?</FrageName>
+            <AntwortA>Der Orionnebel</AntwortA>
+            <AntwortB>Die Milchstraße</AntwortB>
+            <AntwortC>Der Andromedanebel</AntwortC>
+            <AntwortD>Die Magellansche Wolke</AntwortD>
         </Frage>
         <Frage FID="f188" KID="k4">
-            <FrageName>Welche Band wurde durch „Smells Like Teen Spirit“ zum Symbol des Grunge?</FrageName>
-            <AntwortA>Pearl Jam</AntwortA>
-            <AntwortB>Soundgarden</AntwortB>
-            <AntwortC>Foo Fighters</AntwortC>
-            <AntwortD>Nirvana</AntwortD>
+            <FrageName>Wie nennt man die obere Schicht der Sonnenatmosphäre, die während einer totalen Sonnenfinsternis
+                sichtbar wird?
+            </FrageName>
+            <AntwortA>Photosphäre</AntwortA>
+            <AntwortB>Chromosphäre</AntwortB>
+            <AntwortC>Korona</AntwortC>
+            <AntwortD>Konvektionszone</AntwortD>
         </Frage>
         <Frage FID="f189" KID="k4">
-            <FrageName>Wie heißt der Komponist der „Mondscheinsonate“?</FrageName>
-            <AntwortA>Johann Strauss</AntwortA>
-            <AntwortB>Frédéric Chopin</AntwortB>
-            <AntwortC>Franz Schubert</AntwortC>
-            <AntwortD>Ludwig van Beethoven</AntwortD>
+            <FrageName>Welche Umlaufbahn-Resonanz besitzt der Planet Pluto mit Neptun?</FrageName>
+            <AntwortA>1:1</AntwortA>
+            <AntwortB>2:3</AntwortB>
+            <AntwortC>3:4</AntwortC>
+            <AntwortD>4:5</AntwortD>
         </Frage>
         <Frage FID="f190" KID="k4">
-            <FrageName>Wer rappte zusammen mit Dr. Dre den Song „California Love“ (1995)?</FrageName>
-            <AntwortA>2Pac (Tupac Shakur)</AntwortA>
-            <AntwortB>Notorious B.I.G.</AntwortB>
-            <AntwortC>Jay-Z</AntwortC>
-            <AntwortD>Snoop Dogg</AntwortD>
+            <FrageName>Wie heißt der größte Mond des Jupiters und zugleich größte Mond des Sonnensystems?</FrageName>
+            <AntwortA>Callisto</AntwortA>
+            <AntwortB>Io</AntwortB>
+            <AntwortC>Ganymed</AntwortC>
+            <AntwortD>Europa</AntwortD>
         </Frage>
         <Frage FID="f191" KID="k4">
-            <FrageName>Welche Sängerin wurde durch den Song „Genie in a Bottle“ (1999) bekannt?</FrageName>
-            <AntwortA>Christina Aguilera</AntwortA>
-            <AntwortB>Britney Spears</AntwortB>
-            <AntwortC>Jessica Simpson</AntwortC>
-            <AntwortD>Mandy Moore</AntwortD>
+            <FrageName>Welcher deutsche Raketentechniker und Raumfahrtpionier trug maßgeblich zum Apollo-Programm bei?
+            </FrageName>
+            <AntwortA>Hermann Oberth</AntwortA>
+            <AntwortB>Wernher von Braun</AntwortB>
+            <AntwortC>Siegfried Flügge</AntwortC>
+            <AntwortD>Eugen Sänger</AntwortD>
         </Frage>
         <Frage FID="f192" KID="k4">
-            <FrageName>Wer war Frontmann der Band Queen?</FrageName>
-            <AntwortA>Elvis Presley</AntwortA>
-            <AntwortB>Freddie Mercury</AntwortB>
-            <AntwortC>Ozzy Osbourne</AntwortC>
-            <AntwortD>Jon Bon Jovi</AntwortD>
+            <FrageName>Welche Gesteinsbrocken fallen in die Erdatmosphäre und werden als Sternschnuppen sichtbar?
+            </FrageName>
+            <AntwortA>Kometen</AntwortA>
+            <AntwortB>Meteoroiden</AntwortB>
+            <AntwortC>Mondfragmente</AntwortC>
+            <AntwortD>Asteroidenbänder</AntwortD>
         </Frage>
         <Frage FID="f193" KID="k4">
-            <FrageName>Wie heißt das Lied, mit dem Whitney Houston im Film „Bodyguard“ (1992) weltweiten Erfolg hatte?
+            <FrageName>Wie nennt man den Punkt in einer Umlaufbahn, an dem ein Objekt der Sonne am nächsten ist?
             </FrageName>
-            <AntwortA>„I Will Always Love You“</AntwortA>
-            <AntwortB>„Saving All My Love for You“</AntwortB>
-            <AntwortC>„I Wanna Dance with Somebody“</AntwortC>
-            <AntwortD>„Greatest Love of All“</AntwortD>
+            <AntwortA>Apoapsis</AntwortA>
+            <AntwortB>Aphel</AntwortB>
+            <AntwortC>Perihel</AntwortC>
+            <AntwortD>Opposition</AntwortD>
         </Frage>
         <Frage FID="f194" KID="k4">
-            <FrageName>Welcher Komponist schrieb die sinfonische Dichtung „Also sprach Zarathustra“?</FrageName>
-            <AntwortA>Gustav Mahler</AntwortA>
-            <AntwortB>Johannes Brahms</AntwortB>
-            <AntwortC>Richard Strauss</AntwortC>
-            <AntwortD>Anton Bruckner</AntwortD>
+            <FrageName>Welcher Teil eines Kometen enthält das gefrorene Material und bildet den Kern?</FrageName>
+            <AntwortA>Koma</AntwortA>
+            <AntwortB>Nukleus</AntwortB>
+            <AntwortC>Ionenschweif</AntwortC>
+            <AntwortD>Staubschweif</AntwortD>
         </Frage>
         <Frage FID="f195" KID="k4">
-            <FrageName>Welche Girlband landete 1996 mit „Wannabe“ einen Welthit?</FrageName>
-            <AntwortA>Atomic Kitten</AntwortA>
-            <AntwortB>Spice Girls</AntwortB>
-            <AntwortC>Pussycat Dolls</AntwortC>
-            <AntwortD>All Saints</AntwortD>
+            <FrageName>Welches Phänomen beschreibt das Farbenspiel an den Polen durch Sonnenwinde und Magnetfeld?
+            </FrageName>
+            <AntwortA>Polarlicht (Aurora)</AntwortA>
+            <AntwortB>Blaue Stunde</AntwortB>
+            <AntwortC>Zeitraffer-Effekt</AntwortC>
+            <AntwortD>Elmsfeuer</AntwortD>
         </Frage>
         <Frage FID="f196" KID="k4">
-            <FrageName>Wer ist der Sänger des Hits „In the Air Tonight“ (1981)?</FrageName>
-            <AntwortA>Sting</AntwortA>
-            <AntwortB>Phil Collins</AntwortB>
-            <AntwortC>Peter Gabriel</AntwortC>
-            <AntwortD>Michael Bolton</AntwortD>
+            <FrageName>Was ist die Hauptursache für Jahreszeiten auf der Erde?</FrageName>
+            <AntwortA>Sonnenaktivität</AntwortA>
+            <AntwortB>Schwankung des Erdmagnetfeldes</AntwortB>
+            <AntwortC>Neigung der Erdachse</AntwortC>
+            <AntwortD>Variation der Erdbahnentfernung</AntwortD>
         </Frage>
         <Frage FID="f197" KID="k4">
-            <FrageName>Wie heißt die Band, die „Nothing Else Matters“ (1991) veröffentlichte?</FrageName>
-            <AntwortA>Iron Maiden</AntwortA>
-            <AntwortB>Metallica</AntwortB>
-            <AntwortC>Megadeth</AntwortC>
-            <AntwortD>Slayer</AntwortD>
+            <FrageName>Wie heißt das Raumschiff, mit dem die Apollo-11-Astronauten 1969 landeten?</FrageName>
+            <AntwortA>Columbia (Kommandomodul) und Eagle (Mondlandefähre)</AntwortA>
+            <AntwortB>Endeavour und Orion</AntwortB>
+            <AntwortC>Atlantis und Discovery</AntwortC>
+            <AntwortD>Gemini und Mercury</AntwortD>
         </Frage>
         <Frage FID="f198" KID="k4">
-            <FrageName>Welcher Künstler performte den Song „Purple Rain“ (1984)?</FrageName>
-            <AntwortA>James Brown</AntwortA>
-            <AntwortB>Prince</AntwortB>
-            <AntwortC>Lenny Kravitz</AntwortC>
-            <AntwortD>Marvin Gaye</AntwortD>
+            <FrageName>Welcher Planet hat den Großen Roten Fleck, einen gigantischen antizyklonalen Sturm?</FrageName>
+            <AntwortA>Mars</AntwortA>
+            <AntwortB>Saturn</AntwortB>
+            <AntwortC>Neptun</AntwortC>
+            <AntwortD>Jupiter</AntwortD>
         </Frage>
         <Frage FID="f199" KID="k4">
-            <FrageName>Welche australische Rockband hatte mit „You Shook Me All Night Long“ einen Hit?</FrageName>
-            <AntwortA>AC/DC</AntwortA>
-            <AntwortB>INXS</AntwortB>
-            <AntwortC>Midnight Oil</AntwortC>
-            <AntwortD>Men at Work</AntwortD>
-        </Frage>
-        <Frage FID="f200" KID="k4">
-            <FrageName>Wer wurde als erster Sieger bei der Castingshow „Deutschland sucht den Superstar“ (2003)
+            <FrageName>Welcher deutsche Physiker ist für die Grundlagen der Raketen- und Strahltriebwerkstechnik
                 bekannt?
             </FrageName>
-            <AntwortA>Alexander Klaws</AntwortA>
-            <AntwortB>Mark Medlock</AntwortB>
-            <AntwortC>Thomas Godoj</AntwortC>
-            <AntwortD>Luca Hänni</AntwortD>
+            <AntwortA>Albert Einstein</AntwortA>
+            <AntwortB>Max Planck</AntwortB>
+            <AntwortC>Hermann Oberth</AntwortC>
+            <AntwortD>Heinrich Hertz</AntwortD>
+        </Frage>
+        <Frage FID="f200" KID="k4">
+            <FrageName>Was bezeichnet man in der Astronomie als „Light Echo“?</FrageName>
+            <AntwortA>Das Phänomen, bei dem Licht von Saturns Ringen reflektiert wird</AntwortA>
+            <AntwortB>Licht, das von interstellarem Staub reflektiert und zeitlich verzögert sichtbar wird</AntwortB>
+            <AntwortC>Die Aufhellung eines Sterns beim Eintritt in die Hauptreihe</AntwortC>
+            <AntwortD>Den Effekt, bei dem schwarze Löcher Licht „wieder aussenden“</AntwortD>
         </Frage>
         <Frage FID="f201" KID="k5">
             <FrageName>Welche Erfindung leitete maßgeblich die Industrielle Revolution ein?</FrageName>
@@ -3938,56 +3957,56 @@
         <Loesung FID="f148">Gesundheitsgefahr (z. B. Reizung, Sensibilisierung)</Loesung>
         <Loesung FID="f149">Ein Gerät zum Ansaugen von Flüssigkeiten in eine Pipette</Loesung>
         <Loesung FID="f150">Mikroskop</Loesung>
-        <Loesung FID="f151">Queen</Loesung>
-        <Loesung FID="f152">Michael Jackson</Loesung>
-        <Loesung FID="f153">Oasis</Loesung>
-        <Loesung FID="f154">Madonna</Loesung>
-        <Loesung FID="f155">Ed Sheeran</Loesung>
-        <Loesung FID="f156">Wolfgang Amadeus Mozart</Loesung>
-        <Loesung FID="f157">ABBA</Loesung>
-        <Loesung FID="f158">„The Dark Side of the Moon“</Loesung>
-        <Loesung FID="f159">Woodstock</Loesung>
-        <Loesung FID="f160">Don Felder und Joe Walsh</Loesung>
-        <Loesung FID="f161">Adele</Loesung>
-        <Loesung FID="f162">Nirvana</Loesung>
-        <Loesung FID="f163">Lady Gaga</Loesung>
-        <Loesung FID="f164">Céline Dion</Loesung>
-        <Loesung FID="f165">USA und Großbritannien (simultan)</Loesung>
-        <Loesung FID="f166">Georg Friedrich Händel</Loesung>
-        <Loesung FID="f167">Falco (Österreicher, aber deutschsprachig)</Loesung>
-        <Loesung FID="f168">„Please Please Me“</Loesung>
-        <Loesung FID="f169">AC/DC</Loesung>
-        <Loesung FID="f170">Sting</Loesung>
-        <Loesung FID="f171">Britney Spears</Loesung>
-        <Loesung FID="f172">Donauinselfest</Loesung>
-        <Loesung FID="f173">Cyndi Lauper</Loesung>
-        <Loesung FID="f174">George Michael</Loesung>
-        <Loesung FID="f175">Lady Gaga</Loesung>
-        <Loesung FID="f176">Elton John</Loesung>
-        <Loesung FID="f177">Backstreet Boys</Loesung>
-        <Loesung FID="f178">Saxophon</Loesung>
-        <Loesung FID="f179">„Zitti e buoni“</Loesung>
-        <Loesung FID="f180">„Für Elise“</Loesung>
-        <Loesung FID="f181">Destiny’s Child</Loesung>
-        <Loesung FID="f182">John Lennon</Loesung>
-        <Loesung FID="f183">Avicii</Loesung>
-        <Loesung FID="f184">Carlos Santana</Loesung>
-        <Loesung FID="f185">Klavier</Loesung>
-        <Loesung FID="f186">„Love Me Do“</Loesung>
-        <Loesung FID="f187">Taylor Swift</Loesung>
-        <Loesung FID="f188">Nirvana</Loesung>
-        <Loesung FID="f189">Ludwig van Beethoven</Loesung>
-        <Loesung FID="f190">2Pac (Tupac Shakur)</Loesung>
-        <Loesung FID="f191">Christina Aguilera</Loesung>
-        <Loesung FID="f192">Freddie Mercury</Loesung>
-        <Loesung FID="f193">„I Will Always Love You“</Loesung>
-        <Loesung FID="f194">Richard Strauss</Loesung>
-        <Loesung FID="f195">Spice Girls</Loesung>
-        <Loesung FID="f196">Phil Collins</Loesung>
-        <Loesung FID="f197">Metallica</Loesung>
-        <Loesung FID="f198">Prince</Loesung>
-        <Loesung FID="f199">AC/DC</Loesung>
-        <Loesung FID="f200">Alexander Klaws</Loesung>
+        <Loesung FID="f151">Mars</Loesung>
+        <Loesung FID="f152">Jupiter</Loesung>
+        <Loesung FID="f153">Mond</Loesung>
+        <Loesung FID="f154">NASA</Loesung>
+        <Loesung FID="f155">Sonne</Loesung>
+        <Loesung FID="f156">Saturn</Loesung>
+        <Loesung FID="f157">Pluto</Loesung>
+        <Loesung FID="f158">International Space Station (ISS)</Loesung>
+        <Loesung FID="f159">Yuri Gagarin</Loesung>
+        <Loesung FID="f160">Lichtjahr</Loesung>
+        <Loesung FID="f161">Gravitationskraft</Loesung>
+        <Loesung FID="f162">Hubble-Weltraumteleskop</Loesung>
+        <Loesung FID="f163">Supernova</Loesung>
+        <Loesung FID="f164">Region mit so starker Gravitation, dass nicht einmal Licht entweichen kann</Loesung>
+        <Loesung FID="f165">Venus</Loesung>
+        <Loesung FID="f166">Mare (Mondmeere)</Loesung>
+        <Loesung FID="f167">Voyager 1</Loesung>
+        <Loesung FID="f168">Die Bahnregion zwischen Mars und Jupiter mit vielen Asteroiden</Loesung>
+        <Loesung FID="f169">Titan</Loesung>
+        <Loesung FID="f170">Mit der Suche nach und Erforschung von Leben im All</Loesung>
+        <Loesung FID="f171">Wasserstoff</Loesung>
+        <Loesung FID="f172">Tag</Loesung>
+        <Loesung FID="f173">John F. Kennedy</Loesung>
+        <Loesung FID="f174">Neumond</Loesung>
+        <Loesung FID="f175">Proxima Centauri</Loesung>
+        <Loesung FID="f176">Galaxie</Loesung>
+        <Loesung FID="f177">Trägerrakete</Loesung>
+        <Loesung FID="f178">Ein Himmelskörper, der die Erdoberfläche erreicht</Loesung>
+        <Loesung FID="f179">Alexei Leonow</Loesung>
+        <Loesung FID="f180">ESOC</Loesung>
+        <Loesung FID="f181">James Webb Space Telescope</Loesung>
+        <Loesung FID="f182">Einen Planeten außerhalb des Sonnensystems</Loesung>
+        <Loesung FID="f183">Saturn</Loesung>
+        <Loesung FID="f184">Kometenschweif</Loesung>
+        <Loesung FID="f185">ESA</Loesung>
+        <Loesung FID="f186">Mondfinsternis</Loesung>
+        <Loesung FID="f187">Die Milchstraße</Loesung>
+        <Loesung FID="f188">Korona</Loesung>
+        <Loesung FID="f189">2:3</Loesung>
+        <Loesung FID="f190">Ganymed</Loesung>
+        <Loesung FID="f191">Wernher von Braun</Loesung>
+        <Loesung FID="f192">Meteoroiden</Loesung>
+        <Loesung FID="f193">Perihel</Loesung>
+        <Loesung FID="f194">Nukleus</Loesung>
+        <Loesung FID="f195">Polarlicht (Aurora)</Loesung>
+        <Loesung FID="f196">Neigung der Erdachse</Loesung>
+        <Loesung FID="f197">Columbia (Kommandomodul) und Eagle (Mondlandefähre)</Loesung>
+        <Loesung FID="f198">Jupiter</Loesung>
+        <Loesung FID="f199">Hermann Oberth</Loesung>
+        <Loesung FID="f200">Licht, das von interstellarem Staub reflektiert und zeitlich verzögert sichtbar wird</Loesung>
         <Loesung FID="f201">Die Dampfmaschine von James Watt</Loesung>
         <Loesung FID="f202">Alexander Graham Bell</Loesung>
         <Loesung FID="f203">Der Transistor</Loesung>
@@ -4073,7 +4092,7 @@
         <Loesung FID="f283">Electronic Arts</Loesung>
         <Loesung FID="f284">Sony</Loesung>
         <Loesung FID="f285">Pac-Man</Loesung>
-        <Loesung FID="f286">Dark Souls und Bloodborne</Loesung>
+        <Loesung FID="f286">Dark Souls and Bloodborne</Loesung>
         <Loesung FID="f287">Echtzeit-Strategie</Loesung>
         <Loesung FID="f288">Epic Games</Loesung>
         <Loesung FID="f289">Xbox</Loesung>
