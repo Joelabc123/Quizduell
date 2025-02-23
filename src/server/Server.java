@@ -1,14 +1,14 @@
 package server;
 
-import protocol.ErrorMessage;
+import protocol.messages.ErrorMessage;
 import protocol.ErrorType;
-import protocol.PlayerStatus;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class Server {
 
@@ -17,12 +17,17 @@ public class Server {
     private static int PORT = 12345;
     private ServerSocket serverSocket;
     private boolean running = false;
-    private final List<PlayerStatus> players = new ArrayList<>();
+    private final List<PlayerInfo> players = new ArrayList<>();
     private final List<Thread> clientThreads = new ArrayList<>();
+
+    private ArrayList<BattleShipGame> games = new ArrayList<>();
+    private ArrayList<PlayerInfo> queue = new ArrayList<>();
+
     private ServerGUI gui;
 
     public Server() {
         this.gui = new ServerGUI(this);
+        instance = this;
     }
 
     public synchronized void startServer() {
@@ -38,7 +43,7 @@ public class Server {
                     Socket clientSocket = serverSocket.accept();
                     System.out.println("Neuer Client verbunden: " + clientSocket);
 
-                    PlayerStatus player = new PlayerStatus(clientSocket, this);
+                    PlayerInfo player = new PlayerInfo(clientSocket, this);
                     players.add(player);
 
                     Thread clientThread = new Thread(player);
@@ -56,7 +61,7 @@ public class Server {
     public synchronized void stopServer() {
         running = false;
         try {
-            for (PlayerStatus p : players) {
+            for (PlayerInfo p : players) {
                 p.sendMessage(new ErrorMessage(ErrorType.SERVER_CLOSED));
             }
             if (serverSocket != null) {
@@ -74,17 +79,53 @@ public class Server {
         }
     }
 
-    public synchronized void removePlayer(PlayerStatus player) {
+    public synchronized void createGame(BattleShipGame game) {
+        games.add(game);
+    }
+
+    public synchronized void removeGame(UUID id) {
+        games.removeIf(game -> game.getGameState().getId().equals(id));
+    }
+
+    public synchronized void removePlayer(PlayerInfo player) {
         players.remove(player);
         updatePlayerList();
     }
 
+    public synchronized void addToQueue(PlayerInfo player) {
+        queue.add(player);
+        player.sendMessage(new protocol.messages.QueueUpdateMessage(queue.size(), true));
+    }
+
+    public synchronized void removeFromQueue(UUID id) {
+        queue.removeIf(player -> {
+            if(player.getId().equals(id)) {
+                player.sendMessage(new protocol.messages.QueueUpdateMessage(queue.size(), false));
+                return true;
+            }
+            return false;
+        });
+
+    }
+
     private synchronized void updatePlayerList() {
         StringBuilder sb = new StringBuilder();
-        for (PlayerStatus p : players) {
+        for (PlayerInfo p : players) {
             sb.append(p.getUsername()).append(" (").append(p.getIp()).append(")\n");
         }
         gui.updatePlayerList(sb.toString());
+    }
+
+    public synchronized List<PlayerInfo> getPlayers() {
+        return players;
+    }
+
+    public synchronized ArrayList<PlayerInfo> getQueue() {
+        return queue;
+    }
+
+    public synchronized ArrayList<BattleShipGame> getGames() {
+        return games;
     }
 
     /**
@@ -94,15 +135,15 @@ public class Server {
      * @param args command line arguments
      */
     public static void main(String[] args) {
-        if (args.length >= 1 && args[0].contains("--autostart")) {
-            instance.startServer();
-        }
-
         for (int i = 0; i < args.length; i++) {
             if (args[i].equals("--p")) {
                 PORT = Integer.parseInt(args[i + 1]);
             }
         }
         instance = new Server();
+
+        if (args.length >= 1 && args[0].contains("--autostart")) {
+            instance.startServer();
+        }
     }
 }

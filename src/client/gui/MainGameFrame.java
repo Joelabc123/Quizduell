@@ -1,5 +1,7 @@
 package client.gui;
 
+import client.ClientHandler;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -8,6 +10,8 @@ public class MainGameFrame extends JFrame {
     private CardLayout cardLayout;
     private JPanel mainPanel;  // Container für alle Screens
 
+    private ClientHandler clientHandler;
+    private ClientHandler client;
     // Screens
     private LobbyPanel lobbyPanel;
     private ScoreAndCategoriesPanel scorePanel;
@@ -23,6 +27,14 @@ public class MainGameFrame extends JFrame {
         super("Quizduell - Hauptfenster");
         initUI();
         initGameFlow();
+    }
+
+
+    public void connectToServer(String serverAddress, int port) {
+        client = new ClientHandler(serverAddress, port);
+    }
+    public void setClientHandler(ClientHandler clientHandler) {
+        this.clientHandler = clientHandler;
     }
 
     private void initUI() {

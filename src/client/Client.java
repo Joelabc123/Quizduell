@@ -1,7 +1,8 @@
 package client;
 
-public class Client {
+import client.gui.MainGameFrame;
 
+public class Client {
     private static int PORT = 12345;
     private static String HOST = "localhost";
 
@@ -12,7 +13,6 @@ public class Client {
      * @param args command line arguments
      */
     public static void main(String[] args) {
-
         for (int i = 0; i < args.length; i++) {
             if (args[i].equals("--p")) {
                 PORT = Integer.parseInt(args[i + 1]);
@@ -21,6 +21,13 @@ public class Client {
             }
         }
 
-        new ClientHandler(HOST, PORT);
+        // Starte GUI
+        MainGameFrame gui = new MainGameFrame();
+
+        // Verbinde GUI mit dem ClientHandler
+        ClientHandler clientHandler = new ClientHandler(HOST, PORT);
+
+        // Speichere die ClientHandler-Instanz in der GUI für spätere Nutzung
+        gui.setClientHandler(clientHandler);
     }
 }

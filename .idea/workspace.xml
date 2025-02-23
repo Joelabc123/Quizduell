@@ -4,27 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Finished DB">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/ClientGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/ClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/gui/CategoryWheelPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/gui/LobbyPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/gui/MainGameFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/gui/QuestionPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/gui/ScoreAndCategoriesPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/gui/StatisticsPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/ErrorMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/ErrorType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/LoginMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/MessageType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/PlayerStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/ServerGUI.java" afterDir="false" />
+    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Finished GUI">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jdom_2_0_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/jdom-2.0.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/Answer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/Question.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/Round.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/XMLReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/AnswerMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/ErrorMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/ErrorType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/GameOverMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/HostLobbyMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/JoinLobbyMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/LobbyStatusMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/LoginMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/MessageType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/QuestionMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/RoundResultMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/ScoreUpdateMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/StartGameMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server/GameState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server/Parameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server/Quizgame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Usernames.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizduell.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Quizduell.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/MainGameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/MainGameFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/ErrorMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/ErrorType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/LoginMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/MessageType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/PlayerStatus.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +52,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -55,7 +74,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="Security Analysis" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -68,40 +87,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CategoryWheelGUI.executor": "Run",
-    "Application.Client 1.executor": "Run",
-    "Application.Client 2.executor": "Run",
-    "Application.Client.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainGameFrame.executor": "Run",
-    "Application.QuestionGUI.executor": "Run",
-    "Application.QuizGUI.executor": "Run",
-    "Application.ScoreAndCategoriesGUI.executor": "Run",
-    "Application.ScoreAndKategorieGUI.executor": "Run",
-    "Application.Server.executor": "Run",
-    "Application.client.gui.ScoreAndCategoriesGUI.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Joelb/Downloads/javafx-sdk-23.0.2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/Joelb/IdeaProjects/Quizduell/src/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CategoryWheelGUI.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Client 1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Client 2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Client.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainGameFrame.executor&quot;: &quot;Run&quot;,
+    &quot;Application.QuestionGUI.executor&quot;: &quot;Run&quot;,
+    &quot;Application.QuizGUI.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ScoreAndCategoriesGUI.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ScoreAndKategorieGUI.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Server.executor&quot;: &quot;Run&quot;,
+    &quot;Application.client.gui.ScoreAndCategoriesGUI.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Joelb/IdeaProjects/Quizduell/resources/jdom-2.0.6.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Joelb/IdeaProjects/Quizduell/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.MainGameFrame">
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Joelb\IdeaProjects\Quizduell\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Client 2">
     <configuration name="Client 1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="client.Client" />
       <module name="Quizduell" />
@@ -150,8 +175,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainGameFrame" />
         <item itemvalue="Application.Server" />
+        <item itemvalue="Application.MainGameFrame" />
       </list>
     </recent_temporary>
   </component>
@@ -175,6 +200,13 @@
       <workItem from="1740050009394" duration="1936000" />
       <workItem from="1740054120233" duration="2994000" />
       <workItem from="1740060506451" duration="11081000" />
+      <workItem from="1740074409816" duration="72000" />
+      <workItem from="1740123343271" duration="680000" />
+      <workItem from="1740136183811" duration="5109000" />
+      <workItem from="1740143851686" duration="1311000" />
+      <workItem from="1740321024481" duration="7153000" />
+      <workItem from="1740350052905" duration="1482000" />
+      <workItem from="1740351722154" duration="362000" />
     </task>
     <task id="LOCAL-00001" summary="Finished DB">
       <option name="closed" value="true" />
@@ -184,15 +216,35 @@
       <option name="project" value="LOCAL" />
       <updated>1739975900964</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Finished GUI">
+      <option name="closed" value="true" />
+      <created>1740074455505</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740074455505</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finished DB" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished DB" />
+    <MESSAGE value="Finished GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished GUI" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
