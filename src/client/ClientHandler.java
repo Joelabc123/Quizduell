@@ -1,8 +1,7 @@
 package client;
 
-import protocol.ErrorMessage;
-import protocol.ErrorType;
-import protocol.LoginMessage;
+import protocol.messages.ErrorMessage;
+
 import javax.swing.*;
 import java.io.*;
 import java.net.Socket;
@@ -12,6 +11,8 @@ public class ClientHandler {
     private ObjectOutputStream out;
     private ObjectInputStream in;
     private ClientGUI gui;
+
+    public final GameManager gameManager = new GameManager(this);
 
     public ClientHandler(String serverAddress, int port) {
         try {
@@ -38,8 +39,14 @@ public class ClientHandler {
 
                     switch (received.getClass().getSimpleName()) {
                         case "LoginMessage":
-                            LoginMessage loginMessage = (LoginMessage) received;
-                            gui.setUsername("Test");
+                            protocol.messages.LoginMessage loginMessage = (protocol.messages.LoginMessage) received;
+
+                            gameManager.loginMessage(loginMessage);
+                            break;
+                        case "LobbyStatusMessage":
+                            protocol.messages.LobbyStatusMessage lobbyStatusMessage = (protocol.messages.LobbyStatusMessage) received;
+
+                            gameManager.onLobbyStatusMessage(lobbyStatusMessage);
                             break;
                         case "ErrorMessage":
                             ErrorMessage errorMessage = (ErrorMessage) received;
@@ -55,6 +62,15 @@ public class ClientHandler {
                 System.exit(1);
             }
         }).start();
+    }
+
+    public void sendMessage(Object message) {
+        try {
+            out.writeObject(message);
+            out.flush();
+        } catch (IOException e) {
+            showError("Nachricht konnte nicht gesendet werden.");
+        }
     }
 
     private void showError(String message) {

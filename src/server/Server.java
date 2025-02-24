@@ -17,11 +17,10 @@ public class Server {
     private static int PORT = 12345;
     private ServerSocket serverSocket;
     private boolean running = false;
-    private final List<PlayerInfo> players = new ArrayList<>();
+    private final List<Player> players = new ArrayList<>();
     private final List<Thread> clientThreads = new ArrayList<>();
 
-    private ArrayList<BattleShipGame> games = new ArrayList<>();
-    private ArrayList<PlayerInfo> queue = new ArrayList<>();
+    private ArrayList<QuizGame> games = new ArrayList<>();
 
     private ServerGUI gui;
 
@@ -43,7 +42,7 @@ public class Server {
                     Socket clientSocket = serverSocket.accept();
                     System.out.println("Neuer Client verbunden: " + clientSocket);
 
-                    PlayerInfo player = new PlayerInfo(clientSocket, this);
+                    Player player = new Player(clientSocket, this);
                     players.add(player);
 
                     Thread clientThread = new Thread(player);

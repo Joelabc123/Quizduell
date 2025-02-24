@@ -2,15 +2,25 @@ package protocol;
 
 public class Question {
     private String fid;
-    private String kid; // Referenz zur Kategorie
     private String frageName;
-    private Answer answerA;
-    private Answer answerB;
-    private Answer answerC;
-    private Answer answerD;
-    private char correctAnswer; // 'A', 'B', 'C' oder 'D'
+    private String answerA;
+    private String answerB;
+    private String answerC;
+    private String answerD;
+    private Solution correctAnswer;
+    private boolean isCorrect;
 
-    public Question(String fid, String kid, String frageName, Answer answerA, Answer answerB, Answer answerC, Answer answerD) {
+    public Question(String fid, String frageName, String answerA, String answerB, String answerC, String answerD, Solution correctAnswer) {
+        this.fid = fid;
+        this.frageName = frageName;
+        this.answerA = answerA;
+        this.answerB = answerB;
+        this.answerC = answerC;
+        this.answerD = answerD;
+        this.correctAnswer = correctAnswer;
+    }
+
+    public Question(String fid, String kid, String frageName, String answerA, String answerB, String answerC, String answerD) {
         this.fid = fid;
         this.kid = kid;
         this.frageName = frageName;
@@ -18,7 +28,6 @@ public class Question {
         this.answerB = answerB;
         this.answerC = answerC;
         this.answerD = answerD;
-        this.correctAnswer = ' '; // zunächst unset
     }
 
     public String getFid() {
@@ -45,45 +54,46 @@ public class Question {
         this.frageName = frageName;
     }
 
-    public Answer getAnswerA() {
+    public String getAnswerA() {
         return answerA;
     }
 
-    public void setAnswerA(Answer answerA) {
+    public void setAnswerA(String answerA) {
         this.answerA = answerA;
     }
 
-    public Answer getAnswerB() {
+    public String getAnswerB() {
         return answerB;
     }
 
-    public void setAnswerB(Answer answerB) {
+    public void setAnswerB(String answerB) {
         this.answerB = answerB;
     }
 
-    public Answer getAnswerC() {
+    public String getAnswerC() {
         return answerC;
     }
 
-    public void setAnswerC(Answer answerC) {
+    public void setAnswerC(String answerC) {
         this.answerC = answerC;
     }
 
-    public Answer getAnswerD() {
+    public String getAnswerD() {
         return answerD;
     }
 
-    public void setAnswerD(Answer answerD) {
+    public void setAnswerD(String answerD) {
         this.answerD = answerD;
     }
 
-    public char getCorrectAnswer() {
+    public Answer getCorrectAnswer() {
         return correctAnswer;
     }
 
-    public void setCorrectAnswer(char correctAnswer) {
+    public void setCorrectAnswer(Answer correctAnswer) {
         this.correctAnswer = correctAnswer;
     }
+
 
     @Override
     public String toString() {

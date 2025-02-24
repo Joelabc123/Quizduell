@@ -4,44 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Finished GUI">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jdom_2_0_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/jdom-2.0.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/Answer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/Question.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/Round.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/XMLReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/AnswerMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/ErrorMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/ErrorType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/GameOverMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/HostLobbyMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/JoinLobbyMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/LobbyStatusMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/LoginMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/MessageType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/QuestionMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/RoundResultMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/ScoreUpdateMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/StartGameMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/GameState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/Parameter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/Quizgame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Usernames.java" afterDir="false" />
+    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Implemented GameManager and updated messaging protocols">
+      <change afterPath="$PROJECT_DIR$/src/client/GameInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/client/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quizduell.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Quizduell.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/MainGameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/MainGameFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/ErrorMessage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/ErrorType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/LoginMessage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/Message.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/MessageType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/PlayerStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/Round.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Round.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/messages/HostLobbyMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/HostLobbyMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/messages/LobbyStatusMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/LobbyStatusMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/messages/LoginMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/LoginMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/Quizgame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Quizgame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,8 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -114,7 +91,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Joelb/IdeaProjects/Quizduell/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
@@ -206,7 +183,12 @@
       <workItem from="1740143851686" duration="1311000" />
       <workItem from="1740321024481" duration="7153000" />
       <workItem from="1740350052905" duration="1482000" />
-      <workItem from="1740351722154" duration="362000" />
+      <workItem from="1740351722154" duration="1188000" />
+      <workItem from="1740408202746" duration="5632000" />
+      <workItem from="1740437208206" duration="890000" />
+      <workItem from="1740438116299" duration="197000" />
+      <workItem from="1740438322416" duration="250000" />
+      <workItem from="1740438581786" duration="1721000" />
     </task>
     <task id="LOCAL-00001" summary="Finished DB">
       <option name="closed" value="true" />
@@ -224,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740074455505</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implemented MessageTypes and Game Classes">
+      <option name="closed" value="true" />
+      <created>1740352213302</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740352213302</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +234,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finished DB" />
     <MESSAGE value="Finished GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished GUI" />
+    <MESSAGE value="Implemented MessageTypes and Game Classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented MessageTypes and Game Classes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

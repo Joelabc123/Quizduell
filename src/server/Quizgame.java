@@ -1,12 +1,7 @@
 package server;
 
-import protocol.messages.GameStateUpdateMessage;
-import protocol.Ship;
-import protocol.messages.GameStartingMessage;
-
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.UUID;
 
 public class QuizGame implements Game, Runnable {
 
@@ -24,23 +19,21 @@ public class QuizGame implements Game, Runnable {
 
     @Override
     public GameState createGame(int size) {
-        initShips();
-
         this.gameState = new GameState(size, ships);
 
         return gameState;
     }
 
-    private void initShips() {
-
-        ships.add(new Ship(0, Ship.Orientation.HORIZONTAL, 5, 1));
-        ships.add(new Ship(1, Ship.Orientation.HORIZONTAL, 4, 1));
-        ships.add(new Ship(2, Ship.Orientation.HORIZONTAL, 3, 1));
-        ships.add(new Ship(3, Ship.Orientation.HORIZONTAL, 2, 2));
-        ships.add(new Ship(4, Ship.Orientation.HORIZONTAL, 2, 1));
-        ships.add(new Ship(5, Ship.Orientation.HORIZONTAL, 6, 1));
-
+    @Override
+    public GameState addPlayer(Player player) {
+        return null;
     }
+
+    @Override
+    public GameState leaveGame(Player player) {
+        return null;
+    }
+
 
     @Override
     public GameState addPlayer(PlayerInfo player) {

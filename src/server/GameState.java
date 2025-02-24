@@ -1,7 +1,5 @@
 package server;
 
-//import protocol.Board;
-//import protocol.Ship;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -22,40 +20,17 @@ public class GameState implements Serializable  {
     private final UUID id = UUID.randomUUID();
 
     public UUID playerA, playerB;
-    private UUID secret = UUID.randomUUID();;
-
     private int sessionCode;
-
-    private Date created = new Date();
-    private Date lastUpdated = new Date();
-
-    private Date buildGameBoardStarted = null;
-    private Date buildGameBoardFinished = null;
-
-    private Date playersTurnStart = null;
-    private Date playersTurnEnd = null;
-
     private UUID playersTurn = null;
 
     private Board boardA, boardB;
     private ArrayList<Ship> shipsA, shipsB;
 
-    private int size;
-
     private GameStatus status = GameStatus.LOBBY_WAITING;
 
     public GameState(GameState gameState) {
         this.playerA = gameState.playerA;
-        this.playerB = gameState.playerB;
-        this.secret = gameState.secret;
-        this.sessionCode = gameState.sessionCode;
-        this.created = gameState.created;
-        this.lastUpdated = gameState.lastUpdated;
-        this.buildGameBoardStarted = gameState.buildGameBoardStarted;
-        this.buildGameBoardFinished = gameState.buildGameBoardFinished;
-        this.playersTurnStart = gameState.playersTurnStart;
-        this.playersTurnEnd = gameState.playersTurnEnd;
-        this.playersTurn = gameState.playersTurn;
+        this.playerB = gameState.playerB;.sessionCode;
         this.boardA = gameState.boardA;
         this.boardB = gameState.boardB;
         this.shipsA = gameState.shipsA;
@@ -65,11 +40,7 @@ public class GameState implements Serializable  {
     }
 
     public GameState(int size, ArrayList<Ship> ships) {
-        this.boardA = new Board(size, size);
-
-        this.size = size;
         this.sessionCode = generateSessionCode();
-
         setShips(ships);
     }
 
