@@ -11,8 +11,6 @@ public class QuizReader {
 
     public QuizReader() throws Exception {
         XMLReader quiz = new XMLReader("src/quiz.xml");
-
-
     }
 
     public ArrayList<Category> getCategories() {

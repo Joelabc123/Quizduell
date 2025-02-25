@@ -24,96 +24,106 @@ public class XMLReader {
     }
 
     /**
-     * Liest alle Kategorien aus der XML-Datei aus.
-     * @return Liste der Category-Objekte.
+     * Parst die XML-Datei und erstellt eine Liste von Category‑Objekten.
+     * Jeder Kategorie werden die zugehörigen Fragen (mit korrekter Antwort) zugeordnet.
+     * @return Liste von Category‑Objekten.
      */
-    public List<Category> getCategories() {
+    public List<Category> parse() {
+        // 1. Kategorien einlesen
+        Element root = document.getRootElement(); // <database>
+        Element kategorienElem = root.getChild("Kategorien");
+        List<Element> kategorieElems = kategorienElem.getChildren("Kategorie");
         List<Category> categories = new ArrayList<>();
-        Element root = document.getRootElement(); // "database"
-        Element kategorienElement = root.getChild("Kategorien");
-        List<Element> kategorieList = kategorienElement.getChildren("Kategorie");
-        for (Element k : kategorieList) {
+        Map<String, Category> categoryMap = new HashMap<>();
+        for (Element k : kategorieElems) {
             String katID = k.getAttributeValue("KatID");
             String name = k.getChildText("Name");
-            categories.add(new Category(katID, name));
+            Category cat = new Category(katID, name);
+            categories.add(cat);
+            categoryMap.put(katID, cat);
         }
-        return categories;
-    }
 
-    /**
-     * Liest alle Fragen aus der XML-Datei aus.
-     * @return Liste der Question-Objekte.
-     */
-    public List<Question> getQuestions() {
-        List<Question> questions = new ArrayList<>();
-        Element root = document.getRootElement();
-        Element fragenElement = root.getChild("Fragen");
-        List<Element> frageList = fragenElement.getChildren("Frage");
-        for (Element f : frageList) {
+        // 2. Fragen und ihre Antworttexte einlesen
+        Element fragenElem = root.getChild("Fragen");
+        List<Element> frageElems = fragenElem.getChildren("Frage");
+        List<QuestionWrapper> questionWrappers = new ArrayList<>();
+        for (Element f : frageElems) {
             String fid = f.getAttributeValue("FID");
-            String kid = f.getAttributeValue("KID");
+            String kid = f.getAttributeValue("KID");  // Kategorie-ID
             String frageName = f.getChildText("FrageName");
             String antwortA = f.getChildText("AntwortA");
             String antwortB = f.getChildText("AntwortB");
             String antwortC = f.getChildText("AntwortC");
             String antwortD = f.getChildText("AntwortD");
 
-            Answer a = new Answer('A', antwortA);
-            Answer b = new Answer('B', antwortB);
-            Answer c = new Answer('C', antwortC);
-            Answer d = new Answer('D', antwortD);
-
-            // Zunächst ohne korrekte Antwort; diese wird in assignSolutions gesetzt.
-            Question question = new Question(fid, kid, frageName, a, b, c, d);
-            questions.add(question);
+            // Erstelle das Question-Objekt
+            Question question = new Question(fid, frageName);
+            // Speichere die Antworttexte zusammen mit der Frage und der Kategorie-ID
+            QuestionWrapper qw = new QuestionWrapper(question, kid, antwortA, antwortB, antwortC, antwortD);
+            questionWrappers.add(qw);
         }
-        return questions;
-    }
 
-    /**
-     * Liest alle Lösungseinträge aus der XML-Datei und weist den Fragen die korrekte Antwort zu.
-     * @param questions Liste der bereits gelesenen Question-Objekte.
-     */
-    public void assignSolutions(List<Question> questions) {
-        Element root = document.getRootElement();
-        Element loesungenElement = root.getChild("Lösungen");
-        List<Element> loesungList = loesungenElement.getChildren("Loesung");
-        for (Element l : loesungList) {
+        // 3. Lösungen einlesen: Die <Lösungen> enthalten jeweils eine Loesung mit Attribut FID
+        Element loesungenElem = root.getChild("Lösungen");
+        List<Element> loesungElems = loesungenElem.getChildren("Loesung");
+        Map<String, String> solutionMap = new HashMap<>();
+        for (Element l : loesungElems) {
             String fid = l.getAttributeValue("FID");
-            String loesungText = l.getText().trim();
-            for (Question q : questions) {
-                if(q.getFid().equals(fid)) {
-                    // Vergleiche den Lösungstext mit den Antworttexten
-                    if(q.getAnswerA().getText().trim().equals(loesungText)) {
-                        q.setCorrectAnswer('A');
-                    } else if(q.getAnswerB().getText().trim().equals(loesungText)) {
-                        q.setCorrectAnswer('B');
-                    } else if(q.getAnswerC().getText().trim().equals(loesungText)) {
-                        q.setCorrectAnswer('C');
-                    } else if(q.getAnswerD().getText().trim().equals(loesungText)) {
-                        q.setCorrectAnswer('D');
-                    }
-                    break;
+            String solutionText = l.getText().trim();
+            solutionMap.put(fid, solutionText);
+        }
+
+        // 4. Für jede Frage wird anhand der Lösungstexte ermittelt, welche Antwort korrekt ist,
+        //    und die Frage wird der entsprechenden Kategorie zugeordnet.
+        for (QuestionWrapper qw : questionWrappers) {
+            String solText = solutionMap.get(qw.question.getFid());
+            if (solText != null) {
+                // Vergleiche den Lösungstext mit den Antworttexten (mit trim())
+                if (solText.equals(qw.antwortA.trim())) {
+                    qw.question.setCorrectAnswer(Answer.ANSWER_A);
+                } else if (solText.equals(qw.antwortB.trim())) {
+                    qw.question.setCorrectAnswer(Answer.ANSWER_B);
+                } else if (solText.equals(qw.antwortC.trim())) {
+                    qw.question.setCorrectAnswer(Answer.ANSWER_C);
+                } else if (solText.equals(qw.antwortD.trim())) {
+                    qw.question.setCorrectAnswer(Answer.ANSWER_D);
+                } else {
+                    System.err.println("Keine passende Lösung für Frage " + qw.question.getFid());
                 }
+            } else {
+                System.err.println("Keine Lösung für Frage " + qw.question.getFid());
+            }
+
+            // Ordne die Frage der entsprechenden Kategorie zu
+            Category cat = categoryMap.get(qw.kid);
+            if (cat != null) {
+                cat.addQuestion(qw.question);
+            } else {
+                System.err.println("Kategorie " + qw.kid + " nicht gefunden für Frage " + qw.question.getFid());
             }
         }
+
+        return categories;
     }
 
     /**
-     * Ordnet die Fragen ihren Kategorien zu.
-     * @param categories Liste der Category-Objekte.
-     * @param questions Liste der Question-Objekte.
+     * Hilfsklasse, um zwischenzeitlich die Antworttexte zusammen mit einer Frage und der zugehörigen Kategorie-ID zu speichern.
      */
-    public void assignQuestionsToCategories(List<Category> categories, List<Question> questions) {
-        Map<String, Category> map = new HashMap<>();
-        for (Category c : categories) {
-            map.put(c.getKatID(), c);
-        }
-        for (Question q : questions) {
-            Category c = map.get(q.getKid());
-            if(c != null) {
-                c.addQuestion(q);
-            }
+    private static class QuestionWrapper {
+        public Question question;
+        public String kid;
+        public String antwortA;
+        public String antwortB;
+        public String antwortC;
+        public String antwortD;
+
+        public QuestionWrapper(Question question, String kid, String antwortA, String antwortB, String antwortC, String antwortD) {
+            this.question = question;
+            this.kid = kid;
+            this.antwortA = antwortA;
+            this.antwortB = antwortB;
+            this.antwortC = antwortC;
+            this.antwortD = antwortD;
         }
     }
 }

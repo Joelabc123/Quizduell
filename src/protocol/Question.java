@@ -21,6 +21,13 @@ public class Question {
             throw new IllegalArgumentException("Correct answer not in answers");
         }
     }
+    public Question(String fid, String question, Answer correctAnswer) {
+        this.fid = fid;
+        this.frageName = question;
+        this.correctAnswer = correctAnswer;
+        this.answers = null;
+    }
+
 
     public boolean isCorrect(Answer answer) {
         return correctAnswer.equals(answer);

@@ -10,14 +10,14 @@ import java.util.UUID;
 public class QuestionRound {
 
     private Category category;
-    private ArrayList<Question> questions = new ArrayList<>();
+    private Question question;
 
     private Map<String, Answer> answerPlayerA = new HashMap<>(); //FID, Answer
     private Map<String, Answer> answerPlayerB = new HashMap<>();//FID, Answer
 
-    public QuestionRound(Category category, ArrayList<Question> questions) {
+    public QuestionRound(Category category, Question question) {
         this.category = category;
-        this.questions = questions;
+        this.question = question;
     }
 
     public Category getCategory() {
