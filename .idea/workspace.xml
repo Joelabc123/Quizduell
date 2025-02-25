@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Implemented GameManager and updated messaging protocols">
-      <change afterPath="$PROJECT_DIR$/src/protocol/CategoryRound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/QuestionRound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/Answer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/QuizReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/Round.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/Solution.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
-    </list>
+    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Implemented GameManager and updated messaging protocols" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -185,7 +173,7 @@
       <workItem from="1740438116299" duration="197000" />
       <workItem from="1740438322416" duration="250000" />
       <workItem from="1740438581786" duration="1721000" />
-      <workItem from="1740440629992" duration="1711000" />
+      <workItem from="1740440629992" duration="2119000" />
     </task>
     <task id="LOCAL-00001" summary="Finished DB">
       <option name="closed" value="true" />
@@ -211,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740352213302</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implemented GameManager and updated messaging protocols">
+      <option name="closed" value="true" />
+      <created>1740442513761</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740442513761</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +228,8 @@
     <MESSAGE value="Finished DB" />
     <MESSAGE value="Finished GUI" />
     <MESSAGE value="Implemented MessageTypes and Game Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented MessageTypes and Game Classes" />
+    <MESSAGE value="Implemented GameManager and updated messaging protocols" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented GameManager and updated messaging protocols" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
