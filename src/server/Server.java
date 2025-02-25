@@ -1,7 +1,7 @@
 package server;
 
 import protocol.messages.ErrorMessage;
-import protocol.ErrorType;
+import protocol.messages.ErrorType;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.UUID;
 
 public class Server {
+
+    private static QuizReader quizReader;
 
     private static Server instance;
 
@@ -48,8 +50,6 @@ public class Server {
                     Thread clientThread = new Thread(player);
                     clientThreads.add(clientThread);
                     clientThread.start();
-
-                    updatePlayerList();
                 }
             } catch (IOException e) {
                 if (running) e.printStackTrace();
@@ -60,8 +60,8 @@ public class Server {
     public synchronized void stopServer() {
         running = false;
         try {
-            for (PlayerInfo p : players) {
-                p.sendMessage(new ErrorMessage(ErrorType.SERVER_CLOSED));
+            for (Player p : players) {
+                p.sendMessage(new ErrorMessage("Server closed", ErrorType.SERVER_CLOSED));
             }
             if (serverSocket != null) {
                 serverSocket.close();
@@ -72,61 +72,10 @@ public class Server {
             }
             players.clear();
             clientThreads.clear();
-            updatePlayerList();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-    public synchronized void createGame(BattleShipGame game) {
-        games.add(game);
-    }
-
-    public synchronized void removeGame(UUID id) {
-        games.removeIf(game -> game.getGameState().getId().equals(id));
-    }
-
-    public synchronized void removePlayer(PlayerInfo player) {
-        players.remove(player);
-        updatePlayerList();
-    }
-
-    public synchronized void addToQueue(PlayerInfo player) {
-        queue.add(player);
-        player.sendMessage(new protocol.messages.QueueUpdateMessage(queue.size(), true));
-    }
-
-    public synchronized void removeFromQueue(UUID id) {
-        queue.removeIf(player -> {
-            if(player.getId().equals(id)) {
-                player.sendMessage(new protocol.messages.QueueUpdateMessage(queue.size(), false));
-                return true;
-            }
-            return false;
-        });
-
-    }
-
-    private synchronized void updatePlayerList() {
-        StringBuilder sb = new StringBuilder();
-        for (PlayerInfo p : players) {
-            sb.append(p.getUsername()).append(" (").append(p.getIp()).append(")\n");
-        }
-        gui.updatePlayerList(sb.toString());
-    }
-
-    public synchronized List<PlayerInfo> getPlayers() {
-        return players;
-    }
-
-    public synchronized ArrayList<PlayerInfo> getQueue() {
-        return queue;
-    }
-
-    public synchronized ArrayList<BattleShipGame> getGames() {
-        return games;
-    }
-
     /**
      * Main method to start the server
      * -p <port> to specify the port
@@ -139,6 +88,12 @@ public class Server {
                 PORT = Integer.parseInt(args[i + 1]);
             }
         }
+        try {
+            quizReader = new QuizReader();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         instance = new Server();
 
         if (args.length >= 1 && args[0].contains("--autostart")) {

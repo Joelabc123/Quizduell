@@ -5,20 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Implemented GameManager and updated messaging protocols">
-      <change afterPath="$PROJECT_DIR$/src/client/GameInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/CategoryRound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/QuestionRound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server/Answer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server/QuizReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/protocol/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/Round.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Round.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/messages/HostLobbyMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/HostLobbyMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/messages/LobbyStatusMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/LobbyStatusMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/messages/LoginMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/LoginMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/Round.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/Solution.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Quizgame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Quizgame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,9 +25,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -44,12 +40,12 @@
     &quot;assignee&quot;: &quot;Joelabc123&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Joelabc123/Quizduell.git&quot;,
-    &quot;accountId&quot;: &quot;88b653b6-6659-498b-9101-4a95151f0c02&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Joelabc123/Quizduell.git",
+    "accountId": "3f3142b7-35d0-4d29-8e1b-5ef272dc813b"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="Security Analysis" />
   </component>
@@ -64,40 +60,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CategoryWheelGUI.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Client 1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Client 2.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Client.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainGameFrame.executor&quot;: &quot;Run&quot;,
-    &quot;Application.QuestionGUI.executor&quot;: &quot;Run&quot;,
-    &quot;Application.QuizGUI.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ScoreAndCategoriesGUI.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ScoreAndKategorieGUI.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Server.executor&quot;: &quot;Run&quot;,
-    &quot;Application.client.gui.ScoreAndCategoriesGUI.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Joelb/IdeaProjects/Quizduell/resources/jdom-2.0.6.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Joelb/IdeaProjects/Quizduell/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CategoryWheelGUI.executor": "Run",
+    "Application.Client 1.executor": "Run",
+    "Application.Client 2.executor": "Run",
+    "Application.Client.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MainGameFrame.executor": "Run",
+    "Application.QuestionGUI.executor": "Run",
+    "Application.QuizGUI.executor": "Run",
+    "Application.ScoreAndCategoriesGUI.executor": "Run",
+    "Application.ScoreAndKategorieGUI.executor": "Run",
+    "Application.Server.executor": "Run",
+    "Application.client.gui.ScoreAndCategoriesGUI.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/robertjuliankratz/development/Quizduell",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/Joelb/IdeaProjects/Quizduell/src/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Joelb\IdeaProjects\Quizduell\resources" />
@@ -189,6 +185,7 @@
       <workItem from="1740438116299" duration="197000" />
       <workItem from="1740438322416" duration="250000" />
       <workItem from="1740438581786" duration="1721000" />
+      <workItem from="1740440629992" duration="1711000" />
     </task>
     <task id="LOCAL-00001" summary="Finished DB">
       <option name="closed" value="true" />

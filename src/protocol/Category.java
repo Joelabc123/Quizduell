@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Category {
-    private String katID;
-    private String name;
+    private final String katID;
+    private final String name;
     private List<Question> questions;
 
     public Category(String katID, String name) {
@@ -14,36 +14,25 @@ public class Category {
         this.questions = new ArrayList<>();
     }
 
-    public String getKatID() {
-        return katID;
+    private Category(Category category, List<Question> questions) {
+        this.katID = category.katID;
+        this.name = category.name;
+        this.questions = questions;
     }
 
-    public void setKatID(String katID) {
-        this.katID = katID;
-    }
+    public Question getRandQuestion() {
+        Question question = questions.get((int) (Math.random() * questions.size()));
 
-    public String getName() {
-        return name;
-    }
+        question.setCorrectAnswer(null);
 
-    public void setName(String name) {
-        this.name = name;
+        return question;
     }
 
     public List<Question> getQuestions() {
         return questions;
     }
 
-    public void addQuestion(Question question) {
-        this.questions.add(question);
-    }
-
-    @Override
-    public String toString() {
-        return "Category{" +
-                "katID='" + katID + '\'' +
-                ", name='" + name + '\'' +
-                ", questions=" + questions.size() +
-                '}';
+    public String getName() {
+        return name;
     }
 }
