@@ -4,24 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Refactor Question and QuestionRound classes for improved structure and XML parsing">
+    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Refactor messaging protocols and enhance lobby management with new message types">
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/AnswerCategoryMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/SelectCategoryMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/SendCategoryMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/SendQuestionMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/UpdateGameMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server/ClientInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GameInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/XMLReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/messages/ErrorMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/ErrorMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/messages/AnswerMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/messages/GameOverMessage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/protocol/messages/HostLobbyMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/HostLobbyMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/protocol/messages/JoinLobbyMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/JoinLobbyMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/messages/LobbyStatusMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/LobbyStatusMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/messages/LoginMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/LoginMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/messages/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/messages/LobbyStatusMessage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/protocol/messages/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/MessageType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/messages/QuestionMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/messages/RoundResultMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/messages/ScoreUpdateMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/messages/StartGameMessage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/QuizReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/QuizReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +35,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -195,7 +199,8 @@
       <workItem from="1740483286572" duration="5625000" />
       <workItem from="1740510071780" duration="6967000" />
       <workItem from="1740517403988" duration="895000" />
-      <workItem from="1740563953189" duration="4488000" />
+      <workItem from="1740563953189" duration="7178000" />
+      <workItem from="1740591745421" duration="2019000" />
     </task>
     <task id="LOCAL-00001" summary="Finished DB">
       <option name="closed" value="true" />
@@ -237,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740489270727</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Refactor messaging protocols and enhance lobby management with new message types">
+      <option name="closed" value="true" />
+      <created>1740587378618</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740587378618</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +273,8 @@
     <MESSAGE value="Implemented MessageTypes and Game Classes" />
     <MESSAGE value="Implemented GameManager and updated messaging protocols" />
     <MESSAGE value="Refactor Question and QuestionRound classes for improved structure and XML parsing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor Question and QuestionRound classes for improved structure and XML parsing" />
+    <MESSAGE value="Refactor messaging protocols and enhance lobby management with new message types" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor messaging protocols and enhance lobby management with new message types" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

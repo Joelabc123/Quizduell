@@ -20,7 +20,7 @@ public class GameState implements Serializable  {
     private final UUID id = UUID.randomUUID();
 
     public UUID playerA, playerB;
-    private int sessionCode;
+    private int lobbyCode;
 
     private ArrayList<CategoryRound> rounds = new ArrayList<>();
 
@@ -72,8 +72,8 @@ public class GameState implements Serializable  {
         return id;
     }
 
-    public int getSessionCode() {
-        return sessionCode;
+    public int getLobbyCode() {
+        return lobbyCode;
     }
 
     public void setSessionCode(int sessionCode) {

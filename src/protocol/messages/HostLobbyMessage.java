@@ -1,15 +1,11 @@
 package protocol.messages;
 
-import java.util.UUID;
 
 public class HostLobbyMessage extends Message {
     private static final long serialVersionUID = 1L;
 
-    private UUID userId;
-
-    public HostLobbyMessage(UUID userId) {
+    public HostLobbyMessage() {
         super(MessageType.HOST_LOBBY);
-        this.userId = userId;
     }
 
     @Override

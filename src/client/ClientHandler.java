@@ -44,16 +44,6 @@ public class ClientHandler {
 
                             gameManager.loginMessage(loginMessage);
                             break;
-                        case "LobbyStatusMessage":
-                            protocol.messages.LobbyStatusMessage lobbyStatusMessage = (protocol.messages.LobbyStatusMessage) received;
-
-                            gameManager.lobbyStatusMessage(lobbyStatusMessage);
-                            break;
-                        case "StartGameMessage":
-                            protocol.messages.StartGameMessage startGameMessage = (protocol.messages.StartGameMessage) received;
-
-                            gameManager.startGameMessage(startGameMessage);
-                            break;
                         case "ErrorMessage":
                             ErrorMessage errorMessage = (ErrorMessage) received;
                             if(errorMessage.getErrorType().equals(ErrorType.SERVER_CLOSED)) {

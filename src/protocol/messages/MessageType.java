@@ -1,26 +1,17 @@
 package protocol.messages;
 
 public enum MessageType {
-    //Server to Client check
+    // Server to Client
     LOGIN,
-    //Client to Server check
+    SEND_CATEGORY,
+    SEND_QUESTION,
+    UPDATE_GAME,
+    ERROR,
+
+    // Client to Server
     JOIN_LOBBY,
-    //Client to Server check
     HOST_LOBBY,
-    //Server to Client check
-    LOBBY_STATUS,
-    //Server to Client
-    START_GAME,
-    //Server to Client
-    QUESTION,
-    //Client to Server
-    ANSWER,
-    //Server to Client
-    SCORE_UPDATE,
-    //Server to Client
-    ROUND_RESULT,
-    //Server to Client
-    GAME_OVER,
-    //Server to Client
-    ERROR
+    SELECT_CATEGORY,
+    ANSWER_QUESTION
 }
+

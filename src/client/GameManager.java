@@ -1,9 +1,7 @@
 package client;
 
-import protocol.messages.HostLobbyMessage;
-import protocol.messages.JoinLobbyMessage;
-import protocol.messages.LobbyStatusMessage;
-import protocol.messages.LoginMessage;
+import protocol.messages.*;
+import server.Answer;
 import server.GameState;
 
 import java.util.UUID;
@@ -32,22 +30,39 @@ public class GameManager implements GameInterface {
 
     @Override
     public void hostLobby() {
-        this.clientHandler.sendMessage(new HostLobbyMessage(userId));
+        this.clientHandler.sendMessage(new HostLobbyMessage());
+    }
+
+
+    @Override
+    public void sendCategoryMessage(SendCategoryMessage sendCategoryMessage) {
+
     }
 
     @Override
-    public void lobbyStatus(LobbyStatusMessage lobbyStatusMessage) {
-        this.lobbyCode = lobbyStatusMessage.getLobbyCode();
-        //Über stagemanager scene wechseln
+    public void sendQuestionMessage(SendQuestionMessage sendQuestionMessage) {
+
     }
 
     @Override
-    public void joinLobby(UUID playerId,int lobbyCode) {
-        this.clientHandler.sendMessage(new JoinLobbyMessage(userId, lobbyCode));
+    public void updateGameMessage(UpdateGameMessage UpdateGameMessage) {
+        this.latestGameState = UpdateGameMessage.getGameState();
+        this.lobbyCode = latestGameState.getLobbyCode();
     }
 
-    public ClientHandler getClientHandler() {
-        return clientHandler;
+    @Override
+    public void joinLobby(int lobbyCode) {
+        this.clientHandler.sendMessage(new JoinLobbyMessage(lobbyCode));
+    }
+
+    @Override
+    public void selectCategory(String category) {
+
+    }
+
+    @Override
+    public void answerQuestion(Answer answer) {
+
     }
 }
 
