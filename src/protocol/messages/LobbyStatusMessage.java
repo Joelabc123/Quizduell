@@ -1,24 +1,19 @@
 package protocol.messages;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class LobbyStatusMessage extends Message {
     private static final long serialVersionUID = 1L;
 
-    private String lobbyId;
-    private List<String> players;
+    private int lobbyCode;
 
-    public LobbyStatusMessage(String lobbyId, List<String> players) {
-        this.players = players;
-        this.lobbyId = lobbyId;
+    public LobbyStatusMessage( int lobbyCode) {
+        super(MessageType.LOBBY_STATUS);
+        this.lobbyCode = lobbyCode;
     }
 
-    public List<String> getPlayers() {
-        return players;
-    }
-
-    public String getLobbyId() {
-        return lobbyId;
+    public int getLobbyCode() {
+        return lobbyCode;
     }
 
     @Override

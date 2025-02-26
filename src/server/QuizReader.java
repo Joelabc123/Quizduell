@@ -8,14 +8,13 @@ import java.util.ArrayList;
 public class QuizReader {
 
     private ArrayList<Category> categories = new ArrayList<>();
-
+    private XMLReader xmlReader;
     public QuizReader() throws Exception {
-        XMLReader quiz = new XMLReader("src/quiz.xml");
+        xmlReader = new XMLReader("resources/quiz.xml");
     }
 
     public ArrayList<Category> getCategories() {
-        return categories;
-    }
+        return xmlReader.parseCategory();    }
 
     public ArrayList<Category> getThreeRandomCategories() {
         ArrayList<Category> randomCategories = new ArrayList<>();

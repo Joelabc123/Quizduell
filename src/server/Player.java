@@ -1,7 +1,5 @@
 package server;
 
-import protocol.messages.ErrorMessage;
-import protocol.ErrorType;
 import protocol.messages.*;
 import utils.Usernames;
 
@@ -15,7 +13,6 @@ public class Player implements Runnable {
 
     private Socket socket;
     private UUID id;
-    private UUID secret;
     private ObjectOutputStream out;
     private ObjectInputStream in;
     private String username;
@@ -24,7 +21,6 @@ public class Player implements Runnable {
     public Player(Socket socket, Server server) {
         this.socket = socket;
         this.id = UUID.randomUUID();
-        this.secret = UUID.randomUUID();
         this.ip = socket.getInetAddress().getHostAddress();
         this.username = Usernames.generate();
         this.server = server;
@@ -51,18 +47,16 @@ public class Player implements Runnable {
                         HostLobbyMessage hostLobbyMessage = (HostLobbyMessage) received;
                         System.out.println("Player A hosted a game");
 
-                        QuizGame game = new QuizGame(this, server);
+                        QuizGame game = new QuizGame(this, server); // TODO: Create a new game
                         game.addPlayer(this);
 
-
-
-                        this.sendMessage(new LobbyStatusMessage(game.getId()));
+                        this.sendMessage(new LobbyStatusMessage(game.getLobbyCode())); //TODO: gen methods
                     }
 
                 }
             }
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Verbindung mit " + username + " verloren.");
+            System.out.println("Verbindung mit " + username + " verloren .");
             server.removePlayer(this);
             server.removeFromQueue(this.getId());
         }

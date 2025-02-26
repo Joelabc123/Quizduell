@@ -11,7 +11,7 @@ public class LoginMessage extends Message {
     private UUID userId, secret;
 
     public LoginMessage(UUID userId, String username) {
-        this.username = Usernames.generate();
+        super(MessageType.LOGIN);
         this.userId = userId;
         this.username = username;
     }

@@ -20,6 +20,10 @@ public class Category {
         this.questions = questions;
     }
 
+    public void addQuestion(Question question) {
+        questions.add(question);
+    }
+
     public Question getRandQuestion() {
         Question question = questions.get((int) (Math.random() * questions.size()));
 

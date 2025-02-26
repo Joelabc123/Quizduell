@@ -28,6 +28,12 @@ public class Question {
         this.answers = null;
     }
 
+    public Question(String fid, String question) {
+        this.fid = fid;
+        this.frageName = question;
+        this.correctAnswer = null;
+        this.answers = null;
+    }
 
     public boolean isCorrect(Answer answer) {
         return correctAnswer.equals(answer);

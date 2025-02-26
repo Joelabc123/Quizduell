@@ -1,6 +1,7 @@
 package client;
 
 import protocol.messages.ErrorMessage;
+import protocol.messages.ErrorType;
 
 import javax.swing.*;
 import java.io.*;
@@ -46,12 +47,25 @@ public class ClientHandler {
                         case "LobbyStatusMessage":
                             protocol.messages.LobbyStatusMessage lobbyStatusMessage = (protocol.messages.LobbyStatusMessage) received;
 
-                            gameManager.onLobbyStatusMessage(lobbyStatusMessage);
+                            gameManager.lobbyStatusMessage(lobbyStatusMessage);
+                            break;
+                        case "StartGameMessage":
+                            protocol.messages.StartGameMessage startGameMessage = (protocol.messages.StartGameMessage) received;
+
+                            gameManager.startGameMessage(startGameMessage);
                             break;
                         case "ErrorMessage":
                             ErrorMessage errorMessage = (ErrorMessage) received;
-                            if(errorMessage.getError().equals(ErrorType.SERVER_CLOSED)) {
+                            if(errorMessage.getErrorType().equals(ErrorType.SERVER_CLOSED)) {
                                 showError("Server wurde geschlossen.");
+                                System.exit(1);
+                            }
+                            if(errorMessage.getErrorType().equals(ErrorType.INVALID_ACTION)) {
+                                showError("Invalide Aktion.");
+                                System.exit(1);
+                            }
+                            if(errorMessage.getErrorType().equals(ErrorType.UNKNOWN_ERROR)) {
+                                showError("Unbekannter Fehler.");
                                 System.exit(1);
                             }
                             break;

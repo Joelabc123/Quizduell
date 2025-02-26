@@ -71,4 +71,13 @@ public class GameState implements Serializable  {
     public UUID getId() {
         return id;
     }
+
+    public int getSessionCode() {
+        return sessionCode;
+    }
+
+    public void setSessionCode(int sessionCode) {
+        this.sessionCode = sessionCode;
+    }
+
 }

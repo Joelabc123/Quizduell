@@ -1,22 +1,25 @@
 package protocol.messages;
 
+import java.util.UUID;
+
 public class JoinLobbyMessage extends Message {
     private static final long serialVersionUID = 1L;
 
-    private String lobbyId;
-    private String username;
+    private UUID userId;
+    private int lobbyCode;
 
-    public JoinLobbyMessage(String lobbyId, String username) {
-        this.lobbyId = lobbyId;
-        this.username = username;
+    public JoinLobbyMessage(UUID userId, int lobbyCode) {
+        super(MessageType.JOIN_LOBBY);
+        this.userId = userId;
+        this.lobbyCode = lobbyCode;
     }
 
-    public String getLobbyId() {
-        return lobbyId;
+    public UUID getUserId() {
+        return userId;
     }
 
-    public String getUsername() {
-        return username;
+    public int getLobbyCode() {
+        return lobbyCode;
     }
 
     @Override

@@ -3,6 +3,7 @@ package protocol;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.input.SAXBuilder;
+import server.Answer;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -24,16 +25,16 @@ public class XMLReader {
     }
 
     /**
-     * Parst die XML-Datei und erstellt eine Liste von Category‑Objekten.
+     * Parst die XML-Datei und erstellt eine ArrayList von Category‑Objekten.
      * Jeder Kategorie werden die zugehörigen Fragen (mit korrekter Antwort) zugeordnet.
-     * @return Liste von Category‑Objekten.
+     * @return ArrayList von Category‑Objekten.
      */
-    public List<Category> parse() {
+    public ArrayList<Category> parseCategory() {
         // 1. Kategorien einlesen
         Element root = document.getRootElement(); // <database>
         Element kategorienElem = root.getChild("Kategorien");
         List<Element> kategorieElems = kategorienElem.getChildren("Kategorie");
-        List<Category> categories = new ArrayList<>();
+        ArrayList<Category> categories = new ArrayList<>();
         Map<String, Category> categoryMap = new HashMap<>();
         for (Element k : kategorieElems) {
             String katID = k.getAttributeValue("KatID");
@@ -46,7 +47,7 @@ public class XMLReader {
         // 2. Fragen und ihre Antworttexte einlesen
         Element fragenElem = root.getChild("Fragen");
         List<Element> frageElems = fragenElem.getChildren("Frage");
-        List<QuestionWrapper> questionWrappers = new ArrayList<>();
+        ArrayList<QuestionWrapper> questionWrappers = new ArrayList<>();
         for (Element f : frageElems) {
             String fid = f.getAttributeValue("FID");
             String kid = f.getAttributeValue("KID");  // Kategorie-ID

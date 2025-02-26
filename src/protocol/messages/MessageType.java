@@ -1,13 +1,13 @@
 package protocol.messages;
 
 public enum MessageType {
-    //Server to Client
+    //Server to Client check
     LOGIN,
-    //Client to Server
+    //Client to Server check
     JOIN_LOBBY,
-    //Client to Server
+    //Client to Server check
     HOST_LOBBY,
-    //Server to Client
+    //Server to Client check
     LOBBY_STATUS,
     //Server to Client
     START_GAME,
