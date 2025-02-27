@@ -2,6 +2,8 @@ package client;
 
 import protocol.messages.ErrorMessage;
 import protocol.messages.ErrorType;
+import protocol.messages.Message;
+import protocol.messages.MessageType;
 
 import javax.swing.*;
 import java.io.*;
@@ -38,13 +40,30 @@ public class ClientHandler {
                 while (socket.isConnected()) {
                     Object received = in.readObject();
 
-                    switch (received.getClass().getSimpleName()) {
-                        case "LoginMessage":
+                    Message message = (Message) received;
+
+                    switch (message.getType()) {
+                        case MessageType.LOGIN:
                             protocol.messages.LoginMessage loginMessage = (protocol.messages.LoginMessage) received;
 
                             gameManager.loginMessage(loginMessage);
                             break;
-                        case "ErrorMessage":
+                        case MessageType.SEND_CATEGORY:
+                            protocol.messages.SendCategoryMessage sendCategoryMessage = (protocol.messages.SendCategoryMessage) received;
+
+                            gameManager.sendCategoryMessage(sendCategoryMessage);
+                            break;
+                        case MessageType.SEND_QUESTION:
+                            protocol.messages.SendQuestionMessage sendQuestionMessage = (protocol.messages.SendQuestionMessage) received;
+
+                            gameManager.sendQuestionMessage(sendQuestionMessage);
+                            break;
+                        case MessageType.UPDATE_GAME:
+                            protocol.messages.UpdateGameMessage updateGameMessage = (protocol.messages.UpdateGameMessage) received;
+
+                            gameManager.updateGameMessage(updateGameMessage);
+                            break;
+                        case MessageType.ERROR:
                             ErrorMessage errorMessage = (ErrorMessage) received;
                             if(errorMessage.getErrorType().equals(ErrorType.SERVER_CLOSED)) {
                                 showError("Server wurde geschlossen.");

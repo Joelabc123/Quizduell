@@ -20,4 +20,5 @@ public class SendQuestionMessage extends Message {
     public MessageType getType() {
         return MessageType.SEND_QUESTION;
     }
+
 }

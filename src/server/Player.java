@@ -1,5 +1,9 @@
 package server;
 
+import protocol.Category;
+import protocol.CategoryRound;
+import protocol.Question;
+import protocol.QuestionRound;
 import protocol.messages.*;
 import utils.Usernames;
 
@@ -26,8 +30,13 @@ public class Player implements Runnable {
         this.server = server;
     }
 
-    public String getUsername() { return username; }
-    public String getIp() { return ip; }
+    public String getUsername() {
+        return username;
+    }
+
+    public String getIp() {
+        return ip;
+    }
 
     @Override
     public void run() {
@@ -35,6 +44,7 @@ public class Player implements Runnable {
             out = new ObjectOutputStream(socket.getOutputStream());
             in = new ObjectInputStream(socket.getInputStream());
 
+            //When client connects to server
             sendMessage(new LoginMessage(id, username));
 
             while (socket.isConnected()) {
@@ -42,23 +52,69 @@ public class Player implements Runnable {
 
                 System.out.println("Received: " + received.getClass().getSimpleName());
 
-                switch (received.getClass().getSimpleName()) {
-                    case "HostLobbyMessage" -> {
+                Message message = (Message) received;
+
+                switch (message.getType()) {
+                    case MessageType.HOST_LOBBY:
                         HostLobbyMessage hostLobbyMessage = (HostLobbyMessage) received;
-                        System.out.println("Player A hosted a game");
 
-                        QuizGame game = new QuizGame(this, server); // TODO: Create a new game
+                        //Register new QuizGame
+                        QuizGame game = new QuizGame();
+                        Thread gameThread = new Thread(game);
+
                         game.addPlayer(this);
+                        server.registerGame(game, gameThread);
 
-                        this.sendMessage(new LobbyStatusMessage(game.getLobbyCode())); //TODO: gen methods
-                    }
+                        break;
+                    case MessageType.JOIN_LOBBY:
+                        JoinLobbyMessage joinLobbyMessage = (JoinLobbyMessage) received;
 
+                        QuizGame targetGame = null;
+
+                        for (QuizGame quizGame : server.getGames()) {
+                            if (quizGame.getGameState().getLobbyCode() == joinLobbyMessage.getLobbyCode()) {
+                                targetGame = quizGame;
+                            }
+                        }
+
+                        if (targetGame == null) {
+                            sendMessage(new ErrorMessage(ErrorType.AUTHENTICATION_FAILED));
+                            break;
+                        }
+
+                        targetGame.addPlayer(this);
+
+                        break;
+                    case SELECT_CATEGORY:
+                        SelectCategoryMessage selectCategoryMessage = (SelectCategoryMessage) received;
+
+                        Category selectedCategory = selectCategoryMessage.getCategory();
+
+                        QuizGame quizGame = server.getGameFromPlayer(this);
+                        for (Category c : Server.quizReader.categories) {
+                            if (c.getKatID().equals(selectedCategory.getKatID())) {
+                                CategoryRound categoryRound = new CategoryRound(c);
+                                quizGame.getGameState().addRound(categoryRound);
+                            }
+                        }
+
+                        sendMessage(new SendQuestionMessage(quizGame.getGameState()));
+
+                        break;
+                    case ANSWER_QUESTION:
+                        AnswerQuestionMessage answerQuestionMessage = (AnswerQuestionMessage) received;
+                        Answer selectedAnswer = answerQuestionMessage.getSelectedAnswer();
+
+                        QuizGame answerGame = server.getGameFromPlayer(this);
+                        CategoryRound currentCategoryRound = answerGame.getGameState().getCurrentRound();
+
+                        break;
                 }
             }
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("Verbindung mit " + username + " verloren .");
-            server.removePlayer(this);
-            server.removeFromQueue(this.getId());
+            //server.removePlayer(this);
+            //server.removeFromQueue(this.getId());
         }
     }
 

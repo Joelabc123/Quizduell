@@ -10,7 +10,6 @@ public class GameManager implements GameInterface {
 
     private UUID userId;
     private String username;
-    private int lobbyCode;
 
     private GameState latestGameState;
 
@@ -47,7 +46,6 @@ public class GameManager implements GameInterface {
     @Override
     public void updateGameMessage(UpdateGameMessage UpdateGameMessage) {
         this.latestGameState = UpdateGameMessage.getGameState();
-        this.lobbyCode = latestGameState.getLobbyCode();
     }
 
     @Override

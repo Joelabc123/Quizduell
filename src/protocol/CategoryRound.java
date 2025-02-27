@@ -6,21 +6,21 @@ import java.util.UUID;
 
 public class CategoryRound {
 
+
      private final Category category;
-     private ArrayList<QuestionRound> questions = new ArrayList<>();
 
      private ArrayList<UUID> winner = new ArrayList<>();
+     private ArrayList<QuestionRound> questionRounds = new ArrayList<>(); //3 questions
 
-     public CategoryRound(Category category, ArrayList<QuestionRound> questions) {
+     public CategoryRound(Category category) {
          this.category = category;
-         this.questions = questions;
      }
 
     public Category getCategory() {
         return category;
     }
 
-    public ArrayList<QuestionRound> getQuestions() {
-       return questions;
+    public ArrayList<QuestionRound> getQuestionRounds() {
+        return questionRounds;
     }
 }

@@ -1,23 +1,16 @@
 package protocol;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Category {
     private final String katID;
     private final String name;
-    private List<Question> questions;
+    private ArrayList<Question> questions;
 
     public Category(String katID, String name) {
         this.katID = katID;
         this.name = name;
         this.questions = new ArrayList<>();
-    }
-
-    private Category(Category category, List<Question> questions) {
-        this.katID = category.katID;
-        this.name = category.name;
-        this.questions = questions;
     }
 
     public void addQuestion(Question question) {
@@ -32,11 +25,15 @@ public class Category {
         return question;
     }
 
-    public List<Question> getQuestions() {
+    public ArrayList<Question> getQuestions() {
         return questions;
     }
 
     public String getName() {
         return name;
+    }
+
+    public String getKatID() {
+        return katID;
     }
 }

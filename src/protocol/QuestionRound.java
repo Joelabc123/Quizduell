@@ -9,19 +9,13 @@ import java.util.UUID;
 
 public class QuestionRound {
 
-    private Category category;
     private Question question;
 
     private Map<String, Answer> answerPlayerA = new HashMap<>(); //FID, Answer
     private Map<String, Answer> answerPlayerB = new HashMap<>();//FID, Answer
 
-    public QuestionRound(Category category, Question question) {
-        this.category = category;
+    public QuestionRound( Question question) {
         this.question = question;
-    }
-
-    public Category getCategory() {
-        return category;
     }
 
     public void setAnswerPlayerA(String fid, Answer answer) {
@@ -40,4 +34,7 @@ public class QuestionRound {
         return answerPlayerB;
     }
 
+    public Question getQuestion() {
+        return question;
+    }
 }

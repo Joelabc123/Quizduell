@@ -12,7 +12,7 @@ import java.util.UUID;
 
 public class Server {
 
-    private static QuizReader quizReader;
+    public static QuizReader quizReader = new QuizReader();
 
     private static Server instance;
 
@@ -23,6 +23,7 @@ public class Server {
     private final List<Thread> clientThreads = new ArrayList<>();
 
     private ArrayList<QuizGame> games = new ArrayList<>();
+    private ArrayList<Thread> gameThreads = new ArrayList<>();
 
     private ServerGUI gui;
 
@@ -61,7 +62,7 @@ public class Server {
         running = false;
         try {
             for (Player p : players) {
-                p.sendMessage(new ErrorMessage("Server closed", ErrorType.SERVER_CLOSED));
+                p.sendMessage(new ErrorMessage(ErrorType.SERVER_CLOSED));
             }
             if (serverSocket != null) {
                 serverSocket.close();
@@ -76,6 +77,56 @@ public class Server {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Registers a new game and starts the game thread
+     * @param game game to register
+     * @param thread thread to start
+     */
+    public synchronized void registerGame(QuizGame game, Thread thread) {
+        games.add(game);
+        gameThreads.add(thread);
+
+        thread.start();
+    }
+
+    /**
+     * Removes a game from the list of active games
+     * @param id id of the game to remove
+     */
+    public synchronized void unregisterGame(UUID id) {
+        QuizGame targetGame = null;
+        Thread targetThread = null;
+        for (QuizGame game : games) {
+            if (game.getGameState().getId().equals(id)) {
+                targetGame = game;
+                targetThread = gameThreads.get(games.indexOf(game));
+            }
+        }
+
+        if (targetGame != null) {
+            //Stop the game thread
+            targetThread.interrupt();
+            games.remove(targetGame);
+        }
+    }
+
+    public ArrayList<QuizGame> getGames() {
+        return games;
+    }
+
+    public QuizGame getGameFromPlayer(Player player) {
+        for (QuizGame game : games) {
+            if (game.getPlayerA() != null && game.getPlayerA().equals(player)) {
+                return game;
+            }
+            if (game.getPlayerB() != null && game.getPlayerB().equals(player)) {
+                return game;
+            }
+        }
+        return null;
+    }
+
     /**
      * Main method to start the server
      * -p <port> to specify the port
