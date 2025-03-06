@@ -5,6 +5,7 @@ import client.gui.MainGameFrame;
 public class Client {
     private static int PORT = 12345;
     private static String HOST = "localhost";
+    public static ClientHandler clientHandler;
 
     /**
      * Main method to start the client
@@ -20,14 +21,7 @@ public class Client {
                 HOST = args[i + 1];
             }
         }
-
-        // Starte GUI
-        MainGameFrame gui = new MainGameFrame();
-
         // Verbinde GUI mit dem ClientHandler
-        ClientHandler clientHandler = new ClientHandler(HOST, PORT);
-
-        // Speichere die ClientHandler-Instanz in der GUI für spätere Nutzung
-        gui.setClientHandler(clientHandler);
+        clientHandler = new ClientHandler(HOST, PORT);
     }
 }

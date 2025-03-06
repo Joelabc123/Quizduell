@@ -27,13 +27,11 @@ public class QuestionPanel extends JPanel {
     public QuestionPanel(MainGameFrame mainFrame) {
         this.mainFrame = mainFrame;
         initUI();
-        // Den Reset der Runde steuern wir nun explizit aus dem MainGameFrame
     }
 
     private void initUI() {
         setLayout(new BorderLayout());
 
-        // Header mit Titel und Timer
         JPanel headerPanel = new JPanel(new BorderLayout());
         headerPanel.setBackground(new Color(30,144,255));
         headerPanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
@@ -50,12 +48,10 @@ public class QuestionPanel extends JPanel {
 
         add(headerPanel, BorderLayout.NORTH);
 
-        // Frage-Label
         questionLabel = new JLabel("Frage 1: Was ist ...?", SwingConstants.CENTER);
         questionLabel.setFont(new Font("Arial", Font.BOLD, 18));
         add(questionLabel, BorderLayout.CENTER);
 
-        // Panel für Antwort-Buttons
         JPanel answersPanel = new JPanel(new GridLayout(2,2,10,10));
         answersPanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
 
@@ -72,10 +68,6 @@ public class QuestionPanel extends JPanel {
         add(answersPanel, BorderLayout.SOUTH);
     }
 
-    /**
-     * Wird aus dem MainGameFrame aufgerufen, bevor das QuestionPanel angezeigt wird.
-     * Setzt den Frage-Zähler und den roundCompleted-Flag zurück, aktualisiert die Anzeige und startet den Timer.
-     */
     public void resetRound() {
         questionCount = 0;
         roundCompleted = false;
@@ -87,18 +79,18 @@ public class QuestionPanel extends JPanel {
     private JButton createAnswerButton(String text) {
         JButton btn = new JButton(text);
         btn.setFont(new Font("Arial", Font.BOLD, 16));
-        btn.setBackground(new Color(30,144,255)); // Quizduell-Blau
+        btn.setBackground(new Color(30,144,255));
         btn.setForeground(Color.WHITE);
         btn.setFocusPainted(false);
 
         btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(countdownTimer != null && countdownTimer.isRunning()){
+                if (countdownTimer != null && countdownTimer.isRunning()) {
                     countdownTimer.stop();
                 }
-                JButton clicked = (JButton)e.getSource();
-                if(clicked.getText().equals(correctAnswer)){
+                JButton clicked = (JButton) e.getSource();
+                if (clicked.getText().equals(correctAnswer)) {
                     clicked.setBackground(Color.GREEN);
                 } else {
                     clicked.setBackground(Color.RED);
@@ -118,14 +110,14 @@ public class QuestionPanel extends JPanel {
         return btn;
     }
 
-    private void disableAllButtons(){
+    private void disableAllButtons() {
         answerButton1.setEnabled(false);
         answerButton2.setEnabled(false);
         answerButton3.setEnabled(false);
         answerButton4.setEnabled(false);
     }
 
-    private void enableAndResetButtons(){
+    private void enableAndResetButtons() {
         answerButton1.setEnabled(true);
         answerButton2.setEnabled(true);
         answerButton3.setEnabled(true);
@@ -138,16 +130,16 @@ public class QuestionPanel extends JPanel {
         answerButton4.setBackground(initialBlue);
     }
 
-    private void startTimer(){
+    private void startTimer() {
         timeRemaining = 10;
         timerLabel.setText(String.valueOf(timeRemaining));
 
-        countdownTimer = new Timer(1000, new ActionListener(){
+        countdownTimer = new Timer(1000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 timeRemaining--;
                 timerLabel.setText(String.valueOf(timeRemaining));
-                if(timeRemaining <= 0){
+                if (timeRemaining <= 0) {
                     countdownTimer.stop();
                     autoFail();
                 }
@@ -157,15 +149,14 @@ public class QuestionPanel extends JPanel {
         countdownTimer.start();
     }
 
-    private void autoFail(){
+    private void autoFail() {
         disableAllButtons();
-        // Markiere alle Buttons als falsch (rot)
         answerButton1.setBackground(Color.RED);
         answerButton2.setBackground(Color.RED);
         answerButton3.setBackground(Color.RED);
         answerButton4.setBackground(Color.RED);
 
-        Timer delayTimer = new Timer(1500, new ActionListener(){
+        Timer delayTimer = new Timer(1500, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 nextQuestion();
@@ -175,18 +166,16 @@ public class QuestionPanel extends JPanel {
         delayTimer.start();
     }
 
-    private void nextQuestion(){
+    private void nextQuestion() {
         questionCount++;
-        if(questionCount < MAX_QUESTIONS){
+        if (questionCount < MAX_QUESTIONS) {
             questionLabel.setText("Frage " + (questionCount + 1) + ": Was ist ...?");
             enableAndResetButtons();
             startTimer();
         } else {
-            // Letzte Frage der Runde
-            if(!roundCompleted){
+            if (!roundCompleted) {
                 roundCompleted = true;
-                String winner = "LEFT"; // Dummy – hier durch echte Logik ersetzen
-                mainFrame.questionsCompleted(currentCategory, winner);
+                System.out.println("Round abgeschlossen. Externe Logik muss questionsCompleted() aufrufen.");
             }
         }
     }

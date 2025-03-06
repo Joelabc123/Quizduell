@@ -7,13 +7,11 @@ public interface GameInterface {
 
     //SERVER -> CLIENT
     void loginMessage(LoginMessage loginMessage);
-    void sendCategoryMessage(SendCategoryMessage sendCategoryMessage);
-    void sendQuestionMessage(SendQuestionMessage sendQuestionMessage);
     void updateGameMessage(UpdateGameMessage UpdateGameMessage);
 
     //CLIENT -> SERVER
     void hostLobby();
     void joinLobby(int lobbyCode);
     void selectCategory(String category);
-    void answerQuestion(Answer answer);
+    void answerQuestion(Answer answer,String fId);
 }

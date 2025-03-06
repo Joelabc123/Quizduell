@@ -22,7 +22,10 @@ public class GameState implements Serializable {
     private final UUID id = UUID.randomUUID();
 
     public UUID playerA, playerB;
+    public String playerAName, playerBName;
     private final int lobbyCode;
+
+    private boolean gameOver;
 
     private ArrayList<Category> availableCategories = new ArrayList<>();
     private ArrayList<CategoryRound> rounds = new ArrayList<>();
@@ -35,6 +38,7 @@ public class GameState implements Serializable {
     public GameState(ArrayList<Category> availableCategories) {
         this.lobbyCode = (int) (Math.random() * 9000) + 1000;
         this.availableCategories = availableCategories;
+        this.gameOver = false;
     }
 
     public GameState(GameState gameState) {
@@ -44,14 +48,22 @@ public class GameState implements Serializable {
         this.lobbyCode = gameState.lobbyCode;
         this.rounds = gameState.rounds;
         this.playerTurn = gameState.playerTurn;
+        this.gameOver = gameState.gameOver;
+        this.availableCategories = gameState.availableCategories;
+        this.selectCategoryStarted = gameState.selectCategoryStarted;
+        this.selectCategoryFinished = gameState.selectCategoryFinished;
+        this.playerAName = gameState.playerAName;
+        this.playerBName = gameState.playerBName;
     }
 
-    public GameState addPlayer(UUID player) {
+    public GameState addPlayer(UUID player,String username) {
         if (playerA == null) {
             playerA = player;
+            playerAName = username;
 
         } else if (playerB == null) {
             playerB = player;
+            playerBName = username;
         }
         return this;
     }
@@ -99,5 +111,38 @@ public class GameState implements Serializable {
 
     public CategoryRound getCurrentRound() {
         return rounds.getLast();
+    }
+
+    public void setAvailableCategories(ArrayList<Category> availableCategories) {
+        this.availableCategories = availableCategories;
+    }
+
+    public void setGameOver(boolean gameOver) {
+        this.gameOver = gameOver;
+    }
+
+    public Category getCategoryByName(String categoryName) {
+        for (Category category : availableCategories) {
+            if (category.getName().equals(categoryName)) {
+                return category;
+            }
+        }
+        return null;
+    }
+
+    public void setSelectCategoryStarted(Date selectCategoryStarted) {
+        this.selectCategoryStarted = selectCategoryStarted;
+    }
+
+    public void setSelectCategoryFinished(Date selectCategoryFinished) {
+        this.selectCategoryFinished = selectCategoryFinished;
+    }
+
+    public String getPlayerAName() {
+        return playerAName;
+    }
+
+    public String getPlayerBName() {
+        return playerBName;
     }
 }

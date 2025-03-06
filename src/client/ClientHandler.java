@@ -1,9 +1,10 @@
 package client;
 
+import client.gui.MainGameFrame;
 import protocol.messages.ErrorMessage;
 import protocol.messages.ErrorType;
-import protocol.messages.Message;
-import protocol.messages.MessageType;
+import protocol.messages.LoginMessage;
+import protocol.messages.UpdateGameMessage;
 
 import javax.swing.*;
 import java.io.*;
@@ -13,9 +14,9 @@ public class ClientHandler {
     private Socket socket;
     private ObjectOutputStream out;
     private ObjectInputStream in;
-    private ClientGUI gui;
+    private MainGameFrame gui;
 
-    public final GameManager gameManager = new GameManager(this);
+    public GameManager gameManager = new GameManager(this);
 
     public ClientHandler(String serverAddress, int port) {
         try {
@@ -23,7 +24,7 @@ public class ClientHandler {
             out = new ObjectOutputStream(socket.getOutputStream());
             in = new ObjectInputStream(socket.getInputStream());
 
-            gui = new ClientGUI();
+            gui = new MainGameFrame(this);
             listenForMessages();
 
             //show error when connection to server fails
@@ -40,47 +41,42 @@ public class ClientHandler {
                 while (socket.isConnected()) {
                     Object received = in.readObject();
 
-                    Message message = (Message) received;
+                    System.out.println("Received: " + received.getClass().getSimpleName());
 
-                    switch (message.getType()) {
-                        case MessageType.LOGIN:
-                            protocol.messages.LoginMessage loginMessage = (protocol.messages.LoginMessage) received;
+                    switch (received.getClass().getSimpleName()) {
+                        case "LoginMessage":
+                            LoginMessage loginMessage = (LoginMessage) received;
 
                             gameManager.loginMessage(loginMessage);
                             break;
-                        case MessageType.SEND_CATEGORY:
-                            protocol.messages.SendCategoryMessage sendCategoryMessage = (protocol.messages.SendCategoryMessage) received;
-
-                            gameManager.sendCategoryMessage(sendCategoryMessage);
-                            break;
-                        case MessageType.SEND_QUESTION:
-                            protocol.messages.SendQuestionMessage sendQuestionMessage = (protocol.messages.SendQuestionMessage) received;
-
-                            gameManager.sendQuestionMessage(sendQuestionMessage);
-                            break;
-                        case MessageType.UPDATE_GAME:
-                            protocol.messages.UpdateGameMessage updateGameMessage = (protocol.messages.UpdateGameMessage) received;
+                        case "UpdateGameMessage":
+                            UpdateGameMessage updateGameMessage = (UpdateGameMessage) received;
 
                             gameManager.updateGameMessage(updateGameMessage);
                             break;
-                        case MessageType.ERROR:
-                            ErrorMessage errorMessage = (ErrorMessage) received;
-                            if(errorMessage.getErrorType().equals(ErrorType.SERVER_CLOSED)) {
-                                showError("Server wurde geschlossen.");
-                                System.exit(1);
-                            }
-                            if(errorMessage.getErrorType().equals(ErrorType.INVALID_ACTION)) {
-                                showError("Invalide Aktion.");
-                                System.exit(1);
-                            }
-                            if(errorMessage.getErrorType().equals(ErrorType.UNKNOWN_ERROR)) {
-                                showError("Unbekannter Fehler.");
-                                System.exit(1);
+                        case "ErrorMessage":
+                            try {
+                                ErrorMessage errorMessage = (ErrorMessage) received;
+                                if(errorMessage.getErrorType().equals(ErrorType.SERVER_CLOSED)) {
+                                    showError("Server wurde geschlossen.");
+                                    System.exit(1);
+                                }
+                                if(errorMessage.getErrorType().equals(ErrorType.INVALID_ACTION)) {
+                                    showError("Invalide Aktion.");
+                                    System.exit(1);
+                                }
+                                if(errorMessage.getErrorType().equals(ErrorType.UNKNOWN_ERROR)) {
+                                    showError("Unbekannter Fehler.");
+                                    System.exit(1);
+                                }
+                            } catch (ClassCastException e) {
+                                showError("Fehler beim Empfangen der Nachricht.");
                             }
                             break;
                     }
                 }
             } catch (IOException | ClassNotFoundException  | ClassCastException e) {
+                e.printStackTrace();
                 JOptionPane.showMessageDialog(null, "Verbindung unterbrochen.", "Fehler", JOptionPane.ERROR_MESSAGE);
                 System.exit(1);
             }

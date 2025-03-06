@@ -1,130 +1,158 @@
 package client.gui;
 
 import client.ClientHandler;
-
 import javax.swing.*;
 import java.awt.*;
 
 public class MainGameFrame extends JFrame {
 
     private CardLayout cardLayout;
-    private JPanel mainPanel;  // Container für alle Screens
+    private JPanel mainPanel;  // Container für alle Szenen
 
-    private ClientHandler clientHandler;
-    private ClientHandler client;
-    // Screens
-    private LobbyPanel lobbyPanel;
+    // Szenen (Panels) – werden on‑demand erstellt:
+    private LobbyStartPanel lobbyStartPanel;
+    private LobbyJoinPanel lobbyJoinPanel;
+    private LobbyHostPanel lobbyHostPanel;
     private ScoreAndCategoriesPanel scorePanel;
     private CategoryWheelPanel categoryWheelPanel;
     private QuestionPanel questionPanel;
-    private StatisticsPanel statisticsPanel;  // Statistik-Panel
+    private StatisticsPanel statisticsPanel;
 
-    // Runden-Zähler (6 Durchläufe)
+    // Runden-Zähler (z. B. 6 Runden)
     private int roundsPlayed = 0;
     private final int MAX_ROUNDS = 6;
 
-    public MainGameFrame() {
+    // ClientHandler (wird vom Client gesetzt)
+    private ClientHandler clientHandler;
+
+    public MainGameFrame(ClientHandler clientHandler) {
         super("Quizduell - Hauptfenster");
-        initUI();
-        initGameFlow();
-    }
-
-
-    public void connectToServer(String serverAddress, int port) {
-        client = new ClientHandler(serverAddress, port);
-    }
-    public void setClientHandler(ClientHandler clientHandler) {
         this.clientHandler = clientHandler;
-    }
-
-    private void initUI() {
-        cardLayout = new CardLayout();
-        mainPanel = new JPanel(cardLayout);
-
-        // Panels erstellen
-        lobbyPanel = new LobbyPanel(this);
-        scorePanel = new ScoreAndCategoriesPanel(this);
-        categoryWheelPanel = new CategoryWheelPanel(this);
-        questionPanel = new QuestionPanel(this);
-        statisticsPanel = new StatisticsPanel(this);
-
-        // Panels dem CardLayout hinzufügen
-        mainPanel.add(lobbyPanel, "lobby");
-        mainPanel.add(scorePanel, "score");
-        mainPanel.add(categoryWheelPanel, "wheel");
-        mainPanel.add(questionPanel, "question");
-        mainPanel.add(statisticsPanel, "statistics");
-
-        add(mainPanel);
-
+        createMainPanel();
+        createLobbyStartScene();  // Nur die LobbyStart-Szene wird initial erzeugt
+        // Direkt im Konstruktor: Fenstergröße, Position und Close-Operation festlegen
         setSize(800, 600);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        switchLobbyStartPanel();
+        setVisible(true);
     }
 
-    private void initGameFlow() {
-        // Start in der Lobby
-        showLobbyPanel();
+    // Erzeugt den Hauptcontainer (mainPanel) mit CardLayout und fügt ihn dem JFrame hinzu
+    private void createMainPanel() {
+        cardLayout = new CardLayout();
+        mainPanel = new JPanel(cardLayout);
+        add(mainPanel);
     }
 
-    public void showLobbyPanel() {
-        cardLayout.show(mainPanel, "lobby");
+    // Erzeugt und fügt das LobbyStartPanel zum mainPanel hinzu
+    private void createLobbyStartScene() {
+        lobbyStartPanel = new LobbyStartPanel(this);
+        mainPanel.add(lobbyStartPanel, "lobbyStart");
     }
 
-    public void showScorePanel() {
+    // Szenen werden on‑demand erstellt:
+
+    public void switchLobbyJoinPanel() {
+        if (lobbyJoinPanel == null) {
+            lobbyJoinPanel = new LobbyJoinPanel(this);
+            mainPanel.add(lobbyJoinPanel, "lobbyJoin");
+        }
+        cardLayout.show(mainPanel, "lobbyJoin");
+    }
+
+    public void switchLobbyHostPanel() {
+        if (lobbyHostPanel == null) {
+            lobbyHostPanel = new LobbyHostPanel(this);
+            mainPanel.add(lobbyHostPanel, "lobbyHost");
+        }
+        cardLayout.show(mainPanel, "lobbyHost");
+    }
+
+    public void switchScorePanel() {
+        if (scorePanel == null) {
+            scorePanel = new ScoreAndCategoriesPanel(this);
+            mainPanel.add(scorePanel, "score");
+        }
         cardLayout.show(mainPanel, "score");
     }
 
-    public void showCategoryWheelPanel() {
+    public void switchCategoryWheelPanel() {
+        if (categoryWheelPanel == null) {
+            categoryWheelPanel = new CategoryWheelPanel(this);
+            mainPanel.add(categoryWheelPanel, "wheel");
+        }
         cardLayout.show(mainPanel, "wheel");
     }
 
-    public void showQuestionPanel() {
+    public void switchQuestionPanel() {
+        if (questionPanel == null) {
+            questionPanel = new QuestionPanel(this);
+            mainPanel.add(questionPanel, "question");
+        }
         questionPanel.resetRound();
         cardLayout.show(mainPanel, "question");
     }
 
-    public void showStatisticsPanel() {
+    public void switchStatisticsPanel() {
+        if (statisticsPanel == null) {
+            statisticsPanel = new StatisticsPanel(this);
+            mainPanel.add(statisticsPanel, "statistics");
+        }
         statisticsPanel.setFinalStatistics(scorePanel.getLeftScore(), scorePanel.getRightScore());
         cardLayout.show(mainPanel, "statistics");
     }
 
-    /**
-     * Wird vom LobbyPanel aufgerufen, nachdem die Lobby abgeschlossen wurde.
-     */
-    public void lobbyFinished() {
-        // Dummy: Spielernamen setzen (später vom Server abfragen)
-        scorePanel.setPlayerNames("Alice", "Bob");
-        showScorePanel();
+    public void switchLobbyStartPanel() {
+        cardLayout.show(mainPanel, "lobbyStart");
     }
 
     /**
-     * Wird vom QuestionPanel aufgerufen, nachdem alle Fragen beantwortet wurden.
+     * Wird aufgerufen, wenn die Lobby abgeschlossen ist.
+     */
+    public void lobbyFinished() {
+        // Beispiel: Dummy-Namen setzen
+        if (scorePanel == null) {
+            scorePanel = new ScoreAndCategoriesPanel(this);
+            mainPanel.add(scorePanel, "score");
+        }
+        scorePanel.setPlayerNames("Alice", "Bob");
+        switchScorePanel();
+    }
+
+    /**
+     * Wird vom QuestionPanel aufgerufen, wenn eine Runde (z. B. 3 Fragen) abgeschlossen ist.
      */
     public void questionsCompleted(String chosenCategory, String winner) {
+        if (scorePanel == null) {
+            scorePanel = new ScoreAndCategoriesPanel(this);
+            mainPanel.add(scorePanel, "score");
+        }
         scorePanel.addCategoryResult(chosenCategory, winner);
         roundsPlayed++;
         if (roundsPlayed < MAX_ROUNDS) {
-            showScorePanel();
+            switchScorePanel();
         } else {
-            showStatisticsPanel();
+            switchStatisticsPanel();
         }
     }
 
     /**
-     * Setzt den Spielzustand zurück und bringt die Lobby auf den Auswahlbildschirm ("start").
+     * Setzt den Spielzustand zurück und wechselt zur LobbyStart-Szene.
      */
     public void resetGame() {
         roundsPlayed = 0;
-        scorePanel.resetScores();
-        // Setze den LobbyPanel-Zustand zurück zum Startbildschirm
-        lobbyPanel.resetToStart();
+        if (scorePanel != null) {
+            scorePanel.resetScores();
+        }
+        switchLobbyStartPanel();
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            MainGameFrame frame = new MainGameFrame();
-            frame.setVisible(true);
-        });
+    public ClientHandler getClientHandler() {
+        return clientHandler;
+    }
+
+    public void setClientHandler(ClientHandler clientHandler) {
+        this.clientHandler = clientHandler;
     }
 }

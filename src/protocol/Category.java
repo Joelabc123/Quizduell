@@ -1,8 +1,12 @@
 package protocol;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Category {
+public class Category implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private final String katID;
     private final String name;
     private ArrayList<Question> questions;

@@ -14,7 +14,7 @@ public class QuestionRound {
     private Map<String, Answer> answerPlayerA = new HashMap<>(); //FID, Answer
     private Map<String, Answer> answerPlayerB = new HashMap<>();//FID, Answer
 
-    public QuestionRound( Question question) {
+    public QuestionRound(Question question) {
         this.question = question;
     }
 

@@ -2,9 +2,13 @@ package protocol;
 
 import server.Answer;
 
+import java.io.Serializable;
 import java.util.Map;
 
-public class Question {
+public class Question implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private final String fid;
     private final String frageName;
 

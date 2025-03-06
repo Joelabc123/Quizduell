@@ -4,23 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Add messaging classes for category selection and game updates">
+    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Refactor messaging classes and update game state management for improved gameplay flow">
+      <change afterPath="$PROJECT_DIR$/src/client/gui/LobbyHostPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/client/gui/LobbyJoinPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/client/gui/LobbyStartPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GameInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/CategoryWheelPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/CategoryWheelPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/LobbyPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/MainGameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/MainGameFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/QuestionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/QuestionPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/ScoreAndCategoriesPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/ScoreAndCategoriesPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/StatisticsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/StatisticsPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/protocol/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/protocol/CategoryRound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/CategoryRound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Question.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/protocol/QuestionRound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/QuestionRound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/messages/AnswerCategoryMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/AnswerQuestionMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/messages/SelectCategoryMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/SelectCategoryMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/messages/SendQuestionMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/SendQuestionMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/ClientInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/XMLReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/messages/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/MessageType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/messages/SendCategoryMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/messages/SendQuestionMessage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Parameter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/QuizGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/QuizGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/QuizReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/QuizReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Quizgame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/QuizGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +97,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/robertjuliankratz/development/Quizduell&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Joelb/IdeaProjects/battleship-game&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -105,7 +116,7 @@
       <recent name="C:\Users\Joelb\IdeaProjects\Quizduell\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Client 2">
+  <component name="RunManager" selected="Application.Client 1">
     <configuration name="Client 1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="client.Client" />
       <module name="Quizduell" />
@@ -120,22 +131,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainGameFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="client.gui.MainGameFrame" />
-      <module name="Quizduell" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client.gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="server.Server" />
       <module name="Quizduell" />
+      <option name="PROGRAM_PARAMETERS" value="--autostart" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="server.*" />
@@ -149,13 +148,11 @@
     <list>
       <item itemvalue="Application.Client 1" />
       <item itemvalue="Application.Client 2" />
-      <item itemvalue="Application.MainGameFrame" />
       <item itemvalue="Application.Server" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Server" />
-        <item itemvalue="Application.MainGameFrame" />
       </list>
     </recent_temporary>
   </component>
@@ -198,6 +195,14 @@
       <workItem from="1740563953189" duration="7178000" />
       <workItem from="1740591745421" duration="18909000" />
       <workItem from="1740648333401" duration="9379000" />
+      <workItem from="1740689760442" duration="28000" />
+      <workItem from="1741106583082" duration="50000" />
+      <workItem from="1741106648503" duration="2354000" />
+      <workItem from="1741125571917" duration="5729000" />
+      <workItem from="1741187884482" duration="2504000" />
+      <workItem from="1741194736678" duration="6002000" />
+      <workItem from="1741259102730" duration="3158000" />
+      <workItem from="1741266936415" duration="5733000" />
     </task>
     <task id="LOCAL-00001" summary="Finished DB">
       <option name="closed" value="true" />
@@ -255,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740593937422</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Refactor messaging classes and update game state management for improved gameplay flow">
+      <option name="closed" value="true" />
+      <created>1740689784545</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1740689784545</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +293,18 @@
     <MESSAGE value="Refactor Question and QuestionRound classes for improved structure and XML parsing" />
     <MESSAGE value="Refactor messaging protocols and enhance lobby management with new message types" />
     <MESSAGE value="Add messaging classes for category selection and game updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add messaging classes for category selection and game updates" />
+    <MESSAGE value="Refactor messaging classes and update game state management for improved gameplay flow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor messaging classes and update game state management for improved gameplay flow" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

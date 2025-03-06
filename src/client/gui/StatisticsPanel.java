@@ -6,7 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class StatisticsPanel extends JPanel {
-
     private MainGameFrame mainFrame;
     private JLabel finalScoreLabel;
     private JLabel winnerLabel;
@@ -20,10 +19,9 @@ public class StatisticsPanel extends JPanel {
         setLayout(new BorderLayout());
         setBackground(Color.WHITE);
 
-        // Header im Quizduell-Stil
         JPanel headerPanel = new JPanel(new BorderLayout());
-        headerPanel.setBackground(new Color(30, 144, 255));
-        headerPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        headerPanel.setBackground(new Color(30,144,255));
+        headerPanel.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
 
         JLabel titleLabel = new JLabel("Spiel beendet", SwingConstants.CENTER);
         titleLabel.setForeground(Color.WHITE);
@@ -31,11 +29,10 @@ public class StatisticsPanel extends JPanel {
         headerPanel.add(titleLabel, BorderLayout.CENTER);
         add(headerPanel, BorderLayout.NORTH);
 
-        // Center-Bereich: Score und Gewinneranzeige
         JPanel centerPanel = new JPanel();
         centerPanel.setLayout(new BoxLayout(centerPanel, BoxLayout.Y_AXIS));
         centerPanel.setBackground(Color.WHITE);
-        centerPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        centerPanel.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
 
         finalScoreLabel = new JLabel("Finaler Score: 0 - 0", SwingConstants.CENTER);
         finalScoreLabel.setFont(new Font("Arial", Font.BOLD, 24));
@@ -50,32 +47,26 @@ public class StatisticsPanel extends JPanel {
         centerPanel.add(winnerLabel);
         add(centerPanel, BorderLayout.CENTER);
 
-        // Bottom-Bereich: Button "Spiel beenden"
         JPanel bottomPanel = new JPanel();
         bottomPanel.setBackground(Color.WHITE);
-        bottomPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        bottomPanel.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
 
         JButton exitButton = new JButton("Spiel beenden");
         exitButton.setFont(new Font("Arial", Font.BOLD, 20));
-        exitButton.setBackground(new Color(76, 175, 80));
+        exitButton.setBackground(new Color(76,175,80));
         exitButton.setForeground(Color.WHITE);
         exitButton.setFocusPainted(false);
-        exitButton.setPreferredSize(new Dimension(200, 50));
+        exitButton.setPreferredSize(new Dimension(200,50));
         exitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Reset des Spiels und Rückkehr zur Lobby
-                mainFrame.resetGame();
-                mainFrame.showLobbyPanel();
+                System.out.println("Exit-Button gedrückt. Externe Logik muss resetGame() und switchLobbyStartPanel() aufrufen.");
             }
         });
         bottomPanel.add(exitButton);
         add(bottomPanel, BorderLayout.SOUTH);
     }
 
-    /**
-     * Setzt die finalen Statistiken, basierend auf den Spieler-Scores.
-     */
     public void setFinalStatistics(int leftScore, int rightScore) {
         finalScoreLabel.setText("Finaler Score: " + leftScore + " - " + rightScore);
         String winner;

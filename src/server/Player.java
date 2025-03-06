@@ -2,7 +2,6 @@ package server;
 
 import protocol.Category;
 import protocol.CategoryRound;
-import protocol.Question;
 import protocol.QuestionRound;
 import protocol.messages.*;
 import utils.Usernames;
@@ -21,6 +20,8 @@ public class Player implements Runnable {
     private ObjectInputStream in;
     private String username;
     private String ip;
+
+    private boolean ingame = false;
 
     public Player(Socket socket, Server server) {
         this.socket = socket;
@@ -57,13 +58,13 @@ public class Player implements Runnable {
                 switch (message.getType()) {
                     case MessageType.HOST_LOBBY:
                         HostLobbyMessage hostLobbyMessage = (HostLobbyMessage) received;
-
+                        this.ingame = true;
                         //Register new QuizGame
                         QuizGame game = new QuizGame();
                         Thread gameThread = new Thread(game);
 
                         game.addPlayer(this);
-                        server.registerGame(game, gameThread);
+                        server.registerGame(game);
 
                         break;
                     case MessageType.JOIN_LOBBY:
@@ -85,12 +86,12 @@ public class Player implements Runnable {
                         targetGame.addPlayer(this);
 
                         break;
-                    case SELECT_CATEGORY:
+                    case MessageType.SELECT_CATEGORY:
                         SelectCategoryMessage selectCategoryMessage = (SelectCategoryMessage) received;
 
                         Category selectedCategory = selectCategoryMessage.getCategory();
 
-                        QuizGame quizGame = server.getGameFromPlayer(this);
+                        QuizGame quizGame = server.getGame(this);
                         for (Category c : Server.quizReader.categories) {
                             if (c.getKatID().equals(selectedCategory.getKatID())) {
                                 CategoryRound categoryRound = new CategoryRound(c);
@@ -98,15 +99,26 @@ public class Player implements Runnable {
                             }
                         }
 
-                        sendMessage(new SendQuestionMessage(quizGame.getGameState()));
+                        sendMessage(new UpdateGameMessage(quizGame.getGameState()));
 
                         break;
-                    case ANSWER_QUESTION:
+                    case MessageType.ANSWER_QUESTION:
+
+                        /// /SKIBIDIIIIIIII
                         AnswerQuestionMessage answerQuestionMessage = (AnswerQuestionMessage) received;
                         Answer selectedAnswer = answerQuestionMessage.getSelectedAnswer();
+                        String fId = answerQuestionMessage.getfId();
 
-                        QuizGame answerGame = server.getGameFromPlayer(this);
+                        QuizGame answerGame = server.getGame(this);
                         CategoryRound currentCategoryRound = answerGame.getGameState().getCurrentRound();
+                        QuestionRound currentQuestionRound = currentCategoryRound.getQuestionRounds().getLast();
+
+                        if(this.getId().equals(answerGame.getPlayerA().getId())) {
+                            currentQuestionRound.setAnswerPlayerA(fId,selectedAnswer);
+                        }
+                        else {
+                            currentQuestionRound.setAnswerPlayerB(fId,selectedAnswer);
+                        }
 
                         break;
                 }
@@ -119,6 +131,8 @@ public class Player implements Runnable {
     }
 
     public void sendMessage(Message message) {
+    System.out.println("Sending: " + message.getClass().getSimpleName());
+
         try {
             out.writeObject(message);
             out.flush();
@@ -129,5 +143,17 @@ public class Player implements Runnable {
 
     public UUID getId() {
         return id;
+    }
+
+    public ObjectInputStream getIn() {
+        return in;
+    }
+
+    public void setingame(boolean ingame) {
+        this.ingame = ingame;
+    }
+
+    public boolean getIngame() {
+        return ingame;
     }
 }

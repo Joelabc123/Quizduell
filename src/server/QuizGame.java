@@ -1,8 +1,10 @@
 package server;
 
-import protocol.messages.UpdateGameMessage;
+import protocol.*;
 
-import java.util.Date;
+import protocol.messages.*;
+
+import java.util.*;
 
 public class QuizGame implements Game, Runnable {
 
@@ -15,7 +17,6 @@ public class QuizGame implements Game, Runnable {
 
     @Override
     public void run() {
-        //TODO MORGEN TAKT IMPLEMENTIEREN
 
     }
 

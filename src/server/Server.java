@@ -7,12 +7,15 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 public class Server {
 
-    public static QuizReader quizReader = new QuizReader();
+    public static QuizReader quizReader;
 
     private static Server instance;
 
@@ -22,17 +25,22 @@ public class Server {
     private final List<Player> players = new ArrayList<>();
     private final List<Thread> clientThreads = new ArrayList<>();
 
-    private ArrayList<QuizGame> games = new ArrayList<>();
-    private ArrayList<Thread> gameThreads = new ArrayList<>();
+    // HashMap, die sowohl das Spiel als auch den zugehörigen Thread speichert
+    private final Map<UUID, GameContainer> gamesMap = new HashMap<>();
 
     private ServerGUI gui;
+
+
+    // Innerer Container, der das QuizGame und den zugehörigen Thread zusammenhält
+        private record GameContainer(QuizGame game, Thread thread) {
+    }
 
     public Server() {
         this.gui = new ServerGUI(this);
         instance = this;
     }
 
-    public synchronized void startServer() {
+    public void startServer() {
         if (running) return;
 
         new Thread(() -> {
@@ -51,6 +59,8 @@ public class Server {
                     Thread clientThread = new Thread(player);
                     clientThreads.add(clientThread);
                     clientThread.start();
+
+                    updatePlayerList();
                 }
             } catch (IOException e) {
                 if (running) e.printStackTrace();
@@ -58,9 +68,29 @@ public class Server {
         }).start();
     }
 
-    public synchronized void stopServer() {
+    /**
+     * Returns the players that are currently in the lobby (not in a game).
+     */
+    public ArrayList<Player> getPlayersInLobby() {
+        ArrayList<Player> playersInLobby = new ArrayList<>();
+        for (Player player : players) {
+            if (!player.getIngame()) {
+                playersInLobby.add(player);
+            }
+        }
+        return playersInLobby;
+    }
+
+    /**
+     * Stops the server, closes all connections and unregisters all games.
+     */
+    public void stopServer() {
         running = false;
         try {
+            // Alle laufenden Spiele abmelden
+            for (UUID gameId : new ArrayList<>(gamesMap.keySet())) {
+                unregisterGame(gameId);
+            }
             for (Player p : players) {
                 p.sendMessage(new ErrorMessage(ErrorType.SERVER_CLOSED));
             }
@@ -73,58 +103,84 @@ public class Server {
             }
             players.clear();
             clientThreads.clear();
+            updatePlayerList();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     /**
-     * Registers a new game and starts the game thread
-     * @param game game to register
-     * @param thread thread to start
+     * Registers a new game. Der Server erstellt intern den Game-Thread und startet ihn.
+     * @param game the game to register
      */
-    public synchronized void registerGame(QuizGame game, Thread thread) {
-        games.add(game);
-        gameThreads.add(thread);
-
-        thread.start();
+    public void registerGame(QuizGame game) {
+        Thread gameThread = new Thread(game);
+        GameContainer container = new GameContainer(game, gameThread);
+        gamesMap.put(game.getGameState().getId(), container);
+        gameThread.start();
     }
 
     /**
-     * Removes a game from the list of active games
+     * Unregisters a game with the given id by interrupting its thread and removing it from the map.
      * @param id id of the game to remove
      */
-    public synchronized void unregisterGame(UUID id) {
-        QuizGame targetGame = null;
-        Thread targetThread = null;
-        for (QuizGame game : games) {
-            if (game.getGameState().getId().equals(id)) {
-                targetGame = game;
-                targetThread = gameThreads.get(games.indexOf(game));
-            }
-        }
-
-        if (targetGame != null) {
-            //Stop the game thread
-            targetThread.interrupt();
-            games.remove(targetGame);
+    public void unregisterGame(UUID id) {
+        GameContainer container = gamesMap.get(id);
+        if (container != null) {
+            container.thread().interrupt();
+            gamesMap.remove(id);
+            System.out.println("Game " + id + " removed");
         }
     }
 
-    public ArrayList<QuizGame> getGames() {
-        return games;
-    }
-
-    public QuizGame getGameFromPlayer(Player player) {
-        for (QuizGame game : games) {
-            if (game.getPlayerA() != null && game.getPlayerA().equals(player)) {
-                return game;
-            }
-            if (game.getPlayerB() != null && game.getPlayerB().equals(player)) {
+    /**
+     * Returns the game the player is currently in.
+     * @param player the player for whom to retrieve the game
+     * @return the game the player is in or null if none
+     */
+    public synchronized QuizGame getGame(Player player) {
+        for (GameContainer container : gamesMap.values()) {
+            QuizGame game = container.game();
+            if (game.getPlayerA().getId().equals(player.getId()) || game.getPlayerB().getId().equals(player.getId())) {
                 return game;
             }
         }
         return null;
+    }
+
+    /**
+     * Removes a player from the server. If the player is in a game, the game is ended and unregistered.
+     * @param player the player leaving the server
+     */
+    public void removePlayer(Player player) {
+        QuizGame game = getGame(player);
+        System.out.println("Player " + player.getUsername() + " left the server");
+
+        if (game != null) {
+            game.leaveGame(player);
+        }
+        players.remove(player);
+        updatePlayerList();
+    }
+
+
+    private void updatePlayerList() {
+        StringBuilder sb = new StringBuilder();
+        for (Player p : players) {
+            sb.append(p.getUsername()).append(" (").append(p.getIp()).append(")\n");
+        }
+        gui.updatePlayerList(sb.toString());
+    }
+
+    public List<Player> getPlayers() {
+        return players;
+    }
+
+    /**
+     * Returns a list of all active games.
+     */
+    public ArrayList<QuizGame> getGames() {
+        return new ArrayList<>(gamesMap.values().stream().map(GameContainer::game).collect(Collectors.toList()));
     }
 
     /**
@@ -151,4 +207,5 @@ public class Server {
             instance.startServer();
         }
     }
+
 }

@@ -1,5 +1,6 @@
 package client;
 
+import protocol.Category;
 import protocol.messages.*;
 import server.Answer;
 import server.GameState;
@@ -19,12 +20,16 @@ public class GameManager implements GameInterface {
         this.clientHandler = clientHandler;
     }
 
+    public GameState getLatestGameState() {
+        return latestGameState;
+    }
+
     @Override
     public void loginMessage(LoginMessage loginMessage) {
         this.userId = loginMessage.getUserId();
         this.username = loginMessage.getUsername();
 
-        //Über stagemanager scene wechseln
+        System.out.println("Logged in as " + username);
     }
 
     @Override
@@ -32,20 +37,15 @@ public class GameManager implements GameInterface {
         this.clientHandler.sendMessage(new HostLobbyMessage());
     }
 
-
-    @Override
-    public void sendCategoryMessage(SendCategoryMessage sendCategoryMessage) {
-
-    }
-
-    @Override
-    public void sendQuestionMessage(SendQuestionMessage sendQuestionMessage) {
-
-    }
-
     @Override
     public void updateGameMessage(UpdateGameMessage UpdateGameMessage) {
-        this.latestGameState = UpdateGameMessage.getGameState();
+        if(latestGameState == null) {
+            this.latestGameState = UpdateGameMessage.getGameState();
+            //Switch to waiting lobby
+
+        } else {
+            //Dummy
+        }
     }
 
     @Override
@@ -54,13 +54,14 @@ public class GameManager implements GameInterface {
     }
 
     @Override
-    public void selectCategory(String category) {
-
+    public void selectCategory(String categoryName) {
+        Category category = latestGameState.getCategoryByName(categoryName);
+        this.clientHandler.sendMessage(new SelectCategoryMessage(category));
     }
 
     @Override
-    public void answerQuestion(Answer answer) {
-
+    public void answerQuestion(Answer answer,String fId) {
+        this.clientHandler.sendMessage(new AnswerQuestionMessage(answer,fId));
     }
 }
 
