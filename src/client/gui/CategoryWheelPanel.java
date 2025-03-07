@@ -33,10 +33,10 @@ public class CategoryWheelPanel extends JPanel {
         add(wheelPanel, BorderLayout.CENTER);
     }
 
-    public void setCategories(String c1, String c2, String c3) {
-        categories[0] = c1;
-        categories[1] = c2;
-        categories[2] = c3;
+    public void setCategories(String[] categories) {
+        this.categories[0] = categories[0];
+        this.categories[1] = categories[1];
+        this.categories[2] = categories[2];
         repaint();
     }
 

@@ -6,6 +6,9 @@ public enum MessageType {
     SEND_QUESTION,
     UPDATE_GAME,
     ERROR,
+    START_GAME,
+    HOSTED_LOBBY,
+    PLAYER_TURN,
 
     // Client to Server
     JOIN_LOBBY,

@@ -4,7 +4,10 @@ import protocol.Category;
 import protocol.messages.*;
 import server.Answer;
 import server.GameState;
+import client.gui.MainGameFrame;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.UUID;
 
 public class GameManager implements GameInterface {
@@ -13,11 +16,22 @@ public class GameManager implements GameInterface {
     private String username;
 
     private GameState latestGameState;
+    private MainGameFrame mainGameFrame; // Neuer Verweis
 
     private final ClientHandler clientHandler;
 
     public GameManager(ClientHandler clientHandler) {
         this.clientHandler = clientHandler;
+    }
+
+    // Neuer Setter, um den MainGameFrame zu setzen
+    public void setMainGameFrame(MainGameFrame mainGameFrame) {
+        this.mainGameFrame = mainGameFrame;
+    }
+
+    // Neuer Getter, falls benötigt
+    public MainGameFrame getMainGameFrame() {
+        return mainGameFrame;
     }
 
     public GameState getLatestGameState() {
@@ -38,14 +52,9 @@ public class GameManager implements GameInterface {
     }
 
     @Override
-    public void updateGameMessage(UpdateGameMessage UpdateGameMessage) {
-        if(latestGameState == null) {
-            this.latestGameState = UpdateGameMessage.getGameState();
-            //Switch to waiting lobby
-
-        } else {
-            //Dummy
-        }
+    public void updateGameMessage(UpdateGameMessage updateGameMessage) {
+        this.latestGameState = updateGameMessage.getGameState();
+        // Zusätzliche Logik – z. B. MainGameFrame über update informieren
     }
 
     @Override
@@ -60,9 +69,44 @@ public class GameManager implements GameInterface {
     }
 
     @Override
-    public void answerQuestion(Answer answer,String fId) {
-        this.clientHandler.sendMessage(new AnswerQuestionMessage(answer,fId));
+    public void answerQuestion(Answer answer, String fId) {
+        this.clientHandler.sendMessage(new AnswerQuestionMessage(answer, fId));
+    }
+
+    @Override
+    public void startGameMessage(StartGameMessage startGameMessage) {
+        this.latestGameState = startGameMessage.getGameState();
+        mainGameFrame.switchScorePanel();
+        mainGameFrame.getScorePanel().setLeftPlayerName(latestGameState.getPlayerAName());
+        mainGameFrame.getScorePanel().setRightPlayerName(latestGameState.getPlayerBName());
+        System.out.println("Setting Names" + latestGameState.getPlayerAName() + " " + latestGameState.getPlayerBName());
+    }
+
+    @Override
+    public void playerTurnMessage(PlayerTurnMessage playerTurnMessage) {
+        mainGameFrame.getScorePanel().setChooseCategoryButtonVisible(playerTurnMessage.getPlayerTurn());
+        if(playerTurnMessage.getPlayerTurn()){
+            mainGameFrame.switchCategoryWheelPanel();
+            ArrayList<Category> catList = new ArrayList<>(latestGameState.getAvailableCategories());
+            Collections.shuffle(catList);
+            String[] randomCategories = catList.stream()
+                    .limit(3)
+                    .map(Category::getName)
+                    .toArray(String[]::new);
+
+            mainGameFrame.getCategoryWheelPanel().setCategories(randomCategories);
+        }
+    }
+
+    @Override
+    public void hostedLobbyMessage(HostedLobbyMessage hostedLobbyMessage) {
+        this.latestGameState = hostedLobbyMessage.getGameState();
+        System.out.println("Gamestate GameManager: " + hostedLobbyMessage.getGameState().getLobbyCode());
+        mainGameFrame.getLobbyHostPanel().setLobbyId(String.valueOf(latestGameState.getLobbyCode()));
+    }
+
+    @Override
+    public void authenticationError() {
+        mainGameFrame.getLobbyJoinPanel().showAuthenticationError();
     }
 }
-
-

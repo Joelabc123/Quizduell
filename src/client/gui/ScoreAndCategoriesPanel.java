@@ -11,6 +11,7 @@ public class ScoreAndCategoriesPanel extends JPanel {
     private JLabel rightPlayerNameLabel;
     private JLabel scoreLabel;
     private JPanel categoriesPanel;
+    private JButton chooseCategoryButton; // Als Klassenfeld
 
     private int leftScore = 0;
     private int rightScore = 0;
@@ -85,8 +86,8 @@ public class ScoreAndCategoriesPanel extends JPanel {
 
         add(centerPanel, BorderLayout.CENTER);
 
-        // Unten: Button "Kategorie wählen" – ersetzt keine Szenenwechsel-Aufrufe
-        JButton chooseCategoryButton = new JButton("Kategorie wählen");
+        // Unten: Button "Kategorie wählen"
+        chooseCategoryButton = new JButton("Kategorie wählen");
         chooseCategoryButton.setBackground(new Color(76,175,80));
         chooseCategoryButton.setForeground(Color.WHITE);
         chooseCategoryButton.setFont(new Font("Arial", Font.BOLD, 16));
@@ -100,8 +101,12 @@ public class ScoreAndCategoriesPanel extends JPanel {
         add(chooseCategoryButton, BorderLayout.SOUTH);
     }
 
-    public void setPlayerNames(String leftName, String rightName) {
+    // Separate Methoden zum Setzen der Spielernamen:
+    public void setLeftPlayerName(String leftName) {
         leftPlayerNameLabel.setText(leftName);
+    }
+
+    public void setRightPlayerName(String rightName) {
         rightPlayerNameLabel.setText(rightName);
     }
 
@@ -154,5 +159,10 @@ public class ScoreAndCategoriesPanel extends JPanel {
 
     private void updateScoreLabel() {
         scoreLabel.setText("Score: " + leftScore + " - " + rightScore);
+    }
+
+    // Neue Methode zum Setzen bzw. Sichtbarmachen des "Kategorie wählen"-Buttons:
+    public void setChooseCategoryButtonVisible(boolean visible) {
+        chooseCategoryButton.setVisible(visible);
     }
 }

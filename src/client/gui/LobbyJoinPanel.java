@@ -43,6 +43,7 @@ public class LobbyJoinPanel extends JPanel {
                     JOptionPane.showMessageDialog(LobbyJoinPanel.this, "Bitte geben Sie eine gültige Lobby-ID ein.", "Fehler", JOptionPane.ERROR_MESSAGE);
                 } else {
                     System.out.println("Join-Lobby-Button gedrückt mit Lobby-ID: " + lobbyId + ". Externe Logik soll switchLobbyJoinPanel() aufrufen.");
+                    mainFrame.getClientHandler().gameManager.joinLobby(Integer.parseInt(lobbyId));
                 }
             }
         });
@@ -50,5 +51,9 @@ public class LobbyJoinPanel extends JPanel {
         buttonPanel.setBackground(Color.WHITE);
         buttonPanel.add(joinLobbyButton);
         add(buttonPanel, BorderLayout.SOUTH);
+    }
+
+    public void showAuthenticationError() {
+        JOptionPane.showMessageDialog(this, "Authentifizierung fehlgeschlagen. Bitte überprüfen Sie die Lobby-ID.", "Fehler", JOptionPane.ERROR_MESSAGE);
     }
 }

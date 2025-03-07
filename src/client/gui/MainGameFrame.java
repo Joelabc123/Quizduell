@@ -52,7 +52,6 @@ public class MainGameFrame extends JFrame {
     }
 
     // Szenen werden on‑demand erstellt:
-
     public void switchLobbyJoinPanel() {
         if (lobbyJoinPanel == null) {
             lobbyJoinPanel = new LobbyJoinPanel(this);
@@ -108,20 +107,7 @@ public class MainGameFrame extends JFrame {
     }
 
     /**
-     * Wird aufgerufen, wenn die Lobby abgeschlossen ist.
-     */
-    public void lobbyFinished() {
-        // Beispiel: Dummy-Namen setzen
-        if (scorePanel == null) {
-            scorePanel = new ScoreAndCategoriesPanel(this);
-            mainPanel.add(scorePanel, "score");
-        }
-        scorePanel.setPlayerNames("Alice", "Bob");
-        switchScorePanel();
-    }
-
-    /**
-     * Wird vom QuestionPanel aufgerufen, wenn eine Runde (z. B. 3 Fragen) abgeschlossen ist.
+     * Wird vom QuestionPanel aufgerufen, wenn eine Runde (z. B. 3 Fragen) abgeschlossen ist.
      */
     public void questionsCompleted(String chosenCategory, String winner) {
         if (scorePanel == null) {
@@ -146,6 +132,92 @@ public class MainGameFrame extends JFrame {
             scorePanel.resetScores();
         }
         switchLobbyStartPanel();
+    }
+
+    // Getter und Setter
+
+    public CardLayout getCardLayout() {
+        return cardLayout;
+    }
+
+    public void setCardLayout(CardLayout cardLayout) {
+        this.cardLayout = cardLayout;
+    }
+
+    public JPanel getMainPanel() {
+        return mainPanel;
+    }
+
+    public void setMainPanel(JPanel mainPanel) {
+        this.mainPanel = mainPanel;
+    }
+
+    public LobbyStartPanel getLobbyStartPanel() {
+        return lobbyStartPanel;
+    }
+
+    public void setLobbyStartPanel(LobbyStartPanel lobbyStartPanel) {
+        this.lobbyStartPanel = lobbyStartPanel;
+    }
+
+    public LobbyJoinPanel getLobbyJoinPanel() {
+        return lobbyJoinPanel;
+    }
+
+    public void setLobbyJoinPanel(LobbyJoinPanel lobbyJoinPanel) {
+        this.lobbyJoinPanel = lobbyJoinPanel;
+    }
+
+    public LobbyHostPanel getLobbyHostPanel() {
+        return lobbyHostPanel;
+    }
+
+    public void setLobbyHostPanel(LobbyHostPanel lobbyHostPanel) {
+        this.lobbyHostPanel = lobbyHostPanel;
+    }
+
+    public ScoreAndCategoriesPanel getScorePanel() {
+        return scorePanel;
+    }
+
+    public void setScorePanel(ScoreAndCategoriesPanel scorePanel) {
+        this.scorePanel = scorePanel;
+    }
+
+    public CategoryWheelPanel getCategoryWheelPanel() {
+        return categoryWheelPanel;
+    }
+
+    public void setCategoryWheelPanel(CategoryWheelPanel categoryWheelPanel) {
+        this.categoryWheelPanel = categoryWheelPanel;
+    }
+
+    public QuestionPanel getQuestionPanel() {
+        return questionPanel;
+    }
+
+    public void setQuestionPanel(QuestionPanel questionPanel) {
+        this.questionPanel = questionPanel;
+    }
+
+    public StatisticsPanel getStatisticsPanel() {
+        return statisticsPanel;
+    }
+
+    public void setStatisticsPanel(StatisticsPanel statisticsPanel) {
+        this.statisticsPanel = statisticsPanel;
+    }
+
+    public int getRoundsPlayed() {
+        return roundsPlayed;
+    }
+
+    public void setRoundsPlayed(int roundsPlayed) {
+        this.roundsPlayed = roundsPlayed;
+    }
+
+    public int getMaxRounds() {
+        return MAX_ROUNDS;
     }
 
     public ClientHandler getClientHandler() {

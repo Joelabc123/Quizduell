@@ -57,6 +57,7 @@ public class Player implements Runnable {
 
                 switch (message.getType()) {
                     case MessageType.HOST_LOBBY:
+                        System.out.println("Received HostLobbyMessage");
                         HostLobbyMessage hostLobbyMessage = (HostLobbyMessage) received;
                         this.ingame = true;
                         //Register new QuizGame
@@ -65,7 +66,6 @@ public class Player implements Runnable {
 
                         game.addPlayer(this);
                         server.registerGame(game);
-
                         break;
                     case MessageType.JOIN_LOBBY:
                         JoinLobbyMessage joinLobbyMessage = (JoinLobbyMessage) received;
@@ -98,15 +98,14 @@ public class Player implements Runnable {
                                 quizGame.getGameState().addRound(categoryRound);
                             }
                         }
-
+                        System.out.println("Selected Category: " + selectedCategory.toString());
                         sendMessage(new UpdateGameMessage(quizGame.getGameState()));
 
                         break;
                     case MessageType.ANSWER_QUESTION:
-
-                        /// /SKIBIDIIIIIIII
                         AnswerQuestionMessage answerQuestionMessage = (AnswerQuestionMessage) received;
                         Answer selectedAnswer = answerQuestionMessage.getSelectedAnswer();
+
                         String fId = answerQuestionMessage.getfId();
 
                         QuizGame answerGame = server.getGame(this);

@@ -22,16 +22,19 @@ public class QuizGame implements Game, Runnable {
 
     @Override
     public GameState addPlayer(Player player) {
+        System.out.println("Adding player to game");
         if (!this.gameState.getStatus().equals(GameState.GameStatus.LOBBY_WAITING)) {
             return null;
         }
 
         if (playerA == null) {
             playerA = player;
-            playerA.sendMessage(new UpdateGameMessage(gameState));
+            System.out.println("Player A: " + playerA.getUsername());
+            System.out.println("gameState: " + gameState.getLobbyCode());
+            playerA.sendMessage(new HostedLobbyMessage(gameState));
         } else if (playerB == null) {
+            System.out.println("Player B: " + player.getUsername());
             playerB = player;
-            playerB.sendMessage(new UpdateGameMessage(gameState));
         }
 
         if (playerA != null && playerB != null) {
@@ -45,9 +48,30 @@ public class QuizGame implements Game, Runnable {
             gameState.setSelectCategoryStarted(date);
             gameState.setSelectCategoryFinished(new Date(date.getTime() + 10 * 1000));
 
+            gameState.addPlayer(playerA.getId(), playerA.getUsername());
+            gameState.addPlayer(playerB.getId(), playerB.getUsername());
+
             this.gameState = gameState;
 
-            playerA.sendMessage(new UpdateGameMessage(gameState));
+            System.out.println("added players");
+            playerA.sendMessage(new StartGameMessage(gameState));
+            playerB.sendMessage(new StartGameMessage(gameState));
+
+
+            PlayerTurnMessage playerTurnMessage = new PlayerTurnMessage();
+            if(gameState.isPlayerTurn()){
+                playerTurnMessage.setPlayerTurn(true);
+                playerA.sendMessage(playerTurnMessage);
+
+                playerTurnMessage.setPlayerTurn(false);
+                playerB.sendMessage(new PlayerTurnMessage());
+            } else {
+                playerTurnMessage.setPlayerTurn(true);
+                playerB.sendMessage(playerTurnMessage);
+
+                playerTurnMessage.setPlayerTurn(false);
+                playerA.sendMessage(new PlayerTurnMessage());
+            }
         }
         return null;
     }

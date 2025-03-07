@@ -19,15 +19,6 @@ public class QuizReader {
         }
     }
 
-    public ArrayList<Category> getThreeRandomCategories() {
-        //Wenn du diesen kommentar findest, dann bist du ein echter hacker
-        ArrayList<Category> randomCategories = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            randomCategories.add(categories.get((int) (Math.random() * categories.size())));
-        }
-        return randomCategories;
-    }
-
     public ArrayList<Category> getEmptyCategories() {
         ArrayList<Category> emptyCategories = new ArrayList<>();
 

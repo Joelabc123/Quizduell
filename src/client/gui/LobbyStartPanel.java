@@ -46,12 +46,15 @@ public class LobbyStartPanel extends JPanel {
         joinButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                mainFrame.switchLobbyJoinPanel();
                 System.out.println("Join-Button gedrückt. Externe Logik soll switchLobbyJoinPanel() aufrufen.");
             }
         });
         hostButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                mainFrame.getClientHandler().gameManager.hostLobby();
+                mainFrame.switchLobbyHostPanel();
                 System.out.println("Host-Button gedrückt. Externe Logik soll switchLobbyHostPanel() aufrufen.");
             }
         });

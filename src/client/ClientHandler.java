@@ -1,11 +1,7 @@
 package client;
 
 import client.gui.MainGameFrame;
-import protocol.messages.ErrorMessage;
-import protocol.messages.ErrorType;
-import protocol.messages.LoginMessage;
-import protocol.messages.UpdateGameMessage;
-
+import protocol.messages.*;
 import javax.swing.*;
 import java.io.*;
 import java.net.Socket;
@@ -25,10 +21,10 @@ public class ClientHandler {
             in = new ObjectInputStream(socket.getInputStream());
 
             gui = new MainGameFrame(this);
+            // Jetzt wird der MainGameFrame auch im GameManager registriert:
+            gameManager.setMainGameFrame(gui);
+
             listenForMessages();
-
-            //show error when connection to server fails
-
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Verbindung zum Server fehlgeschlagen.", "Fehler", JOptionPane.ERROR_MESSAGE);
             System.exit(1);
@@ -41,18 +37,33 @@ public class ClientHandler {
                 while (socket.isConnected()) {
                     Object received = in.readObject();
 
-                    System.out.println("Received: " + received.getClass().getSimpleName());
+                    System.out.println("ClientHandler: Received: " + received.getClass().getSimpleName());
 
                     switch (received.getClass().getSimpleName()) {
                         case "LoginMessage":
                             LoginMessage loginMessage = (LoginMessage) received;
-
                             gameManager.loginMessage(loginMessage);
                             break;
                         case "UpdateGameMessage":
+                            System.out.println("Case UpdateGameMessage");
                             UpdateGameMessage updateGameMessage = (UpdateGameMessage) received;
-
                             gameManager.updateGameMessage(updateGameMessage);
+                            break;
+                        case "StartGameMessage":
+                            System.out.println("Case StartGameMessage");
+                            StartGameMessage startGameMessage = (StartGameMessage) received;
+                            gameManager.startGameMessage(startGameMessage);
+                            break;
+                        case "HostedLobbyMessage":
+                            System.out.println("Case HostedLobbyMessage");
+                            HostedLobbyMessage hostedLobbyMessage = (HostedLobbyMessage) received;
+                            System.out.println("Gamestate : " + hostedLobbyMessage.getGameState().getLobbyCode());
+                            gameManager.hostedLobbyMessage(hostedLobbyMessage);
+                            break;
+                        case "PlayerTurnMessage": //TODO: PlayerTurnMessageUmschalterImServer
+                            System.out.println("Case PlayerTurnMessage");
+                            PlayerTurnMessage playerTurnMessage = (PlayerTurnMessage) received;
+                            gameManager.playerTurnMessage(playerTurnMessage);
                             break;
                         case "ErrorMessage":
                             try {
@@ -69,13 +80,17 @@ public class ClientHandler {
                                     showError("Unbekannter Fehler.");
                                     System.exit(1);
                                 }
+                                if(errorMessage.getErrorType().equals(ErrorType.AUTHENTICATION_FAILED)) {
+                                    showError("Falscher Lobbycode.");
+
+                                }
                             } catch (ClassCastException e) {
                                 showError("Fehler beim Empfangen der Nachricht.");
                             }
                             break;
                     }
                 }
-            } catch (IOException | ClassNotFoundException  | ClassCastException e) {
+            } catch (IOException | ClassNotFoundException | ClassCastException e) {
                 e.printStackTrace();
                 JOptionPane.showMessageDialog(null, "Verbindung unterbrochen.", "Fehler", JOptionPane.ERROR_MESSAGE);
                 System.exit(1);
