@@ -14,6 +14,7 @@ public class ClientHandler {
 
     public GameManager gameManager = new GameManager(this);
 
+
     public ClientHandler(String serverAddress, int port) {
         try {
             socket = new Socket(serverAddress, port);
