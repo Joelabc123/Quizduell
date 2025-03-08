@@ -8,19 +8,20 @@ import java.util.*;
 
 public class QuizGame implements Game, Runnable {
 
+    private ArrayList<Category> aviabaleCategories = new ArrayList<>();
+
     private Player playerA, playerB;
     private GameState gameState = null;
 
-    public QuizGame() {
+    public QuizGame(ArrayList<Category> categories) {
         this.gameState = new GameState(Server.quizReader.getEmptyCategories());
+        this.aviabaleCategories = categories;
     }
 
-    @Override
     public void run() {
 
     }
 
-    @Override
     public GameState addPlayer(Player player) {
         System.out.println("Adding player to game");
         if (!this.gameState.getStatus().equals(GameState.GameStatus.LOBBY_WAITING)) {
@@ -76,7 +77,15 @@ public class QuizGame implements Game, Runnable {
         return null;
     }
 
-    @Override
+    public void broadcast(Message msg) {
+        if (playerA != null) {
+            playerA.sendMessage(msg);
+        }
+        if (playerB != null) {
+            playerB.sendMessage(msg);
+        }
+    }
+
     public GameState leaveGame(Player player) {
 
         return gameState;
@@ -91,12 +100,10 @@ public class QuizGame implements Game, Runnable {
 
     }
 
-    @Override
     public GameState getGameState() {
         return this.gameState;
     }
 
-    @Override
     public void setGameState(GameState gameState) {
         this.gameState = gameState;
     }
@@ -107,5 +114,9 @@ public class QuizGame implements Game, Runnable {
 
     public Player getPlayerB() {
         return playerB;
+    }
+
+    public ArrayList<Category> getAviabaleCategories() {
+        return aviabaleCategories;
     }
 }

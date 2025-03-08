@@ -4,25 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Refactor game state management and enhance lobby functionality with new panels and serialization support">
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/HostedLobbyMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/PlayerTurnMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/StartGameMessage.java" afterDir="false" />
+    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Refactor game state management and add new messaging types for lobby and gameplay updates">
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/SendCategoriesMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GameInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GameManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/gui/CategoryWheelPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/CategoryWheelPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/LobbyHostPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/LobbyHostPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/LobbyJoinPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/LobbyJoinPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/LobbyStartPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/LobbyStartPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/MainGameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/MainGameFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/QuestionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/QuestionPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/gui/ScoreAndCategoriesPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/ScoreAndCategoriesPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/CategoryRound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/CategoryRound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/XMLReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/protocol/messages/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/MessageType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/GameState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/QuizGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/QuizGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/QuizReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/QuizReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +193,9 @@
       <workItem from="1741266936415" duration="7125000" />
       <workItem from="1741279319858" duration="2368000" />
       <workItem from="1741350343023" duration="14462000" />
-      <workItem from="1741369220653" duration="3489000" />
+      <workItem from="1741369220653" duration="5861000" />
+      <workItem from="1741443973657" duration="13362000" />
+      <workItem from="1741463627599" duration="766000" />
     </task>
     <task id="LOCAL-00001" summary="Finished DB">
       <option name="closed" value="true" />
@@ -269,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741273571753</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Refactor game state management and add new messaging types for lobby and gameplay updates">
+      <option name="closed" value="true" />
+      <created>1741374814325</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1741374814325</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +304,8 @@
     <MESSAGE value="Add messaging classes for category selection and game updates" />
     <MESSAGE value="Refactor messaging classes and update game state management for improved gameplay flow" />
     <MESSAGE value="Refactor game state management and enhance lobby functionality with new panels and serialization support" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor game state management and enhance lobby functionality with new panels and serialization support" />
+    <MESSAGE value="Refactor game state management and add new messaging types for lobby and gameplay updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor game state management and add new messaging types for lobby and gameplay updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

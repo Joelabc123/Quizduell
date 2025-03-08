@@ -3,6 +3,7 @@ package protocol;
 import server.Answer;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Map;
 
 public class Question implements Serializable {
@@ -47,7 +48,29 @@ public class Question implements Serializable {
         return fid;
     }
 
+    public String getFrageName() {
+        return frageName;
+    }
+
     public void setCorrectAnswer(Answer correctAnswer) {
         this.correctAnswer = correctAnswer;
+    }
+
+    public ArrayList<String> getAnswerOptions() {
+        ArrayList<String> options = new ArrayList<>();
+        System.out.println("Size: " + answers.size());
+        // Option 1: Reihenfolge anhand der Enum-Werte
+        for (Answer key : Answer.values()) {
+            System.out.println("Key: " + key);
+            System.out.println("Value: " + answers.get(key));
+            if (answers != null && answers.containsKey(key)) {
+                options.add(answers.get(key));
+            }
+        }
+        return options;
+    }
+
+    public Answer getCorrectAnswer() {
+        return correctAnswer;
     }
 }

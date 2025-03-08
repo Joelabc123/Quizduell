@@ -10,6 +10,7 @@ public interface GameInterface {
     void startGameMessage(StartGameMessage startGameMessage);
     void hostedLobbyMessage(HostedLobbyMessage hostedLobbyMessage);
     void playerTurnMessage(PlayerTurnMessage playerTurnMessage);
+    void sendCategoriesMessage(SendCategoriesMessage sendCategoriesMessage);
 
     //CLIENT -> SERVER
     void hostLobby();

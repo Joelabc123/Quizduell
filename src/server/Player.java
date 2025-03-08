@@ -8,6 +8,7 @@ import utils.Usernames;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.UUID;
 
 public class Player implements Runnable {
@@ -61,7 +62,7 @@ public class Player implements Runnable {
                         HostLobbyMessage hostLobbyMessage = (HostLobbyMessage) received;
                         this.ingame = true;
                         //Register new QuizGame
-                        QuizGame game = new QuizGame();
+                        QuizGame game = new QuizGame(new ArrayList<>(Server.quizReader.categories));
                         Thread gameThread = new Thread(game);
 
                         game.addPlayer(this);
@@ -88,19 +89,34 @@ public class Player implements Runnable {
                         break;
                     case MessageType.SELECT_CATEGORY:
                         SelectCategoryMessage selectCategoryMessage = (SelectCategoryMessage) received;
-
+                        System.out.println("Received SelectCategoryMessage: " + selectCategoryMessage.getCategory().getName());
                         Category selectedCategory = selectCategoryMessage.getCategory();
 
                         QuizGame quizGame = server.getGame(this);
-                        for (Category c : Server.quizReader.categories) {
+                        // Finde die richtige Kategorie und füge eine neue Runde hinzu
+                        for (Category c : quizGame.getAviabaleCategories()) {
                             if (c.getKatID().equals(selectedCategory.getKatID())) {
+                                System.out.println("kategorie gefunden" + c.getName());
                                 CategoryRound categoryRound = new CategoryRound(c);
+
+                                categoryRound.setQuestionRounds();
                                 quizGame.getGameState().addRound(categoryRound);
+                                break;
                             }
                         }
-                        System.out.println("Selected Category: " + selectedCategory.toString());
-                        sendMessage(new UpdateGameMessage(quizGame.getGameState()));
 
+                        // Erzeuge eine SendCategoriesMessage, die den aktuellen GameState enthält,
+                        // und broadcasten Sie diese Nachricht an alle Spieler des Spiels.
+                        System.out.println("CategoryRoundCheck: " + quizGame.getGameState().getCurrentRound().getCategory().getName());
+                        System.out.println("CategoryRoundCheck: " + quizGame.getGameState().getCurrentRound().getCategory());
+                        System.out.println("CategoryRoundCheck: " + quizGame.getGameState().getCurrentRound());
+                        System.out.println("CategoryRoundCheck: " + quizGame.getGameState());
+
+                        GameState gameState = new GameState(quizGame.getGameState());
+
+                        SendCategoriesMessage scm = new SendCategoriesMessage(gameState);
+                        quizGame.broadcast(scm);
+                        quizGame.getAviabaleCategories().remove(selectedCategory);
                         break;
                     case MessageType.ANSWER_QUESTION:
                         AnswerQuestionMessage answerQuestionMessage = (AnswerQuestionMessage) received;

@@ -2,7 +2,6 @@ package server;
 
 import protocol.Category;
 import protocol.CategoryRound;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -21,7 +20,7 @@ public class GameState implements Serializable {
 
     // Instanzfelder
     private final UUID id = UUID.randomUUID();
-    public UUID playerA, playerB; // Öffentlich zugänglich – alternativ Getter/Setter hinzufügen
+    public UUID playerA, playerB;
     public String playerAName, playerBName;
     private final int lobbyCode;
     private boolean gameOver;
@@ -31,14 +30,15 @@ public class GameState implements Serializable {
     private Date selectCategoryStarted, selectCategoryFinished;
     private boolean playerTurn;
 
-    // Konstruktoren
+    // Konstruktor: Initialisierung des GameState mit verfügbaren Kategorien
     public GameState(ArrayList<Category> availableCategories) {
         this.lobbyCode = (int) (Math.random() * 9000) + 1000;
-        this.availableCategories = availableCategories;
+        this.availableCategories = new ArrayList<>(availableCategories);
         this.gameOver = false;
         this.playerTurn = false;
     }
 
+    // Kopierkonstruktor: Erstellt tiefe Kopien der Listen und Datumseinträge
     public GameState(GameState gameState) {
         this.playerA = gameState.playerA;
         this.playerB = gameState.playerB;
@@ -46,11 +46,14 @@ public class GameState implements Serializable {
         this.playerBName = gameState.playerBName;
         this.status = gameState.status;
         this.lobbyCode = gameState.lobbyCode;
-        this.rounds = gameState.rounds;
+        // Tiefe Kopie der Listen
+        this.rounds = new ArrayList<>(gameState.rounds);
+        System.out.println("rounds: " + rounds);
+        this.availableCategories = new ArrayList<>(gameState.availableCategories);
         this.gameOver = gameState.gameOver;
-        this.availableCategories = gameState.availableCategories;
-        this.selectCategoryStarted = gameState.selectCategoryStarted;
-        this.selectCategoryFinished = gameState.selectCategoryFinished;
+        // Datumseinträge als Kopien
+        this.selectCategoryStarted = (gameState.selectCategoryStarted != null) ? new Date(gameState.selectCategoryStarted.getTime()) : null;
+        this.selectCategoryFinished = (gameState.selectCategoryFinished != null) ? new Date(gameState.selectCategoryFinished.getTime()) : null;
         this.playerTurn = gameState.playerTurn;
     }
 
@@ -109,7 +112,7 @@ public class GameState implements Serializable {
     }
 
     public void setAvailableCategories(ArrayList<Category> availableCategories) {
-        this.availableCategories = availableCategories;
+        this.availableCategories = new ArrayList<>(availableCategories);
     }
 
     public ArrayList<CategoryRound> getRounds() {
@@ -117,7 +120,7 @@ public class GameState implements Serializable {
     }
 
     public void setRounds(ArrayList<CategoryRound> rounds) {
-        this.rounds = rounds;
+        this.rounds = new ArrayList<>(rounds);
     }
 
     public GameStatus getStatus() {
@@ -129,19 +132,19 @@ public class GameState implements Serializable {
     }
 
     public Date getSelectCategoryStarted() {
-        return selectCategoryStarted;
+        return (selectCategoryStarted != null) ? new Date(selectCategoryStarted.getTime()) : null;
     }
 
     public void setSelectCategoryStarted(Date selectCategoryStarted) {
-        this.selectCategoryStarted = selectCategoryStarted;
+        this.selectCategoryStarted = (selectCategoryStarted != null) ? new Date(selectCategoryStarted.getTime()) : null;
     }
 
     public Date getSelectCategoryFinished() {
-        return selectCategoryFinished;
+        return (selectCategoryFinished != null) ? new Date(selectCategoryFinished.getTime()) : null;
     }
 
     public void setSelectCategoryFinished(Date selectCategoryFinished) {
-        this.selectCategoryFinished = selectCategoryFinished;
+        this.selectCategoryFinished = (selectCategoryFinished != null) ? new Date(selectCategoryFinished.getTime()) : null;
     }
 
     public boolean isPlayerTurn() {

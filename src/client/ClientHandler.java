@@ -65,6 +65,15 @@ public class ClientHandler {
                             PlayerTurnMessage playerTurnMessage = (PlayerTurnMessage) received;
                             gameManager.playerTurnMessage(playerTurnMessage);
                             break;
+                        case "SendCategoriesMessage":
+                            System.out.println("Case SendCategoriesMessage");
+                            SendCategoriesMessage sendCategoriesMessage = (SendCategoriesMessage) received;
+                            System.out.println("ClientHandler: Received SendCategoriesMessage" + sendCategoriesMessage.getGameState());
+                            System.out.println("ClientHandler: Received SendCategoriesMessage" + sendCategoriesMessage.getGameState().getCurrentRound());
+                            System.out.println("ClientHandler: Received SendCategoriesMessage" + sendCategoriesMessage.getGameState().getCurrentRound().getQuestionRounds());
+                            System.out.println("ClientHandler: Received SendCategoriesMessage" + sendCategoriesMessage.getGameState().getCurrentRound().getCategory());
+                            gameManager.sendCategoriesMessage(sendCategoriesMessage);
+                            break;
                         case "ErrorMessage":
                             try {
                                 ErrorMessage errorMessage = (ErrorMessage) received;

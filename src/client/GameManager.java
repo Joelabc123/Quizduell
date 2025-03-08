@@ -1,6 +1,7 @@
 package client;
 
 import protocol.Category;
+import protocol.Question;
 import protocol.messages.*;
 import server.Answer;
 import server.GameState;
@@ -85,17 +86,6 @@ public class GameManager implements GameInterface {
     @Override
     public void playerTurnMessage(PlayerTurnMessage playerTurnMessage) {
         mainGameFrame.getScorePanel().setChooseCategoryButtonVisible(playerTurnMessage.getPlayerTurn());
-        if(playerTurnMessage.getPlayerTurn()){
-            mainGameFrame.switchCategoryWheelPanel();
-            ArrayList<Category> catList = new ArrayList<>(latestGameState.getAvailableCategories());
-            Collections.shuffle(catList);
-            String[] randomCategories = catList.stream()
-                    .limit(3)
-                    .map(Category::getName)
-                    .toArray(String[]::new);
-
-            mainGameFrame.getCategoryWheelPanel().setCategories(randomCategories);
-        }
     }
 
     @Override
@@ -106,7 +96,50 @@ public class GameManager implements GameInterface {
     }
 
     @Override
+    public void sendCategoriesMessage(SendCategoriesMessage sendCategoriesMessage) {
+        this.latestGameState = sendCategoriesMessage.getGameState();
+        setQuestions();
+    }
+
+    //HELPER
+    @Override
     public void authenticationError() {
         mainGameFrame.getLobbyJoinPanel().showAuthenticationError();
     }
+
+    public void setCategories(){
+        mainGameFrame.switchCategoryWheelPanel();
+        ArrayList<Category> catList = new ArrayList<>(latestGameState.getAvailableCategories());
+        Collections.shuffle(catList);
+        String[] randomCategories = catList.stream()
+                .limit(3)
+                .map(Category::getName)
+                .toArray(String[]::new);
+
+        mainGameFrame.getCategoryWheelPanel().setCategories(randomCategories);
+    }
+
+    public void setQuestions(){
+        String kat = latestGameState.getCurrentRound().getCategory().getName();
+        // Wähle eine zufällige Frage aus der Liste und entferne sie aus der Liste
+        Question randomQuestion = latestGameState.getCurrentRound().getCategory().getQuestions()
+                .remove((int)(Math.random() * latestGameState.getCurrentRound().getCategory().getQuestions().size()));
+        String randomQuestionText = randomQuestion.getFrageName();
+        ArrayList<String> answerTexts = randomQuestion.getAnswerOptions();
+        System.out.println("AnswerTexts: " + answerTexts);
+        Answer answer = randomQuestion.getCorrectAnswer();
+
+        mainGameFrame.switchQuestionPanel();
+        mainGameFrame.getQuestionPanel().setCategory(kat);
+        mainGameFrame.getQuestionPanel().setQuestionText(randomQuestionText);
+        mainGameFrame.getQuestionPanel().setCorrectAnswer(answer);
+        // Übergibt alle vier Antwortmöglichkeiten an die QuestionPanel-Methode
+        mainGameFrame.getQuestionPanel().setAnswerOptions(
+                answerTexts.get(0),
+                answerTexts.get(1),
+                answerTexts.get(2),
+                answerTexts.get(3)
+        );
+    }
+
 }

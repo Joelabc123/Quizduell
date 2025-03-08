@@ -40,7 +40,6 @@ public class XMLReader {
             String katID = k.getAttributeValue("KatID");
             String name = k.getChildText("Name");
             Category cat = new Category(katID, name);
-            //Skibidi
             categories.add(cat);
             categoryMap.put(katID, cat);
         }

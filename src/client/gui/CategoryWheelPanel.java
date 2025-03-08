@@ -77,7 +77,7 @@ public class CategoryWheelPanel extends JPanel {
                     "Kategorie '" + chosenCategory + "' wurde gewählt!",
                     "Auswahl",
                     JOptionPane.INFORMATION_MESSAGE);
-
+            mainFrame.getClientHandler().gameManager.selectCategory(chosenCategory);
             System.out.println("WheelPanel: Button gedrückt, externe Logik soll switchQuestionPanel() aufrufen.");
         }
 

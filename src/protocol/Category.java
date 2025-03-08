@@ -17,6 +17,8 @@ public class Category implements Serializable {
         this.questions = new ArrayList<>();
     }
 
+
+
     public void addQuestion(Question question) {
         questions.add(question);
     }

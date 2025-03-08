@@ -1,9 +1,13 @@
 package client.gui;
 
+import protocol.Category;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class ScoreAndCategoriesPanel extends JPanel {
     private MainGameFrame mainFrame;
@@ -43,8 +47,8 @@ public class ScoreAndCategoriesPanel extends JPanel {
 
         // Header: Quizduell-Blauer Bereich mit Spielernamen und Titel
         JPanel header = new JPanel(new BorderLayout());
-        header.setBackground(new Color(30,144,255));
-        header.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
+        header.setBackground(new Color(30, 144, 255));
+        header.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         leftPlayerNameLabel = new JLabel("Spieler Links", SwingConstants.LEFT);
         leftPlayerNameLabel.setForeground(Color.WHITE);
@@ -88,7 +92,7 @@ public class ScoreAndCategoriesPanel extends JPanel {
 
         // Unten: Button "Kategorie wählen"
         chooseCategoryButton = new JButton("Kategorie wählen");
-        chooseCategoryButton.setBackground(new Color(76,175,80));
+        chooseCategoryButton.setBackground(new Color(76, 175, 80));
         chooseCategoryButton.setForeground(Color.WHITE);
         chooseCategoryButton.setFont(new Font("Arial", Font.BOLD, 16));
         chooseCategoryButton.setFocusPainted(false);
@@ -96,6 +100,7 @@ public class ScoreAndCategoriesPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Button 'Kategorie wählen' gedrückt. Externe Logik muss switchCategoryWheelPanel() aufrufen.");
+                mainFrame.getClientHandler().gameManager.setCategories();
             }
         });
         add(chooseCategoryButton, BorderLayout.SOUTH);
@@ -112,8 +117,8 @@ public class ScoreAndCategoriesPanel extends JPanel {
 
     public void addCategoryResult(String category, String winner) {
         JPanel rowPanel = new JPanel(new BorderLayout());
-        rowPanel.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
-        rowPanel.setBackground(new Color(230,244,255));
+        rowPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+        rowPanel.setBackground(new Color(230, 244, 255));
         rowPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 40));
 
         JLabel leftLabel = new JLabel("", SwingConstants.CENTER);
@@ -128,12 +133,12 @@ public class ScoreAndCategoriesPanel extends JPanel {
             case "LEFT":
                 leftScore++;
                 leftLabel.setText("Gewonnen");
-                leftLabel.setForeground(new Color(76,175,80));
+                leftLabel.setForeground(new Color(76, 175, 80));
                 break;
             case "RIGHT":
                 rightScore++;
                 rightLabel.setText("Gewonnen");
-                rightLabel.setForeground(new Color(76,175,80));
+                rightLabel.setForeground(new Color(76, 175, 80));
                 break;
             case "TIE":
                 leftScore++;
