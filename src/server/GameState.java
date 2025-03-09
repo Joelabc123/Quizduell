@@ -29,6 +29,8 @@ public class GameState implements Serializable {
     private GameStatus status = GameStatus.LOBBY_WAITING;
     private Date selectCategoryStarted, selectCategoryFinished;
     private boolean playerTurn;
+    private int turnQuestionRound;
+
 
     // Konstruktor: Initialisierung des GameState mit verfügbaren Kategorien
     public GameState(ArrayList<Category> availableCategories) {
@@ -36,6 +38,7 @@ public class GameState implements Serializable {
         this.availableCategories = new ArrayList<>(availableCategories);
         this.gameOver = false;
         this.playerTurn = false;
+        this.turnQuestionRound = 0;
     }
 
     // Kopierkonstruktor: Erstellt tiefe Kopien der Listen und Datumseinträge
@@ -55,6 +58,7 @@ public class GameState implements Serializable {
         this.selectCategoryStarted = (gameState.selectCategoryStarted != null) ? new Date(gameState.selectCategoryStarted.getTime()) : null;
         this.selectCategoryFinished = (gameState.selectCategoryFinished != null) ? new Date(gameState.selectCategoryFinished.getTime()) : null;
         this.playerTurn = gameState.playerTurn;
+        this.turnQuestionRound = gameState.turnQuestionRound;
     }
 
     // Getter und Setter
@@ -189,7 +193,7 @@ public class GameState implements Serializable {
         if (rounds.isEmpty()) {
             return null;
         }
-        return rounds.get(rounds.size() - 1);
+        return rounds.getLast();
     }
 
     public Category getCategoryByName(String categoryName) {
@@ -199,5 +203,13 @@ public class GameState implements Serializable {
             }
         }
         return null;
+    }
+
+    public int getTurnQuestionRound() {
+        return turnQuestionRound;
+    }
+
+    public void setTurnQuestionRound(int turnQuestionRound) {
+        this.turnQuestionRound = turnQuestionRound;
     }
 }

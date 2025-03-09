@@ -1,7 +1,9 @@
 package client;
 
 import protocol.messages.*;
-import server.Answer;
+
+import java.util.ArrayList;
+
 public interface GameInterface {
 
     //SERVER -> CLIENT
@@ -16,7 +18,7 @@ public interface GameInterface {
     void hostLobby();
     void joinLobby(int lobbyCode);
     void selectCategory(String category);
-    void answerQuestion(Answer answer,String fId);
+    void answerQuestion(ArrayList<Boolean> answers);
 
     //FEHLER
     void authenticationError();

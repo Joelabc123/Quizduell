@@ -70,8 +70,8 @@ public class GameManager implements GameInterface {
     }
 
     @Override
-    public void answerQuestion(Answer answer, String fId) {
-        this.clientHandler.sendMessage(new AnswerQuestionMessage(answer, fId));
+    public void answerQuestion(ArrayList<Boolean> answers) {
+        this.clientHandler.sendMessage(new AnswerQuestionMessage(answers));
     }
 
     @Override
@@ -98,6 +98,7 @@ public class GameManager implements GameInterface {
     @Override
     public void sendCategoriesMessage(SendCategoriesMessage sendCategoriesMessage) {
         this.latestGameState = sendCategoriesMessage.getGameState();
+        mainGameFrame.switchQuestionPanel();
         setQuestions();
     }
 
@@ -121,15 +122,30 @@ public class GameManager implements GameInterface {
 
     public void setQuestions(){
         String kat = latestGameState.getCurrentRound().getCategory().getName();
+        System.out.println("Setting Questions for Category: " + kat);
+        Question randomQuestion;
         // Wähle eine zufällige Frage aus der Liste und entferne sie aus der Liste
-        Question randomQuestion = latestGameState.getCurrentRound().getCategory().getQuestions()
-                .remove((int)(Math.random() * latestGameState.getCurrentRound().getCategory().getQuestions().size()));
+        switch(latestGameState.getTurnQuestionRound()) {
+            case 0:
+                randomQuestion = latestGameState.getCurrentRound().getQuestions().getFirst();
+                latestGameState.setTurnQuestionRound(1);
+                break;
+            case 1:
+                randomQuestion = latestGameState.getCurrentRound().getQuestions().get(1);
+                latestGameState.setTurnQuestionRound(2);
+                break;
+            case 2:
+                randomQuestion = latestGameState.getCurrentRound().getQuestions().get(2);
+                break;
+            default:
+                System.out.println("Keine Frage gefunden");
+                randomQuestion = null;
+        }
         String randomQuestionText = randomQuestion.getFrageName();
+        System.out.println("RandomQuestionText: " + randomQuestionText);
         ArrayList<String> answerTexts = randomQuestion.getAnswerOptions();
         System.out.println("AnswerTexts: " + answerTexts);
         Answer answer = randomQuestion.getCorrectAnswer();
-
-        mainGameFrame.switchQuestionPanel();
         mainGameFrame.getQuestionPanel().setCategory(kat);
         mainGameFrame.getQuestionPanel().setQuestionText(randomQuestionText);
         mainGameFrame.getQuestionPanel().setCorrectAnswer(answer);

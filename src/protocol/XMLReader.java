@@ -57,9 +57,17 @@ public class XMLReader {
             String antwortC = f.getChildText("AntwortC");
             String antwortD = f.getChildText("AntwortD");
 
-            // Erstelle das Question-Objekt
-            Question question = new Question(fid, frageName);
-            // Speichere die Antworttexte zusammen mit der Frage und der Kategorie-ID
+            // Erstelle eine Map für die Antwortmöglichkeiten:
+            Map<Answer, String> answerMap = new HashMap<>();
+            answerMap.put(Answer.ANSWER_A, antwortA);
+            answerMap.put(Answer.ANSWER_B, antwortB);
+            answerMap.put(Answer.ANSWER_C, antwortC);
+            answerMap.put(Answer.ANSWER_D, antwortD);
+
+            // Erstelle das Question-Objekt mit allen Parametern.
+            // Wir setzen zunächst als Dummy den Wert Answer.ANSWER_A; dieser wird später korrigiert.
+            Question question = new Question(fid, frageName, answerMap, Answer.ANSWER_A);
+            // Speichere zusätzlich die Original-Antworttexte in einem Wrapper, um später die korrekte Antwort zu bestimmen.
             QuestionWrapper qw = new QuestionWrapper(question, kid, antwortA, antwortB, antwortC, antwortD);
             questionWrappers.add(qw);
         }

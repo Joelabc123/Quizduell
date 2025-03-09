@@ -26,19 +26,6 @@ public class Question implements Serializable {
             throw new IllegalArgumentException("Correct answer not in answers");
         }
     }
-    public Question(String fid, String question, Answer correctAnswer) {
-        this.fid = fid;
-        this.frageName = question;
-        this.correctAnswer = correctAnswer;
-        this.answers = null;
-    }
-
-    public Question(String fid, String question) {
-        this.fid = fid;
-        this.frageName = question;
-        this.correctAnswer = null;
-        this.answers = null;
-    }
 
     public boolean isCorrect(Answer answer) {
         return correctAnswer.equals(answer);
@@ -58,14 +45,14 @@ public class Question implements Serializable {
 
     public ArrayList<String> getAnswerOptions() {
         ArrayList<String> options = new ArrayList<>();
-        System.out.println("Size: " + answers.size());
         // Option 1: Reihenfolge anhand der Enum-Werte
         for (Answer key : Answer.values()) {
             System.out.println("Key: " + key);
-            System.out.println("Value: " + answers.get(key));
             if (answers != null && answers.containsKey(key)) {
                 options.add(answers.get(key));
+                System.out.println("Options: " + options);
             }
+            System.out.println("Size: " + options.size());
         }
         return options;
     }

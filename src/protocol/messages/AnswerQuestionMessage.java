@@ -1,27 +1,35 @@
 package protocol.messages;
 
-import server.Answer;
+import java.util.ArrayList;
 
 public class AnswerQuestionMessage extends Message {
     private static final long serialVersionUID = 1L;
 
-    Answer selectedAnswer;
-    String fId;
+    ArrayList<Boolean> answers;
 
-    public AnswerQuestionMessage(Answer selectedAnswer, String fId) {
+    public AnswerQuestionMessage(ArrayList<Boolean> answers) {
         super(MessageType.ANSWER_QUESTION);
-        this.selectedAnswer = selectedAnswer;
-        this.fId = fId;
+        this.answers = answers;
     }
 
     @Override
     public MessageType getType() {return MessageType.ANSWER_QUESTION;}
 
-    public Answer getSelectedAnswer() {
-        return selectedAnswer;
+    public ArrayList<Boolean> getAnswers() {
+        return answers;
     }
 
-    public String getfId() {
-        return fId;
+    public void setAnswers(ArrayList<Boolean> answers) {
+        this.answers = answers;
+    }
+
+    public int getScore() {
+        int score = 0;
+        for (Boolean answer : answers) {
+            if (answer) {
+                score++;
+            }
+        }
+        return score;
     }
 }
