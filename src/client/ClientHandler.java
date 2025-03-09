@@ -14,6 +14,7 @@ public class ClientHandler {
 
     public GameManager gameManager = new GameManager(this);
 
+
     public ClientHandler(String serverAddress, int port) {
         try {
             socket = new Socket(serverAddress, port);
@@ -70,8 +71,6 @@ public class ClientHandler {
                             SendCategoriesMessage sendCategoriesMessage = (SendCategoriesMessage) received;
                             System.out.println("ClientHandler: Received SendCategoriesMessage" + sendCategoriesMessage.getGameState());
                             System.out.println("ClientHandler: Received SendCategoriesMessage" + sendCategoriesMessage.getGameState().getCurrentRound());
-                            System.out.println("ClientHandler: Received SendCategoriesMessage" + sendCategoriesMessage.getGameState().getCurrentRound().getQuestionRounds());
-                            System.out.println("ClientHandler: Received SendCategoriesMessage" + sendCategoriesMessage.getGameState().getCurrentRound().getCategory());
                             gameManager.sendCategoriesMessage(sendCategoriesMessage);
                             break;
                         case "ErrorMessage":

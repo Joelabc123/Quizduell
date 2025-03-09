@@ -4,6 +4,7 @@ import server.Answer;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
 public class QuestionPanel extends JPanel {
 
@@ -24,6 +25,9 @@ public class QuestionPanel extends JPanel {
 
     // Flag, um Mehrfachaufrufe des Rundenabschlusses zu verhindern
     private boolean roundCompleted = false;
+
+    //ArrayList zum Sammeln der Antworten
+    ArrayList<Boolean> answers = new ArrayList<Boolean>();
 
     public QuestionPanel(MainGameFrame mainFrame) {
         this.mainFrame = mainFrame;
@@ -94,8 +98,10 @@ public class QuestionPanel extends JPanel {
                 // Prüfe, ob der übergebene Answer-Wert korrekt ist
                 if (answerOption.equals(correctAnswer)) {
                     btn.setBackground(Color.GREEN);
+                    answers.add(true);
                 } else {
                     btn.setBackground(Color.RED);
+                    answers.add(false);
                 }
                 disableAllButtons();
 
@@ -171,13 +177,14 @@ public class QuestionPanel extends JPanel {
     private void nextQuestion() {
         questionCount++;
         if (questionCount < MAX_QUESTIONS) {
-            questionLabel.setText("Frage " + (questionCount + 1) + ": Was ist ...?");
+            mainFrame.getClientHandler().gameManager.setQuestions();
             enableAndResetButtons();
             startTimer();
         } else {
             if (!roundCompleted) {
                 roundCompleted = true;
                 System.out.println("Round abgeschlossen. Externe Logik muss questionsCompleted() aufrufen.");
+                mainFrame.getClientHandler().gameManager.answerQuestion(answers);
             }
         }
     }

@@ -4,23 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Refactor game state management and add new messaging types for lobby and gameplay updates">
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/SendCategoriesMessage.java" afterDir="false" />
+    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Initialize ClientHandler with GameManager instance for improved game management">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GameInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/CategoryWheelPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/CategoryWheelPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/MainGameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/MainGameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/gui/QuestionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/QuestionPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/gui/ScoreAndCategoriesPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/ScoreAndCategoriesPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/protocol/CategoryRound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/CategoryRound.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/protocol/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/QuestionRound.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/protocol/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/XMLReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/messages/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/MessageType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/messages/AnswerQuestionMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/AnswerQuestionMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/GameState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/QuizGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/QuizGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Security Analysis" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -82,7 +80,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;refactor&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Joelb/IdeaProjects/battleship-game&quot;,
@@ -196,6 +194,8 @@
       <workItem from="1741369220653" duration="5861000" />
       <workItem from="1741443973657" duration="13362000" />
       <workItem from="1741463627599" duration="766000" />
+      <workItem from="1741513061110" duration="10923000" />
+      <workItem from="1741533714054" duration="5115000" />
     </task>
     <task id="LOCAL-00001" summary="Finished DB">
       <option name="closed" value="true" />

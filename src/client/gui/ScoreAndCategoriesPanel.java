@@ -1,13 +1,8 @@
 package client.gui;
 
 import protocol.Category;
-
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Collections;
 
 public class ScoreAndCategoriesPanel extends JPanel {
     private MainGameFrame mainFrame;
@@ -96,17 +91,14 @@ public class ScoreAndCategoriesPanel extends JPanel {
         chooseCategoryButton.setForeground(Color.WHITE);
         chooseCategoryButton.setFont(new Font("Arial", Font.BOLD, 16));
         chooseCategoryButton.setFocusPainted(false);
-        chooseCategoryButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Button 'Kategorie wählen' gedrückt. Externe Logik muss switchCategoryWheelPanel() aufrufen.");
-                mainFrame.getClientHandler().gameManager.setCategories();
-            }
+        chooseCategoryButton.addActionListener(e -> {
+            System.out.println("Button 'Kategorie wählen' gedrückt. Externe Logik muss switchCategoryWheelPanel() aufrufen.");
+            mainFrame.getClientHandler().gameManager.setCategories();
         });
         add(chooseCategoryButton, BorderLayout.SOUTH);
     }
 
-    // Separate Methoden zum Setzen der Spielernamen:
+    // Externe Setter für Spielernamen:
     public void setLeftPlayerName(String leftName) {
         leftPlayerNameLabel.setText(leftName);
     }
@@ -115,7 +107,17 @@ public class ScoreAndCategoriesPanel extends JPanel {
         rightPlayerNameLabel.setText(rightName);
     }
 
-    public void addCategoryResult(String category, String winner) {
+    // Externe Methode zum Setzen beider Scores
+    public void setScores(int left, int right) {
+        this.leftScore = left;
+        this.rightScore = right;
+        updateScoreLabel();
+    }
+
+    // Externe Methode, um das Ergebnis einer Kategorie anzuzeigen.
+    // Wenn der Parameter "winner" "unentschieden" (case-insensitive) ist,
+    // werden beide Seiten als "Unentschieden" angezeigt.
+    public void addCategoryWinner(String category, String winner) {
         JPanel rowPanel = new JPanel(new BorderLayout());
         rowPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
         rowPanel.setBackground(new Color(230, 244, 255));
@@ -125,29 +127,28 @@ public class ScoreAndCategoriesPanel extends JPanel {
         JLabel catLabel = new JLabel(category, SwingConstants.CENTER);
         JLabel rightLabel = new JLabel("", SwingConstants.CENTER);
 
-        catLabel.setFont(new Font("Arial", Font.BOLD, 16));
         leftLabel.setFont(new Font("Arial", Font.PLAIN, 14));
+        catLabel.setFont(new Font("Arial", Font.BOLD, 16));
         rightLabel.setFont(new Font("Arial", Font.PLAIN, 14));
 
-        switch (winner) {
-            case "LEFT":
-                leftScore++;
-                leftLabel.setText("Gewonnen");
-                leftLabel.setForeground(new Color(76, 175, 80));
-                break;
-            case "RIGHT":
-                rightScore++;
-                rightLabel.setText("Gewonnen");
-                rightLabel.setForeground(new Color(76, 175, 80));
-                break;
-            case "TIE":
-                leftScore++;
-                rightScore++;
-                leftLabel.setText("Unentschieden");
-                rightLabel.setText("Unentschieden");
-                leftLabel.setForeground(Color.ORANGE);
-                rightLabel.setForeground(Color.ORANGE);
-                break;
+        if (winner.equalsIgnoreCase("unentschieden")) {
+            leftLabel.setText("Unentschieden");
+            rightLabel.setText("Unentschieden");
+            leftLabel.setForeground(Color.ORANGE);
+            rightLabel.setForeground(Color.ORANGE);
+        } else if (winner.equalsIgnoreCase("left")) {
+            leftLabel.setText("Gewonnen");
+            leftLabel.setForeground(new Color(76, 175, 80));
+            rightLabel.setText("");
+            leftScore++;
+        } else if (winner.equalsIgnoreCase("right")) {
+            rightLabel.setText("Gewonnen");
+            rightLabel.setForeground(new Color(76, 175, 80));
+            leftLabel.setText("");
+            rightScore++;
+        } else {
+            // Falls ein anderer String übergeben wurde, geben wir ihn in der Mitte aus:
+            catLabel.setText(category + " - " + winner);
         }
 
         rowPanel.add(leftLabel, BorderLayout.WEST);

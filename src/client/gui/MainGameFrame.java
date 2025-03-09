@@ -107,23 +107,6 @@ public class MainGameFrame extends JFrame {
     }
 
     /**
-     * Wird vom QuestionPanel aufgerufen, wenn eine Runde (z. B. 3 Fragen) abgeschlossen ist.
-     */
-    public void questionsCompleted(String chosenCategory, String winner) {
-        if (scorePanel == null) {
-            scorePanel = new ScoreAndCategoriesPanel(this);
-            mainPanel.add(scorePanel, "score");
-        }
-        scorePanel.addCategoryResult(chosenCategory, winner);
-        roundsPlayed++;
-        if (roundsPlayed < MAX_ROUNDS) {
-            switchScorePanel();
-        } else {
-            switchStatisticsPanel();
-        }
-    }
-
-    /**
      * Setzt den Spielzustand zurück und wechselt zur LobbyStart-Szene.
      */
     public void resetGame() {

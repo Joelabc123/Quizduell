@@ -2,13 +2,14 @@ package server;
 
 import protocol.Category;
 import protocol.CategoryRound;
-import protocol.QuestionRound;
+import protocol.Question;
 import protocol.messages.*;
 import utils.Usernames;
 
 import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.UUID;
 
 public class Player implements Runnable {
@@ -97,9 +98,9 @@ public class Player implements Runnable {
                         for (Category c : quizGame.getAviabaleCategories()) {
                             if (c.getKatID().equals(selectedCategory.getKatID())) {
                                 System.out.println("kategorie gefunden" + c.getName());
+                                System.out.println("c" + c.getQuestions().getFirst().getFrageName());
                                 CategoryRound categoryRound = new CategoryRound(c);
-
-                                categoryRound.setQuestionRounds();
+                                fillCategoryRound(categoryRound);
                                 quizGame.getGameState().addRound(categoryRound);
                                 break;
                             }
@@ -120,28 +121,34 @@ public class Player implements Runnable {
                         break;
                     case MessageType.ANSWER_QUESTION:
                         AnswerQuestionMessage answerQuestionMessage = (AnswerQuestionMessage) received;
-                        Answer selectedAnswer = answerQuestionMessage.getSelectedAnswer();
-
-                        String fId = answerQuestionMessage.getfId();
-
+                        // Hier nehmen wir an, dass answerQuestionMessage eine Liste von Booleans enthält,
+                        // die die Antworten repräsentieren (oder alternativ andere Parameter).
+                        ArrayList<Boolean> answerList = answerQuestionMessage.getAnswers();
                         QuizGame answerGame = server.getGame(this);
                         CategoryRound currentCategoryRound = answerGame.getGameState().getCurrentRound();
-                        QuestionRound currentQuestionRound = currentCategoryRound.getQuestionRounds().getLast();
 
-                        if(this.getId().equals(answerGame.getPlayerA().getId())) {
-                            currentQuestionRound.setAnswerPlayerA(fId,selectedAnswer);
+                        // Unterscheide, ob die Nachricht von playerA oder playerB stammt:
+                        if (this.getId().equals(answerGame.getPlayerA().getId())) {
+                            // Verarbeite die Antwort von playerA:
+                            currentCategoryRound.setAnswersPlayerA(answerList);
+                            System.out.println("Antwort von Player A erhalten.");
+                        } else if (this.getId().equals(answerGame.getPlayerB().getId())) {
+                            // Verarbeite die Antwort von playerB:
+                            currentCategoryRound.setAnswersPlayerB(answerList);
+                            System.out.println("Antwort von Player B erhalten.");
+                        } else {
+                            System.out.println("Antwort von unbekanntem Spieler: " + this.getId());
                         }
-                        else {
-                            currentQuestionRound.setAnswerPlayerB(fId,selectedAnswer);
-                        }
+
+                        GameState gameState2 = new GameState(answerGame.getGameState());
+
 
                         break;
                 }
             }
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("Verbindung mit " + username + " verloren .");
-            //server.removePlayer(this);
-            //server.removeFromQueue(this.getId());
+            server.removePlayer(this);
         }
     }
 
@@ -171,4 +178,28 @@ public class Player implements Runnable {
     public boolean getIngame() {
         return ingame;
     }
+
+    public void fillCategoryRound(CategoryRound cr) {
+        // Stelle sicher, dass die Fragenliste in der CategoryRound initialisiert ist.
+        cr.initializeQuestions();
+
+        // Hole die Kategorie aus der übergebenen Runde
+        Category category = cr.getCategory();
+        ArrayList<Question> availableQuestions = category.getQuestions();
+        if (availableQuestions.size() < 3) {
+            throw new IllegalStateException("Nicht genügend Fragen vorhanden, um eine Runde zu füllen.");
+        }
+
+        // Mische die Liste einmal
+        Collections.shuffle(availableQuestions);
+
+        // Entferne die ersten drei Fragen und füge sie der CategoryRound hinzu
+        for (int i = 0; i < 3; i++) {
+            Question q = availableQuestions.remove(0);
+            cr.addQuestion(q);
+        }
+    }
+
+
+
 }
