@@ -1,6 +1,7 @@
 package client.gui;
 
 import javax.swing.*;
+import javax.swing.border.BevelBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,22 +18,25 @@ public class StatisticsPanel extends JPanel {
 
     private void initUI() {
         setLayout(new BorderLayout());
-        setBackground(Color.WHITE);
+        setOpaque(false); // Damit der Gradient-Hintergrund sichtbar wird
 
-        JPanel headerPanel = new JPanel(new BorderLayout());
-        headerPanel.setBackground(new Color(30,144,255));
-        headerPanel.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
+        // Banner-Panel oben: Farbe #0077B6 für bessere Sichtbarkeit des Titels
+        JPanel bannerPanel = new JPanel(new BorderLayout());
+        bannerPanel.setOpaque(true);
+        bannerPanel.setBackground(Color.decode("#0077B6"));
+        bannerPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
         JLabel titleLabel = new JLabel("Spiel beendet", SwingConstants.CENTER);
         titleLabel.setForeground(Color.WHITE);
         titleLabel.setFont(new Font("Arial", Font.BOLD, 28));
-        headerPanel.add(titleLabel, BorderLayout.CENTER);
-        add(headerPanel, BorderLayout.NORTH);
+        bannerPanel.add(titleLabel, BorderLayout.CENTER);
+        add(bannerPanel, BorderLayout.NORTH);
 
+        // Center-Panel für Statistiken
         JPanel centerPanel = new JPanel();
         centerPanel.setLayout(new BoxLayout(centerPanel, BoxLayout.Y_AXIS));
-        centerPanel.setBackground(Color.WHITE);
-        centerPanel.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
+        centerPanel.setOpaque(false);
+        centerPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
         finalScoreLabel = new JLabel("Finaler Score: 0 - 0", SwingConstants.CENTER);
         finalScoreLabel.setFont(new Font("Arial", Font.BOLD, 24));
@@ -47,36 +51,59 @@ public class StatisticsPanel extends JPanel {
         centerPanel.add(winnerLabel);
         add(centerPanel, BorderLayout.CENTER);
 
+        // Bottom-Panel für den Button
         JPanel bottomPanel = new JPanel();
-        bottomPanel.setBackground(Color.WHITE);
-        bottomPanel.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
+        bottomPanel.setOpaque(false);
+        bottomPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        JButton exitButton = new JButton("Spiel beenden");
-        exitButton.setFont(new Font("Arial", Font.BOLD, 20));
-        exitButton.setBackground(new Color(76,175,80));
-        exitButton.setForeground(Color.WHITE);
-        exitButton.setFocusPainted(false);
-        exitButton.setPreferredSize(new Dimension(200,50));
-        exitButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Exit-Button gedrückt. Externe Logik muss resetGame() und switchLobbyStartPanel() aufrufen.");
-            }
-        });
+        JButton exitButton = getJButton();
         bottomPanel.add(exitButton);
         add(bottomPanel, BorderLayout.SOUTH);
     }
 
-    public void setFinalStatistics(int leftScore, int rightScore) {
+    private JButton getJButton() {
+        JButton exitButton = new JButton("Spiel beenden");
+        exitButton.setFont(new Font("Arial", Font.BOLD, 22));
+        exitButton.setBackground(new Color(76, 175, 80));
+        exitButton.setForeground(Color.WHITE);
+        exitButton.setFocusPainted(false);
+        exitButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        exitButton.setPreferredSize(new Dimension(200, 50));
+        // 3D-Effekt durch BevelBorder
+        exitButton.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainFrame.resetGame();
+                mainFrame.switchLobbyStartPanel();
+                System.out.println("Exit-Button gedrückt. Externe Logik muss resetGame() und switchLobbyStartPanel() aufrufen.");
+            }
+        });
+        return exitButton;
+    }
+
+    public void setFinalStatistics(int leftScore, int rightScore, String usernameLeft, String usernameRight) {
         finalScoreLabel.setText("Finaler Score: " + leftScore + " - " + rightScore);
         String winner;
         if (leftScore > rightScore) {
-            winner = "Gewinner: Spieler Links";
+            winner = "Gewinner: " + usernameLeft;
         } else if (rightScore > leftScore) {
-            winner = "Gewinner: Spieler Rechts";
+            winner = "Gewinner: " + usernameRight;
         } else {
             winner = "Unentschieden!";
         }
         winnerLabel.setText(winner);
+    }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        // Hintergrund mit Farbverlauf: von dunkelblau oben zu hellblau unten
+        Graphics2D g2d = (Graphics2D) g.create();
+        int width = getWidth();
+        int height = getHeight();
+        GradientPaint gp = new GradientPaint(0, 0, new Color(0, 150, 199, 255), 0, height, new Color(144, 224, 239));
+        g2d.setPaint(gp);
+        g2d.fillRect(0, 0, width, height);
+        g2d.dispose();
     }
 }

@@ -142,6 +142,7 @@ public class Player implements Runnable {
                         // Gewinnerberechnung und Scoreaktualisierung nur, wenn beide Spieler ihre Antworten (z.B. 3 Antworten) abgegeben haben:
                         if (currentRound.getAnswersPlayerA().size() == 3 && currentRound.getAnswersPlayerB().size() == 3) {
                             gs.switchPlayerTurn();
+                            gs.incrementCurrentRound();
                             currentRound.setWinner();
                             System.out.println("Winner213213213213: " + currentRound.getWinner());
                             gs.updateScores();
@@ -153,6 +154,10 @@ public class Player implements Runnable {
                             // Falls erforderlich, zusätzlich:
                             System.out.println("turnPlayerB: " + gameState2.getTurnPlayerB());
                             System.out.println("turnPlayerB: " + gameState2.getTurnPlayerB());
+                            if(gs.isLastRound()){
+                                System.out.println("Game Over");
+                                answerGame.broadcast(new GameOverMessage(gameState2));
+                            }
                             server.getGame(this).broadcast(new PlayerTurnMessage(gameState2));
                         }
                         break;

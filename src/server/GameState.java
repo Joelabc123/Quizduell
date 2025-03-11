@@ -33,6 +33,9 @@ public class GameState implements Serializable {
     private int scorePlayerA;
     private int scorePlayerB;
 
+    private final int MAX_ROUNDS = 6;
+    private int currentRound;
+
     public GameState(ArrayList<Category> availableCategories) {
         this.lobbyCode = (int) (Math.random() * 9000) + 1000;
         this.availableCategories = new ArrayList<>(availableCategories);
@@ -42,6 +45,7 @@ public class GameState implements Serializable {
         this.scorePlayerB = 0;
         this.turnPlayerA = true;
         this.turnPlayerB = false;
+        this.currentRound = 0;
     }
 
     public GameState(GameState gameState) {
@@ -65,6 +69,7 @@ public class GameState implements Serializable {
         this.scorePlayerB = gameState.scorePlayerB;
         this.turnPlayerA = gameState.turnPlayerA;
         this.turnPlayerB = gameState.turnPlayerB;
+        this.currentRound = gameState.currentRound;
     }
 
     // Getter und Setter (wie gehabt)
@@ -225,7 +230,7 @@ public class GameState implements Serializable {
         if (rounds.isEmpty()) {
             return null;
         }
-        return rounds.get(rounds.size() - 1);
+        return rounds.getLast();
     }
 
     public Category getCategoryByName(String categoryName) {
@@ -258,4 +263,13 @@ public class GameState implements Serializable {
     public void setTurnPlayerB(boolean turnPlayerB) {
         this.turnPlayerB = turnPlayerB;
     }
+
+    public void incrementCurrentRound() {
+        this.currentRound++;
+    }
+
+    public boolean isLastRound() {
+        return currentRound >= MAX_ROUNDS;
+    }
+
 }

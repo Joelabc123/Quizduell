@@ -31,20 +31,11 @@ public class GameManager implements GameInterface {
         this.mainGameFrame = mainGameFrame;
     }
 
-    // Neuer Getter, falls benötigt
-    public MainGameFrame getMainGameFrame() {
-        return mainGameFrame;
-    }
-
-    public GameState getLatestGameState() {
-        return latestGameState;
-    }
-
     @Override
     public void loginMessage(LoginMessage loginMessage) {
         this.userId = loginMessage.getUserId();
         this.username = loginMessage.getUsername();
-
+        mainGameFrame.getLobbyStartPanel().setPlayerName(username);
         System.out.println("Logged in as " + username);
     }
 
@@ -97,6 +88,14 @@ public class GameManager implements GameInterface {
         mainGameFrame.getScorePanel().setLeftPlayerName(latestGameState.getPlayerAName());
         mainGameFrame.getScorePanel().setRightPlayerName(latestGameState.getPlayerBName());
         System.out.println("Setting Names" + latestGameState.getPlayerAName() + " " + latestGameState.getPlayerBName());
+        if(latestGameState.playerA.equals(this.userId)) {
+            mainGameFrame.getScorePanel().setLeftPlayerName(latestGameState.getPlayerAName() + " (Du)");
+            mainGameFrame.getScorePanel().setRightPlayerName(latestGameState.getPlayerBName());
+
+        } else if(latestGameState.playerB.equals(this.userId)) {
+            mainGameFrame.getScorePanel().setLeftPlayerName(latestGameState.getPlayerAName());
+            mainGameFrame.getScorePanel().setRightPlayerName(latestGameState.getPlayerBName() + " (Du)");
+        }
     }
 
     @Override
@@ -110,7 +109,6 @@ public class GameManager implements GameInterface {
         } else if(latestGameState.playerB.equals(this.userId)) {
             System.out.println("Player B" + latestGameState.getTurnPlayerB());
             mainGameFrame.getScorePanel().setChooseCategoryButtonVisible(playerTurnMessage.getGameState().getTurnPlayerB());
-
         }
     }
 
@@ -126,6 +124,13 @@ public class GameManager implements GameInterface {
         this.latestGameState = sendCategoriesMessage.getGameState();
         mainGameFrame.switchQuestionPanel();
         setQuestions();
+    }
+
+    @Override
+    public void gameOverMessage(GameOverMessage gameOverMessage) {
+        this.latestGameState = gameOverMessage.getGameState();
+        mainGameFrame.switchStatisticsPanel();
+        mainGameFrame.getStatisticsPanel().setFinalStatistics(latestGameState.getScorePlayerA(), latestGameState.getScorePlayerB(),latestGameState.playerAName, latestGameState.playerBName);
     }
 
     //HELPER
@@ -182,7 +187,8 @@ public class GameManager implements GameInterface {
                 answerTexts.get(2),
                 answerTexts.get(3)
         );
-
     }
+
+
 
 }

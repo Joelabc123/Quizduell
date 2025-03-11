@@ -75,7 +75,6 @@ public class QuizGame implements Game, Runnable {
         return null;
     }
 
-
     public void broadcast(Message msg) {
         if (playerA != null) {
             playerA.sendMessage(msg);
@@ -86,17 +85,14 @@ public class QuizGame implements Game, Runnable {
     }
 
     public GameState leaveGame(Player player) {
-
         return gameState;
     }
 
     private synchronized void startBuildPhase() {
-
     }
 
 
     public synchronized void sendGameStateUpdate() {
-
     }
 
     public GameState getGameState() {

@@ -8,7 +8,7 @@ public class LoginMessage extends Message {
     private static final long serialVersionUID = 1L;
 
     private String username;
-    private UUID userId, secret;
+    private UUID userId;
 
     public LoginMessage(UUID userId, String username) {
         super(MessageType.LOGIN);
@@ -22,10 +22,6 @@ public class LoginMessage extends Message {
 
     public UUID getUserId() {
         return userId;
-    }
-
-    public UUID getSecret() {
-        return secret;
     }
 
     @Override

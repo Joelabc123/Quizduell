@@ -99,7 +99,6 @@ public class MainGameFrame extends JFrame {
             statisticsPanel = new StatisticsPanel(this);
             mainPanel.add(statisticsPanel, "statistics");
         }
-        statisticsPanel.setFinalStatistics(scorePanel.getLeftScore(), scorePanel.getRightScore());
         cardLayout.show(mainPanel, "statistics");
     }
 
