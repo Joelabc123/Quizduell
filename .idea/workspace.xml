@@ -4,21 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Initialize ClientHandler with GameManager instance for improved game management">
+    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Refactor CategoryRound and GameState to enhance game outcome management and support multiple answers">
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/GameOverMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GameInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/CategoryWheelPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/CategoryWheelPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/LobbyHostPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/LobbyHostPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/LobbyJoinPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/LobbyJoinPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/LobbyStartPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/LobbyStartPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/gui/MainGameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/MainGameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/gui/QuestionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/QuestionPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/gui/ScoreAndCategoriesPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/ScoreAndCategoriesPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/CategoryRound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/CategoryRound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/QuestionRound.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/XMLReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/messages/AnswerQuestionMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/AnswerQuestionMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/StatisticsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/StatisticsPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/messages/LoginMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/LoginMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/messages/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/MessageType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/GameState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/QuizGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/QuizGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,13 +32,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -139,6 +148,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Server" />
+        <item itemvalue="Application.Server" />
       </list>
     </recent_temporary>
   </component>
@@ -196,6 +206,10 @@
       <workItem from="1741463627599" duration="766000" />
       <workItem from="1741513061110" duration="10923000" />
       <workItem from="1741533714054" duration="5115000" />
+      <workItem from="1741595415969" duration="2583000" />
+      <workItem from="1741608221243" duration="17772000" />
+      <workItem from="1741635505857" duration="121000" />
+      <workItem from="1741682986661" duration="18729000" />
     </task>
     <task id="LOCAL-00001" summary="Finished DB">
       <option name="closed" value="true" />
@@ -277,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741374814325</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Refactor CategoryRound and GameState to enhance game outcome management and support multiple answers">
+      <option name="closed" value="true" />
+      <created>1741684614241</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1741684614241</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +327,8 @@
     <MESSAGE value="Refactor messaging classes and update game state management for improved gameplay flow" />
     <MESSAGE value="Refactor game state management and enhance lobby functionality with new panels and serialization support" />
     <MESSAGE value="Refactor game state management and add new messaging types for lobby and gameplay updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor game state management and add new messaging types for lobby and gameplay updates" />
+    <MESSAGE value="Refactor CategoryRound and GameState to enhance game outcome management and support multiple answers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor CategoryRound and GameState to enhance game outcome management and support multiple answers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

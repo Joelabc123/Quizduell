@@ -90,6 +90,7 @@ public class MainGameFrame extends JFrame {
             mainPanel.add(questionPanel, "question");
         }
         questionPanel.resetRound();
+
         cardLayout.show(mainPanel, "question");
     }
 
@@ -98,7 +99,6 @@ public class MainGameFrame extends JFrame {
             statisticsPanel = new StatisticsPanel(this);
             mainPanel.add(statisticsPanel, "statistics");
         }
-        statisticsPanel.setFinalStatistics(scorePanel.getLeftScore(), scorePanel.getRightScore());
         cardLayout.show(mainPanel, "statistics");
     }
 

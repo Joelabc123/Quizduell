@@ -2,6 +2,7 @@ package client;
 
 import client.gui.MainGameFrame;
 import protocol.messages.*;
+
 import javax.swing.*;
 import java.io.*;
 import java.net.Socket;
@@ -61,7 +62,7 @@ public class ClientHandler {
                             System.out.println("Gamestate : " + hostedLobbyMessage.getGameState().getLobbyCode());
                             gameManager.hostedLobbyMessage(hostedLobbyMessage);
                             break;
-                        case "PlayerTurnMessage": //TODO: PlayerTurnMessageUmschalterImServer
+                        case "PlayerTurnMessage":
                             System.out.println("Case PlayerTurnMessage");
                             PlayerTurnMessage playerTurnMessage = (PlayerTurnMessage) received;
                             gameManager.playerTurnMessage(playerTurnMessage);
@@ -73,22 +74,27 @@ public class ClientHandler {
                             System.out.println("ClientHandler: Received SendCategoriesMessage" + sendCategoriesMessage.getGameState().getCurrentRound());
                             gameManager.sendCategoriesMessage(sendCategoriesMessage);
                             break;
+                        case "GameOverMessage":
+                            System.out.println("Case GameOverMessage");
+                            GameOverMessage gameOverMessage = (GameOverMessage) received;
+                            gameManager.gameOverMessage(gameOverMessage);
+                            break;
                         case "ErrorMessage":
                             try {
                                 ErrorMessage errorMessage = (ErrorMessage) received;
-                                if(errorMessage.getErrorType().equals(ErrorType.SERVER_CLOSED)) {
+                                if (errorMessage.getErrorType().equals(ErrorType.SERVER_CLOSED)) {
                                     showError("Server wurde geschlossen.");
                                     System.exit(1);
                                 }
-                                if(errorMessage.getErrorType().equals(ErrorType.INVALID_ACTION)) {
+                                if (errorMessage.getErrorType().equals(ErrorType.INVALID_ACTION)) {
                                     showError("Invalide Aktion.");
                                     System.exit(1);
                                 }
-                                if(errorMessage.getErrorType().equals(ErrorType.UNKNOWN_ERROR)) {
+                                if (errorMessage.getErrorType().equals(ErrorType.UNKNOWN_ERROR)) {
                                     showError("Unbekannter Fehler.");
                                     System.exit(1);
                                 }
-                                if(errorMessage.getErrorType().equals(ErrorType.AUTHENTICATION_FAILED)) {
+                                if (errorMessage.getErrorType().equals(ErrorType.AUTHENTICATION_FAILED)) {
                                     showError("Falscher Lobbycode.");
 
                                 }
