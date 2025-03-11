@@ -8,14 +8,14 @@ import java.util.*;
 
 public class QuizGame implements Game, Runnable {
 
-    private ArrayList<Category> aviabaleCategories = new ArrayList<>();
+    private ArrayList<Category> availableCategories = new ArrayList<>();
 
     private Player playerA, playerB;
     private GameState gameState = null;
 
     public QuizGame(ArrayList<Category> categories) {
         this.gameState = new GameState(Server.quizReader.getEmptyCategories());
-        this.aviabaleCategories = categories;
+        this.availableCategories = categories;
     }
 
     public void run() {
@@ -49,33 +49,32 @@ public class QuizGame implements Game, Runnable {
             gameState.setSelectCategoryStarted(date);
             gameState.setSelectCategoryFinished(new Date(date.getTime() + 10 * 1000));
 
+            System.out.println(playerA.getUsername() + " " + playerB.getUsername());
+            System.out.println(playerA.getId() + " " + playerB.getId());
+
             gameState.addPlayer(playerA.getId(), playerA.getUsername());
             gameState.addPlayer(playerB.getId(), playerB.getUsername());
 
             this.gameState = gameState;
 
+
+            System.out.println("turnPlayerA: " + gameState.getTurnPlayerA());
+            System.out.println("turnPlayerB: " + gameState.getTurnPlayerB());
+
             System.out.println("added players");
             playerA.sendMessage(new StartGameMessage(gameState));
             playerB.sendMessage(new StartGameMessage(gameState));
 
+            GameState gameState2 = new GameState(this.getGameState());
 
-            PlayerTurnMessage playerTurnMessage = new PlayerTurnMessage();
-            if(gameState.isPlayerTurn()){
-                playerTurnMessage.setPlayerTurn(true);
-                playerA.sendMessage(playerTurnMessage);
+            playerA.sendMessage(new PlayerTurnMessage(gameState2));
+            playerB.sendMessage(new PlayerTurnMessage(gameState2));
 
-                playerTurnMessage.setPlayerTurn(false);
-                playerB.sendMessage(new PlayerTurnMessage());
-            } else {
-                playerTurnMessage.setPlayerTurn(true);
-                playerB.sendMessage(playerTurnMessage);
-
-                playerTurnMessage.setPlayerTurn(false);
-                playerA.sendMessage(new PlayerTurnMessage());
-            }
+            this.gameState = gameState2;
         }
         return null;
     }
+
 
     public void broadcast(Message msg) {
         if (playerA != null) {
@@ -116,7 +115,7 @@ public class QuizGame implements Game, Runnable {
         return playerB;
     }
 
-    public ArrayList<Category> getAviabaleCategories() {
-        return aviabaleCategories;
+    public ArrayList<Category> getAvailableCategories() {
+        return availableCategories;
     }
 }

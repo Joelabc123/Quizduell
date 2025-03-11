@@ -95,7 +95,7 @@ public class Player implements Runnable {
 
                         QuizGame quizGame = server.getGame(this);
                         // Finde die richtige Kategorie und füge eine neue Runde hinzu
-                        for (Category c : quizGame.getAviabaleCategories()) {
+                        for (Category c : quizGame.getAvailableCategories()) {
                             if (c.getKatID().equals(selectedCategory.getKatID())) {
                                 System.out.println("kategorie gefunden" + c.getName());
                                 System.out.println("c" + c.getQuestions().getFirst().getFrageName());
@@ -117,33 +117,47 @@ public class Player implements Runnable {
 
                         SendCategoriesMessage scm = new SendCategoriesMessage(gameState);
                         quizGame.broadcast(scm);
-                        quizGame.getAviabaleCategories().remove(selectedCategory);
+                        quizGame.getAvailableCategories().remove(selectedCategory);
                         break;
                     case MessageType.ANSWER_QUESTION:
                         AnswerQuestionMessage answerQuestionMessage = (AnswerQuestionMessage) received;
-                        // Hier nehmen wir an, dass answerQuestionMessage eine Liste von Booleans enthält,
-                        // die die Antworten repräsentieren (oder alternativ andere Parameter).
                         ArrayList<Boolean> answerList = answerQuestionMessage.getAnswers();
+                        System.out.println("Received AnswerQuestionMessage: " + answerList);
                         QuizGame answerGame = server.getGame(this);
-                        CategoryRound currentCategoryRound = answerGame.getGameState().getCurrentRound();
+                        GameState gs = answerGame.getGameState();
+                        CategoryRound currentRound = gs.getCurrentRound();
 
-                        // Unterscheide, ob die Nachricht von playerA oder playerB stammt:
+
+                        // Ermitteln, von welchem Spieler die Antwort kommt, und kopieren die Antwortliste
                         if (this.getId().equals(answerGame.getPlayerA().getId())) {
-                            // Verarbeite die Antwort von playerA:
-                            currentCategoryRound.setAnswersPlayerA(answerList);
-                            System.out.println("Antwort von Player A erhalten.");
+                            currentRound.setAnswersPlayerA(new ArrayList<>(answerList));
+                            System.out.println("Antwort von Player A erhalten: " + answerList);
                         } else if (this.getId().equals(answerGame.getPlayerB().getId())) {
-                            // Verarbeite die Antwort von playerB:
-                            currentCategoryRound.setAnswersPlayerB(answerList);
-                            System.out.println("Antwort von Player B erhalten.");
+                            currentRound.setAnswersPlayerB(new ArrayList<>(answerList));
+                            System.out.println("Antwort von Player B erhalten: " + answerList);
                         } else {
                             System.out.println("Antwort von unbekanntem Spieler: " + this.getId());
                         }
 
-                        GameState gameState2 = new GameState(answerGame.getGameState());
-
-
+                        // Gewinnerberechnung und Scoreaktualisierung nur, wenn beide Spieler ihre Antworten (z.B. 3 Antworten) abgegeben haben:
+                        if (currentRound.getAnswersPlayerA().size() == 3 && currentRound.getAnswersPlayerB().size() == 3) {
+                            gs.switchPlayerTurn();
+                            currentRound.setWinner();
+                            System.out.println("Winner213213213213: " + currentRound.getWinner());
+                            gs.updateScores();
+                            GameState gameState2 = new GameState(gs); // Tiefe Kopie
+                            System.out.println("Winner: " + currentRound.getWinner());
+                            System.out.println("Score Player A: " + gs.getScorePlayerA() + ", Score Player B: " + gs.getScorePlayerB());
+                            // Sende Update-Nachricht an alle Spieler:
+                            answerGame.broadcast(new UpdateGameMessage(gameState2));
+                            // Falls erforderlich, zusätzlich:
+                            System.out.println("turnPlayerB: " + gameState2.getTurnPlayerB());
+                            System.out.println("turnPlayerB: " + gameState2.getTurnPlayerB());
+                            server.getGame(this).broadcast(new PlayerTurnMessage(gameState2));
+                        }
                         break;
+
+
                 }
             }
         } catch (IOException | ClassNotFoundException e) {
@@ -153,7 +167,7 @@ public class Player implements Runnable {
     }
 
     public void sendMessage(Message message) {
-    System.out.println("Sending: " + message.getClass().getSimpleName());
+        System.out.println("Sending: " + message.getClass().getSimpleName());
 
         try {
             out.writeObject(message);
@@ -199,7 +213,6 @@ public class Player implements Runnable {
             cr.addQuestion(q);
         }
     }
-
 
 
 }

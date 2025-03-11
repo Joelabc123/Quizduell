@@ -1,5 +1,6 @@
 package client;
 
+import protocol.GameOutcome;
 import protocol.Category;
 import protocol.Question;
 import protocol.messages.*;
@@ -55,8 +56,20 @@ public class GameManager implements GameInterface {
     @Override
     public void updateGameMessage(UpdateGameMessage updateGameMessage) {
         this.latestGameState = updateGameMessage.getGameState();
-        // Zusätzliche Logik – z. B. MainGameFrame über update informieren
+        mainGameFrame.switchScorePanel();
+        int scorePlayerA = latestGameState.getScorePlayerA();
+        int scorePlayerB = latestGameState.getScorePlayerB();
+        GameOutcome gameOutcome = (latestGameState.getCurrentRound() != null) ?
+                latestGameState.getCurrentRound().getWinner() : null;
+
+        System.out.println("ScorePlayerA: " + scorePlayerA);
+        System.out.println("ScorePlayerB: " + scorePlayerB);
+        System.out.println("GameOutcome: " + gameOutcome);
+
+        mainGameFrame.getScorePanel().setScores(scorePlayerA, scorePlayerB);
+        mainGameFrame.getScorePanel().addCategoryWinner(latestGameState.getCurrentRound().getCategory().getName(),latestGameState.getCurrentRound().getWinner());
     }
+
 
     @Override
     public void joinLobby(int lobbyCode) {
@@ -71,7 +84,10 @@ public class GameManager implements GameInterface {
 
     @Override
     public void answerQuestion(ArrayList<Boolean> answers) {
-        this.clientHandler.sendMessage(new AnswerQuestionMessage(answers));
+        System.out.println("Sending Answers: " + answers);
+        System.out.println("Sending Answers: " + answers.size());
+        System.out.println("Sending Answers: " + answers.toString());
+        this.clientHandler.sendMessage(new AnswerQuestionMessage(new ArrayList<>(answers)));
     }
 
     @Override
@@ -85,7 +101,17 @@ public class GameManager implements GameInterface {
 
     @Override
     public void playerTurnMessage(PlayerTurnMessage playerTurnMessage) {
-        mainGameFrame.getScorePanel().setChooseCategoryButtonVisible(playerTurnMessage.getPlayerTurn());
+        this.latestGameState = playerTurnMessage.getGameState();
+        System.out.println("PlayerTurnMessage: ");
+        if(latestGameState.playerA.equals(this.userId)) {
+            System.out.println("Player A" + latestGameState.getTurnPlayerA());
+            mainGameFrame.getScorePanel().setChooseCategoryButtonVisible(playerTurnMessage.getGameState().getTurnPlayerA());
+
+        } else if(latestGameState.playerB.equals(this.userId)) {
+            System.out.println("Player B" + latestGameState.getTurnPlayerB());
+            mainGameFrame.getScorePanel().setChooseCategoryButtonVisible(playerTurnMessage.getGameState().getTurnPlayerB());
+
+        }
     }
 
     @Override
@@ -156,6 +182,7 @@ public class GameManager implements GameInterface {
                 answerTexts.get(2),
                 answerTexts.get(3)
         );
+
     }
 
 }

@@ -2,6 +2,7 @@ package server;
 
 import protocol.Category;
 import protocol.CategoryRound;
+import protocol.GameOutcome;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -11,14 +12,12 @@ public class GameState implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    // Enum für den Spielstatus
     public enum GameStatus {
         LOBBY_WAITING,
         IN_GAME,
         GAME_OVER
     }
 
-    // Instanzfelder
     private final UUID id = UUID.randomUUID();
     public UUID playerA, playerB;
     public String playerAName, playerBName;
@@ -28,20 +27,23 @@ public class GameState implements Serializable {
     private ArrayList<CategoryRound> rounds = new ArrayList<>();
     private GameStatus status = GameStatus.LOBBY_WAITING;
     private Date selectCategoryStarted, selectCategoryFinished;
-    private boolean playerTurn;
+    private boolean turnPlayerA;
+    private boolean turnPlayerB;
     private int turnQuestionRound;
+    private int scorePlayerA;
+    private int scorePlayerB;
 
-
-    // Konstruktor: Initialisierung des GameState mit verfügbaren Kategorien
     public GameState(ArrayList<Category> availableCategories) {
         this.lobbyCode = (int) (Math.random() * 9000) + 1000;
         this.availableCategories = new ArrayList<>(availableCategories);
         this.gameOver = false;
-        this.playerTurn = false;
         this.turnQuestionRound = 0;
+        this.scorePlayerA = 0;
+        this.scorePlayerB = 0;
+        this.turnPlayerA = true;
+        this.turnPlayerB = false;
     }
 
-    // Kopierkonstruktor: Erstellt tiefe Kopien der Listen und Datumseinträge
     public GameState(GameState gameState) {
         this.playerA = gameState.playerA;
         this.playerB = gameState.playerB;
@@ -49,20 +51,23 @@ public class GameState implements Serializable {
         this.playerBName = gameState.playerBName;
         this.status = gameState.status;
         this.lobbyCode = gameState.lobbyCode;
-        // Tiefe Kopie der Listen
-        this.rounds = new ArrayList<>(gameState.rounds);
-        System.out.println("rounds: " + rounds);
-        this.availableCategories = new ArrayList<>(gameState.availableCategories);
+        // Tiefe Kopie der Rounds
+        this.rounds = new ArrayList<>();
+        for (CategoryRound cr : gameState.rounds) {
+            this.rounds.add(new CategoryRound(cr));
+        }
         this.gameOver = gameState.gameOver;
-        // Datumseinträge als Kopien
+        this.availableCategories = new ArrayList<>(gameState.availableCategories);
         this.selectCategoryStarted = (gameState.selectCategoryStarted != null) ? new Date(gameState.selectCategoryStarted.getTime()) : null;
         this.selectCategoryFinished = (gameState.selectCategoryFinished != null) ? new Date(gameState.selectCategoryFinished.getTime()) : null;
-        this.playerTurn = gameState.playerTurn;
         this.turnQuestionRound = gameState.turnQuestionRound;
+        this.scorePlayerA = gameState.scorePlayerA;
+        this.scorePlayerB = gameState.scorePlayerB;
+        this.turnPlayerA = gameState.turnPlayerA;
+        this.turnPlayerB = gameState.turnPlayerB;
     }
 
-    // Getter und Setter
-
+    // Getter und Setter (wie gehabt)
     public UUID getId() {
         return id;
     }
@@ -124,7 +129,10 @@ public class GameState implements Serializable {
     }
 
     public void setRounds(ArrayList<CategoryRound> rounds) {
-        this.rounds = new ArrayList<>(rounds);
+        this.rounds = new ArrayList<>();
+        for (CategoryRound cr : rounds) {
+            this.rounds.add(new CategoryRound(cr));
+        }
     }
 
     public GameStatus getStatus() {
@@ -151,17 +159,42 @@ public class GameState implements Serializable {
         this.selectCategoryFinished = (selectCategoryFinished != null) ? new Date(selectCategoryFinished.getTime()) : null;
     }
 
-    public boolean isPlayerTurn() {
-        return playerTurn;
+    public boolean getTurnPlayerA() {
+        return turnPlayerA;
     }
 
-    public void setPlayerTurn(boolean playerTurn) {
-        this.playerTurn = playerTurn;
+    public boolean getTurnPlayerB() {
+        return turnPlayerB;
     }
 
-    // Weitere Methoden zur Spielzustandsverwaltung
+    public int getTurnQuestionRound() {
+        return turnQuestionRound;
+    }
 
-    public GameState addPlayer(UUID player, String username) {
+    public void setTurnQuestionRound(int turnQuestionRound) {
+        this.turnQuestionRound = turnQuestionRound;
+    }
+
+    public int getScorePlayerA() {
+        return scorePlayerA;
+    }
+
+    public int getScorePlayerB() {
+        return scorePlayerB;
+    }
+
+    public void switchPlayerTurn() {
+        if(turnPlayerA) {
+            setTurnPlayerA(false);
+            setTurnPlayerB(true);
+
+        } else {
+            setTurnPlayerA(true);
+            setTurnPlayerB(false);
+        }
+    }
+
+    public void addPlayer(UUID player, String username) {
         if (playerA == null) {
             playerA = player;
             playerAName = username;
@@ -169,7 +202,6 @@ public class GameState implements Serializable {
             playerB = player;
             playerBName = username;
         }
-        return this;
     }
 
     public GameState removePlayer(UUID player) {
@@ -193,7 +225,7 @@ public class GameState implements Serializable {
         if (rounds.isEmpty()) {
             return null;
         }
-        return rounds.getLast();
+        return rounds.get(rounds.size() - 1);
     }
 
     public Category getCategoryByName(String categoryName) {
@@ -205,11 +237,25 @@ public class GameState implements Serializable {
         return null;
     }
 
-    public int getTurnQuestionRound() {
-        return turnQuestionRound;
+    public void updateScores(){
+        int scoreA = 0;
+        int scoreB = 0;
+        for (CategoryRound round : rounds) {
+            if (round.getWinner() == GameOutcome.PLAYER_A) {
+                scoreA++;
+            } else if (round.getWinner() == GameOutcome.PLAYER_B) {
+                scoreB++;
+            }
+        }
+        scorePlayerA = scoreA;
+        scorePlayerB = scoreB;
     }
 
-    public void setTurnQuestionRound(int turnQuestionRound) {
-        this.turnQuestionRound = turnQuestionRound;
+    public void setTurnPlayerA(boolean turnPlayerA) {
+        this.turnPlayerA = turnPlayerA;
+    }
+
+    public void setTurnPlayerB(boolean turnPlayerB) {
+        this.turnPlayerB = turnPlayerB;
     }
 }

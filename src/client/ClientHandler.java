@@ -61,7 +61,7 @@ public class ClientHandler {
                             System.out.println("Gamestate : " + hostedLobbyMessage.getGameState().getLobbyCode());
                             gameManager.hostedLobbyMessage(hostedLobbyMessage);
                             break;
-                        case "PlayerTurnMessage": //TODO: PlayerTurnMessageUmschalterImServer
+                        case "PlayerTurnMessage":
                             System.out.println("Case PlayerTurnMessage");
                             PlayerTurnMessage playerTurnMessage = (PlayerTurnMessage) received;
                             gameManager.playerTurnMessage(playerTurnMessage);

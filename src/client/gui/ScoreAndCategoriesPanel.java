@@ -1,6 +1,7 @@
 package client.gui;
 
-import protocol.Category;
+import protocol.GameOutcome;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -117,7 +118,7 @@ public class ScoreAndCategoriesPanel extends JPanel {
     // Externe Methode, um das Ergebnis einer Kategorie anzuzeigen.
     // Wenn der Parameter "winner" "unentschieden" (case-insensitive) ist,
     // werden beide Seiten als "Unentschieden" angezeigt.
-    public void addCategoryWinner(String category, String winner) {
+    public void addCategoryWinner(String category, GameOutcome winner) {
         JPanel rowPanel = new JPanel(new BorderLayout());
         rowPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
         rowPanel.setBackground(new Color(230, 244, 255));
@@ -131,23 +132,22 @@ public class ScoreAndCategoriesPanel extends JPanel {
         catLabel.setFont(new Font("Arial", Font.BOLD, 16));
         rightLabel.setFont(new Font("Arial", Font.PLAIN, 14));
 
-        if (winner.equalsIgnoreCase("unentschieden")) {
+        if (winner == GameOutcome.DRAW) {
             leftLabel.setText("Unentschieden");
             rightLabel.setText("Unentschieden");
             leftLabel.setForeground(Color.ORANGE);
             rightLabel.setForeground(Color.ORANGE);
-        } else if (winner.equalsIgnoreCase("left")) {
+        } else if (winner == GameOutcome.PLAYER_A) {
             leftLabel.setText("Gewonnen");
             leftLabel.setForeground(new Color(76, 175, 80));
             rightLabel.setText("");
-            leftScore++;
-        } else if (winner.equalsIgnoreCase("right")) {
+            // Keine zusätzliche Inkrementierung hier!
+        } else if (winner == GameOutcome.PLAYER_B) {
             rightLabel.setText("Gewonnen");
             rightLabel.setForeground(new Color(76, 175, 80));
             leftLabel.setText("");
-            rightScore++;
+            // Keine zusätzliche Inkrementierung hier!
         } else {
-            // Falls ein anderer String übergeben wurde, geben wir ihn in der Mitte aus:
             catLabel.setText(category + " - " + winner);
         }
 
@@ -163,6 +163,7 @@ public class ScoreAndCategoriesPanel extends JPanel {
         categoriesPanel.repaint();
     }
 
+
     private void updateScoreLabel() {
         scoreLabel.setText("Score: " + leftScore + " - " + rightScore);
     }
@@ -170,5 +171,6 @@ public class ScoreAndCategoriesPanel extends JPanel {
     // Neue Methode zum Setzen bzw. Sichtbarmachen des "Kategorie wählen"-Buttons:
     public void setChooseCategoryButtonVisible(boolean visible) {
         chooseCategoryButton.setVisible(visible);
+        repaint();
     }
 }

@@ -4,21 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Initialize ClientHandler with GameManager instance for improved game management">
+    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Refactor AnswerQuestionMessage and CategoryRound to support multiple answers and improve game state management">
+      <change afterPath="$PROJECT_DIR$/src/protocol/GameOutcome.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GameInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GameManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/gui/MainGameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/MainGameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/gui/QuestionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/QuestionPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/gui/ScoreAndCategoriesPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/ScoreAndCategoriesPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/protocol/CategoryRound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/CategoryRound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/QuestionRound.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/XMLReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/messages/AnswerQuestionMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/AnswerQuestionMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/messages/PlayerTurnMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/PlayerTurnMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/GameState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/QuizGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/QuizGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Usernames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Usernames.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,13 +27,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -139,6 +143,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Server" />
+        <item itemvalue="Application.Server" />
       </list>
     </recent_temporary>
   </component>
@@ -196,6 +201,10 @@
       <workItem from="1741463627599" duration="766000" />
       <workItem from="1741513061110" duration="10923000" />
       <workItem from="1741533714054" duration="5115000" />
+      <workItem from="1741595415969" duration="2583000" />
+      <workItem from="1741608221243" duration="17772000" />
+      <workItem from="1741635505857" duration="121000" />
+      <workItem from="1741682986661" duration="1077000" />
     </task>
     <task id="LOCAL-00001" summary="Finished DB">
       <option name="closed" value="true" />

@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class Usernames {
     private static final String[] ADJECTIVES = {
-            "Wühlige"
+            "Wühlige","A","B","C","D","E"
     };
 
     private static final String[] NOUNS = {
-            "Wühlmaus"
+            "Wühlmaus","Käfer","C","D","E"
     };
 
     private static final Random RANDOM = new Random();

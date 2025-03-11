@@ -5,10 +5,11 @@ import server.GameState;
 public class PlayerTurnMessage extends Message {
     private static final long serialVersionUID = 1L;
 
-    boolean playerTurn;
+    private GameState gameState;
 
-    public PlayerTurnMessage() {
+    public PlayerTurnMessage(GameState gameState) {
         super(MessageType.PLAYER_TURN);
+        this.gameState = gameState;
     }
 
     @Override
@@ -16,11 +17,7 @@ public class PlayerTurnMessage extends Message {
         return MessageType.PLAYER_TURN;
     }
 
-    public boolean getPlayerTurn() {
-        return playerTurn;
-    }
-
-    public void setPlayerTurn(boolean playerTurn) {
-        this.playerTurn = playerTurn;
+    public GameState getGameState() {
+        return gameState;
     }
 }

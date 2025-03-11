@@ -1,0 +1,168 @@
+Index: src/client/GameManager.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package client;\r\n\r\nimport protocol.Category;\r\nimport protocol.Question;\r\nimport protocol.messages.*;\r\nimport server.Answer;\r\nimport server.GameState;\r\nimport client.gui.MainGameFrame;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.Collections;\r\nimport java.util.UUID;\r\n\r\npublic class GameManager implements GameInterface {\r\n\r\n    private UUID userId;\r\n    private String username;\r\n\r\n    private GameState latestGameState;\r\n    private MainGameFrame mainGameFrame; // Neuer Verweis\r\n\r\n    private final ClientHandler clientHandler;\r\n\r\n    public GameManager(ClientHandler clientHandler) {\r\n        this.clientHandler = clientHandler;\r\n    }\r\n\r\n    // Neuer Setter, um den MainGameFrame zu setzen\r\n    public void setMainGameFrame(MainGameFrame mainGameFrame) {\r\n        this.mainGameFrame = mainGameFrame;\r\n    }\r\n\r\n    // Neuer Getter, falls benötigt\r\n    public MainGameFrame getMainGameFrame() {\r\n        return mainGameFrame;\r\n    }\r\n\r\n    public GameState getLatestGameState() {\r\n        return latestGameState;\r\n    }\r\n\r\n    @Override\r\n    public void loginMessage(LoginMessage loginMessage) {\r\n        this.userId = loginMessage.getUserId();\r\n        this.username = loginMessage.getUsername();\r\n\r\n        System.out.println(\"Logged in as \" + username);\r\n    }\r\n\r\n    @Override\r\n    public void hostLobby() {\r\n        this.clientHandler.sendMessage(new HostLobbyMessage());\r\n    }\r\n\r\n    @Override\r\n    public void updateGameMessage(UpdateGameMessage updateGameMessage) {\r\n        this.latestGameState = updateGameMessage.getGameState();\r\n        // Zusätzliche Logik – z. B. MainGameFrame über update informieren\r\n    }\r\n\r\n    @Override\r\n    public void joinLobby(int lobbyCode) {\r\n        this.clientHandler.sendMessage(new JoinLobbyMessage(lobbyCode));\r\n    }\r\n\r\n    @Override\r\n    public void selectCategory(String categoryName) {\r\n        Category category = latestGameState.getCategoryByName(categoryName);\r\n        this.clientHandler.sendMessage(new SelectCategoryMessage(category));\r\n    }\r\n\r\n    @Override\r\n    public void answerQuestion(Answer answer, String fId) {\r\n        this.clientHandler.sendMessage(new AnswerQuestionMessage(answer, fId));\r\n    }\r\n\r\n    @Override\r\n    public void startGameMessage(StartGameMessage startGameMessage) {\r\n        this.latestGameState = startGameMessage.getGameState();\r\n        mainGameFrame.switchScorePanel();\r\n        mainGameFrame.getScorePanel().setLeftPlayerName(latestGameState.getPlayerAName());\r\n        mainGameFrame.getScorePanel().setRightPlayerName(latestGameState.getPlayerBName());\r\n        System.out.println(\"Setting Names\" + latestGameState.getPlayerAName() + \" \" + latestGameState.getPlayerBName());\r\n    }\r\n\r\n    @Override\r\n    public void playerTurnMessage(PlayerTurnMessage playerTurnMessage) {\r\n        mainGameFrame.getScorePanel().setChooseCategoryButtonVisible(playerTurnMessage.getPlayerTurn());\r\n    }\r\n\r\n    @Override\r\n    public void hostedLobbyMessage(HostedLobbyMessage hostedLobbyMessage) {\r\n        this.latestGameState = hostedLobbyMessage.getGameState();\r\n        System.out.println(\"Gamestate GameManager: \" + hostedLobbyMessage.getGameState().getLobbyCode());\r\n        mainGameFrame.getLobbyHostPanel().setLobbyId(String.valueOf(latestGameState.getLobbyCode()));\r\n    }\r\n\r\n    @Override\r\n    public void sendCategoriesMessage(SendCategoriesMessage sendCategoriesMessage) {\r\n        this.latestGameState = sendCategoriesMessage.getGameState();\r\n        setQuestions();\r\n    }\r\n\r\n    //HELPER\r\n    @Override\r\n    public void authenticationError() {\r\n        mainGameFrame.getLobbyJoinPanel().showAuthenticationError();\r\n    }\r\n\r\n    public void setCategories(){\r\n        mainGameFrame.switchCategoryWheelPanel();\r\n        ArrayList<Category> catList = new ArrayList<>(latestGameState.getAvailableCategories());\r\n        Collections.shuffle(catList);\r\n        String[] randomCategories = catList.stream()\r\n                .limit(3)\r\n                .map(Category::getName)\r\n                .toArray(String[]::new);\r\n\r\n        mainGameFrame.getCategoryWheelPanel().setCategories(randomCategories);\r\n    }\r\n\r\n    public void setQuestions(){\r\n        String kat = latestGameState.getCurrentRound().getCategory().getName();\r\n        // Wähle eine zufällige Frage aus der Liste und entferne sie aus der Liste\r\n        Question randomQuestion = latestGameState.getCurrentRound().getCategory().getQuestions()\r\n                .remove((int)(Math.random() * latestGameState.getCurrentRound().getCategory().getQuestions().size()));\r\n        String randomQuestionText = randomQuestion.getFrageName();\r\n        ArrayList<String> answerTexts = randomQuestion.getAnswerOptions();\r\n        System.out.println(\"AnswerTexts: \" + answerTexts);\r\n        Answer answer = randomQuestion.getCorrectAnswer();\r\n\r\n        mainGameFrame.switchQuestionPanel();\r\n        mainGameFrame.getQuestionPanel().setCategory(kat);\r\n        mainGameFrame.getQuestionPanel().setQuestionText(randomQuestionText);\r\n        mainGameFrame.getQuestionPanel().setCorrectAnswer(answer);\r\n        // Übergibt alle vier Antwortmöglichkeiten an die QuestionPanel-Methode\r\n        mainGameFrame.getQuestionPanel().setAnswerOptions(\r\n                answerTexts.get(0),\r\n                answerTexts.get(1),\r\n                answerTexts.get(2),\r\n                answerTexts.get(3)\r\n        );\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/client/GameManager.java b/src/client/GameManager.java
+--- a/src/client/GameManager.java	(revision 6f721c8b03062ea722eb7dfd3f18443cb76f6264)
++++ b/src/client/GameManager.java	(date 1741539824296)
+@@ -55,7 +55,8 @@
+     @Override
+     public void updateGameMessage(UpdateGameMessage updateGameMessage) {
+         this.latestGameState = updateGameMessage.getGameState();
+-        // Zusätzliche Logik – z. B. MainGameFrame über update informieren
++        mainGameFrame.switchScorePanel();
++        mainGameFrame.getScorePanel().set
+     }
+ 
+     @Override
+Index: src/client/gui/ScoreAndCategoriesPanel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package client.gui;\r\n\r\nimport protocol.Category;\r\n\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\nimport java.awt.event.ActionEvent;\r\nimport java.awt.event.ActionListener;\r\nimport java.util.ArrayList;\r\nimport java.util.Collections;\r\n\r\npublic class ScoreAndCategoriesPanel extends JPanel {\r\n    private MainGameFrame mainFrame;\r\n    private JLabel leftPlayerNameLabel;\r\n    private JLabel rightPlayerNameLabel;\r\n    private JLabel scoreLabel;\r\n    private JPanel categoriesPanel;\r\n    private JButton chooseCategoryButton; // Als Klassenfeld\r\n\r\n    private int leftScore = 0;\r\n    private int rightScore = 0;\r\n\r\n    public ScoreAndCategoriesPanel(MainGameFrame mainFrame) {\r\n        this.mainFrame = mainFrame;\r\n        initUI();\r\n    }\r\n\r\n    public int getLeftScore() {\r\n        return leftScore;\r\n    }\r\n\r\n    public int getRightScore() {\r\n        return rightScore;\r\n    }\r\n\r\n    public void resetScores() {\r\n        leftScore = 0;\r\n        rightScore = 0;\r\n        scoreLabel.setText(\"Score: 0 - 0\");\r\n        categoriesPanel.removeAll();\r\n        categoriesPanel.revalidate();\r\n        categoriesPanel.repaint();\r\n    }\r\n\r\n    private void initUI() {\r\n        setLayout(new BorderLayout());\r\n\r\n        // Header: Quizduell-Blauer Bereich mit Spielernamen und Titel\r\n        JPanel header = new JPanel(new BorderLayout());\r\n        header.setBackground(new Color(30, 144, 255));\r\n        header.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));\r\n\r\n        leftPlayerNameLabel = new JLabel(\"Spieler Links\", SwingConstants.LEFT);\r\n        leftPlayerNameLabel.setForeground(Color.WHITE);\r\n        leftPlayerNameLabel.setFont(new Font(\"Arial\", Font.BOLD, 16));\r\n        header.add(leftPlayerNameLabel, BorderLayout.WEST);\r\n\r\n        rightPlayerNameLabel = new JLabel(\"Spieler Rechts\", SwingConstants.RIGHT);\r\n        rightPlayerNameLabel.setForeground(Color.WHITE);\r\n        rightPlayerNameLabel.setFont(new Font(\"Arial\", Font.BOLD, 16));\r\n        header.add(rightPlayerNameLabel, BorderLayout.EAST);\r\n\r\n        JLabel titleLabel = new JLabel(\"QUIZDUELL - Score & Kategorien\", SwingConstants.CENTER);\r\n        titleLabel.setForeground(Color.WHITE);\r\n        titleLabel.setFont(new Font(\"Arial\", Font.BOLD, 24));\r\n        header.add(titleLabel, BorderLayout.CENTER);\r\n\r\n        add(header, BorderLayout.NORTH);\r\n\r\n        // Center: Score-Anzeige und Kategorienliste\r\n        JPanel centerPanel = new JPanel();\r\n        centerPanel.setLayout(new BoxLayout(centerPanel, BoxLayout.Y_AXIS));\r\n        centerPanel.setBackground(Color.WHITE);\r\n\r\n        scoreLabel = new JLabel(\"Score: 0 - 0\", SwingConstants.CENTER);\r\n        scoreLabel.setFont(new Font(\"Arial\", Font.BOLD, 20));\r\n        scoreLabel.setAlignmentX(Component.CENTER_ALIGNMENT);\r\n\r\n        centerPanel.add(Box.createVerticalStrut(20));\r\n        centerPanel.add(scoreLabel);\r\n        centerPanel.add(Box.createVerticalStrut(20));\r\n\r\n        categoriesPanel = new JPanel();\r\n        categoriesPanel.setLayout(new BoxLayout(categoriesPanel, BoxLayout.Y_AXIS));\r\n        categoriesPanel.setBackground(Color.WHITE);\r\n\r\n        JScrollPane scrollPane = new JScrollPane(categoriesPanel);\r\n        scrollPane.setBorder(null);\r\n        centerPanel.add(scrollPane);\r\n\r\n        add(centerPanel, BorderLayout.CENTER);\r\n\r\n        // Unten: Button \"Kategorie wählen\"\r\n        chooseCategoryButton = new JButton(\"Kategorie wählen\");\r\n        chooseCategoryButton.setBackground(new Color(76, 175, 80));\r\n        chooseCategoryButton.setForeground(Color.WHITE);\r\n        chooseCategoryButton.setFont(new Font(\"Arial\", Font.BOLD, 16));\r\n        chooseCategoryButton.setFocusPainted(false);\r\n        chooseCategoryButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                System.out.println(\"Button 'Kategorie wählen' gedrückt. Externe Logik muss switchCategoryWheelPanel() aufrufen.\");\r\n                mainFrame.getClientHandler().gameManager.setCategories();\r\n            }\r\n        });\r\n        add(chooseCategoryButton, BorderLayout.SOUTH);\r\n    }\r\n\r\n    // Separate Methoden zum Setzen der Spielernamen:\r\n    public void setLeftPlayerName(String leftName) {\r\n        leftPlayerNameLabel.setText(leftName);\r\n    }\r\n\r\n    public void setRightPlayerName(String rightName) {\r\n        rightPlayerNameLabel.setText(rightName);\r\n    }\r\n\r\n    public void addCategoryResult(String category, String winner) {\r\n        JPanel rowPanel = new JPanel(new BorderLayout());\r\n        rowPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));\r\n        rowPanel.setBackground(new Color(230, 244, 255));\r\n        rowPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 40));\r\n\r\n        JLabel leftLabel = new JLabel(\"\", SwingConstants.CENTER);\r\n        JLabel catLabel = new JLabel(category, SwingConstants.CENTER);\r\n        JLabel rightLabel = new JLabel(\"\", SwingConstants.CENTER);\r\n\r\n        catLabel.setFont(new Font(\"Arial\", Font.BOLD, 16));\r\n        leftLabel.setFont(new Font(\"Arial\", Font.PLAIN, 14));\r\n        rightLabel.setFont(new Font(\"Arial\", Font.PLAIN, 14));\r\n\r\n        switch (winner) {\r\n            case \"LEFT\":\r\n                leftScore++;\r\n                leftLabel.setText(\"Gewonnen\");\r\n                leftLabel.setForeground(new Color(76, 175, 80));\r\n                break;\r\n            case \"RIGHT\":\r\n                rightScore++;\r\n                rightLabel.setText(\"Gewonnen\");\r\n                rightLabel.setForeground(new Color(76, 175, 80));\r\n                break;\r\n            case \"TIE\":\r\n                leftScore++;\r\n                rightScore++;\r\n                leftLabel.setText(\"Unentschieden\");\r\n                rightLabel.setText(\"Unentschieden\");\r\n                leftLabel.setForeground(Color.ORANGE);\r\n                rightLabel.setForeground(Color.ORANGE);\r\n                break;\r\n        }\r\n\r\n        rowPanel.add(leftLabel, BorderLayout.WEST);\r\n        rowPanel.add(catLabel, BorderLayout.CENTER);\r\n        rowPanel.add(rightLabel, BorderLayout.EAST);\r\n\r\n        categoriesPanel.add(rowPanel);\r\n        categoriesPanel.add(Box.createVerticalStrut(5));\r\n\r\n        updateScoreLabel();\r\n        categoriesPanel.revalidate();\r\n        categoriesPanel.repaint();\r\n    }\r\n\r\n    private void updateScoreLabel() {\r\n        scoreLabel.setText(\"Score: \" + leftScore + \" - \" + rightScore);\r\n    }\r\n\r\n    // Neue Methode zum Setzen bzw. Sichtbarmachen des \"Kategorie wählen\"-Buttons:\r\n    public void setChooseCategoryButtonVisible(boolean visible) {\r\n        chooseCategoryButton.setVisible(visible);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/client/gui/ScoreAndCategoriesPanel.java b/src/client/gui/ScoreAndCategoriesPanel.java
+--- a/src/client/gui/ScoreAndCategoriesPanel.java	(revision 6f721c8b03062ea722eb7dfd3f18443cb76f6264)
++++ b/src/client/gui/ScoreAndCategoriesPanel.java	(date 1741539824293)
+@@ -1,13 +1,8 @@
+ package client.gui;
+ 
+ import protocol.Category;
+-
+ import javax.swing.*;
+ import java.awt.*;
+-import java.awt.event.ActionEvent;
+-import java.awt.event.ActionListener;
+-import java.util.ArrayList;
+-import java.util.Collections;
+ 
+ public class ScoreAndCategoriesPanel extends JPanel {
+     private MainGameFrame mainFrame;
+@@ -96,17 +91,14 @@
+         chooseCategoryButton.setForeground(Color.WHITE);
+         chooseCategoryButton.setFont(new Font("Arial", Font.BOLD, 16));
+         chooseCategoryButton.setFocusPainted(false);
+-        chooseCategoryButton.addActionListener(new ActionListener() {
+-            @Override
+-            public void actionPerformed(ActionEvent e) {
+-                System.out.println("Button 'Kategorie wählen' gedrückt. Externe Logik muss switchCategoryWheelPanel() aufrufen.");
+-                mainFrame.getClientHandler().gameManager.setCategories();
+-            }
++        chooseCategoryButton.addActionListener(e -> {
++            System.out.println("Button 'Kategorie wählen' gedrückt. Externe Logik muss switchCategoryWheelPanel() aufrufen.");
++            mainFrame.getClientHandler().gameManager.setCategories();
+         });
+         add(chooseCategoryButton, BorderLayout.SOUTH);
+     }
+ 
+-    // Separate Methoden zum Setzen der Spielernamen:
++    // Externe Setter für Spielernamen:
+     public void setLeftPlayerName(String leftName) {
+         leftPlayerNameLabel.setText(leftName);
+     }
+@@ -115,7 +107,17 @@
+         rightPlayerNameLabel.setText(rightName);
+     }
+ 
+-    public void addCategoryResult(String category, String winner) {
++    // Externe Methode zum Setzen beider Scores
++    public void setScores(int left, int right) {
++        this.leftScore = left;
++        this.rightScore = right;
++        updateScoreLabel();
++    }
++
++    // Externe Methode, um das Ergebnis einer Kategorie anzuzeigen.
++    // Wenn der Parameter "winner" "unentschieden" (case-insensitive) ist,
++    // werden beide Seiten als "Unentschieden" angezeigt.
++    public void addCategoryWinner(String category, String winner) {
+         JPanel rowPanel = new JPanel(new BorderLayout());
+         rowPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+         rowPanel.setBackground(new Color(230, 244, 255));
+@@ -125,29 +127,28 @@
+         JLabel catLabel = new JLabel(category, SwingConstants.CENTER);
+         JLabel rightLabel = new JLabel("", SwingConstants.CENTER);
+ 
+-        catLabel.setFont(new Font("Arial", Font.BOLD, 16));
+         leftLabel.setFont(new Font("Arial", Font.PLAIN, 14));
++        catLabel.setFont(new Font("Arial", Font.BOLD, 16));
+         rightLabel.setFont(new Font("Arial", Font.PLAIN, 14));
+ 
+-        switch (winner) {
+-            case "LEFT":
+-                leftScore++;
+-                leftLabel.setText("Gewonnen");
+-                leftLabel.setForeground(new Color(76, 175, 80));
+-                break;
+-            case "RIGHT":
+-                rightScore++;
+-                rightLabel.setText("Gewonnen");
+-                rightLabel.setForeground(new Color(76, 175, 80));
+-                break;
+-            case "TIE":
+-                leftScore++;
+-                rightScore++;
+-                leftLabel.setText("Unentschieden");
+-                rightLabel.setText("Unentschieden");
+-                leftLabel.setForeground(Color.ORANGE);
+-                rightLabel.setForeground(Color.ORANGE);
+-                break;
++        if (winner.equalsIgnoreCase("unentschieden")) {
++            leftLabel.setText("Unentschieden");
++            rightLabel.setText("Unentschieden");
++            leftLabel.setForeground(Color.ORANGE);
++            rightLabel.setForeground(Color.ORANGE);
++        } else if (winner.equalsIgnoreCase("left")) {
++            leftLabel.setText("Gewonnen");
++            leftLabel.setForeground(new Color(76, 175, 80));
++            rightLabel.setText("");
++            leftScore++;
++        } else if (winner.equalsIgnoreCase("right")) {
++            rightLabel.setText("Gewonnen");
++            rightLabel.setForeground(new Color(76, 175, 80));
++            leftLabel.setText("");
++            rightScore++;
++        } else {
++            // Falls ein anderer String übergeben wurde, geben wir ihn in der Mitte aus:
++            catLabel.setText(category + " - " + winner);
+         }
+ 
+         rowPanel.add(leftLabel, BorderLayout.WEST);
+Index: src/client/gui/MainGameFrame.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package client.gui;\r\n\r\nimport client.ClientHandler;\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\n\r\npublic class MainGameFrame extends JFrame {\r\n\r\n    private CardLayout cardLayout;\r\n    private JPanel mainPanel;  // Container für alle Szenen\r\n\r\n    // Szenen (Panels) – werden on‑demand erstellt:\r\n    private LobbyStartPanel lobbyStartPanel;\r\n    private LobbyJoinPanel lobbyJoinPanel;\r\n    private LobbyHostPanel lobbyHostPanel;\r\n    private ScoreAndCategoriesPanel scorePanel;\r\n    private CategoryWheelPanel categoryWheelPanel;\r\n    private QuestionPanel questionPanel;\r\n    private StatisticsPanel statisticsPanel;\r\n\r\n    // Runden-Zähler (z. B. 6 Runden)\r\n    private int roundsPlayed = 0;\r\n    private final int MAX_ROUNDS = 6;\r\n\r\n    // ClientHandler (wird vom Client gesetzt)\r\n    private ClientHandler clientHandler;\r\n\r\n    public MainGameFrame(ClientHandler clientHandler) {\r\n        super(\"Quizduell - Hauptfenster\");\r\n        this.clientHandler = clientHandler;\r\n        createMainPanel();\r\n        createLobbyStartScene();  // Nur die LobbyStart-Szene wird initial erzeugt\r\n        // Direkt im Konstruktor: Fenstergröße, Position und Close-Operation festlegen\r\n        setSize(800, 600);\r\n        setLocationRelativeTo(null);\r\n        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\r\n        switchLobbyStartPanel();\r\n        setVisible(true);\r\n    }\r\n\r\n    // Erzeugt den Hauptcontainer (mainPanel) mit CardLayout und fügt ihn dem JFrame hinzu\r\n    private void createMainPanel() {\r\n        cardLayout = new CardLayout();\r\n        mainPanel = new JPanel(cardLayout);\r\n        add(mainPanel);\r\n    }\r\n\r\n    // Erzeugt und fügt das LobbyStartPanel zum mainPanel hinzu\r\n    private void createLobbyStartScene() {\r\n        lobbyStartPanel = new LobbyStartPanel(this);\r\n        mainPanel.add(lobbyStartPanel, \"lobbyStart\");\r\n    }\r\n\r\n    // Szenen werden on‑demand erstellt:\r\n    public void switchLobbyJoinPanel() {\r\n        if (lobbyJoinPanel == null) {\r\n            lobbyJoinPanel = new LobbyJoinPanel(this);\r\n            mainPanel.add(lobbyJoinPanel, \"lobbyJoin\");\r\n        }\r\n        cardLayout.show(mainPanel, \"lobbyJoin\");\r\n    }\r\n\r\n    public void switchLobbyHostPanel() {\r\n        if (lobbyHostPanel == null) {\r\n            lobbyHostPanel = new LobbyHostPanel(this);\r\n            mainPanel.add(lobbyHostPanel, \"lobbyHost\");\r\n        }\r\n        cardLayout.show(mainPanel, \"lobbyHost\");\r\n    }\r\n\r\n    public void switchScorePanel() {\r\n        if (scorePanel == null) {\r\n            scorePanel = new ScoreAndCategoriesPanel(this);\r\n            mainPanel.add(scorePanel, \"score\");\r\n        }\r\n        cardLayout.show(mainPanel, \"score\");\r\n    }\r\n\r\n    public void switchCategoryWheelPanel() {\r\n        if (categoryWheelPanel == null) {\r\n            categoryWheelPanel = new CategoryWheelPanel(this);\r\n            mainPanel.add(categoryWheelPanel, \"wheel\");\r\n        }\r\n        cardLayout.show(mainPanel, \"wheel\");\r\n    }\r\n\r\n    public void switchQuestionPanel() {\r\n        if (questionPanel == null) {\r\n            questionPanel = new QuestionPanel(this);\r\n            mainPanel.add(questionPanel, \"question\");\r\n        }\r\n        questionPanel.resetRound();\r\n        cardLayout.show(mainPanel, \"question\");\r\n    }\r\n\r\n    public void switchStatisticsPanel() {\r\n        if (statisticsPanel == null) {\r\n            statisticsPanel = new StatisticsPanel(this);\r\n            mainPanel.add(statisticsPanel, \"statistics\");\r\n        }\r\n        statisticsPanel.setFinalStatistics(scorePanel.getLeftScore(), scorePanel.getRightScore());\r\n        cardLayout.show(mainPanel, \"statistics\");\r\n    }\r\n\r\n    public void switchLobbyStartPanel() {\r\n        cardLayout.show(mainPanel, \"lobbyStart\");\r\n    }\r\n\r\n    /**\r\n     * Wird vom QuestionPanel aufgerufen, wenn eine Runde (z. B. 3 Fragen) abgeschlossen ist.\r\n     */\r\n    public void questionsCompleted(String chosenCategory, String winner) {\r\n        if (scorePanel == null) {\r\n            scorePanel = new ScoreAndCategoriesPanel(this);\r\n            mainPanel.add(scorePanel, \"score\");\r\n        }\r\n        scorePanel.addCategoryResult(chosenCategory, winner);\r\n        roundsPlayed++;\r\n        if (roundsPlayed < MAX_ROUNDS) {\r\n            switchScorePanel();\r\n        } else {\r\n            switchStatisticsPanel();\r\n        }\r\n    }\r\n\r\n    /**\r\n     * Setzt den Spielzustand zurück und wechselt zur LobbyStart-Szene.\r\n     */\r\n    public void resetGame() {\r\n        roundsPlayed = 0;\r\n        if (scorePanel != null) {\r\n            scorePanel.resetScores();\r\n        }\r\n        switchLobbyStartPanel();\r\n    }\r\n\r\n    // Getter und Setter\r\n\r\n    public CardLayout getCardLayout() {\r\n        return cardLayout;\r\n    }\r\n\r\n    public void setCardLayout(CardLayout cardLayout) {\r\n        this.cardLayout = cardLayout;\r\n    }\r\n\r\n    public JPanel getMainPanel() {\r\n        return mainPanel;\r\n    }\r\n\r\n    public void setMainPanel(JPanel mainPanel) {\r\n        this.mainPanel = mainPanel;\r\n    }\r\n\r\n    public LobbyStartPanel getLobbyStartPanel() {\r\n        return lobbyStartPanel;\r\n    }\r\n\r\n    public void setLobbyStartPanel(LobbyStartPanel lobbyStartPanel) {\r\n        this.lobbyStartPanel = lobbyStartPanel;\r\n    }\r\n\r\n    public LobbyJoinPanel getLobbyJoinPanel() {\r\n        return lobbyJoinPanel;\r\n    }\r\n\r\n    public void setLobbyJoinPanel(LobbyJoinPanel lobbyJoinPanel) {\r\n        this.lobbyJoinPanel = lobbyJoinPanel;\r\n    }\r\n\r\n    public LobbyHostPanel getLobbyHostPanel() {\r\n        return lobbyHostPanel;\r\n    }\r\n\r\n    public void setLobbyHostPanel(LobbyHostPanel lobbyHostPanel) {\r\n        this.lobbyHostPanel = lobbyHostPanel;\r\n    }\r\n\r\n    public ScoreAndCategoriesPanel getScorePanel() {\r\n        return scorePanel;\r\n    }\r\n\r\n    public void setScorePanel(ScoreAndCategoriesPanel scorePanel) {\r\n        this.scorePanel = scorePanel;\r\n    }\r\n\r\n    public CategoryWheelPanel getCategoryWheelPanel() {\r\n        return categoryWheelPanel;\r\n    }\r\n\r\n    public void setCategoryWheelPanel(CategoryWheelPanel categoryWheelPanel) {\r\n        this.categoryWheelPanel = categoryWheelPanel;\r\n    }\r\n\r\n    public QuestionPanel getQuestionPanel() {\r\n        return questionPanel;\r\n    }\r\n\r\n    public void setQuestionPanel(QuestionPanel questionPanel) {\r\n        this.questionPanel = questionPanel;\r\n    }\r\n\r\n    public StatisticsPanel getStatisticsPanel() {\r\n        return statisticsPanel;\r\n    }\r\n\r\n    public void setStatisticsPanel(StatisticsPanel statisticsPanel) {\r\n        this.statisticsPanel = statisticsPanel;\r\n    }\r\n\r\n    public int getRoundsPlayed() {\r\n        return roundsPlayed;\r\n    }\r\n\r\n    public void setRoundsPlayed(int roundsPlayed) {\r\n        this.roundsPlayed = roundsPlayed;\r\n    }\r\n\r\n    public int getMaxRounds() {\r\n        return MAX_ROUNDS;\r\n    }\r\n\r\n    public ClientHandler getClientHandler() {\r\n        return clientHandler;\r\n    }\r\n\r\n    public void setClientHandler(ClientHandler clientHandler) {\r\n        this.clientHandler = clientHandler;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/client/gui/MainGameFrame.java b/src/client/gui/MainGameFrame.java
+--- a/src/client/gui/MainGameFrame.java	(revision 6f721c8b03062ea722eb7dfd3f18443cb76f6264)
++++ b/src/client/gui/MainGameFrame.java	(date 1741539824289)
+@@ -106,23 +106,6 @@
+         cardLayout.show(mainPanel, "lobbyStart");
+     }
+ 
+-    /**
+-     * Wird vom QuestionPanel aufgerufen, wenn eine Runde (z. B. 3 Fragen) abgeschlossen ist.
+-     */
+-    public void questionsCompleted(String chosenCategory, String winner) {
+-        if (scorePanel == null) {
+-            scorePanel = new ScoreAndCategoriesPanel(this);
+-            mainPanel.add(scorePanel, "score");
+-        }
+-        scorePanel.addCategoryResult(chosenCategory, winner);
+-        roundsPlayed++;
+-        if (roundsPlayed < MAX_ROUNDS) {
+-            switchScorePanel();
+-        } else {
+-            switchStatisticsPanel();
+-        }
+-    }
+-
+     /**
+      * Setzt den Spielzustand zurück und wechselt zur LobbyStart-Szene.
+      */

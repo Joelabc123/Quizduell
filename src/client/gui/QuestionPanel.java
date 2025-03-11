@@ -26,8 +26,8 @@ public class QuestionPanel extends JPanel {
     // Flag, um Mehrfachaufrufe des Rundenabschlusses zu verhindern
     private boolean roundCompleted = false;
 
-    //ArrayList zum Sammeln der Antworten
-    ArrayList<Boolean> answers = new ArrayList<Boolean>();
+    // ArrayList zum Sammeln der Antworten
+    private ArrayList<Boolean> answers = new ArrayList<>();
 
     public QuestionPanel(MainGameFrame mainFrame) {
         this.mainFrame = mainFrame;
@@ -77,6 +77,7 @@ public class QuestionPanel extends JPanel {
         questionCount = 0;
         roundCompleted = false;
         questionLabel.setText("Frage 1: Was ist ...?");
+        answers.clear(); // Alte Antworten löschen
         enableAndResetButtons();
         startTimer();
     }
@@ -95,7 +96,9 @@ public class QuestionPanel extends JPanel {
                 if (countdownTimer != null && countdownTimer.isRunning()) {
                     countdownTimer.stop();
                 }
-                // Prüfe, ob der übergebene Answer-Wert korrekt ist
+                // Debug: Ausgabe der Werte
+                System.out.println("Button clicked: " + answerOption + ", correctAnswer: " + correctAnswer);
+
                 if (answerOption.equals(correctAnswer)) {
                     btn.setBackground(Color.GREEN);
                     answers.add(true);
@@ -177,6 +180,7 @@ public class QuestionPanel extends JPanel {
     private void nextQuestion() {
         questionCount++;
         if (questionCount < MAX_QUESTIONS) {
+            // Statt der direkten Wiederholung rufen wir setQuestions() im GameManager auf
             mainFrame.getClientHandler().gameManager.setQuestions();
             enableAndResetButtons();
             startTimer();
@@ -184,7 +188,10 @@ public class QuestionPanel extends JPanel {
             if (!roundCompleted) {
                 roundCompleted = true;
                 System.out.println("Round abgeschlossen. Externe Logik muss questionsCompleted() aufrufen.");
+                System.out.println("Antworten: " + answers);
                 mainFrame.getClientHandler().gameManager.answerQuestion(answers);
+                answers.clear();
+                System.out.println("Antworten n.c: " + answers);
             }
         }
     }

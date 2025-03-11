@@ -90,6 +90,7 @@ public class MainGameFrame extends JFrame {
             mainPanel.add(questionPanel, "question");
         }
         questionPanel.resetRound();
+
         cardLayout.show(mainPanel, "question");
     }
 
