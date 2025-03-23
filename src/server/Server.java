@@ -1,7 +1,6 @@
 package server;
 
-import protocol.messages.ErrorMessage;
-import protocol.messages.ErrorType;
+import protocol.messages.GameOverMessage;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -20,93 +19,46 @@ public class Server {
     private static Server instance;
 
     private static int PORT = 12345;
-    private ServerSocket serverSocket;
-    private boolean running = false;
-    private final List<Player> players = new ArrayList<>();
-    private final List<Thread> clientThreads = new ArrayList<>();
+    private ServerSocket socketServer;
+    private boolean isRunning = false;
+    private final List<Player> connectedPlayers = new ArrayList<>();
+    private final List<Thread> threadClients = new ArrayList<>();
 
-    // HashMap, die sowohl das Spiel als auch den zugehörigen Thread speichert
-    private final Map<UUID, GameContainer> gamesMap = new HashMap<>();
+    // Map, die das Spiel und den zugehörigen Thread speichert
+    private final Map<UUID, SpielContainer> spielMap = new HashMap<>();
 
-    private ServerGUI gui;
-
-
-    // Innerer Container, der das QuizGame und den zugehörigen Thread zusammenhält
-        private record GameContainer(QuizGame game, Thread thread) {
+    // Innere Record-Klasse, die QuizGame und den zugehörigen Thread zusammenhält
+    private record SpielContainer(QuizGame spiel, Thread laufenderThread) {
     }
 
     public Server() {
-        this.gui = new ServerGUI(this);
         instance = this;
     }
 
     public void startServer() {
-        if (running) return;
+        if (isRunning) return;
 
         new Thread(() -> {
             try {
-                serverSocket = new ServerSocket(PORT);
-                running = true;
+                socketServer = new ServerSocket(PORT);
+                isRunning = true;
                 System.out.println("Server gestartet auf Port " + PORT);
 
-                while (running) {
-                    Socket clientSocket = serverSocket.accept();
-                    System.out.println("Neuer Client verbunden: " + clientSocket);
+                while (isRunning) {
+                    Socket clientSock = socketServer.accept();
+                    System.out.println("Neuer Client verbunden: " + clientSock);
 
-                    Player player = new Player(clientSocket, this);
-                    players.add(player);
+                    Player spieler = new Player(clientSock, this);
+                    connectedPlayers.add(spieler);
 
-                    Thread clientThread = new Thread(player);
-                    clientThreads.add(clientThread);
-                    clientThread.start();
-
-                    updatePlayerList();
+                    Thread clientRunnableThread = new Thread(spieler);
+                    threadClients.add(clientRunnableThread);
+                    clientRunnableThread.start();
                 }
-            } catch (IOException e) {
-                if (running) e.printStackTrace();
+            } catch (IOException ex) {
+                if (isRunning) ex.printStackTrace();
             }
         }).start();
-    }
-
-    /**
-     * Returns the players that are currently in the lobby (not in a game).
-     */
-    public ArrayList<Player> getPlayersInLobby() {
-        ArrayList<Player> playersInLobby = new ArrayList<>();
-        for (Player player : players) {
-            if (!player.getIngame()) {
-                playersInLobby.add(player);
-            }
-        }
-        return playersInLobby;
-    }
-
-    /**
-     * Stops the server, closes all connections and unregisters all games.
-     */
-    public void stopServer() {
-        running = false;
-        try {
-            // Alle laufenden Spiele abmelden
-            for (UUID gameId : new ArrayList<>(gamesMap.keySet())) {
-                unregisterGame(gameId);
-            }
-            for (Player p : players) {
-                p.sendMessage(new ErrorMessage(ErrorType.SERVER_CLOSED));
-            }
-            if (serverSocket != null) {
-                serverSocket.close();
-                System.out.println("Server gestoppt.");
-            }
-            for (Thread t : clientThreads) {
-                t.interrupt();
-            }
-            players.clear();
-            clientThreads.clear();
-            updatePlayerList();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     /**
@@ -114,10 +66,10 @@ public class Server {
      * @param game the game to register
      */
     public void registerGame(QuizGame game) {
-        Thread gameThread = new Thread(game);
-        GameContainer container = new GameContainer(game, gameThread);
-        gamesMap.put(game.getGameState().getId(), container);
-        gameThread.start();
+        Thread gameLaufThread = new Thread(game);
+        SpielContainer container = new SpielContainer(game, gameLaufThread);
+        spielMap.put(game.getGameState().getId(), container);
+        gameLaufThread.start();
     }
 
     /**
@@ -125,10 +77,10 @@ public class Server {
      * @param id id of the game to remove
      */
     public void unregisterGame(UUID id) {
-        GameContainer container = gamesMap.get(id);
+        SpielContainer container = spielMap.get(id);
         if (container != null) {
-            container.thread().interrupt();
-            gamesMap.remove(id);
+            container.laufenderThread().interrupt();
+            spielMap.remove(id);
             System.out.println("Game " + id + " removed");
         }
     }
@@ -139,10 +91,11 @@ public class Server {
      * @return the game the player is in or null if none
      */
     public synchronized QuizGame getGame(Player player) {
-        for (GameContainer container : gamesMap.values()) {
-            QuizGame game = container.game();
-            if (game.getPlayerA().getId().equals(player.getId()) || game.getPlayerB().getId().equals(player.getId())) {
-                return game;
+        for (SpielContainer container : spielMap.values()) {
+            QuizGame quizGame = container.spiel();
+            if (quizGame.getPlayerA().getId().equals(player.getId()) ||
+                    quizGame.getPlayerB().getId().equals(player.getId())) {
+                return quizGame;
             }
         }
         return null;
@@ -153,34 +106,21 @@ public class Server {
      * @param player the player leaving the server
      */
     public void removePlayer(Player player) {
-        QuizGame game = getGame(player);
+        QuizGame currentGame = getGame(player);
         System.out.println("Player " + player.getUsername() + " left the server");
-
-        if (game != null) {
-            game.leaveGame(player);
+        if (currentGame != null) {
+            currentGame.leaveGame(player);
         }
-        players.remove(player);
-        updatePlayerList();
-    }
-
-
-    private void updatePlayerList() {
-        StringBuilder sb = new StringBuilder();
-        for (Player p : players) {
-            sb.append(p.getUsername()).append(" (").append(p.getIp()).append(")\n");
-        }
-        gui.updatePlayerList(sb.toString());
-    }
-
-    public List<Player> getPlayers() {
-        return players;
+        connectedPlayers.remove(player);
     }
 
     /**
      * Returns a list of all active games.
      */
     public ArrayList<QuizGame> getGames() {
-        return new ArrayList<>(gamesMap.values().stream().map(GameContainer::game).collect(Collectors.toList()));
+        return new ArrayList<>(spielMap.values().stream()
+                .map(SpielContainer::spiel)
+                .collect(Collectors.toList()));
     }
 
     /**
@@ -190,22 +130,12 @@ public class Server {
      * @param args command line arguments
      */
     public static void main(String[] args) {
-        for (int i = 0; i < args.length; i++) {
-            if (args[i].equals("--p")) {
-                PORT = Integer.parseInt(args[i + 1]);
-            }
-        }
         try {
             quizReader = new QuizReader();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception exc) {
+            exc.printStackTrace();
         }
-
         instance = new Server();
-
-        if (args.length >= 1 && args[0].contains("--autostart")) {
-            instance.startServer();
-        }
+        instance.startServer();
     }
-
 }

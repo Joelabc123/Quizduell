@@ -82,6 +82,11 @@ public class GameManager implements GameInterface {
     }
 
     @Override
+    public void sendQuizset(String quizset) {
+        this.clientHandler.sendMessage(new SendQuizsetMessage(quizset));
+    }
+
+    @Override
     public void startGameMessage(StartGameMessage startGameMessage) {
         this.latestGameState = startGameMessage.getGameState();
         mainGameFrame.switchScorePanel();
@@ -188,7 +193,5 @@ public class GameManager implements GameInterface {
                 answerTexts.get(3)
         );
     }
-
-
 
 }

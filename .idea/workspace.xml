@@ -4,25 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Refactor CategoryRound and GameState to enhance game outcome management and support multiple answers">
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/GameOverMessage.java" afterDir="false" />
+    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Refactor UI components and game state management to enhance user experience and support game over functionality">
+      <change afterPath="$PROJECT_DIR$/src/client/gui/CreateQuizPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/protocol/messages/SendQuizsetMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_09_03_2025_18_03_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_09_03_2025_18_03__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/quiz.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/quiz.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/ClientGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ClientGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GameInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/CategoryWheelPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/CategoryWheelPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/gui/LobbyHostPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/LobbyHostPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/LobbyJoinPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/LobbyJoinPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/gui/LobbyStartPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/LobbyStartPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/gui/MainGameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/MainGameFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/QuestionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/QuestionPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/ScoreAndCategoriesPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/ScoreAndCategoriesPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/StatisticsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/StatisticsPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/messages/LoginMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/LoginMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Question.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/protocol/messages/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/MessageType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/GameState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/QuizGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/QuizGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/ServerGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Usernames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Usernames.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +62,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -89,7 +92,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;refactor&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Joelb/IdeaProjects/battleship-game&quot;,
@@ -111,7 +114,7 @@
       <recent name="C:\Users\Joelb\IdeaProjects\Quizduell\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Client 2">
+  <component name="RunManager" selected="Application.Client 1">
     <configuration name="Client 1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="client.Client" />
       <module name="Quizduell" />
@@ -129,7 +132,6 @@
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="server.Server" />
       <module name="Quizduell" />
-      <option name="PROGRAM_PARAMETERS" value="--autostart" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="server.*" />
@@ -147,7 +149,6 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Server" />
         <item itemvalue="Application.Server" />
       </list>
     </recent_temporary>
@@ -210,6 +211,13 @@
       <workItem from="1741608221243" duration="17772000" />
       <workItem from="1741635505857" duration="121000" />
       <workItem from="1741682986661" duration="18729000" />
+      <workItem from="1741728658026" duration="255000" />
+      <workItem from="1741808563355" duration="360000" />
+      <workItem from="1741809260826" duration="1821000" />
+      <workItem from="1741875725021" duration="7416000" />
+      <workItem from="1741896263709" duration="715000" />
+      <workItem from="1742586963854" duration="635000" />
+      <workItem from="1742743720578" duration="2495000" />
     </task>
     <task id="LOCAL-00001" summary="Finished DB">
       <option name="closed" value="true" />

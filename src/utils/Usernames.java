@@ -3,19 +3,23 @@ package utils;
 import java.util.Random;
 
 public class Usernames {
-    private static final String[] ADJECTIVES = {
-            "Wühlige","A","B","C","D","E"
+    // Pool an beschreibenden Worten (Adjektiven) mit Großbuchstaben
+    private static final String[] modifiers = {
+            "Wühlige", "Schnelle", "Flauschige", "Witzige", "Mutige",
+            "Tapsige", "Neugierige", "Elegante", "Schlaue", "Drollige", "Quirlige"
     };
 
-    private static final String[] NOUNS = {
-            "Wühlmaus","Käfer","C","D","E"
+    // Pool an Substantiven
+    private static final String[] subjects = {
+            "Wühlmaus", "Häschen", "Löwe", "Tiger", "Fuchs",
+            "Bär", "Eule", "Dachs", "Frosch", "Igel", "Biber"
     };
 
-    private static final Random RANDOM = new Random();
+    private static final Random rng = new Random();
 
     public static String generate() {
-        String adjective = ADJECTIVES[RANDOM.nextInt(ADJECTIVES.length)];
-        String noun = NOUNS[RANDOM.nextInt(NOUNS.length)];
-        return adjective + " " + noun;
+        String modifier = modifiers[rng.nextInt(modifiers.length)];
+        String subject = subjects[rng.nextInt(subjects.length)];
+        return modifier + " " + subject;
     }
 }

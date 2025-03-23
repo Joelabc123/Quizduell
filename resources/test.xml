@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<database>
+                    
+    
+    
+    
+    <Kategorien>
+                                
+    
+        
+        
+        <Kategorie KatID="K2">
+                                    
+            
+            <Name>Test123</Name>
+                                
+        
+        </Kategorie>
+                    
+    
+    </Kategorien>
+                    
+    
+    
+    
+    <Fragen>
+                        
+    
+        
+        <Frage FID="F1" KID="K2">
+                        
+            <FrageName>Testfrage</FrageName>
+                        
+            <AntwortA>1</AntwortA>
+                        
+            <AntwortB>2</AntwortB>
+                        
+            <AntwortC>3</AntwortC>
+                        
+            <AntwortD>4</AntwortD>
+                    
+        </Frage>
+            
+    </Fragen>
+                    
+    
+    
+    
+    <Lösungen/>
+                
+
+
+
+</database>

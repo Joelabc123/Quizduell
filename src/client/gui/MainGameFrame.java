@@ -17,6 +17,7 @@ public class MainGameFrame extends JFrame {
     private CategoryWheelPanel categoryWheelPanel;
     private QuestionPanel questionPanel;
     private StatisticsPanel statisticsPanel;
+    private CreateQuizPanel createQuizPanel; // Neues Panel für die Quiz-Erstellung
 
     // Runden-Zähler (z. B. 6 Runden)
     private int roundsPlayed = 0;
@@ -90,7 +91,6 @@ public class MainGameFrame extends JFrame {
             mainPanel.add(questionPanel, "question");
         }
         questionPanel.resetRound();
-
         cardLayout.show(mainPanel, "question");
     }
 
@@ -107,6 +107,18 @@ public class MainGameFrame extends JFrame {
     }
 
     /**
+     * Wechselt zur Szene der Quiz-Erstellung.
+     * Falls das Panel noch nicht existiert, wird es erstellt und dem mainPanel hinzugefügt.
+     */
+    public void switchCreateQuizPane() {
+        if (createQuizPanel == null) {
+            createQuizPanel = new CreateQuizPanel(this);
+            mainPanel.add(createQuizPanel, "createQuiz");
+        }
+        cardLayout.show(mainPanel, "createQuiz");
+    }
+
+    /**
      * Setzt den Spielzustand zurück und wechselt zur LobbyStart-Szene.
      */
     public void resetGame() {
@@ -119,95 +131,44 @@ public class MainGameFrame extends JFrame {
 
     // Getter und Setter
 
-    public CardLayout getCardLayout() {
-        return cardLayout;
-    }
-
-    public void setCardLayout(CardLayout cardLayout) {
-        this.cardLayout = cardLayout;
-    }
-
-    public JPanel getMainPanel() {
-        return mainPanel;
-    }
-
-    public void setMainPanel(JPanel mainPanel) {
-        this.mainPanel = mainPanel;
-    }
-
     public LobbyStartPanel getLobbyStartPanel() {
         return lobbyStartPanel;
-    }
-
-    public void setLobbyStartPanel(LobbyStartPanel lobbyStartPanel) {
-        this.lobbyStartPanel = lobbyStartPanel;
     }
 
     public LobbyJoinPanel getLobbyJoinPanel() {
         return lobbyJoinPanel;
     }
 
-    public void setLobbyJoinPanel(LobbyJoinPanel lobbyJoinPanel) {
-        this.lobbyJoinPanel = lobbyJoinPanel;
-    }
-
     public LobbyHostPanel getLobbyHostPanel() {
         return lobbyHostPanel;
-    }
-
-    public void setLobbyHostPanel(LobbyHostPanel lobbyHostPanel) {
-        this.lobbyHostPanel = lobbyHostPanel;
     }
 
     public ScoreAndCategoriesPanel getScorePanel() {
         return scorePanel;
     }
 
-    public void setScorePanel(ScoreAndCategoriesPanel scorePanel) {
-        this.scorePanel = scorePanel;
-    }
-
     public CategoryWheelPanel getCategoryWheelPanel() {
         return categoryWheelPanel;
-    }
-
-    public void setCategoryWheelPanel(CategoryWheelPanel categoryWheelPanel) {
-        this.categoryWheelPanel = categoryWheelPanel;
     }
 
     public QuestionPanel getQuestionPanel() {
         return questionPanel;
     }
 
-    public void setQuestionPanel(QuestionPanel questionPanel) {
-        this.questionPanel = questionPanel;
-    }
-
     public StatisticsPanel getStatisticsPanel() {
         return statisticsPanel;
-    }
-
-    public void setStatisticsPanel(StatisticsPanel statisticsPanel) {
-        this.statisticsPanel = statisticsPanel;
-    }
-
-    public int getRoundsPlayed() {
-        return roundsPlayed;
-    }
-
-    public void setRoundsPlayed(int roundsPlayed) {
-        this.roundsPlayed = roundsPlayed;
-    }
-
-    public int getMaxRounds() {
-        return MAX_ROUNDS;
     }
 
     public ClientHandler getClientHandler() {
         return clientHandler;
     }
 
-    public void setClientHandler(ClientHandler clientHandler) {
-        this.clientHandler = clientHandler;
+    // Getter und Setter für createQuizPanel (CreateQuizGame)
+    public CreateQuizPanel getCreateQuizPanel() {
+        return createQuizPanel;
+    }
+
+    public void setCreateQuizPanel(CreateQuizPanel createQuizPanel) {
+        this.createQuizPanel = createQuizPanel;
     }
 }

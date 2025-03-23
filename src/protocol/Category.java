@@ -17,18 +17,8 @@ public class Category implements Serializable {
         this.questions = new ArrayList<>();
     }
 
-
-
     public void addQuestion(Question question) {
         questions.add(question);
-    }
-
-    public Question getRandQuestion() {
-        Question question = questions.get((int) (Math.random() * questions.size()));
-
-        question.setCorrectAnswer(null);
-
-        return question;
     }
 
     public ArrayList<Question> getQuestions() {

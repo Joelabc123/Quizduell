@@ -27,10 +27,6 @@ public class Question implements Serializable {
         }
     }
 
-    public boolean isCorrect(Answer answer) {
-        return correctAnswer.equals(answer);
-    }
-
     public String getFid() {
         return fid;
     }

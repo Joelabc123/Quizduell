@@ -53,30 +53,39 @@ public class LobbyStartPanel extends JPanel {
 
         JButton joinButton = new JButton("Spiel beitreten");
         JButton hostButton = new JButton("Spiel hosten");
+        JButton createQuizButton = new JButton("Eigenes Quiz erstellen");
 
-        // Schrift und Größe
+        // Schrift und Größe für alle Buttons
         joinButton.setFont(new Font("Segoe UI", Font.BOLD, 20));
         hostButton.setFont(new Font("Segoe UI", Font.BOLD, 20));
+        createQuizButton.setFont(new Font("Segoe UI", Font.BOLD, 20));
         joinButton.setPreferredSize(new Dimension(220, 60));
         hostButton.setPreferredSize(new Dimension(220, 60));
+        createQuizButton.setPreferredSize(new Dimension(220, 60));
 
         // Standardfarben
         Color joinColor = new Color(76, 175, 80);   // Grün
         Color hostColor = new Color(244, 67, 54);     // Rot
+        Color createQuizColor = new Color(33, 150, 243); // Blau
+
         joinButton.setBackground(joinColor);
         hostButton.setBackground(hostColor);
+        createQuizButton.setBackground(createQuizColor);
         joinButton.setForeground(Color.WHITE);
         hostButton.setForeground(Color.WHITE);
+        createQuizButton.setForeground(Color.WHITE);
 
         // 3D-Effekt durch BevelBorder
         joinButton.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
         hostButton.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
+        createQuizButton.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
 
         // Fokusanzeige deaktivieren
         joinButton.setFocusPainted(false);
         hostButton.setFocusPainted(false);
+        createQuizButton.setFocusPainted(false);
 
-        // Dynamischer Mouse-Hover-Effekt
+        // Dynamischer Mouse-Hover-Effekt für joinButton
         joinButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
@@ -87,6 +96,7 @@ public class LobbyStartPanel extends JPanel {
                 joinButton.setBackground(joinColor);
             }
         });
+        // Dynamischer Mouse-Hover-Effekt für hostButton
         hostButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
@@ -95,6 +105,17 @@ public class LobbyStartPanel extends JPanel {
             @Override
             public void mouseExited(MouseEvent e) {
                 hostButton.setBackground(hostColor);
+            }
+        });
+        // Dynamischer Mouse-Hover-Effekt für createQuizButton
+        createQuizButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                createQuizButton.setBackground(createQuizColor.darker());
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                createQuizButton.setBackground(createQuizColor);
             }
         });
 
@@ -114,9 +135,18 @@ public class LobbyStartPanel extends JPanel {
                 System.out.println("Host-Button gedrückt. Externe Logik soll switchLobbyHostPanel() aufrufen.");
             }
         });
+        createQuizButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Hier können Sie die Logik für das Erstellen eines eigenen Quiz einbinden
+                System.out.println("Eigenes Quiz erstellen-Button gedrückt. Externe Logik soll eigene Quiz-Erstellung aufrufen.");
+                mainFrame.switchCreateQuizPane();
+            }
+        });
 
         buttonPanel.add(joinButton);
         buttonPanel.add(hostButton);
+        buttonPanel.add(createQuizButton);
         add(buttonPanel);
 
         add(Box.createVerticalGlue());

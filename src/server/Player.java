@@ -69,6 +69,10 @@ public class Player implements Runnable {
                         game.addPlayer(this);
                         server.registerGame(game);
                         break;
+                    case MessageType.SEND_QUIZSET:
+                        String quizset = ((SendQuizsetMessage) received).getQuizset();
+
+                        break;
                     case MessageType.JOIN_LOBBY:
                         JoinLobbyMessage joinLobbyMessage = (JoinLobbyMessage) received;
 
@@ -188,14 +192,6 @@ public class Player implements Runnable {
 
     public ObjectInputStream getIn() {
         return in;
-    }
-
-    public void setingame(boolean ingame) {
-        this.ingame = ingame;
-    }
-
-    public boolean getIngame() {
-        return ingame;
     }
 
     public void fillCategoryRound(CategoryRound cr) {

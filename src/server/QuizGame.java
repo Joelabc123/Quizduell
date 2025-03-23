@@ -18,16 +18,10 @@ public class QuizGame implements Game, Runnable {
         this.availableCategories = categories;
     }
 
-    public void run() {
-
-    }
+    public void run() {}
 
     public GameState addPlayer(Player player) {
         System.out.println("Adding player to game");
-        if (!this.gameState.getStatus().equals(GameState.GameStatus.LOBBY_WAITING)) {
-            return null;
-        }
-
         if (playerA == null) {
             playerA = player;
             System.out.println("Player A: " + playerA.getUsername());
@@ -39,15 +33,10 @@ public class QuizGame implements Game, Runnable {
         }
 
         if (playerA != null && playerB != null) {
-            gameState.setStatus(GameState.GameStatus.IN_GAME);
-
             //Time to select Category
             Date date = new Date();
 
             GameState gameState = new GameState(this.getGameState());
-
-            gameState.setSelectCategoryStarted(date);
-            gameState.setSelectCategoryFinished(new Date(date.getTime() + 10 * 1000));
 
             System.out.println(playerA.getUsername() + " " + playerB.getUsername());
             System.out.println(playerA.getId() + " " + playerB.getId());
@@ -56,7 +45,6 @@ public class QuizGame implements Game, Runnable {
             gameState.addPlayer(playerB.getId(), playerB.getUsername());
 
             this.gameState = gameState;
-
 
             System.out.println("turnPlayerA: " + gameState.getTurnPlayerA());
             System.out.println("turnPlayerB: " + gameState.getTurnPlayerB());
@@ -86,13 +74,6 @@ public class QuizGame implements Game, Runnable {
 
     public GameState leaveGame(Player player) {
         return gameState;
-    }
-
-    private synchronized void startBuildPhase() {
-    }
-
-
-    public synchronized void sendGameStateUpdate() {
     }
 
     public GameState getGameState() {

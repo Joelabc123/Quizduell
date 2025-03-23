@@ -16,6 +16,7 @@ public enum MessageType {
     JOIN_LOBBY,
     HOST_LOBBY,
     SELECT_CATEGORY,
-    ANSWER_QUESTION
+    ANSWER_QUESTION,
+    SEND_QUIZSET
 }
 

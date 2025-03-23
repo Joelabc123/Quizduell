@@ -5,18 +5,11 @@ import protocol.CategoryRound;
 import protocol.GameOutcome;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.UUID;
 
 public class GameState implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    public enum GameStatus {
-        LOBBY_WAITING,
-        IN_GAME,
-        GAME_OVER
-    }
 
     private final UUID id = UUID.randomUUID();
     public UUID playerA, playerB;
@@ -25,8 +18,6 @@ public class GameState implements Serializable {
     private boolean gameOver;
     private ArrayList<Category> availableCategories = new ArrayList<>();
     private ArrayList<CategoryRound> rounds = new ArrayList<>();
-    private GameStatus status = GameStatus.LOBBY_WAITING;
-    private Date selectCategoryStarted, selectCategoryFinished;
     private boolean turnPlayerA;
     private boolean turnPlayerB;
     private int turnQuestionRound;
@@ -53,7 +44,6 @@ public class GameState implements Serializable {
         this.playerB = gameState.playerB;
         this.playerAName = gameState.playerAName;
         this.playerBName = gameState.playerBName;
-        this.status = gameState.status;
         this.lobbyCode = gameState.lobbyCode;
         // Tiefe Kopie der Rounds
         this.rounds = new ArrayList<>();
@@ -62,8 +52,6 @@ public class GameState implements Serializable {
         }
         this.gameOver = gameState.gameOver;
         this.availableCategories = new ArrayList<>(gameState.availableCategories);
-        this.selectCategoryStarted = (gameState.selectCategoryStarted != null) ? new Date(gameState.selectCategoryStarted.getTime()) : null;
-        this.selectCategoryFinished = (gameState.selectCategoryFinished != null) ? new Date(gameState.selectCategoryFinished.getTime()) : null;
         this.turnQuestionRound = gameState.turnQuestionRound;
         this.scorePlayerA = gameState.scorePlayerA;
         this.scorePlayerB = gameState.scorePlayerB;
@@ -77,91 +65,20 @@ public class GameState implements Serializable {
         return id;
     }
 
-    public UUID getPlayerA() {
-        return playerA;
-    }
-
-    public void setPlayerA(UUID playerA) {
-        this.playerA = playerA;
-    }
-
-    public UUID getPlayerB() {
-        return playerB;
-    }
-
-    public void setPlayerB(UUID playerB) {
-        this.playerB = playerB;
-    }
-
     public String getPlayerAName() {
         return playerAName;
-    }
-
-    public void setPlayerAName(String playerAName) {
-        this.playerAName = playerAName;
     }
 
     public String getPlayerBName() {
         return playerBName;
     }
 
-    public void setPlayerBName(String playerBName) {
-        this.playerBName = playerBName;
-    }
-
     public int getLobbyCode() {
         return lobbyCode;
     }
 
-    public boolean isGameOver() {
-        return gameOver;
-    }
-
-    public void setGameOver(boolean gameOver) {
-        this.gameOver = gameOver;
-    }
-
     public ArrayList<Category> getAvailableCategories() {
         return availableCategories;
-    }
-
-    public void setAvailableCategories(ArrayList<Category> availableCategories) {
-        this.availableCategories = new ArrayList<>(availableCategories);
-    }
-
-    public ArrayList<CategoryRound> getRounds() {
-        return rounds;
-    }
-
-    public void setRounds(ArrayList<CategoryRound> rounds) {
-        this.rounds = new ArrayList<>();
-        for (CategoryRound cr : rounds) {
-            this.rounds.add(new CategoryRound(cr));
-        }
-    }
-
-    public GameStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(GameStatus status) {
-        this.status = status;
-    }
-
-    public Date getSelectCategoryStarted() {
-        return (selectCategoryStarted != null) ? new Date(selectCategoryStarted.getTime()) : null;
-    }
-
-    public void setSelectCategoryStarted(Date selectCategoryStarted) {
-        this.selectCategoryStarted = (selectCategoryStarted != null) ? new Date(selectCategoryStarted.getTime()) : null;
-    }
-
-    public Date getSelectCategoryFinished() {
-        return (selectCategoryFinished != null) ? new Date(selectCategoryFinished.getTime()) : null;
-    }
-
-    public void setSelectCategoryFinished(Date selectCategoryFinished) {
-        this.selectCategoryFinished = (selectCategoryFinished != null) ? new Date(selectCategoryFinished.getTime()) : null;
     }
 
     public boolean getTurnPlayerA() {
@@ -216,10 +133,6 @@ public class GameState implements Serializable {
             playerB = null;
         }
         return this;
-    }
-
-    public int getPlayerCount() {
-        return (playerA != null ? 1 : 0) + (playerB != null ? 1 : 0);
     }
 
     public void addRound(CategoryRound round) {

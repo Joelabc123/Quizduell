@@ -20,6 +20,7 @@ public interface GameInterface {
     void joinLobby(int lobbyCode);
     void selectCategory(String category);
     void answerQuestion(ArrayList<Boolean> answers);
+    void sendQuizset(String quizset);
 
     //FEHLER
     void authenticationError();
