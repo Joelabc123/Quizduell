@@ -163,12 +163,7 @@ public class MainGameFrame extends JFrame {
         return clientHandler;
     }
 
-    // Getter und Setter für createQuizPanel (CreateQuizGame)
-    public CreateQuizPanel getCreateQuizPanel() {
-        return createQuizPanel;
-    }
-
-    public void setCreateQuizPanel(CreateQuizPanel createQuizPanel) {
-        this.createQuizPanel = createQuizPanel;
+    public void setLobbyHostPanel(LobbyHostPanel lobbyHostPanel) {
+        this.lobbyHostPanel = lobbyHostPanel;
     }
 }

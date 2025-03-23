@@ -4,28 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Refactor UI components and game state management to enhance user experience and support game over functionality">
-      <change afterPath="$PROJECT_DIR$/src/client/gui/CreateQuizPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/messages/SendQuizsetMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_09_03_2025_18_03_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_09_03_2025_18_03__Changes_.xml" beforeDir="false" />
+    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Add quiz set management and UI enhancements for quiz creation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/quiz.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/quiz.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/ClientGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ClientGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GameInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/test.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/gui/LobbyHostPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/LobbyHostPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/LobbyStartPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/LobbyStartPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/MainGameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/MainGameFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/messages/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/messages/MessageType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/GameState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/QuizGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/QuizGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/ServerGUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Usernames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Usernames.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/QuizReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/QuizReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +201,7 @@
       <workItem from="1741875725021" duration="7416000" />
       <workItem from="1741896263709" duration="715000" />
       <workItem from="1742586963854" duration="635000" />
-      <workItem from="1742743720578" duration="2495000" />
+      <workItem from="1742743720578" duration="4348000" />
     </task>
     <task id="LOCAL-00001" summary="Finished DB">
       <option name="closed" value="true" />
@@ -307,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741684614241</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add quiz set management and UI enhancements for quiz creation">
+      <option name="closed" value="true" />
+      <created>1742746594771</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1742746594771</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +328,8 @@
     <MESSAGE value="Refactor game state management and enhance lobby functionality with new panels and serialization support" />
     <MESSAGE value="Refactor game state management and add new messaging types for lobby and gameplay updates" />
     <MESSAGE value="Refactor CategoryRound and GameState to enhance game outcome management and support multiple answers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor CategoryRound and GameState to enhance game outcome management and support multiple answers" />
+    <MESSAGE value="Add quiz set management and UI enhancements for quiz creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add quiz set management and UI enhancements for quiz creation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -2,6 +2,9 @@ package client.gui;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.*;
 import java.awt.*;
 import java.io.File;
 import java.util.ArrayList;
@@ -16,12 +19,11 @@ public class LobbyHostPanel extends JPanel {
 
     public LobbyHostPanel(MainGameFrame mainFrame) {
         this.mainFrame = mainFrame;
+        this.mainFrame.setLobbyHostPanel(this); // Registrierung des Panels im MainGameFrame
         initUI();
         loadQuizSets();
-        // Hier wird die Lobby-ID aktualisiert.
-        // Ersetze generateLobbyId() ggf. durch deinen Lobby-ID-Provider (z.B. mainFrame.getLobbyId())
-        setLobbyId(generateLobbyId());
     }
+
 
     private void initUI() {
         // Vertikale Anordnung
@@ -65,13 +67,22 @@ public class LobbyHostPanel extends JPanel {
         quizSetComboBox.setAlignmentX(Component.CENTER_ALIGNMENT);
         add(quizSetComboBox);
 
-        // Sobald ein neues Element ausgewählt wird, wird sendQuizset aufgerufen
+        // Sobald ein neues Element ausgewählt wird, wird geprüft, ob das Quizset gültig ist.
+        // Sind mindestens 8 Kategorien vorhanden und besitzt jede Kategorie mindestens 3 Fragen,
+        // wird die Methode sendQuizset (über den GameManager) aufgerufen.
         quizSetComboBox.addActionListener(e -> {
             String selectedQuiz = getSelectedQuizSet();
             if (selectedQuiz != null && !selectedQuiz.isEmpty()) {
-                // Hier wird die Methode sendQuizset aufgerufen.
-                // Annahme: MainGameFrame hat die Methode sendQuizset(String quizset)
-                mainFrame.getClientHandler().gameManager.sendQuizset(selectedQuiz);
+                if (!validateQuizset(selectedQuiz)) {
+                    JOptionPane.showMessageDialog(
+                            this,
+                            "Ungültiges Quizset.\nEs müssen mindestens 8 Kategorien vorhanden sein und jede Kategorie muss mindestens 3 Fragen haben.",
+                            "Quizset Fehler",
+                            JOptionPane.ERROR_MESSAGE
+                    );
+                } else {
+                    mainFrame.getClientHandler().gameManager.sendQuizset(selectedQuiz);
+                }
             }
         });
 
@@ -119,16 +130,62 @@ public class LobbyHostPanel extends JPanel {
         hostLobbyIdLabel.setText("Lobby-ID: " + lobbyid);
     }
 
-    // Beispielmethode zur Erzeugung einer zufälligen Lobby-ID.
-    // Ersetze diesen Code gegebenenfalls durch die tatsächliche Logik (z.B. mainFrame.getLobbyId()).
-    private String generateLobbyId() {
-        int randomId = (int) (Math.random() * 9000) + 1000; // erzeugt eine 4-stellige Zahl
-        return String.valueOf(randomId);
-    }
-
     // Gibt das aktuell ausgewählte Quizset zurück.
     public String getSelectedQuizSet() {
         Object selected = quizSetComboBox.getSelectedItem();
         return selected != null ? selected.toString() : null;
+    }
+
+    /**
+     * Prüft, ob das ausgewählte Quizset folgende Bedingungen erfüllt:
+     * - Es sind mindestens 8 Kategorien vorhanden.
+     * - Jede Kategorie besitzt mindestens 3 Fragen.
+     *
+     * Dazu wird das XML-Dokument des Quizsets geparst.
+     *
+     * @param fileName der Name der XML-Datei (im Ordner "resources")
+     * @return true, wenn beide Bedingungen erfüllt sind, sonst false.
+     */
+    private boolean validateQuizset(String fileName) {
+        try {
+            File file = new File("resources", fileName);
+            if (!file.exists() || !file.isFile()) {
+                return false;
+            }
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document doc = builder.parse(file);
+            doc.getDocumentElement().normalize();
+
+            // Anzahl der Kategorien prüfen
+            NodeList categoryList = doc.getElementsByTagName("Kategorie");
+            if (categoryList.getLength() < 8) {
+                return false;
+            }
+
+            // Anzahl der Fragen pro Kategorie prüfen:
+            NodeList questionList = doc.getElementsByTagName("Frage");
+
+            // Für jede Kategorie ermitteln, wie viele Fragen ihr zugeordnet sind
+            for (int i = 0; i < categoryList.getLength(); i++) {
+                Element categoryElem = (Element) categoryList.item(i);
+                String katID = categoryElem.getAttribute("KatID");
+                int count = 0;
+                for (int j = 0; j < questionList.getLength(); j++) {
+                    Element questionElem = (Element) questionList.item(j);
+                    String questionKatID = questionElem.getAttribute("KID");
+                    if (katID.equals(questionKatID)) {
+                        count++;
+                    }
+                }
+                if (count < 3) {
+                    return false;
+                }
+            }
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }
