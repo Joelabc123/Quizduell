@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Add quiz set management and UI enhancements for quiz creation">
+    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="#1 Finished final project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/gui/LobbyHostPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/LobbyHostPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/QuizReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/QuizReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/CreateQuizPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/CreateQuizPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +95,7 @@
       <recent name="C:\Users\Joelb\IdeaProjects\Quizduell\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Client 1">
+  <component name="RunManager" selected="Application.Client 2">
     <configuration name="Client 1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="client.Client" />
       <module name="Quizduell" />
@@ -201,7 +198,8 @@
       <workItem from="1741875725021" duration="7416000" />
       <workItem from="1741896263709" duration="715000" />
       <workItem from="1742586963854" duration="635000" />
-      <workItem from="1742743720578" duration="4348000" />
+      <workItem from="1742743720578" duration="4799000" />
+      <workItem from="1742839797705" duration="1085000" />
     </task>
     <task id="LOCAL-00001" summary="Finished DB">
       <option name="closed" value="true" />
@@ -299,7 +297,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742746594771</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="#1 Finished final project">
+      <option name="closed" value="true" />
+      <created>1742748291677</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1742748291677</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,7 +335,8 @@
     <MESSAGE value="Refactor game state management and add new messaging types for lobby and gameplay updates" />
     <MESSAGE value="Refactor CategoryRound and GameState to enhance game outcome management and support multiple answers" />
     <MESSAGE value="Add quiz set management and UI enhancements for quiz creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add quiz set management and UI enhancements for quiz creation" />
+    <MESSAGE value="#1 Finished final project" />
+    <option name="LAST_COMMIT_MESSAGE" value="#1 Finished final project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

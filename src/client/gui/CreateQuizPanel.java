@@ -210,21 +210,18 @@ public class CreateQuizPanel extends JPanel {
 
         panel.add(inputPanel, BorderLayout.NORTH);
 
-        // Steuer-Buttons für Hinzufügen und Fertig
+        // Steuer-Buttons: Nur der "Frage hinzufügen"-Button wird hier belassen.
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 10));
         buttonPanel.setOpaque(false);
         addQuestionButton = new JButton("Frage hinzufügen");
-        finishQuestionButton = new JButton("Fertig");
         buttonPanel.add(addQuestionButton);
-        buttonPanel.add(finishQuestionButton);
         panel.add(buttonPanel, BorderLayout.CENTER);
 
-        // ActionListener für Hinzufügen und Fertig
+        // ActionListener für Hinzufügen
         addQuestionButton.addActionListener(e -> {
             addQuestion();
             updateQuestionList();
         });
-        finishQuestionButton.addActionListener(e -> mainFrame.switchLobbyStartPanel());
 
         // Panel für Frage löschen
         JPanel deletePanel = new JPanel(new BorderLayout());
@@ -249,16 +246,30 @@ public class CreateQuizPanel extends JPanel {
     private JPanel createCategoryPanel() {
         JPanel panel = new JPanel(new BorderLayout());
         panel.setOpaque(false);
+
         // Obere Hälfte: Hinzufügen von Kategorien
-        JPanel inputPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        // Layout auf vertikale Anordnung umgestellt: Eingabefeld oben, Button darunter.
+        JPanel inputPanel = new JPanel();
+        inputPanel.setLayout(new BoxLayout(inputPanel, BoxLayout.Y_AXIS));
         inputPanel.setOpaque(false);
         inputPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
-        inputPanel.add(new JLabel("Kategorie Name:"));
+
+        // Panel für das Eingabefeld "Kategorie Name:"
+        JPanel inputFieldPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        inputFieldPanel.setOpaque(false);
+        inputFieldPanel.add(new JLabel("Kategorie Name:"));
         categoryNameField = new JTextField(20);
-        inputPanel.add(categoryNameField);
+        inputFieldPanel.add(categoryNameField);
+        inputPanel.add(inputFieldPanel);
+
+        // Panel für den Button "Kategorie hinzufügen"
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        buttonPanel.setOpaque(false);
         addCategoryButton = new JButton("Kategorie hinzufügen");
         addCategoryButton.setPreferredSize(new Dimension(200, 40));
-        inputPanel.add(addCategoryButton);
+        buttonPanel.add(addCategoryButton);
+        inputPanel.add(buttonPanel);
+
         panel.add(inputPanel, BorderLayout.NORTH);
 
         addCategoryButton.addActionListener(e -> {
@@ -326,7 +337,7 @@ public class CreateQuizPanel extends JPanel {
 
         panel.add(Box.createVerticalGlue());
 
-        // Button-Panel
+        // Button-Panel mit den XML-Buttons
         JPanel bottomPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         bottomPanel.setOpaque(false);
         createNewXmlButton = new JButton("Neue XML-Datei erstellen");
@@ -336,6 +347,14 @@ public class CreateQuizPanel extends JPanel {
         bottomPanel.add(saveSelectedXmlButton);
         bottomPanel.add(deleteXmlButton);
         panel.add(bottomPanel);
+
+        // Füge den "Fertig"-Button unterhalb der XML-Buttons hinzu
+        finishQuestionButton = new JButton("Fertig");
+        finishQuestionButton.addActionListener(e -> mainFrame.switchLobbyStartPanel());
+        JPanel finishPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        finishPanel.setOpaque(false);
+        finishPanel.add(finishQuestionButton);
+        panel.add(finishPanel);
 
         // Listener für XML-Dateiauswahl
         xmlFileList.addListSelectionListener(e -> {
