@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Update workspace.xml to streamline change list management and adjust task duration">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/XMLReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
-    </list>
+    <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Update workspace.xml to streamline change list management and adjust task duration" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,6 +199,7 @@
       <workItem from="1742839797705" duration="1479000" />
       <workItem from="1743185022995" duration="160000" />
       <workItem from="1748886570939" duration="2260000" />
+      <workItem from="1749276641733" duration="317000" />
     </task>
     <task id="LOCAL-00001" summary="Finished DB">
       <option name="closed" value="true" />
@@ -316,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742841266478</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Update workspace.xml to streamline change list management and adjust task duration">
+      <option name="closed" value="true" />
+      <created>1749276913162</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1749276913162</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +352,8 @@
     <MESSAGE value="Refactor CategoryRound and GameState to enhance game outcome management and support multiple answers" />
     <MESSAGE value="Add quiz set management and UI enhancements for quiz creation" />
     <MESSAGE value="#1 Finished final project" />
-    <option name="LAST_COMMIT_MESSAGE" value="#1 Finished final project" />
+    <MESSAGE value="Update workspace.xml to streamline change list management and adjust task duration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update workspace.xml to streamline change list management and adjust task duration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

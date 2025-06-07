@@ -1,0 +1,587 @@
+\documentclass[12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%
+%     PACKAGES     %
+%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{hyperref}
+\usepackage{titleref}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{listings}
+
+\usepackage{geometry}
+\geometry{left=29mm,right=29mm,top=29mm,bottom=29mm} % Standard: 40mm
+
+%%%%%%%%%%%%%%%%%%%%
+%     DOKUMENT     %
+%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\shorthandoff{"}
+
+% TITELSEITE
+
+\title{\textbf{P3: Datenbanken (Chat)}}
+\author{Abgabetermin: 8. Mai 2016}
+\date{Punktzahl: 30}
+\maketitle
+
+\subsection*{}
+
+In diesem Projekt wird primär das Thema Datenbanken behandelt. Sie sollen
+hierzu eine einfache Datenbankanwendung implementieren, die es ermöglicht,
+Benutzer und ausgetauschte Nachrichten zwischen diesen Benutzern abzuspeichern
+(siehe Aufgabe I.). Außerdem soll es möglich sein, dass bestimmte
+vordefinierte Anfragen an die Datenbank gestellt werden können (siehe
+Aufgabenstellung). Die implementierte Datenbank stellt dann die Grundlage
+einer Chatanwendung dar, die im nächsten Projekt von Ihnen entwickelt werden
+soll.  
+\\ \\
+Sie finden in ILIAS die Archivdatei \texttt{P3.zip} vor, die Sie in \emph{eclipse} als neues Projekt importieren können. Vergewissern Sie sich daraufhin als erstes, dass Sie im Java Build Path Ihres gerade angelegten Projekts eine aktuelle Version des Datenbanktreibers JDBC für SQLite (siehe \url{https://bitbucket.org/xerial/sqlite-jdbc/downloads}) eingebunden haben, ohne den das Projekt nicht lauffähig sein wird.
+
+% VORGABEN
+
+\section*{Vorgaben}
+Die Vorgaben unter \texttt{P3.zip} definieren bereits eine Grundstruktur, die
+Sie für Ihre Implementierung verwenden sollen. Darin sind mehrere Packages
+vorgegeben, die nachfolgend kurz erläutert werden. 
+
+\subsubsection*{Package server}
+
+% \subsubsection*{BattleShipGame}
+
+\begin{picture}(500,380) % Höhe erhöht
+\put(10,10){\framebox(440, 360)} % Box höher
+\put(180,345){BattleShipGame}
+\put(10,330){\line(1,0){440}}
+
+% ATTRIBUTES (abgekürzt)
+
+\put(15,310){...}
+
+\put(10,295){\line(1,0){440}}
+
+% METHODS
+\put(15,275){+ BattleShipGame(server : Server)}
+\put(15,260){+ BattleShipGame(server : Server, gameOptions : GameOptions)}
+\put(15,245){+ run() : void}
+\put(15,230){+ addPlayer(player : ServerPlayer) : void}
+\put(15,215){+ removePlayer(player : ServerPlayer) : void}
+\put(15,200){+ sendGameStartingEvent() : void}
+\put(15,185){+ onPlayerPlaceShips(player : ServerPlayer, ships : ArrayList<Ship>) : void}
+\put(15,170){+ onPlayerReadyStateChange(player : ServerPlayer, ready : boolean) : void}
+\put(15,155){+ sendInGameStartEvent() : void}
+\put(15,140){+ sendTurnChangeEvent() : void}
+\put(15,125){+ sendGameOverEvent(reason : GameOverReason) : void}
+\put(15,110){+ onPlayerAttemptMove(player : ServerPlayer, move : Move) : void}
+\put(15,95){+ getGameState() : GameState}
+\put(15,80){+ setGameState(gameState : GameState) : void}
+\put(15,65){+ initAvailableShips() : void}
+\put(15,50){+ getSize() : int}
+\put(15,35){+ getPlayerA() : ServerPlayer}
+\put(15,20){+ getPlayerB() : ServerPlayer}
+
+\end{picture}
+
+\subsubsection*{GameState}
+
+\begin{picture}(500,495)
+\put(10,10){\framebox(440, 475)} % Höhe der Box angepasst
+\put(195,460){GameState}
+\put(10,445){\line(1,0){440}}
+
+% ATTRIBUTES (abgekürzt)
+\put(15,425){...}
+
+\put(10,410){\line(1,0){440}}
+
+% METHODS
+\put(15,390){+ GameState(gameOptions : GameOptions, ships : ArrayList<Ship>)}
+\put(15,375){+ GameState(gameState : GameState)}
+\put(15,330){+ isPlayersTurn(player : UUID) : boolean}
+\put(15,225){+ getPlayer(player : UUID) : ClientPlayer}
+\put(15,210){+ getOpponent(player : UUID) : ClientPlayer}
+\put(15,195){+ getCurrentTurnPlayer() : ClientPlayer}
+\put(15,165){+ getWinner() : ArrayList<ClientPlayer>}
+\put(15,150){+ getLoser() : ArrayList<ClientPlayer>}
+\put(15,105){+ getPlayerCount() : int}
+\put(15,90){+ getAvailableShips() : ArrayList<Ship>}
+\put(15,60){+ getStatus() : GameStatus}
+\put(15,45){+ getId() : UUID}
+\put(15,30){+ getGameOptions() : GameOptions}
+\put(15,15){...}
+
+\end{picture}
+
+\subsubsection*{ServerPlayer}
+
+\begin{picture}(500,430)
+\put(10,10){\framebox(440, 410)} % Höhe der Box angepasst
+\put(195,395){ServerPlayer}
+\put(10,380){\line(1,0){440}}
+
+% ATTRIBUTES (abgekürzt)
+\put(15,360){...}
+
+\put(10,345){\line(1,0){440}}
+
+% METHODS
+\put(15,325){+ ServerPlayer(socket : Socket, server : Server)}
+\put(15,310){+ run() : void}
+\put(15,295){+ sendMessage(message : Message) : void}
+\put(15,280){+ getUsername() : String}
+\put(15,265){+ getIp() : String}
+\put(15,250){+ setInGame(inGame : boolean) : void}
+\put(15,235){+ isInGame() : boolean}
+\put(15,220){+ getId() : UUID}
+\put(15,205){+ broadcastQueueStateUpdate() : void}
+\put(15,190){+ checkQueueForPossibleGame() : void}
+\put(15,175){+ createGame(gameOptions : GameOptions) : void}
+\put(15,160){+ createGame(playerA : ServerPlayer, playerB : ServerPlayer) : void}
+\put(15,145){+ logToConsole(message : String) : void}
+
+\end{picture}
+
+\subsubsection*{Package protocol}
+
+
+\subsubsection*{Package client}
+
+\subsubsection*{ClientPlayer}
+
+\begin{picture}(500,340)
+\put(10,10){\framebox(440, 320)} % Höhe angepasst
+\put(195,305){ClientPlayer}
+\put(10,290){\line(1,0){440}}
+
+% ATTRIBUTES (abgekürzt)
+\put(15,270){...}
+
+\put(10,255){\line(1,0){440}}
+
+% METHODS
+\put(15,235){+ ClientPlayer(clientPlayer : ClientPlayer)}
+\put(15,220){+ ClientPlayer(id : UUID, name : String)}
+\put(15,205){+ isPlayer(id : UUID) : boolean}
+\put(15,190){+ isTurn() : boolean}
+\put(15,175){+ getName() : String}
+\put(15,160){+ getMoves() : ArrayList<Move>}
+\put(15,145){+ getUncoveredShips() : ArrayList<Ship>}
+\put(15,130){+ getEnergy() : int}
+\put(15,115){+ getId() : UUID}
+\put(15,100){+ isReady() : boolean}
+\put(15,85){+ isInGame() : boolean}
+\put(15,70){+ isWinner() : boolean}
+\put(15,55){+ setWinner(winner : boolean) : void}
+\put(15,40){+ setTurn(turn : boolean) : void}
+\put(15,25){+ setInGame(inGame : boolean) : void}
+\put(15,10){+ setEnergy(energy : int) : void}
+\put(235,235){+ addEnergy(energy : int) : void}
+\put(235,220){+ removeEnergy(energy : int) : void}
+\put(235,205){+ setReady(ready : boolean) : void}
+\put(235,190){+ setUncoveredShips(uncoveredShips : ArrayList<Ship>) : void}
+
+\end{picture}
+
+\subsubsection*{GameHandler}
+
+\begin{picture}(500,500)
+\put(10,10){\framebox(440,480)}
+\put(195,465){GameHandler}
+\put(10,450){\line(1,0){440}}
+
+% ATTRIBUTES (abgekürzt)
+\put(15,430){...}
+
+\put(10,415){\line(1,0){440}}
+
+% METHODS
+\put(15,395){+ GameHandler(clientHandler : ClientHandler, gameState : GameState)}
+\put(15,380){+ onBuildPhaseStarts(gameStartMessage : GameBuildingStartMessage) : void}
+\put(15,365){+ onGameInGameStarts(gameInGameStartMessage : GameInGameStartMessage) : void}
+\put(15,350){+ onGameOver(gameOverMessage : GameOverMessage) : void}
+\put(15,335){+ onPlayerHoverEvent(playerHoverMessage : PlayerHoverMessage) : void}
+\put(15,320){+ onTurnChange(playerTurnChangeMessage : PlayerTurnChangeMessage) : void}
+\put(15,305){+ onMoveMade(moveMadeMessage : MoveMadeMessage) : void}
+\put(15,290){+ onGameError(message : ErrorMessage) : void}
+\put(15,275){+ sendPlayerHoverEvent(x : int, y : int, affectedFields : ArrayList<Cell>) : void}
+\put(15,260){+ sendUpdateBuildBoardMessage(ships : ArrayList<Ship>) : void}
+\put(15,245){+ sendPlayerReadyMessage(ready : boolean) : void}
+\put(15,230){+ sendGameMoveEvent(move : Move) : void}
+\put(15,215){+ sendLeaveGame() : void}
+\put(15,200){+ onBuildReadyStateChange(playerReadyStateChangeMessage : PlayerReadyStateChangeMessage) : void}
+\put(15,185){+ showBuildPhase() : void}
+\put(15,170){- updateMoves() : void}
+\put(15,155){+ getPlayersShips() : ArrayList<Ship>}
+\put(15,140){+ getClientHandler() : ClientHandler}
+\put(15,125){+ getGameState() : GameState}
+\end{picture}
+
+\subsubsection*{LobbyHandler}
+
+\begin{picture}(500,240)
+\put(10,10){\framebox(440,220)}
+\put(195,205){LobbyHandler}
+\put(10,190){\line(1,0){440}}
+
+% ATTRIBUTES (abgekürzt)
+\put(15,170){...}
+
+\put(10,155){\line(1,0){440}}
+
+% METHODS
+\put(15,135){+ LobbyHandler(clientHandler : ClientHandler)}
+\put(15,120){+ onQueueUpdate(queueUpdateMessage : QueueUpdateMessage) : void}
+\put(15,105){+ onLobbyError(errorMessage : ErrorMessage) : void}
+\put(15,90){+ sendJoinQueueEvent() : void}
+\put(15,75){+ sendLeaveQueueEvent() : void}
+\put(15,60){+ sendCreateGameEvent(gameOptions : GameOptions) : void}
+\put(15,45){+ sendJoinGameWithCodeEvent(code : int) : void}
+\put(15,30){+ setInQueue(inQueue : boolean) : void}
+\put(15,15){+ getQueueLength() : int}
+\put(15,0){+ isInQueue() : boolean}
+\end{picture}
+
+Im Unterverzeichnis \texttt{resources} finden Sie zudem die CSV Datei mit den Daten ...
+
+% AUFGABEN
+
+\pagebreak
+\section*{Aufgabenstellung}
+
+% AUFGABE I.
+
+\subsection*{(a) DatabaseCREATE vervollständigen \hfill (6 P) }
+
+Relation \emph{users}:
+% users
+\begin{table}[ht]
+\begin{tabular}{|c|c|}
+ \hline
+ \multicolumn{2}{|c|}{\textbf{users}} \\ 
+ \hline
+ \hline 
+ username & TEXT          \\ 
+          & PRIMARY KEY   \\
+          & NOT NULL      \\
+ \hline
+\end{tabular}
+\end{table} \\
+% messages
+
+\subsection*{LobbyClient}
+
+\begin{picture}(500,235)
+\put(10,10){\framebox(400, 210)}
+\put(180,190){<<interface>>}
+\put(170,175){LobbyClient}
+\put(10,160){\line(1,0){400}}
+
+% SERVER -> CLIENT
+\put(25,140){+ onQueueUpdate(queueUpdateMessage : QueueUpdateMessage) : void}
+\put(35,125){+ onLobbyError(errorMessage : ErrorMessage) : void}
+
+% CLIENT -> SERVER
+\put(100,105){+ sendJoinQueueEvent() : void}
+\put(100,90){+ sendLeaveQueueEvent() : void}
+\put(78,75){+ sendCreateGameEvent(gameOptions : GameOptions) : void}
+\put(65,60){+ sendJoinGameWithCodeEvent(code : int) : void}
+\end{picture}
+
+\pagebreak
+\subsubsection*{GameClient}
+
+\begin{picture}(500,325)
+\put(10,10){\framebox(440, 305)}
+\put(190,290){<<interface>>}
+\put(190,275){GameClient}
+\put(10,260){\line(1,0){440}}
+
+% SERVER -> CLIENT
+\put(15,240){+ onPlayerHoverEvent(message : PlayerHoverMessage) : void}
+\put(20,225){+ onBuildPhaseStarts(message : GameBuildingStartMessage) : void}
+\put(20,210){+ onGameInGameStarts(message : GameInGameStartMessage) : void}
+\put(55,195){+ onGameOver(message : GameOverMessage) : void}
+\put(40,180){+ onTurnChange(message : PlayerTurnChangeMessage) : void}
+\put(55,165){+ onMoveMade(message : MoveMadeMessage) : void}
+\put(10,150){+ onBuildReadyStateChange(message : PlayerReadyStateChangeMessage) : void}
+\put(85,135){+ onGameError(message : ErrorMessage) : void}
+\put(135,120){+ showBuildPhase() : void}
+
+% CLIENT -> SERVER
+\put(20,100){+ sendPlayerHoverEvent(x : int, y : int, affectedFields : ArrayList<Cell>) : void}
+\put(20,85){+ sendUpdateBuildBoardMessage(ships : ArrayList<Ship>) : void}
+\put(55,70){+ sendPlayerReadyMessage(ready : boolean) : void}
+\put(85,55){+ sendGameMoveEvent(move : Move) : void}
+\put(135,40){+ sendLeaveGame() : void}
+\end{picture}
+
+\subsubsection*{insertChatUser(user : ChatUser) : boolean}
+
+\pagebreak
+\section*{Spielprinzip und Spielablauf}
+
+Im Spiel \textbf{Schiffeversenken} platzieren zwei Spieler zunächst verdeckt Schiffe unterschiedlicher Größen auf einem quadratischen Spielfeld, welches aus einem Raster besteht. Ziel des Spiels ist es, alle Schiffe des Gegners zu versenken. Dazu wählen die Spieler abwechselnd Felder aus, indem sie deren Koordinaten angeben (z. B. „B5“). Ein Treffer wird rot markiert, während ein Fehlschuss grau erscheint. Trifft ein Spieler ein Schiff, erhält er einen weiteren Zug. Das Spiel endet, sobald entweder alle gegnerischen Schiffe versenkt sind, ein Spieler aufgibt oder ein Spieler die Verbindung zum Server verliert.
+\\ \\
+Zusätzlich verfügt das Spiel über ein Energiesystem: Spieler erhalten für erfolgreiche Züge und Treffer Energiepunkte, welche sie einsetzen können, um spezielle Items zu aktivieren, wie beispielsweise eine Seabomb (trifft ein 2x2-Feld), eine Bombe, die eine komplette Zeile oder Spalte trifft (SeaBombItem), oder ein Radar, das die Anzahl der Schiffe in einem bestimmten Bereich anzeigt.
+
+\section*{Server-Komponente}
+
+Der \textbf{Server} ist das Herzstück des Systems und übernimmt zentrale Aufgaben der Spieler- und Spielverwaltung. Er nimmt neue Spieler über eine Socket-Verbindung auf einem festgelegten Port entgegen und erzeugt für jeden Spieler eine separate Instanz der Klasse \textbf{ServerPlayer}, welche wiederum die Kommunikation und Verwaltung des Spielers übernimmt. Dabei organisiert der Server alle Spieler in internen Listen, alle aktiven Spiele in einer Map, und verwaltet zusätzlich eine Warteschlange für Spieler, die aktuell auf ein Spiel warten.
+\\ \\
+Im Detail übernimmt der Server folgende Aufgaben:
+
+\subsubsection*{Serververwaltung:}
+\begin{itemize}
+    \item Initialisierung des Serversockets, Akzeptieren neuer Client-Verbindungen und Verwaltung dieser Verbindungen.
+    \item Start und Stop des Servers und Aktualisierung der Server-GUI.
+\end{itemize}
+
+\subsubsection*{Spielermanagement:}
+\begin{itemize}
+    \item Verwaltung aller aktuell verbundenen Spieler. Jeder Spieler besitzt eine eindeutige ID und wird mit einem automatischen Benutzernamen versehen.
+    \item Verwaltung einer Warteschlange, die neue Spieler aufnimmt und bei ausreichend Spielern automatisch neue Spielsitzungen startet.
+\end{itemize}
+
+\subsubsection*{Spielmanagement:}
+\begin{itemize}
+    \item Registrierung neuer Spiele, welche durch die Klasse \textbf{BattleShipGame} dargestellt werden. Diese Spiele werden mit eindeutigen IDs in einer Map gespeichert.
+    \item Jedes Spiel läuft in einem separaten Thread und ist unabhängig vom Hauptserver-Thread. 
+    \item Der Server erlaubt Spielern auch, Spiele über spezielle Join-Codes beizutreten, überprüft die Gültigkeit dieser Codes, verwaltet Zustände wie „Lobby“, „Bauphase“ und „aktive Spielphase“ und informiert Spieler über Ereignisse wie Zugwechsel und Spielende.
+\end{itemize}
+
+Die Klasse \textbf{ServerPlayer} verwaltet individuell die Kommunikation mit einem einzelnen Spieler. Dabei erhält sie Nachrichten vom jeweiligen Client, überprüft sie auf Gültigkeit, reagiert entsprechend, und sendet wiederum Antworten zurück an den Client. Sie sorgt auch dafür, dass Spielzustände (wie Warteschlange oder aktive Spielzuordnung) stets aktuell sind und hält den Spieler über seinen Status auf dem Laufenden.
+\\ \\
+Zentrales Element für die Kommunikation zwischen Server und Client ist ein eigens definiertes \textbf{Nachrichtenprotokoll} im Package \texttt{protocol.messages}. Dieses Protokoll basiert auf einer abstrakten Basisklasse \textbf{Message}, von der alle spezifischen Nachrichtenarten erben, beispielsweise:
+\begin{itemize}
+    \item \textbf{RegisterMessage}: Bestätigt einem Client die erfolgreiche Verbindung mit Benutzername und eindeutiger ID.
+    \item \textbf{QueueUpdateMessage}: Informiert Spieler über die aktuelle Warteschlangenlänge und ob sie selbst Teil der Warteschlange sind.
+    \item \textbf{CreateGameMessage / JoinGameWithCodeMessage}: Ermöglichen das Erstellen neuer Spielsitzungen oder das Beitreten in bereits existierende Spiele mittels eines Session-Codes.
+    \item \textbf{PlayerReadyMessage / PlayerUpdateShipPlacement}: Teilen dem Server während der Bauphase die Bereitschaft des Spielers und die Positionierung der Schiffe mit.
+    \item \textbf{PlayerMoveMessage / PlayerHoverMessage}: Informieren über Spielzüge und Aktionen des Spielers im aktiven Spiel, wie das Auswählen eines Feldes oder das Schweben (Hovering) über einem Feld.
+\end{itemize}
+
+\section*{Client-Komponente}
+
+Die \textbf{Client-Komponente} stellt die Benutzeroberfläche dar, mit der Spieler interagieren, und übernimmt dabei zwei Hauptfunktionen: Kommunikation mit dem Server und Aktualisierung der grafischen Darstellung des Spiels. Der Client setzt sich aus mehreren Klassen zusammen, insbesondere aus:
+\begin{itemize}
+    \item \textbf{ClientHandler}: Diese zentrale Klasse stellt die Verbindung zum Server her und initialisiert Streams zur Kommunikation. Sie empfängt Nachrichten vom Server und verteilt diese an die zuständigen Komponenten (wie Lobby- und GameHandler).
+    \item \textbf{LobbyHandler}: Diese Komponente verwaltet die Interaktionen in der Lobby, insbesondere das Beitreten und Verlassen der Warteschlange, sowie das Erstellen oder Betreten von Spielen.
+    \item \textbf{GameHandler}: Diese Komponente verwaltet alle spielbezogenen Interaktionen, wie das Platzieren der Schiffe in der Bauphase, den Wechsel von Spielzügen, die Nutzung von Items und das Erkennen von Spielereignissen (z. B. Zugwechsel oder Spielende). Sie aktualisiert dementsprechend die Benutzeroberfläche.
+\end{itemize}
+
+\subsection*{Zusammenspiel der Komponenten}
+
+Die klare Trennung zwischen Server- und Client-Komponenten ermöglicht eine übersichtliche Struktur des Spiels:
+\begin{itemize}
+    \item Der \textbf{Server} agiert als autoritative Instanz, welche sämtliche Spiellogik, den Zustand der Spieler und die Koordination der Spielsitzungen zentral verwaltet.
+    \item Der \textbf{Client} bietet eine benutzerfreundliche Oberfläche für den Spieler, kommuniziert mit dem Server über das definierte Nachrichtenprotokoll und stellt Spielabläufe und -ereignisse für den Nutzer übersichtlich dar.
+\end{itemize}
+
+Die saubere Trennung dieser Komponenten ermöglicht eine effiziente Zusammenarbeit: Clients melden Aktionen (z. B. Schiffplatzierungen oder Spielzüge) an den Server, der diese verarbeitet und entsprechende Nachrichten zur Aktualisierung der Spielzustände zurück an die Clients sendet. Diese klare Zuständigkeit garantiert, dass der Server stets den Überblick über den Gesamtzustand behält, während die Clients primär die Interaktion und Visualisierung verantworten.
+
+\pagebreak
+\section*{Hinweise}
+
+\begin{itemize}
+\item Die Reihenfolge
+\item Das Attribut 
+\item Wenn Sie 
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=5cm]{puzzle1.png} \hspace*{1cm}
+\includegraphics[width=5cm]{puzzle2.png}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Neue Inhalte: Protokoll und Message-Klassen Details %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagebreak
+\section*{(1) Protokoll}
+
+\subsection*{Message.java}
+
+In dieser Aufgabe sollen Sie die abstrakte Klasse \textbf{Message} im Package \textbf{protocol.messages} implementieren. Diese Klasse stellt die Basis für alle Nachrichtenobjekte dar, die über das Netzwerk zwischen Server und Client ausgetauscht werden. Die Klasse selbst enthält allgemeine Informationen, die für jeden Nachrichtentyp gültig sind.
+\\ \\
+Erweitern Sie zunächst die Klassendeklaration der Klasse \textbf{Message} so, dass sie explizit als abstrakte Klasse definiert wird. Ergänzen Sie die Klasse außerdem um ein privates Attribut namens \textbf{type} vom Typ \textbf{MessageType}, das später eindeutig angibt, um welche konkrete Art von Nachricht es sich handelt. Initialisieren Sie dieses Attribut innerhalb des gegebenen Konstruktors mit dem übergebenen Parameter.
+\\ \\
+Ergänzen Sie anschließend eine öffentliche Getter-Methode (\textbf{getType()}) , die es erlaubt, den Nachrichtentyp von außen abzufragen.
+\\ \\
+Beachten Sie, dass diese abstrakte Klasse als Grundlage für sämtliche weiteren konkreten Nachrichtentypen dient, weshalb hier keine weiteren Attribute oder spezifische Methoden für die Unterklassen enthalten sein sollen. Die tatsächlichen konkreten Nachrichtenklassen werden von dieser abstrakten Klasse abgeleitet und können bei Bedarf zusätzliche Attribute und Methoden definieren.
+\\ \\
+Stellen Sie abschließend sicher, dass Ihre Klasse das Interface \textbf{Serializable} implementiert.
+
+\subsection*{RegisterMessage.java}
+
+In dieser Aufgabe implementieren Sie die Klasse \textbf{RegisterMessage} im Package \textbf{protocol.messages}. Diese Klasse dient dazu, einem Spieler die erfolgreiche \textbf{Registrierung} auf dem Server zu bestätigen. Sie enthält als wesentliche Informationen den \textbf{Benutzernamen} (\texttt{username}) und die eindeutige \textbf{Benutzer-ID} (\texttt{userId}) des Spielers.
+\\ \\
+Die Klasse \textbf{RegisterMessage} muss von der abstrakten Oberklasse \textbf{Message} erben und das Interface \textbf{Serializable} implementieren, um über Netzwerkstreams verschickt werden zu können.
+\\ \\
+Definieren Sie dazu zwei private, finale Attribute:
+\begin{itemize}
+    \item Ein Attribut \textbf{username} vom Typ \texttt{String} für den Namen des registrierten Benutzers.
+    \item Ein Attribut \textbf{userId} vom Typ \texttt{UUID} zur eindeutigen Identifikation des Benutzers.
+\end{itemize}
+
+Implementieren Sie einen \textbf{öffentlichen Konstruktor}, welcher die beiden Parameter \texttt{username} und \texttt{userId} erhält und diese Attribute entsprechend initialisiert. Zusätzlich müssen Sie im Konstruktor den Oberklassenkonstruktor mit dem Nachrichtentyp \textbf{REGISTER} explizit aufrufen.
+\\ \\
+Implementieren Sie außerdem je eine \textbf{Getter-Methode} für die Attribute, um diese nach außen zugänglich zu machen (\texttt{getUsername()} und \texttt{getUserId()}).
+
+\subsection*{QueueUpdateMessage.java}
+
+In dieser Aufgabe implementieren Sie die Klasse \textbf{QueueUpdateMessage} im Package \textbf{protocol.messages.lobby}. Diese Klasse informiert den Spieler über den aktuellen Zustand der Warteschlange, indem sie ihm mitteilt, wie groß die Warteschlange aktuell ist und ob er selbst Teil dieser Warteschlange ist. Diese Nachricht wird vom Server an den Client gesendet und erbt von der abstrakten Klasse \textbf{Message}.
+\\ \\
+Die Klasse \textbf{QueueUpdateMessage} muss von der Klasse \textbf{Message} erben. Erstellen Sie hierzu zunächst zwei private Attribute:
+\begin{itemize}
+    \item \textbf{queueSize} vom Typ \texttt{int}: Gibt die aktuelle Größe der Warteschlange an.
+    \item \textbf{playerInQueue} vom Typ \texttt{boolean}: Gibt an, ob der Spieler aktuell in der Warteschlange ist oder nicht.
+\end{itemize}
+
+Implementieren Sie anschließend einen Konstruktor, der genau diese beiden Attribute übergeben bekommt (\texttt{int queueSize, boolean playerInQueue}) und diese Werte entsprechend zuweist. Rufen Sie im Konstruktor zusätzlich den Konstruktor der Oberklasse \textbf{Message} mit dem Nachrichtentyp \textbf{QUEUE\_UPDATE} auf.
+\\ \\
+Erstellen Sie zusätzlich \textbf{Getter-Methoden} für beide Attribute (\texttt{getQueueSize()} und \texttt{isPlayerInQueue()}), um externen Zugriff auf den jeweiligen Wert zu ermöglichen. Implementieren Sie schließlich die Methode \texttt{toString()}, welche eine klar lesbare String-Darstellung der \textbf{QueueUpdateMessage} mit den enthaltenen Informationen (\texttt{queueSize} und \texttt{playerInQueue}) zurückliefert.
+
+\subsection*{JoinQueueMessage.java}
+
+In dieser Aufgabe implementieren Sie die Klasse \textbf{JoinQueueMessage} im Package \textbf{protocol.messages.lobby}. Diese Nachricht wird vom Client an den Server gesendet, sobald ein Spieler der Warteschlange beitreten möchte. Als Antwort auf diese Nachricht sendet der Server eine Nachricht vom Typ \textbf{QueueUpdateMessage} zurück, welche die aktuelle Größe der Warteschlange sowie den Status des Spielers enthält.
+\\ \\
+Die Klasse \textbf{JoinQueueMessage} muss von der abstrakten Klasse \textbf{Message} erben. Implementieren Sie hierzu einen parameterlosen Konstruktor, der ausschließlich den Konstruktor der Oberklasse \textbf{Message} aufruft und diesem den Nachrichtentyp \textbf{JOIN\_QUEUE} übergibt.
+
+\subsection*{LeaveQueueMessage.java}
+
+In dieser Aufgabe implementieren Sie die Klasse \textbf{LeaveQueueMessage} im Package \textbf{protocol.messages.lobby}. Diese Nachricht wird vom Client an den Server gesendet, wenn der Spieler die Warteschlange verlassen möchte.
+\\ \\
+Die Klasse \textbf{LeaveQueueMessage} muss von der abstrakten Klasse \textbf{Message} erben.
+\\ \\
+Implementieren Sie hierzu einen parameterlosen Konstruktor, welcher den Konstruktor der Oberklasse \textbf{Message} aufruft und diesem den Nachrichtentyp \textbf{LEAVE\_QUEUE} übergibt.
+
+\subsection*{CreateGameMessage.java}
+
+In dieser Aufgabe implementieren Sie die Klasse \textbf{CreateGameMessage} im Package \textbf{protocol.messages.lobby}. Diese Nachricht wird vom Client an den Server gesendet, wenn ein Spieler ein neues Spiel erstellen möchte. Sie enthält als wichtige Information die gewünschten Spieloptionen (gespeichert in einem Objekt vom Typ \texttt{GameOptions}).
+\\ \\
+Die Klasse \textbf{CreateGameMessage} muss von der abstrakten Klasse \textbf{Message} erben.
+\\ \\
+Fügen Sie zunächst ein privates Attribut namens \textbf{gameOptions} vom Typ \texttt{GameOptions} hinzu, um die Spieloptionen zu speichern. Erstellen Sie anschließend einen öffentlichen Konstruktor, der ein Objekt vom Typ \texttt{GameOptions} als Parameter erhält und dieses Attribut entsprechend initialisiert. Rufen Sie dabei im Konstruktor ebenfalls den Konstruktor der Oberklasse \textbf{Message} mit dem Nachrichtentyp \textbf{CREATE\_GAME} auf.
+\\ \\
+Implementieren Sie zusätzlich eine öffentliche Getter-Methode namens \texttt{getGameOptions()}, welche den Zugriff auf das Attribut \textbf{gameOptions} ermöglicht.
+
+\subsection*{JoinGameWithCodeMessage.java}
+
+In dieser Aufgabe implementieren Sie die Klasse \textbf{JoinGameWithCodeMessage} im Package \textbf{protocol.messages.lobby}. Diese Nachricht wird vom Client an den Server gesendet, wenn ein Spieler einem bestehenden Spiel mit Hilfe eines sechsstelligen Session-Codes beitreten möchte.
+\\ \\
+Die Klasse \textbf{JoinGameWithCodeMessage} muss von der abstrakten Klasse \textbf{Message} erben.
+\\ \\
+Erstellen Sie zunächst ein privates finales Attribut mit dem Namen \textbf{sessionCode} vom Typ \texttt{int}, das den sechsstelligen Session-Code enthält. Implementieren Sie anschließend einen öffentlichen Konstruktor, der genau einen Parameter (\texttt{int sessionCode}) erhält und das Attribut entsprechend initialisiert. Im Konstruktor muss zusätzlich der Konstruktor der Oberklasse \textbf{Message} mit dem Nachrichtentyp \textbf{JOIN\_GAME\_WITH\_CODE} aufgerufen werden.
+\\ \\
+Erstellen Sie abschließend eine öffentliche Getter-Methode namens \texttt{getSessionCode()}, um den Zugriff auf das Attribut von außen zu ermöglichen.
+
+\subsection*{PlayerReadyMessage.java}
+
+In dieser Aufgabe implementieren Sie die Klasse \textbf{PlayerReadyMessage} im Package \textbf{protocol.messages.game.building}. Diese Nachricht wird vom Client an den Server gesendet, wenn ein Spieler seinen \texttt{Bereitschaftsstatus} (\textbf{ready}) mitteilt, um dem Server zu signalisieren, dass er bereit ist, das Spiel zu starten. Die Klasse \textbf{PlayerReadyMessage} muss von der abstrakten Oberklasse \textbf{Message} erben.
+\\ \\
+Definieren Sie hierzu ein privates, finales Attribut namens \textbf{ready} vom Typ \texttt{boolean}, welches den aktuellen Bereitschaftsstatus des Spielers speichert.
+\\ \\
+Implementieren Sie anschließend einen öffentlichen Konstruktor, welcher den Bereitschaftsstatus (\texttt{boolean ready}) als Parameter erhält und dieses Attribut entsprechend initialisiert. Im Konstruktor muss zusätzlich der Oberklassenkonstruktor explizit mit dem Nachrichtentyp \textbf{PLAYER\_READY} aufgerufen werden.
+\\ \\
+Implementieren Sie zusätzlich eine öffentliche Getter-Methode namens \texttt{isReady()}, welche externen Zugriff auf das Attribut \textbf{ready} erlaubt.
+
+\subsection*{PlayerUpdateShipPlacement.java}
+
+In dieser Aufgabe implementieren Sie die Klasse \textbf{PlayerUpdateShipPlacement} im Package \textbf{protocol.messages.game.building}. Diese Nachricht wird vom Client an den Server gesendet, sobald ein Spieler während der Bauphase des Spiels eine neue Positionierung seiner Schiffe mitteilt. Die Klasse \textbf{PlayerUpdateShipPlacement} muss von der abstrakten Oberklasse \textbf{Message} erben.
+\\ \\
+Erstellen Sie zunächst ein privates, finales Attribut namens \textbf{ships} vom Typ \texttt{ArrayList<Ship>}, das die aktuell platzierten Schiffe des Spielers beinhaltet.
+\\ \\
+Implementieren Sie anschließend einen öffentlichen Konstruktor, der genau diese Schiffsliste (\texttt{ArrayList<Ship>}) als Parameter erhält und damit das Attribut initialisiert. Im Konstruktor rufen Sie zusätzlich explizit den Konstruktor der Oberklasse \textbf{Message} mit dem Nachrichtentyp \textbf{PLAYER\_UPDATE\_SHIP\_PLACEMENT} auf.
+\\ \\
+Implementieren Sie zusätzlich eine öffentliche Getter-Methode \texttt{getShips()}, um externen Zugriff auf die aktuelle Schiffsliste zu ermöglichen.
+
+\subsection*{LeaveGameMessage.java}
+
+In dieser Aufgabe implementieren Sie die Klasse \textbf{LeaveGameMessage} im Package \textbf{protocol.messages.game}. Diese Nachricht wird vom Client an den Server gesendet, wenn ein Spieler ein laufendes Spiel verlassen möchte. Diese Nachricht wird genutzt, um den Server darüber zu informieren, dass der Client seine Spielsitzung beendet. Die Klasse \textbf{LeaveGameMessage} muss von der abstrakten Klasse \textbf{Message} erben.
+\\ \\
+Implementieren Sie hierzu einen öffentlichen, parameterlosen Konstruktor. Dieser Konstruktor ruft ausschließlich den Konstruktor der Oberklasse \textbf{Message} explizit mit dem Nachrichtentyp \textbf{LEAVE\_GAME} auf.
+
+\subsection*{GameInGameStartMessage.java}
+
+In dieser Aufgabe implementieren Sie die Klasse \textbf{GameInGameStartMessage} im Package \textbf{protocol.messages.game.ingame}. Diese Nachricht wird vom Server an den Client gesendet, sobald die aktive Spielphase beginnt. Der Server versendet diese Nachricht entweder, nachdem beide Spieler ihre Bereitschaft bestätigt haben (\texttt{PlayerReadyMessage}), oder sobald die Zeit für die Bauphase abgelaufen ist (\texttt{GameBuildingStartMessage}). Die Klasse \textbf{GameInGameStartMessage} erbt von der abstrakten Klasse \textbf{Message}.
+\\ \\
+Definieren Sie zunächst zwei private Attribute:
+\begin{itemize}
+    \item \textbf{gameState} vom Typ \texttt{GameState}: Beschreibt den aktuellen Zustand des Spiels zu Beginn der aktiven Spielphase.
+    \item \textbf{yourShips} vom Typ \texttt{ArrayList<Ship>}: Enthält die Liste der Schiffe des aktuellen Spielers.
+\end{itemize}
+
+Implementieren Sie anschließend einen Konstruktor mit den Parametern (\texttt{GameState gameState, ArrayList<Ship> yourShips}). Im Konstruktor weisen Sie den beiden Attributen die Parameter entsprechend zu. Dabei erstellen Sie für die Schiffsliste eine neue Kopie, um eine direkte externe Änderung der Schiffsliste zu vermeiden. Im Konstruktor rufen Sie zusätzlich explizit den Oberklassenkonstruktor mit dem Nachrichtentyp \textbf{GAME\_IN\_GAME\_START} auf.
+\\ \\
+Implementieren Sie zusätzlich öffentliche Getter-Methoden für beide Attribute (\texttt{getGameState()} und \texttt{getYourShips()}), um externen Zugriff darauf zu ermöglichen.
+
+\subsection*{PlayerMoveMessage.java}
+
+In dieser Aufgabe implementieren Sie die Klasse \textbf{PlayerMoveMessage} im Package \textbf{protocol.messages.game.ingame}. Diese Nachricht wird vom Client an den Server gesendet, sobald ein Spieler während des laufenden Spiels einen Spielzug (\texttt{Move}) ausführt. Die Klasse \textbf{PlayerMoveMessage} erbt von der abstrakten Klasse \textbf{Message}.
+\\ \\
+Definieren Sie zunächst ein privates, finales Attribut namens \textbf{move} vom Typ \texttt{Move}, das den vom Spieler ausgeführten Spielzug speichert.
+\\ \\
+Implementieren Sie anschließend einen öffentlichen Konstruktor, welcher ein Objekt vom Typ \texttt{Move} als Parameter erhält und das Attribut entsprechend initialisiert. Der Konstruktor muss zusätzlich den Oberklassenkonstruktor explizit mit dem Nachrichtentyp \textbf{PLAYER\_MOVE} aufrufen.
+\\ \\
+Implementieren Sie außerdem eine öffentliche Getter-Methode namens \texttt{getMove()}, um externen Zugriff auf den ausgeführten Spielzug zu ermöglichen.
+
+\subsection*{PlayerHoverMessage.java}
+
+In dieser Aufgabe implementieren Sie die Klasse \textbf{PlayerHoverMessage} im Package \textbf{protocol.messages.game.ingame}. Diese Nachricht wird versendet, wenn ein Spieler im laufenden Spiel mit der Maus über ein bestimmtes Spielfeld (eine Zelle) fährt (``hovering''). Die Klasse \textbf{PlayerHoverMessage} erbt von der abstrakten Klasse \textbf{Message}.
+\\ \\
+Dabei tritt die Nachricht in zwei Kontexten auf:
+\begin{itemize}
+    \item Als Nachricht vom Client an den Server, wenn der Spieler über eine Zelle fährt.
+    \item Als Nachricht vom Server an den Client, um zu signalisieren, dass der Gegner über eine Zelle fährt.
+\end{itemize}
+
+Definieren Sie zunächst folgende private Attribute:
+\begin{itemize}
+    \item \textbf{userId} vom Typ \texttt{UUID}: die ID des Spielers, der das Hover-Ereignis ausgelöst hat.
+    \item \textbf{x} vom Typ \texttt{int}: die X-Koordinate der Zelle.
+    \item \textbf{y} vom Typ \texttt{int}: die Y-Koordinate der Zelle.
+    \item \textbf{affectedFields} vom Typ \texttt{ArrayList<Cell>}: Liste der Zellen, die durch das Hover-Ereignis betroffen sind.
+\end{itemize}
+
+Implementieren Sie anschließend zwei Konstruktoren:
+\begin{enumerate}
+    \item Einen Konstruktor mit den Parametern \texttt{UUID userId, int x, int y, ArrayList<Cell> affectedFields}. Dieser Konstruktor initialisiert alle Attribute mit den übergebenen Werten und ruft explizit den Konstruktor der Oberklasse \textbf{Message} mit dem Nachrichtentyp \textbf{PLAYER\_HOVER} auf.
+    \item Einen Kopierkonstruktor, der als Parameter ein bereits existierendes Objekt vom Typ \textbf{PlayerHoverMessage} erhält. Dieser initialisiert die Attribute entsprechend der Werte des übergebenen Objekts und ruft ebenfalls den Oberklassenkonstruktor mit dem Typ \textbf{PLAYER\_HOVER} auf.
+\end{enumerate}
+
+Implementieren Sie außerdem die öffentlichen Getter-Methoden \texttt{getUserId()}, \texttt{getX()}, \texttt{getY()} und \texttt{getAffectedFields()}, um externen Zugriff auf die Attribute zu ermöglichen.
+
+\subsection*{Implementierung der GameState-basierten Message-Klassen}
+
+In dieser Aufgabe implementieren Sie mehrere Message-Klassen, die alle eine ähnliche Struktur aufweisen und sich lediglich im Namen der Klasse sowie im übergebenen \textbf{MessageType} unterscheiden. Jede dieser Klassen wird verwendet, um den Client über den aktuellen Spielzustand (\texttt{GameState}) zu informieren. Alle Klassen erben von der abstrakten Klasse \textbf{Message}.
+\\ \\
+Implementieren Sie für jede Klasse ein privates, finales Attribut namens \textbf{gameState} vom Typ \texttt{GameState}. Erstellen Sie anschließend einen öffentlichen Konstruktor, der genau einen Parameter vom Typ \texttt{GameState} erhält, dieses Attribut initialisiert und dabei explizit den Konstruktor der Oberklasse mit dem jeweils passenden \textbf{MessageType} aufruft.
+\\ \\
+Ergänzen Sie jede Klasse um eine Getter-Methode (\texttt{getGameState()}), um Zugriff auf den Spielzustand zu ermöglichen. Überschreiben Sie abschließend die Methode \texttt{toString()}, um eine sinnvolle String-Repräsentation der Nachricht sicherzustellen.
+\\ \\
+Die einzelnen Klassen in \texttt{protocol.messages.game} unterscheiden sich nur durch ihren Namen und den jeweils zu verwendenden \textbf{MessageType}, der wie folgt festgelegt ist:
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Klassenname} & \textbf{Zu verwendender MessageType} \\
+\hline
+\texttt{GameOverMessage} & \textbf{GAME\_OVER} \\
+\texttt{JoinGameMessage} & \textbf{JOIN\_GAME} \\
+\texttt{building.PlayerReadyStateChangeMessage} & \textbf{BUILD\_READY\_STATE\_CHANGE} \\
+\texttt{ingame.MoveMadeMessage} & \textbf{MOVE\_MADE} \\
+\texttt{ingame.PlayerTurnChangeMessage} & \textbf{TURN\_CHANGE} \\
+\texttt{building.GameBuildingStartMessage} & \textbf{BUILDING\_PHASE\_STARTS} \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}
