@@ -160,15 +160,6 @@ public class XMLReader {
                 // Hier können Sie überlegen, ob Sie die Kategorie dynamisch erstellen möchten.
             }
         }
-
-        /**
-         * Aufgabe 7 (optional):
-         * Erstellen Sie einfache Unit-Tests, um die Funktionalität Ihrer XML-Verarbeitung zu überprüfen.
-         * Testen Sie insbesondere:
-         * - Das korrekte Einlesen von Kategorien, Fragen und Lösungen.
-         * - Die Zuordnung der richtigen Antwort zu jeder Frage.
-         */
-
         return categories;
     }
 
@@ -178,8 +169,6 @@ public class XMLReader {
      * - Das Question-Objekt
      * - Die zugehörige Kategorie-ID (KID)
      * - Die Originalantworttexte (AntwortA bis AntwortD)
-     *
-     * Überlegen Sie, ob es sinnvoll ist, diese Klasse in eine eigene Datei auszulagern.
      */
     private static class QuestionWrapper {
         public Question question;
