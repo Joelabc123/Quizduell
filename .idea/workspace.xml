@@ -5,23 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e30a93c0-8013-4ed1-ab9d-9e23c5cb740e" name="Changes" comment="Finished Project">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-latex/Muster copy.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-latex/Muster.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-latex/Muster.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-latex/Muster.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-latex/Muster.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-latex/battleships.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-latex/battleships.fdb_latexmk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-latex/battleships.fls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-latex/battleships.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-latex/battleships.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-latex/battleships.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-latex/battleships.synctex.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-latex/battleships.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-latex/python.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protocol/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/XMLReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/gui/CreateQuizPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/gui/CreateQuizPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,6 +206,7 @@
       <workItem from="1749276641733" duration="317000" />
       <workItem from="1751834541920" duration="1355000" />
       <workItem from="1752002905355" duration="285000" />
+      <workItem from="1752050906354" duration="4501000" />
     </task>
     <task id="LOCAL-00001" summary="Finished DB">
       <option name="closed" value="true" />
@@ -341,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749276913162</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Finished Project">
+      <option name="closed" value="true" />
+      <created>1752050941987</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1752050941987</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

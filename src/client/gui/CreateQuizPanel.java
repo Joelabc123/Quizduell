@@ -17,11 +17,10 @@ import java.util.Map;
 
 public class CreateQuizPanel extends JPanel {
 
-    private MainGameFrame mainFrame; // Referenz zum MainGameFrame
+    private MainGameFrame mainFrame;
 
-    // Links: TabbedPane für Fragen- und Kategorie-Erstellung
     private JTabbedPane tabbedPane;
-    // Komponenten für Fragen erstellen
+    //Komponenten für Fragen erstellen
     private JPanel questionPanel;
     private JTextArea questionTextArea;
     private JTextField answerField1, answerField2, answerField3, answerField4;
@@ -29,25 +28,24 @@ public class CreateQuizPanel extends JPanel {
     private ButtonGroup correctAnswerGroup;
     private JButton addQuestionButton, finishQuestionButton;
     private JComboBox<String> categoryComboBox; // Auswahl, in welche Kategorie die Frage gehört
-    // Für Frage-XML: Wir speichern Fragen im Abschnitt <Fragen>
     private int nextFID = 1;
 
-    // Neue Komponenten für Fragen löschen
+    //Komponenten für Fragen löschen
     private DefaultListModel<String> questionListModel;
     private JList<String> questionList;
     private JButton deleteQuestionButton;
 
-    // Komponenten für Kategorie erstellen
+    //Komponenten für Kategorie erstellen
     private JPanel categoryPanel;
     private JTextField categoryNameField;
     private JButton addCategoryButton;
 
-    // Neue Komponenten für Kategorie löschen
+    //Komponenten für Kategorie löschen
     private DefaultListModel<String> categoryDeletionListModel;
     private JList<String> categoryDeletionList;
     private JButton deleteCategoryButton;
 
-    // Rechts: Panel mit Dateiliste, Buttons und Kategorienanzeige aus der ausgewählten XML-Datei
+    //Panel mit Dateiliste, Buttons und Kategorienanzeige aus der ausgewählten XML-Datei
     private JPanel rightPanel;
     private JList<String> xmlFileList;
     private DefaultListModel<String> xmlFileListModel;
@@ -57,11 +55,8 @@ public class CreateQuizPanel extends JPanel {
     private JButton createNewXmlButton;
     private JButton deleteXmlButton;
 
-    // Verzeichnis für XML-Dateien
     private final String resourcesDir = "resources/";
 
-    // XML-Dokument, an dem gearbeitet wird – entspricht der DTD: <database> mit Unterelementen Kategorien, Fragen, Lösungen
-    // Falls keine Datei ausgewählt wurde, wird ein neues Dokument erzeugt.
     private Document quizDocument;
     private Element rootDatabase; // Root: <database>
     private Element kategorienElement; // <Kategorien>
@@ -72,45 +67,34 @@ public class CreateQuizPanel extends JPanel {
     private Document selectedXmlDocument;
     private File selectedXmlFile;
 
-    // Hilfsstruktur zum Speichern der Zuordnung von Kategorienamen zu KatIDs (aus dem geladenen XML)
     private Map<String, String> categoryMap = new HashMap<>();
 
-    // Für neue Kategorien-ID (wird beim Laden aktualisiert)
     private int nextKatID = 1;
 
     public CreateQuizPanel(MainGameFrame mainFrame) {
         this.mainFrame = mainFrame;
-        // Eigener Hintergrund soll gezeichnet werden
         setOpaque(false);
         setLayout(new BorderLayout());
         setBorder(new EmptyBorder(20, 20, 20, 20));
 
-        // Neues Dokument initialisieren (wird verwendet, falls keine XML-Datei ausgewählt wurde)
         initNewQuizDocument();
 
-        // Links: TabbedPane für "Fragen erstellen" und "Kategorie erstellen"
         tabbedPane = new JTabbedPane();
         tabbedPane.addTab("Fragen erstellen", createQuestionPanel());
         tabbedPane.addTab("Kategorie erstellen", createCategoryPanel());
         add(tabbedPane, BorderLayout.CENTER);
 
-        // Rechts: Panel mit Dateiliste, Buttons und Kategorienanzeige
         rightPanel = createRightPanel();
         add(rightPanel, BorderLayout.EAST);
     }
 
-    /**
-     * Erstellt ein neues XML-Dokument, falls keine Datei geladen wurde.
-     */
     private void initNewQuizDocument() {
         try {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             quizDocument = builder.newDocument();
-            // Root-Element <database>
             rootDatabase = quizDocument.createElement("database");
             quizDocument.appendChild(rootDatabase);
-            // Unterelemente erstellen
             kategorienElement = quizDocument.createElement("Kategorien");
             rootDatabase.appendChild(kategorienElement);
             fragenElement = quizDocument.createElement("Fragen");
@@ -124,9 +108,6 @@ public class CreateQuizPanel extends JPanel {
         }
     }
 
-    /**
-     * Erstellt das Panel für die Fragens-Erstellung inklusive Frage-Löschfunktion.
-     */
     private JPanel createQuestionPanel() {
         JPanel panel = new JPanel(new BorderLayout());
         panel.setOpaque(false);
@@ -135,7 +116,6 @@ public class CreateQuizPanel extends JPanel {
         inputPanel.setOpaque(false);
         inputPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
 
-        // Frage eingeben
         JLabel questionLabel = new JLabel("Frage:");
         questionTextArea = new JTextArea(3, 40);
         questionTextArea.setLineWrap(true);
@@ -144,7 +124,6 @@ public class CreateQuizPanel extends JPanel {
         inputPanel.add(questionLabel);
         inputPanel.add(questionScrollPane);
 
-        // Antworten
         JPanel answersPanel = new JPanel(new GridLayout(4, 1, 5, 5));
         answersPanel.setOpaque(false);
         correctAnswerGroup = new ButtonGroup();
@@ -199,7 +178,6 @@ public class CreateQuizPanel extends JPanel {
 
         inputPanel.add(answersPanel);
 
-        // Auswahl der Kategorie
         JPanel catPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         catPanel.setOpaque(false);
         catPanel.add(new JLabel("Kategorie:"));
@@ -210,20 +188,17 @@ public class CreateQuizPanel extends JPanel {
 
         panel.add(inputPanel, BorderLayout.NORTH);
 
-        // Steuer-Buttons: Nur der "Frage hinzufügen"-Button wird hier belassen.
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 10));
         buttonPanel.setOpaque(false);
         addQuestionButton = new JButton("Frage hinzufügen");
         buttonPanel.add(addQuestionButton);
         panel.add(buttonPanel, BorderLayout.CENTER);
 
-        // ActionListener für Hinzufügen
         addQuestionButton.addActionListener(e -> {
             addQuestion();
             updateQuestionList();
         });
 
-        // Panel für Frage löschen
         JPanel deletePanel = new JPanel(new BorderLayout());
         deletePanel.setOpaque(false);
         questionListModel = new DefaultListModel<>();
@@ -240,21 +215,15 @@ public class CreateQuizPanel extends JPanel {
         return panel;
     }
 
-    /**
-     * Erstellt das Panel zur Kategorie-Erstellung inklusive Löschfunktion.
-     */
     private JPanel createCategoryPanel() {
         JPanel panel = new JPanel(new BorderLayout());
         panel.setOpaque(false);
 
-        // Obere Hälfte: Hinzufügen von Kategorien
-        // Layout auf vertikale Anordnung umgestellt: Eingabefeld oben, Button darunter.
         JPanel inputPanel = new JPanel();
         inputPanel.setLayout(new BoxLayout(inputPanel, BoxLayout.Y_AXIS));
         inputPanel.setOpaque(false);
         inputPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
 
-        // Panel für das Eingabefeld "Kategorie Name:"
         JPanel inputFieldPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         inputFieldPanel.setOpaque(false);
         inputFieldPanel.add(new JLabel("Kategorie Name:"));
@@ -262,7 +231,6 @@ public class CreateQuizPanel extends JPanel {
         inputFieldPanel.add(categoryNameField);
         inputPanel.add(inputFieldPanel);
 
-        // Panel für den Button "Kategorie hinzufügen"
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         buttonPanel.setOpaque(false);
         addCategoryButton = new JButton("Kategorie hinzufügen");
@@ -289,7 +257,6 @@ public class CreateQuizPanel extends JPanel {
             updateCategoryDeletionList();
         });
 
-        // Untere Hälfte: Liste der Kategorien und Lösch-Funktion
         JPanel deletePanel = new JPanel(new BorderLayout());
         deletePanel.setOpaque(false);
         categoryDeletionListModel = new DefaultListModel<>();
@@ -306,17 +273,12 @@ public class CreateQuizPanel extends JPanel {
         return panel;
     }
 
-    /**
-     * Erstellt das rechte Panel, das XML-Dateien, Kategorien und Buttons anzeigt.
-     * Das Panel wird mit einem vertikalen BoxLayout aufgebaut, sodass die Buttons immer sichtbar sind.
-     */
     private JPanel createRightPanel() {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         panel.setOpaque(false);
         panel.setBorder(new EmptyBorder(5, 5, 5, 5));
 
-        // XML-Dateiliste
         xmlFileListModel = new DefaultListModel<>();
         xmlFileList = new JList<>(xmlFileListModel);
         xmlFileList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -327,7 +289,6 @@ public class CreateQuizPanel extends JPanel {
 
         panel.add(Box.createVerticalStrut(10));
 
-        // Kategorienanzeige aus Datei
         fileCategoryListModel = new DefaultListModel<>();
         fileCategoryList = new JList<>(fileCategoryListModel);
         JScrollPane categoryListScroll = new JScrollPane(fileCategoryList);
@@ -337,7 +298,6 @@ public class CreateQuizPanel extends JPanel {
 
         panel.add(Box.createVerticalGlue());
 
-        // Button-Panel mit den XML-Buttons
         JPanel bottomPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         bottomPanel.setOpaque(false);
         createNewXmlButton = new JButton("Neue XML-Datei erstellen");
@@ -348,7 +308,6 @@ public class CreateQuizPanel extends JPanel {
         bottomPanel.add(deleteXmlButton);
         panel.add(bottomPanel);
 
-        // Füge den "Fertig"-Button unterhalb der XML-Buttons hinzu
         finishQuestionButton = new JButton("Fertig");
         finishQuestionButton.addActionListener(e -> mainFrame.switchLobbyStartPanel());
         JPanel finishPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
@@ -403,9 +362,7 @@ public class CreateQuizPanel extends JPanel {
         return panel;
     }
 
-    /**
-     * Liest alle XML-Dateien aus dem Ordner resources und füllt die xmlFileList.
-     */
+
     private void populateXmlFileList() {
         xmlFileListModel.clear();
         File dir = new File(resourcesDir);
@@ -421,9 +378,7 @@ public class CreateQuizPanel extends JPanel {
         }
     }
 
-    /**
-     * Löscht die ausgewählte XML-Datei.
-     */
+
     private void deleteSelectedXmlFile() {
         String selectedFileName = xmlFileList.getSelectedValue();
         if (selectedFileName != null) {
@@ -447,9 +402,7 @@ public class CreateQuizPanel extends JPanel {
         }
     }
 
-    /**
-     * Lädt die ausgewählte XML-Datei und aktualisiert die Anzeige der Kategorien.
-     */
+
     private void loadSelectedXmlFile(File file) {
         try {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -476,17 +429,12 @@ public class CreateQuizPanel extends JPanel {
         }
     }
 
-    /**
-     * Gibt das erste Kind-Element mit dem gegebenen Tag-Namen zurück.
-     */
+
     private Element getFirstChildElement(Element parent, String tagName) {
         NodeList nl = parent.getElementsByTagName(tagName);
         return nl.getLength() > 0 ? (Element) nl.item(0) : null;
     }
 
-    /**
-     * Aktualisiert die Liste der Kategorien im rechten Panel anhand des geladenen XML-Dokuments.
-     */
     private void updateFileCategoryList() {
         fileCategoryListModel.clear();
         categoryMap.clear();
@@ -513,9 +461,7 @@ public class CreateQuizPanel extends JPanel {
         }
     }
 
-    /**
-     * Aktualisiert das ComboBox in der Fragen-Erstellung mit den Kategorien aus dem aktuell geladenen XML.
-     */
+
     private void updateCategoryComboBox() {
         categoryComboBox.removeAllItems();
         if (selectedXmlDocument != null && kategorienElement != null) {
@@ -539,9 +485,6 @@ public class CreateQuizPanel extends JPanel {
         }
     }
 
-    /**
-     * Aktualisiert die Liste der Fragen im Frage-Löschbereich.
-     */
     private void updateQuestionList() {
         if (questionListModel == null) return;
         questionListModel.clear();
@@ -557,9 +500,6 @@ public class CreateQuizPanel extends JPanel {
         }
     }
 
-    /**
-     * Aktualisiert die Liste der Kategorien im Kategorie-Löschbereich.
-     */
     private void updateCategoryDeletionList() {
         if (categoryDeletionListModel == null) return;
         categoryDeletionListModel.clear();
@@ -575,9 +515,6 @@ public class CreateQuizPanel extends JPanel {
         }
     }
 
-    /**
-     * Fügt der aktuell ausgewählten XML-Datei eine neue Kategorie hinzu.
-     */
     private void addCategoryToSelectedXml(String categoryName) {
         if (kategorienElement == null) {
             kategorienElement = quizDocument.createElement("Kategorien");
@@ -593,9 +530,6 @@ public class CreateQuizPanel extends JPanel {
         autoSaveXmlFile();
     }
 
-    /**
-     * Fügt eine neue Frage dem XML-Dokument hinzu.
-     */
     private void addQuestion() {
         String questionText = questionTextArea.getText().trim();
         String ans1 = answerField1.getText().trim();
@@ -663,9 +597,7 @@ public class CreateQuizPanel extends JPanel {
         correctAnswerGroup.clearSelection();
     }
 
-    /**
-     * Löscht die ausgewählte Frage aus dem XML-Dokument.
-     */
+
     private void deleteSelectedQuestion() {
         String selectedValue = questionList.getSelectedValue();
         if (selectedValue == null) {
@@ -692,9 +624,6 @@ public class CreateQuizPanel extends JPanel {
         }
     }
 
-    /**
-     * Löscht die ausgewählte Kategorie aus dem XML-Dokument und entfernt auch zugehörige Fragen.
-     */
     private void deleteSelectedCategory() {
         String selectedCategory = categoryDeletionList.getSelectedValue();
         if (selectedCategory == null) {
@@ -741,9 +670,6 @@ public class CreateQuizPanel extends JPanel {
         updateCategoryDeletionList();
     }
 
-    /**
-     * Aktualisiert die nextFID- und nextKatID-Werte anhand des geladenen XML-Dokuments.
-     */
     private void updateIDsFromDocument() {
         nextFID = 1;
         if (fragenElement != null) {
@@ -779,9 +705,6 @@ public class CreateQuizPanel extends JPanel {
         }
     }
 
-    /**
-     * Speichert das aktuell geladene XML-Dokument in die ausgewählte Datei.
-     */
     private void saveSelectedXmlFile() {
         if (selectedXmlDocument == null || selectedXmlFile == null) {
             JOptionPane.showMessageDialog(this, "Keine XML-Datei zum Speichern ausgewählt.", "Fehler", JOptionPane.ERROR_MESSAGE);
@@ -801,9 +724,6 @@ public class CreateQuizPanel extends JPanel {
         }
     }
 
-    /**
-     * Automatische Speicherung der XML-Datei ohne Benachrichtigung.
-     */
     private void autoSaveXmlFile() {
         if (selectedXmlDocument == null || selectedXmlFile == null) {
             return;
