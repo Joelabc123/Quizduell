@@ -49,14 +49,6 @@ Die Kommunikation zwischen Client und Server erfolgt über serialisierte `Messag
 
 Fragen werden aus XML-Dateien im Verzeichnis `resources/` geladen und müssen dem Schema in `quiz.dtd` entsprechen. Die Struktur umfasst `<Kategorien>`, `<Fragen>` und `<Lösungen>`.
 
-## Farbschema
-
-| Farbe     | Hex       |
-|-----------|-----------|
-| Hintergrund (dunkel) | `#44624a` |
-| Hintergrund (mittel) | `#c0cfb2` |
-| Hintergrund (hell)   | `#f1ebe1` |
-
 ## Abhängigkeiten
 
 - Java (JDK 11+)
